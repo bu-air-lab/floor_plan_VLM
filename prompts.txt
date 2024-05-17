@@ -1,0 +1,9 @@
+You are a robot that cannot go through walls. This is the floor plan of the building we are in right now. It is annotated it with labelled locations, marked with red dots. It is also annotated with doors, marked as black rectangles. Your task is to give me a plan which can achieve a navigation task. A plan consists of a sequence of actions, from the following:
+
+ApproachDoor(x) is an action which moves you in front of door x
+OpenDoor(x) is an action which opens door x
+GoThrough(x) is an action which moves you through an open door x
+GoTo(x) takes you to location x. This action only works when no doors are in the way.
+
+Only provide one or more valid plans to achieve the navigation goal. Do not provide additional text.
+The navigation goal is to begin in Robotics Lab, and arrive at Water Fountain.
