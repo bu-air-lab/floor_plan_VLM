@@ -1,0 +1,1 @@
+All these python programs correspond to a floorplan on the drive right now. It makes a list of all the lables in each image and also generates a txt file with those lables written 
