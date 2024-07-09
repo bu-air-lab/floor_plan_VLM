@@ -1,0 +1,15 @@
+{
+    "path": [
+        "ApproachDoor(D4)",
+        "OpenDoor(D4)",
+        "GoThrough(D4)",
+        "GoTo(D7)",
+        "ApproachDoor(D7)",
+        "OpenDoor(D7)",
+        "GoThrough(D7)",
+        "GoTo(D8)",
+        "ApproachDoor(D8)",
+        "OpenDoor(D8)",
+        "GoThrough(D8)"
+    ]
+}

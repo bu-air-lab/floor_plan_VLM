@@ -1,0 +1,8 @@
+{
+    "actions": [
+        "ApproachDoor(D7)",
+        "OpenDoor(D7)",
+        "GoThrough(D7)",
+        "GoTo(REPAS)"
+    ]
+}
