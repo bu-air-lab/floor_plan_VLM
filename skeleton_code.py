@@ -73,7 +73,7 @@ plans = {
     ],
     'medium1': [
         ('CELLIER', 'WC'),
-        ('SEJOUR', 'CAVE'),
+        ('SEJOUR', 'CH.1'),
         ('CUISINE', 'CH.2'),
         ('DEGT.', 'PORCHE'),
         ('WC', 'BAINS')
@@ -95,9 +95,9 @@ plans = {
     'complex1': [
         ('GARAGE', 'CHAMBRE 2'),
         ('CELLIER', 'WC'),
-        ('BAINS', 'SEJOUR'),
+        ('BAINS', 'TERRASSE COUVERTE'),
         ('CHAMBRE 1', 'TERRASSE COUVERTE'),
-        ('CUISINE', 'REPAS')
+        ('CUISINE', 'CHAMBRE 1')
     ],
     'complex2': [
         ('GARAGE', 'BAINS'),
