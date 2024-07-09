@@ -215,25 +215,11 @@ def process_images_and_prompts():
 
             #Call VLM
             text_response = query_gpt4o_with_image_and_text(image_path, prompt)
-            #print(prompt, image_path, text_response)
 
-            #Write json plan output by VLM to json file
-            # Find the start and end of the JSON snippet
-            json_start = text_response.find('{')
-            json_end = text_response.rfind('}') + 1
-
-            # Extract the JSON snippet
-            json_snippet = text_response[json_start:json_end]
-            print(text_response)
-            print(json_snippet)
-
-            # Load the JSON to validate it (optional but recommended)
-            json_data = json.loads(json_snippet)
-
-            # Write the JSON snippet to a new file
-            filename = 'output/yellow_labelled/' + key + '_' + start + '_' + end + '.json'
+            # Write the text response to a new file
+            filename = 'output/yellow_labelled/' + key + '_' + start + '_' + end + '.txt'
             with open(filename, 'w') as file:
-                json.dump(json_data, file, indent=4)
+                file.write(text_response)
 
             print("Done with plan:", plan)
         print("Done with", image_file)
