@@ -1,0 +1,39 @@
+Here is the detailed navigation plan from BAINS to PORCHE:
+
+### Rooms and Doors:
+- **Rooms:**
+  - BAINS
+  - WC
+  - CHAMBRE 3
+  - CHAMBRE 2
+  - CHAMBRE 1
+  - HALL
+  - CELLIER
+  - GARAGE
+  - PORCHE
+
+- **Doors:**
+  - D1: GARAGE <-> CELLIER
+  - D2: CHAMBRE 1 <-> HALL
+  - D3: WC <-> HALL
+  - D4: BAINS <-> HALL
+  - D5: CHAMBRE 3 <-> HALL
+  - D6: CHAMBRE 2 <-> HALL
+  - D7: CELLIER <-> HALL
+  - D8: HALL <-> PORCHE
+
+### Navigation Plan:
+```json
+[
+  {"action": "ApproachDoor", "door": "D4"},
+  {"action": "OpenDoor", "door": "D4"},
+  {"action": "GoThrough", "door": "D4"},
+  {"action": "GoTo", "location": "HALL"},
+  {"action": "ApproachDoor", "door": "D8"},
+  {"action": "OpenDoor", "door": "D8"},
+  {"action": "GoThrough", "door": "D8"},
+  {"action": "GoTo", "location": "PORCHE"}
+]
+```
+
+This plan ensures that you move from BAINS to PORCHE efficiently, using only the necessary doors and avoiding any unnecessary rooms or doors.

@@ -1,0 +1,46 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. BAINS
+2. WC
+3. CHAMBRE 3
+4. CHAMBRE 2
+5. CHAMBRE 1
+6. HALL
+7. CELLIER
+8. GARAGE
+9. PORCHE
+
+**Doors:**
+1. D1: Connects GARAGE and CELLIER
+2. D2: Connects CHAMBRE 1 and HALL
+3. D3: Connects WC and HALL
+4. D4: Connects BAINS and HALL
+5. D5: Connects CHAMBRE 3 and HALL
+6. D6: Connects CHAMBRE 2 and HALL
+7. D7: Connects CELLIER and HALL
+8. D8: Connects HALL and PORCHE
+
+### Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(D4)",
+    "OpenDoor(D4)",
+    "GoThrough(D4)",
+    "ApproachDoor(D8)",
+    "OpenDoor(D8)",
+    "GoThrough(D8)"
+  ]
+}
+```
+
+### Explanation
+
+1. **ApproachDoor(D4)**: Move in front of door D4, which connects BAINS to HALL.
+2. **OpenDoor(D4)**: Open door D4.
+3. **GoThrough(D4)**: Move through door D4 to enter the HALL.
+4. **ApproachDoor(D8)**: Move in front of door D8, which connects HALL to PORCHE.
+5. **OpenDoor(D8)**: Open door D8.
+6. **GoThrough(D8)**: Move through door D8 to arrive at the PORCHE.

@@ -1,0 +1,28 @@
+Here is the detailed list of rooms and doors with their connections:
+
+**Rooms:**
+1. TERRASSE COUVERTE
+2. CUISINE (three sections labeled as CUISINE)
+3. CELLIER
+4. CH. PARENTS
+5. DOUCHE
+
+**Doors:**
+1. D1: Connects TERRASSE COUVERTE to CUISINE
+2. D2: Connects CELLIER to CUISINE
+3. D3: Connects CH. PARENTS to CUISINE
+4. D4: Connects DOUCHE to CUISINE
+
+**Navigation Plan:**
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)"
+  ]
+}
+```
+
+This plan ensures that you move from the TERRASSE COUVERTE to the CUISINE by using the necessary door D1.

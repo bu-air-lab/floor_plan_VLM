@@ -1,0 +1,41 @@
+Here is the detailed list of rooms and doors with their connections:
+
+**Rooms:**
+1. CELLIER
+2. HALL
+3. BAIN
+4. WC
+5. CHAMBRE 1
+6. CHAMBRE 2
+7. CUISINE
+8. PORCHE
+9. GARAGE
+10. TERRASSE COUVERTE
+
+**Doors:**
+1. D1: Connects CELLIER to HALL
+2. D2: Connects HALL to BAIN
+3. D3: Connects HALL to WC
+4. D4: Connects HALL to CHAMBRE 1
+5. D5: Connects HALL to CHAMBRE 2
+6. D6: Connects HALL to PORCHE
+7. D7: Connects HALL to CUISINE
+8. D8: Connects CUISINE to TERRASSE COUVERTE
+9. D9: Connects HALL to GARAGE
+
+**Navigation Plan:**
+
+Starting in the CELLIER and arriving at the WC, the sequence of actions is as follows:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"}
+]
+```
+
+This plan ensures that you move from the CELLIER to the WC by passing through the necessary doors in the correct sequence.

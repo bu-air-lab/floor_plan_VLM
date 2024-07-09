@@ -1,0 +1,28 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. TERRASSE COUVERTE
+2. CUISINE (multiple sections)
+3. CELLIER
+4. CH. PARENTS
+5. DOUCHE
+
+**Doors:**
+1. D1: Connects TERRASSE COUVERTE to CUISINE
+2. D2: Connects CUISINE to CELLIER
+3. D3: Connects CUISINE to CH. PARENTS
+4. D4: Connects CH. PARENTS to DOUCHE
+
+### Navigation Plan
+
+To navigate from TERRASSE COUVERTE to CUISINE, you need to follow these steps:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"}
+]
+```
+
+This plan ensures that you move from the TERRASSE COUVERTE to the CUISINE by using the only necessary door, D1.

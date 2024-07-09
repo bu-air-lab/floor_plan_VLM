@@ -1,0 +1,30 @@
+Here is the detailed navigation plan for you to move from the PORCHE to the CUISINE:
+
+### Rooms and Doors:
+- **PORCHE**: Connected to HALL via D5
+- **HALL**: Connected to PORCHE via D5, CHAMBRE 2 via D2, BATHROOM via D3, WC via D4, CHAMBRE 1 via D6, CUISINE via D7, and TERRASSE COUVERTE via D8
+- **CUISINE**: Connected to HALL via D7 and TERRASSE COUVERTE via D8
+
+### Navigation Plan:
+1. **ApproachDoor(D5)**: Move in front of door D5.
+2. **OpenDoor(D5)**: Open door D5.
+3. **GoThrough(D5)**: Move through door D5 to enter the HALL.
+4. **ApproachDoor(D7)**: Move in front of door D7.
+5. **OpenDoor(D7)**: Open door D7.
+6. **GoThrough(D7)**: Move through door D7 to enter the CUISINE.
+
+### Final Path in JSON Format:
+```json
+{
+  "path": [
+    "ApproachDoor(D5)",
+    "OpenDoor(D5)",
+    "GoThrough(D5)",
+    "ApproachDoor(D7)",
+    "OpenDoor(D7)",
+    "GoThrough(D7)"
+  ]
+}
+```
+
+This plan ensures you navigate efficiently from the PORCHE to the CUISINE, using only the necessary doors.

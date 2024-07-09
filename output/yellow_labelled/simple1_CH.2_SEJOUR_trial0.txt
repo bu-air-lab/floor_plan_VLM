@@ -1,0 +1,34 @@
+Here is the detailed list of rooms and doors with their connections:
+
+Rooms:
+- CH.1
+- CH.2
+- CH.3
+- SEJOUR
+- CUISINE
+
+Doors:
+- D1: Connects CH.3 and SEJOUR
+- D2: Connects CH.2 and SEJOUR
+- D3: Connects CH.2 and SEJOUR
+- D4: Connects CH.1 and SEJOUR
+- D5: Connects CUISINE and SEJOUR
+- D6: Connects CUISINE and SEJOUR
+
+To navigate from CH.2 to SEJOUR, you need to use the following doors:
+
+1. D3: Connects CH.2 and SEJOUR
+
+Here is the navigation plan in JSON format:
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"}
+  ]
+}
+```
+
+This plan ensures that you move from CH.2 to SEJOUR efficiently by using the necessary door D3.

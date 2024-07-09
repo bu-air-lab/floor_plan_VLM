@@ -1,0 +1,36 @@
+Here is the detailed list of rooms and doors with their connections:
+
+**Rooms:**
+1. SEJOUR
+2. CELLER
+3. CUISINE
+4. WC
+5. BAINS
+6. DEGT
+7. CH.1
+8. CH.2
+
+**Doors:**
+1. D1: SEJOUR - CELLER
+2. D2: CELLER - CUISINE
+3. D3: CUISINE - DEGT
+4. D4: SEJOUR - DEGT
+5. D5: DEGT - CH.1
+6. D6: DEGT - CH.2
+7. D7: DEGT - BAINS
+8. D8: DEGT - WC
+
+**Navigation Plan:**
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"}
+]
+```
+
+This plan ensures that you move from SEJOUR to CH.1 by passing through the necessary doors D4 and D5.

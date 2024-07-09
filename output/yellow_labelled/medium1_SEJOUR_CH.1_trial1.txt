@@ -1,0 +1,47 @@
+### Room and Door Descriptions
+
+**Rooms:**
+- SEJOUR
+- CUISINE
+- CELLER
+- WC
+- BAIN
+- DEGT
+- CH.1
+- CH.2
+
+**Doors:**
+- D1: SEJOUR <-> CELLER
+- D2: CELLER <-> CUISINE
+- D3: CUISINE <-> SEJOUR
+- D4: SEJOUR <-> DEGT
+- D5: DEGT <-> CH.1
+- D6: DEGT <-> CH.2
+- D7: DEGT <-> BAIN
+- D8: DEGT <-> WC
+
+### Navigation Plan
+
+To navigate from SEJOUR to CH.1, the following sequence of actions is required:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"}
+]
+```
+
+### Explanation
+
+1. **ApproachDoor(D4)**: Move in front of door D4, which connects SEJOUR to DEGT.
+2. **OpenDoor(D4)**: Open door D4.
+3. **GoThrough(D4)**: Move through door D4 to enter DEGT.
+4. **ApproachDoor(D5)**: Move in front of door D5, which connects DEGT to CH.1.
+5. **OpenDoor(D5)**: Open door D5.
+6. **GoThrough(D5)**: Move through door D5 to enter CH.1.
+
+This plan ensures that you navigate efficiently from SEJOUR to CH.1 by using the necessary doors only.

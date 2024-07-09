@@ -1,0 +1,64 @@
+Here is the detailed navigation plan for moving from the GARAGE to CHAMBRE ENFANT 1:
+
+### Room and Door Descriptions:
+- **Rooms:**
+  - GARAGE
+  - PORCHE
+  - CELLIER
+  - HALL
+  - LINGERIE
+  - BUREAU
+  - WC
+  - BAINS
+  - CHAMBRE PARENTS
+  - CHAMBRE ENFANT 1
+  - CHAMBRE ENFANT 2
+
+- **Doors:**
+  - D1: GARAGE to CELLIER
+  - D2: PORCHE to CELLIER
+  - D3: PORCHE to HALL
+  - D4: WC to HALL
+  - D5: LINGERIE to HALL
+  - D6: BUREAU to HALL
+  - D7: BAINS to HALL
+  - D8: CHAMBRE PARENTS to HALL
+  - D9: HALL to CHAMBRE ENFANT 2
+  - D10: HALL to CHAMBRE ENFANT 1
+  - D11: CELLIER to HALL
+
+### Navigation Plan:
+```json
+{
+  "actions": [
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)",
+    "GoTo(D11)",
+    "ApproachDoor(D11)",
+    "OpenDoor(D11)",
+    "GoThrough(D11)",
+    "GoTo(D10)",
+    "ApproachDoor(D10)",
+    "OpenDoor(D10)",
+    "GoThrough(D10)",
+    "GoTo(CHAMBRE ENFANT 1)"
+  ]
+}
+```
+
+### Explanation:
+1. **ApproachDoor(D1):** Move in front of door D1.
+2. **OpenDoor(D1):** Open door D1.
+3. **GoThrough(D1):** Move through door D1 to enter the CELLIER.
+4. **GoTo(D11):** Move to door D11 within the CELLIER.
+5. **ApproachDoor(D11):** Move in front of door D11.
+6. **OpenDoor(D11):** Open door D11.
+7. **GoThrough(D11):** Move through door D11 to enter the HALL.
+8. **GoTo(D10):** Move to door D10 within the HALL.
+9. **ApproachDoor(D10):** Move in front of door D10.
+10. **OpenDoor(D10):** Open door D10.
+11. **GoThrough(D10):** Move through door D10 to enter CHAMBRE ENFANT 1.
+12. **GoTo(CHAMBRE ENFANT 1):** Move to the specified location within CHAMBRE ENFANT 1.
+
+This plan ensures that you navigate efficiently from the GARAGE to CHAMBRE ENFANT 1, passing through only the necessary doors and rooms.

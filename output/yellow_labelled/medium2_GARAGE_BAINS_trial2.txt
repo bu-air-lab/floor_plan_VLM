@@ -1,0 +1,40 @@
+Here is the detailed list of rooms and doors with their connections:
+
+**Rooms:**
+1. GARAGE
+2. CHAMBRE 1
+3. CELLIER
+4. HALL
+5. BAINS
+6. WC
+7. CHAMBRE 2
+8. CHAMBRE 3
+9. PORCHE
+
+**Doors:**
+1. D1: Connects GARAGE and CELLIER
+2. D2: Connects CHAMBRE 1 and HALL
+3. D3: Connects HALL and WC
+4. D4: Connects HALL and BAINS
+5. D5: Connects HALL and CHAMBRE 3
+6. D6: Connects HALL and CHAMBRE 2
+7. D7: Connects CELLIER and HALL
+8. D8: Connects HALL and PORCHE
+
+**Navigation Plan:**
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"}
+]
+```
+
+This plan ensures that you start in the GARAGE and arrive at the BAINS, passing through only the necessary doors.

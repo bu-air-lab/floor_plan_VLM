@@ -1,0 +1,43 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. DOUCHE
+2. CH. PARENTS
+3. CUISINE
+4. CELLIER
+5. TERRASSE COUVERTE
+
+**Doors:**
+1. D1: Connects TERRASSE COUVERTE and CUISINE
+2. D2: Connects CUISINE and CELLIER
+3. D3: Connects CH. PARENTS and CUISINE
+4. D4: Connects DOUCHE and CUISINE
+
+### Navigation Plan
+
+Starting in the DOUCHE, the goal is to reach the CELLIER. The path involves moving through the CUISINE.
+
+**Steps:**
+1. ApproachDoor(D4)
+2. OpenDoor(D4)
+3. GoThrough(D4) (Now in CUISINE)
+4. ApproachDoor(D2)
+5. OpenDoor(D2)
+6. GoThrough(D2) (Now in CELLIER)
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+  ]
+}
+```
+
+This plan ensures that you navigate efficiently from the DOUCHE to the CELLIER, passing through the necessary doors and rooms.

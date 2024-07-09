@@ -1,0 +1,41 @@
+### Room and Door Descriptions:
+
+- **Rooms:**
+  - CH.1
+  - CH.2
+  - CH.3
+  - SEJOUR
+  - CUISINE
+
+- **Doors:**
+  - D1: Connects CH.3 and SEJOUR
+  - D2: Connects CH.3 and CH.2
+  - D3: Connects CH.2 and SEJOUR
+  - D4: Connects CH.1 and SEJOUR
+  - D5: Connects SEJOUR and CUISINE
+  - D6: Connects SEJOUR and CUISINE
+
+### Navigation Plan:
+
+1. **Start in CH.1**
+2. **ApproachDoor(D4)**
+3. **OpenDoor(D4)**
+4. **GoThrough(D4) to SEJOUR**
+5. **ApproachDoor(D3)**
+6. **OpenDoor(D3)**
+7. **GoThrough(D3) to CH.2**
+
+### Final Path in JSON Format:
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(D4)",
+    "OpenDoor(D4)",
+    "GoThrough(D4)",
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)",
+    "GoThrough(D3)"
+  ]
+}
+```

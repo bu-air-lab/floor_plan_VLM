@@ -1,0 +1,48 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. GARAGES
+2. CELLIER
+3. CUISINE (two separate areas)
+4. WC
+5. HALL (multiple areas)
+6. DOUCHE
+7. CHAMBRE 1
+
+**Doors:**
+1. D1: Connects GARAGES to HALL
+2. D2: Connects HALL to DOUCHE
+3. D3: Connects HALL to CELLIER
+4. D4: Connects HALL to WC
+5. D5: Connects HALL to CHAMBRE 1
+6. D6: Connects HALL to CUISINE (left)
+7. D7: Connects HALL to CUISINE (right)
+
+### Navigation Plan
+
+Starting in the GARAGES, the goal is to reach the CELLIER. The most efficient path involves the following sequence of actions:
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)",
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)",
+    "GoThrough(D3)",
+    "GoTo(CELLIER)"
+  ]
+}
+```
+
+### Explanation:
+1. **ApproachDoor(D1)**: Move in front of door D1.
+2. **OpenDoor(D1)**: Open door D1.
+3. **GoThrough(D1)**: Move through door D1 to the HALL.
+4. **ApproachDoor(D3)**: Move in front of door D3.
+5. **OpenDoor(D3)**: Open door D3.
+6. **GoThrough(D3)**: Move through door D3 to the CELLIER.
+7. **GoTo(CELLIER)**: Move to the CELLIER.
+
+This plan ensures that you navigate from the GARAGES to the CELLIER efficiently, using only the necessary doors.

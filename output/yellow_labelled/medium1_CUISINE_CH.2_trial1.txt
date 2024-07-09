@@ -1,0 +1,53 @@
+Here is the detailed list of rooms and doors with their connections:
+
+**Rooms:**
+1. CUISINE
+2. SEJOUR
+3. CELLER
+4. DEGT
+5. CH.1
+6. CH.2
+7. WC
+8. BAINS
+
+**Doors:**
+1. D1: SEJOUR <-> Porche
+2. D2: CUISINE <-> CELLER
+3. D3: CUISINE <-> SEJOUR
+4. D4: SEJOUR <-> DEGT
+5. D5: DEGT <-> CH.1
+6. D6: DEGT <-> CH.2
+7. D7: DEGT <-> BAINS
+8. D8: DEGT <-> WC
+
+**Navigation Plan:**
+
+Starting in the CUISINE and arriving at CH.2:
+
+1. ApproachDoor(D3)
+2. OpenDoor(D3)
+3. GoThrough(D3) to SEJOUR
+4. ApproachDoor(D4)
+5. OpenDoor(D4)
+6. GoThrough(D4) to DEGT
+7. ApproachDoor(D6)
+8. OpenDoor(D6)
+9. GoThrough(D6) to CH.2
+
+Here is the final path in JSON format:
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"}
+  ]
+}
+```

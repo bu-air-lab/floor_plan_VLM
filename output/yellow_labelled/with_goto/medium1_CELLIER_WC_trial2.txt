@@ -1,0 +1,66 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. CELLIER
+2. CUISINE
+3. SEJOUR
+4. DEGT
+5. WC
+6. BAINS
+7. CH.1
+8. CH.2
+
+**Doors:**
+1. D1: SEJOUR <-> Porche
+2. D2: CELLIER <-> CUISINE
+3. D3: CUISINE <-> SEJOUR
+4. D4: SEJOUR <-> DEGT
+5. D5: DEGT <-> CH.1
+6. D6: DEGT <-> CH.2
+7. D7: DEGT <-> BAINS
+8. D8: DEGT <-> WC
+
+### Navigation Plan
+
+```json
+{
+  "plan": [
+    "ApproachDoor(D2)",
+    "OpenDoor(D2)",
+    "GoThrough(D2)",
+    "GoTo(CUISINE)",
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)",
+    "GoThrough(D3)",
+    "GoTo(SEJOUR)",
+    "ApproachDoor(D4)",
+    "OpenDoor(D4)",
+    "GoThrough(D4)",
+    "GoTo(DEGT)",
+    "ApproachDoor(D8)",
+    "OpenDoor(D8)",
+    "GoThrough(D8)",
+    "GoTo(WC)"
+  ]
+}
+```
+
+### Explanation
+1. **ApproachDoor(D2)**: Move in front of door D2 from CELLIER.
+2. **OpenDoor(D2)**: Open door D2.
+3. **GoThrough(D2)**: Move through door D2 to CUISINE.
+4. **GoTo(CUISINE)**: Move to CUISINE.
+5. **ApproachDoor(D3)**: Move in front of door D3 in CUISINE.
+6. **OpenDoor(D3)**: Open door D3.
+7. **GoThrough(D3)**: Move through door D3 to SEJOUR.
+8. **GoTo(SEJOUR)**: Move to SEJOUR.
+9. **ApproachDoor(D4)**: Move in front of door D4 in SEJOUR.
+10. **OpenDoor(D4)**: Open door D4.
+11. **GoThrough(D4)**: Move through door D4 to DEGT.
+12. **GoTo(DEGT)**: Move to DEGT.
+13. **ApproachDoor(D8)**: Move in front of door D8 in DEGT.
+14. **OpenDoor(D8)**: Open door D8.
+15. **GoThrough(D8)**: Move through door D8 to WC.
+16. **GoTo(WC)**: Move to WC.
+
+This plan ensures that you navigate from CELLIER to WC efficiently, using the necessary doors and avoiding any unnecessary rooms or doors.

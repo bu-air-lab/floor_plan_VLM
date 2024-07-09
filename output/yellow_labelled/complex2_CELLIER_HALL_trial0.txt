@@ -1,0 +1,46 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. CELLIER
+2. GARAGE
+3. CHAMBRE 2
+4. HALL
+5. BAIN
+6. WC
+7. CHAMBRE 1
+8. PORCHE
+9. CUISINE
+10. TERRASSE COUVERTE
+
+**Doors:**
+1. D1: CELLIER <-> HALL
+2. D2: CHAMBRE 2 <-> HALL
+3. D3: BAIN <-> HALL
+4. D4: WC <-> HALL
+5. D5: PORCHE <-> HALL
+6. D6: CHAMBRE 1 <-> HALL
+7. D7: CUISINE <-> HALL
+8. D8: CUISINE <-> TERRASSE COUVERTE
+9. D9: GARAGE <-> CELLIER
+
+### Navigation Plan
+
+To navigate from the CELLIER to the HALL, the following sequence of actions is required:
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)"
+  ]
+}
+```
+
+### Explanation
+
+1. **ApproachDoor(D1)**: Move in front of door D1, which connects the CELLIER to the HALL.
+2. **OpenDoor(D1)**: Open door D1.
+3. **GoThrough(D1)**: Move through the open door D1 to enter the HALL.
+
+This plan ensures that you move directly from the CELLIER to the HALL without passing through any unnecessary doors or rooms.

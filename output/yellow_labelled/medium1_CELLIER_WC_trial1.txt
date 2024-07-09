@@ -1,0 +1,49 @@
+Here is the detailed list of rooms and doors with their connections:
+
+**Rooms:**
+1. CELLIER
+2. CUISINE
+3. SEJOUR
+4. DEGT
+5. CH.1
+6. CH.2
+7. WC
+8. BAINS
+
+**Doors:**
+1. D1: SEJOUR <-> Porche
+2. D2: CELLIER <-> CUISINE
+3. D3: CUISINE <-> SEJOUR
+4. D4: SEJOUR <-> DEGT
+5. D5: DEGT <-> CH.1
+6. D6: DEGT <-> CH.2
+7. D7: DEGT <-> BAINS
+8. D8: DEGT <-> WC
+
+**Navigation Plan:**
+
+```json
+{
+  "plan": [
+    "ApproachDoor(D2)",
+    "OpenDoor(D2)",
+    "GoThrough(D2)",
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)",
+    "GoThrough(D3)",
+    "ApproachDoor(D4)",
+    "OpenDoor(D4)",
+    "GoThrough(D4)",
+    "ApproachDoor(D8)",
+    "OpenDoor(D8)",
+    "GoThrough(D8)"
+  ]
+}
+```
+
+**Explanation:**
+1. Start in the CELLIER.
+2. Approach and open Door D2 to enter the CUISINE.
+3. Approach and open Door D3 to enter the SEJOUR.
+4. Approach and open Door D4 to enter the DEGT.
+5. Approach and open Door D8 to enter the WC.

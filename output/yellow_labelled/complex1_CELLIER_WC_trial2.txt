@@ -1,0 +1,27 @@
+Here is the detailed navigation plan for you to move from the CELLIER to the WC:
+
+### Rooms and Doors:
+- **CELLIER**: Connected to HALL via D1
+- **HALL**: Connected to CELLIER via D1, BAIN via D2, WC via D3, CHAMBRE 1 via D4, CHAMBRE 2 via D5, PORCHE via D6, CUISINE via D7
+- **BAINS**: Connected to HALL via D2
+- **WC**: Connected to HALL via D3
+- **CHAMBRE 1**: Connected to HALL via D4
+- **CHAMBRE 2**: Connected to HALL via D5
+- **PORCHE**: Connected to HALL via D6
+- **CUISINE**: Connected to HALL via D7, TERRASSE COUVERTE via D8
+- **GARAGE**: Connected to CELLIER via D9
+- **TERRASSE COUVERTE**: Connected to CUISINE via D8
+
+### Navigation Plan:
+```json
+[
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"}
+]
+```
+
+This plan ensures you move efficiently from the CELLIER to the WC by passing through the necessary doors.

@@ -1,0 +1,49 @@
+Here is the detailed navigation plan for moving from the WC to CHAMBRE 2:
+
+### Rooms and Doors:
+- **Rooms:**
+  - WC
+  - Bains
+  - Chambre 1
+  - Chambre 2
+  - Chambre 3
+  - Hall
+  - Cellier
+  - Garage
+  - Porche
+
+- **Doors:**
+  - D1: Connects Garage and Cellier
+  - D2: Connects Chambre 1 and Hall
+  - D3: Connects WC and Hall
+  - D4: Connects Bains and Hall
+  - D5: Connects Chambre 3 and Hall
+  - D6: Connects Chambre 2 and Hall
+  - D7: Connects Cellier and Hall
+  - D8: Connects Hall and Porche
+
+### Navigation Plan:
+1. **ApproachDoor(D3):** Move in front of door D3.
+2. **OpenDoor(D3):** Open door D3.
+3. **GoThrough(D3):** Move through door D3 to the Hall.
+4. **GoTo(D6):** Move to door D6.
+5. **ApproachDoor(D6):** Move in front of door D6.
+6. **OpenDoor(D6):** Open door D6.
+7. **GoThrough(D6):** Move through door D6 to CHAMBRE 2.
+
+### JSON Format:
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)",
+    "GoThrough(D3)",
+    "GoTo(D6)",
+    "ApproachDoor(D6)",
+    "OpenDoor(D6)",
+    "GoThrough(D6)"
+  ]
+}
+```
+
+This plan ensures that you move efficiently from the WC to CHAMBRE 2, using only the necessary doors and avoiding any unnecessary rooms or doors.

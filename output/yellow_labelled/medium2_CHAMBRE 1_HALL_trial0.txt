@@ -1,0 +1,35 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. CHAMBRE 1
+2. CHAMBRE 2
+3. CHAMBRE 3
+4. HALL
+5. WC
+6. BAIN
+7. GARAGE
+8. CELLIER
+
+**Doors:**
+1. D1: Connects GARAGE and CELLIER
+2. D2: Connects CHAMBRE 1 and HALL
+3. D3: Connects WC and HALL
+4. D4: Connects BAIN and HALL
+5. D5: Connects CHAMBRE 3 and HALL
+6. D6: Connects CHAMBRE 2 and HALL
+7. D7: Connects CELLIER and HALL
+8. D8: Connects HALL and PORCHE
+
+### Navigation Plan
+
+Starting in CHAMBRE 1 and arriving at the HALL:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+]
+```
+
+This plan ensures that you move from CHAMBRE 1 to the HALL by using the necessary door D2.

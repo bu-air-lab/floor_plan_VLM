@@ -1,0 +1,44 @@
+### Room and Door Descriptions:
+
+- **Rooms:**
+  - CH.1
+  - CH.2
+  - CH.3
+  - SEJOUR
+  - CUISINE
+
+- **Doors:**
+  - D1: Connects CH.3 and SEJOUR
+  - D2: Connects CH.2 and SEJOUR
+  - D3: Connects CH.2 and SEJOUR
+  - D4: Connects CH.1 and SEJOUR
+  - D5: Connects CUISINE and SEJOUR
+  - D6: Connects CUISINE and SEJOUR
+
+### Navigation Plan:
+
+1. **ApproachDoor(D1):** Move in front of door D1.
+2. **OpenDoor(D1):** Open door D1.
+3. **GoThrough(D1):** Move through open door D1 to SEJOUR.
+4. **GoTo(D4):** Move to door D4.
+5. **ApproachDoor(D4):** Move in front of door D4.
+6. **OpenDoor(D4):** Open door D4.
+7. **GoThrough(D4):** Move through open door D4 to CH.1.
+
+### Final Path in JSON Format:
+
+```json
+{
+  "path": [
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)",
+    "GoTo(D4)",
+    "ApproachDoor(D4)",
+    "OpenDoor(D4)",
+    "GoThrough(D4)"
+  ]
+}
+```
+
+This plan ensures that you move from CH.3 to CH.1 efficiently by passing through the necessary doors and avoiding any unnecessary rooms or doors.

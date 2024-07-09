@@ -1,0 +1,52 @@
+### Room and Door Descriptions:
+
+- **Rooms:**
+  - CHAMBRE 1
+  - CHAMBRE 2
+  - CUISINE
+  - CELLIER
+  - GARAGE
+  - BAIN
+  - WC
+  - PORCHE
+  - TERRASSE COUVERTE
+  - HALL
+
+- **Doors:**
+  - D1: CELLIER to HALL
+  - D2: CHAMBRE 2 to HALL
+  - D3: BAIN to HALL
+  - D4: WC to HALL
+  - D5: PORCHE to HALL
+  - D6: CHAMBRE 1 to HALL
+  - D7: CUISINE to HALL
+  - D8: CUISINE to TERRASSE COUVERTE
+  - D9: GARAGE to CELLIER
+
+### Navigation Plan:
+
+1. **ApproachDoor(D6):** Move in front of door D6.
+2. **OpenDoor(D6):** Open door D6.
+3. **GoThrough(D6):** Move through door D6 to the HALL.
+4. **ApproachDoor(D7):** Move in front of door D7.
+5. **OpenDoor(D7):** Open door D7.
+6. **GoThrough(D7):** Move through door D7 to the CUISINE.
+7. **ApproachDoor(D8):** Move in front of door D8.
+8. **OpenDoor(D8):** Open door D8.
+9. **GoThrough(D8):** Move through door D8 to the TERRASSE COUVERTE.
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(D6)",
+    "OpenDoor(D6)",
+    "GoThrough(D6)",
+    "ApproachDoor(D7)",
+    "OpenDoor(D7)",
+    "GoThrough(D7)",
+    "ApproachDoor(D8)",
+    "OpenDoor(D8)",
+    "GoThrough(D8)"
+  ]
+}
+```

@@ -1,0 +1,49 @@
+### Room and Door Descriptions
+
+**Rooms:**
+- WC
+- BAINS
+- DEGT
+- SEJOUR
+- CUISINE
+- CELLIER
+- CH.1
+- CH.2
+
+**Doors:**
+- D1: SEJOUR <-> Porche
+- D2: CUISINE <-> CELLIER
+- D3: CUISINE <-> SEJOUR
+- D4: SEJOUR <-> DEGT
+- D5: DEGT <-> CH.1
+- D6: DEGT <-> CH.2
+- D7: BAINS <-> DEGT
+- D8: WC <-> DEGT
+
+### Navigation Plan
+
+```json
+{
+  "plan": [
+    "ApproachDoor(D8)",
+    "OpenDoor(D8)",
+    "GoThrough(D8)",
+    "ApproachDoor(D7)",
+    "OpenDoor(D7)",
+    "GoThrough(D7)",
+    "GoTo(BAINS)"
+  ]
+}
+```
+
+### Explanation
+
+1. **ApproachDoor(D8)**: Move in front of door D8, which connects WC to DEGT.
+2. **OpenDoor(D8)**: Open door D8.
+3. **GoThrough(D8)**: Move through door D8 to DEGT.
+4. **ApproachDoor(D7)**: Move in front of door D7, which connects DEGT to BAINS.
+5. **OpenDoor(D7)**: Open door D7.
+6. **GoThrough(D7)**: Move through door D7 to BAINS.
+7. **GoTo(BAINS)**: Move to the BAINS room.
+
+This plan ensures that you navigate efficiently from WC to BAINS by passing through the necessary doors D8 and D7.
