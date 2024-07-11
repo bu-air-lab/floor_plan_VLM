@@ -1,6 +1,6 @@
 ## TODO
-	- log all results
-	- make figure
+	- make figure	
+	- Fix medium 3
 	- start paper (correct template, references)
 	- plan demo
 	- Evaluate based on planners understanding of door connections
