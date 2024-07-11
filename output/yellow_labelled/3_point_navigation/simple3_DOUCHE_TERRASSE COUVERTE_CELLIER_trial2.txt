@@ -1,0 +1,52 @@
+Here is the detailed navigation plan based on the provided floor plan:
+
+### Room and Door Descriptions:
+- **Rooms:**
+  - DOUCHE
+  - TERRASSE COUVERTE
+  - CELLIER
+  - CUISINE
+  - CH. PARENTS
+
+- **Doors:**
+  - **D1:** Connects TERRASSE COUVERTE and CUISINE
+  - **D2:** Connects CUISINE and CELLIER
+  - **D3:** Connects CH. PARENTS and CUISINE
+  - **D4:** Connects DOUCHE and CUISINE
+
+### Navigation Plan:
+1. **Start in DOUCHE**
+2. ApproachDoor(D4)
+3. OpenDoor(D4)
+4. GoThrough(D4) to enter CUISINE
+5. ApproachDoor(D1)
+6. OpenDoor(D1)
+7. GoThrough(D1) to enter TERRASSE COUVERTE
+8. ApproachDoor(D1)
+9. OpenDoor(D1)
+10. GoThrough(D1) to enter CUISINE
+11. ApproachDoor(D2)
+12. OpenDoor(D2)
+13. GoThrough(D2) to enter CELLIER
+
+### Final Path in JSON Format:
+```json
+{
+  "path": [
+    "ApproachDoor(D4)",
+    "OpenDoor(D4)",
+    "GoThrough(D4)",
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)",
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)",
+    "ApproachDoor(D2)",
+    "OpenDoor(D2)",
+    "GoThrough(D2)"
+  ]
+}
+```
+
+This plan ensures that you navigate from DOUCHE to TERRASSE COUVERTE and finally to CELLIER, following the sequence of actions and using the necessary doors.

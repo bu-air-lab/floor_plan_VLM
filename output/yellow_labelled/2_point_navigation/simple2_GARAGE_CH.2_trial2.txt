@@ -1,0 +1,50 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. GARAGE
+2. BATHROOM (BAINS)
+3. CH.1
+4. CH.2
+5. HALL
+6. CUISINE
+
+**Doors:**
+1. D1: Connects BATHROOM (BAINS) and HALL
+2. D2: Connects CH.1 and HALL
+3. D3: Connects CH.2 and HALL
+4. D4: Connects GARAGE and CUISINE
+5. D5: Connects CUISINE and HALL
+
+### Navigation Plan
+
+To navigate from the GARAGE to CH.2, follow these steps:
+
+1. **ApproachDoor(D4):** Move in front of door D4.
+2. **OpenDoor(D4):** Open door D4.
+3. **GoThrough(D4):** Move through open door D4 to the CUISINE.
+4. **ApproachDoor(D5):** Move in front of door D5.
+5. **OpenDoor(D5):** Open door D5.
+6. **GoThrough(D5):** Move through open door D5 to the HALL.
+7. **ApproachDoor(D3):** Move in front of door D3.
+8. **OpenDoor(D3):** Open door D3.
+9. **GoThrough(D3):** Move through open door D3 to CH.2.
+
+### Final Path in JSON Format
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"}
+  ]
+}
+```
+
+This plan ensures that you move efficiently from the GARAGE to CH.2 by passing through the necessary doors without any unnecessary detours.

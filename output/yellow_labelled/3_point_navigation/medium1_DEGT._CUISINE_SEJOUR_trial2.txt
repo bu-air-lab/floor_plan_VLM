@@ -1,0 +1,62 @@
+### Room and Door Descriptions
+
+**Rooms:**
+- DEGT.
+- CUISINE
+- SEJOUR
+- CH.1
+- CH.2
+- WC
+- BAINS
+- CELLIER
+
+**Doors:**
+- D1: Connects SEJOUR and Porche
+- D2: Connects CUISINE and CELLIER
+- D3: Connects CUISINE and CH.2
+- D4: Connects SEJOUR and DEGT.
+- D5: Connects DEGT. and CH.1
+- D6: Connects DEGT. and CH.2
+- D7: Connects BAINS and CH.2
+- D8: Connects WC and DEGT.
+
+### Navigation Plan
+
+1. **Start in DEGT.**
+2. **Move to CUISINE:**
+   - ApproachDoor(D4)
+   - OpenDoor(D4)
+   - GoThrough(D4) to SEJOUR
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1) to Porche
+   - ApproachDoor(D2)
+   - OpenDoor(D2)
+   - GoThrough(D2) to CUISINE
+3. **Move to SEJOUR:**
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3) to SEJOUR
+
+### Final Path in JSON Format
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"}
+  ]
+}
+```
+
+This plan ensures that you move from DEGT. to CUISINE and then to SEJOUR, following the necessary sequence of actions to navigate through the doors.

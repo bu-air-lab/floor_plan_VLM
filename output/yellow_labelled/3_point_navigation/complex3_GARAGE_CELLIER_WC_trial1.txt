@@ -1,0 +1,61 @@
+Here is the detailed navigation plan for you to move from the GARAGE to the CELLIER and then to the WC:
+
+### Room and Door Descriptions:
+- **Rooms:**
+  - GARAGE
+  - CELLIER
+  - WC
+  - PORCHE
+  - HALL
+  - LINGERIE
+  - BUREAU
+  - BAINS
+  - CHAMBRE PARENTS
+  - CHAMBRE ENFANT 1
+  - CHAMBRE ENFANT 2
+
+- **Doors:**
+  - D1: Connects GARAGE and CELLIER
+  - D2: Connects CELLIER and PORCHE
+  - D3: Connects PORCHE and HALL
+  - D4: Connects HALL and WC
+  - D5: Connects HALL and LINGERIE
+  - D6: Connects HALL and BUREAU
+  - D7: Connects HALL and BAINS
+  - D8: Connects HALL and CHAMBRE PARENTS
+  - D9: Connects HALL and CHAMBRE ENFANT 2
+  - D10: Connects HALL and CHAMBRE ENFANT 1
+  - D11: Connects CELLIER and HALL
+
+### Navigation Plan:
+```json
+[
+  {"action": "ApproachDoor", "door": "D1"},
+  {"action": "OpenDoor", "door": "D1"},
+  {"action": "GoThrough", "door": "D1"},
+  {"action": "ApproachDoor", "door": "D11"},
+  {"action": "OpenDoor", "door": "D11"},
+  {"action": "GoThrough", "door": "D11"},
+  {"action": "ApproachDoor", "door": "D4"},
+  {"action": "OpenDoor", "door": "D4"},
+  {"action": "GoThrough", "door": "D4"}
+]
+```
+
+### Explanation:
+1. **From GARAGE to CELLIER:**
+   - Approach door D1.
+   - Open door D1.
+   - Go through door D1 to enter CELLIER.
+
+2. **From CELLIER to HALL:**
+   - Approach door D11.
+   - Open door D11.
+   - Go through door D11 to enter HALL.
+
+3. **From HALL to WC:**
+   - Approach door D4.
+   - Open door D4.
+   - Go through door D4 to enter WC.
+
+This plan ensures you move efficiently from the GARAGE to the CELLIER and then to the WC, using only the necessary doors.

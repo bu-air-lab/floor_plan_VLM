@@ -1,0 +1,62 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. CHAMBRE ENFANT 1
+2. CHAMBRE ENFANT 2
+3. CHAMBRE PARENTS
+4. BAINS
+5. BUREAU
+6. LINGERIE
+7. WC
+8. CELLIER
+9. PORCHE
+10. HALL
+11. GARAGE
+
+**Doors:**
+1. D1: GARAGE <-> CELLIER
+2. D2: PORCHE <-> CELLIER
+3. D3: CELLIER <-> HALL
+4. D4: WC <-> HALL
+5. D5: LINGERIE <-> HALL
+6. D6: BUREAU <-> HALL
+7. D7: BAINS <-> HALL
+8. D8: CHAMBRE PARENTS <-> HALL
+9. D9: CHAMBRE ENFANT 2 <-> HALL
+10. D10: CHAMBRE ENFANT 1 <-> HALL
+11. D11: CELLIER <-> HALL
+
+### Navigation Plan
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"}
+]
+```
+
+### Detailed Steps
+
+1. **From CHAMBRE ENFANT 1:**
+   - ApproachDoor(D10)
+   - OpenDoor(D10)
+   - GoThrough(D10) to enter the HALL
+
+2. **From HALL:**
+   - ApproachDoor(D7)
+   - OpenDoor(D7)
+   - GoThrough(D7) to enter BAINS
+
+3. **From BAINS:**
+   - ApproachDoor(D8)
+   - OpenDoor(D8)
+   - GoThrough(D8) to enter CHAMBRE PARENTS
+
+This plan ensures that you move efficiently from CHAMBRE ENFANT 1 to BAINS and finally to CHAMBRE PARENTS, using only the necessary doors.

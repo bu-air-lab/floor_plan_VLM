@@ -1,0 +1,39 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. CH. PARENTS
+2. CUISINE
+3. DOUCHE
+4. TERRASSE COUVERTE
+5. CELLIER
+
+**Doors:**
+1. D1: Connects TERRASSE COUVERTE and CUISINE
+2. D2: Connects CELLIER and CUISINE
+3. D3: Connects CH. PARENTS and CUISINE
+4. D4: Connects CUISINE and DOUCHE
+
+### Navigation Plan
+
+Starting in CH. PARENTS, the sequence of actions to reach CUISINE and then DOUCHE is as follows:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"}
+]
+```
+
+### Explanation:
+1. **ApproachDoor(D3):** Move in front of door D3.
+2. **OpenDoor(D3):** Open door D3.
+3. **GoThrough(D3):** Move through door D3 to enter CUISINE.
+4. **ApproachDoor(D4):** Move in front of door D4.
+5. **OpenDoor(D4):** Open door D4.
+6. **GoThrough(D4):** Move through door D4 to enter DOUCHE.
+
+This plan ensures that you move efficiently from CH. PARENTS to CUISINE and then to DOUCHE, using only the necessary doors.

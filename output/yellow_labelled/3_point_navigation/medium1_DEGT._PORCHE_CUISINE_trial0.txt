@@ -1,0 +1,66 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. DEGT.
+2. SEJOUR
+3. PORCHE
+4. CUISINE
+5. CELLER
+6. CH.1
+7. CH.2
+8. WC
+9. BAINS
+
+**Doors:**
+1. D1: SEJOUR <-> PORCHE
+2. D2: CUISINE <-> CELLER
+3. D3: CUISINE <-> SEJOUR
+4. D4: SEJOUR <-> DEGT.
+5. D5: DEGT. <-> CH.1
+6. D6: DEGT. <-> CH.2
+7. D7: BAINS <-> CH.2
+8. D8: WC <-> DEGT.
+
+### Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"}
+  ]
+}
+```
+
+### Explanation
+1. **From DEGT. to SEJOUR:**
+   - ApproachDoor(D4)
+   - OpenDoor(D4)
+   - GoThrough(D4)
+
+2. **From SEJOUR to PORCHE:**
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1)
+
+3. **From PORCHE to SEJOUR:**
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1)
+
+4. **From SEJOUR to CUISINE:**
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3)
+
+This plan ensures that you move efficiently from DEGT. to PORCHE and then to CUISINE, using the necessary doors in the correct sequence.

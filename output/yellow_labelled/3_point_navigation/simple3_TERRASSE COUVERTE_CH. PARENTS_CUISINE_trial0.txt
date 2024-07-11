@@ -1,0 +1,48 @@
+Here is the detailed navigation plan based on the provided floor plan:
+
+### Rooms and Doors:
+- **Rooms:**
+  - TERRASSE COUVERTE
+  - CUISINE
+  - CH. PARENTS
+  - CELLIER
+  - DOUCHE
+
+- **Doors:**
+  - D1: Connects TERRASSE COUVERTE and CUISINE
+  - D2: Connects CUISINE and CELLIER
+  - D3: Connects CUISINE and CH. PARENTS
+  - D4: Connects CH. PARENTS and DOUCHE
+
+### Navigation Plan:
+1. **Start in TERRASSE COUVERTE**
+2. **Move to CH. PARENTS:**
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1)
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3)
+3. **Move to CUISINE:**
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3)
+
+### JSON Format:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"}
+  ]
+}
+```
+
+This plan ensures that you move from TERRASSE COUVERTE to CH. PARENTS and then to CUISINE, following the correct sequence of actions and using the necessary doors.

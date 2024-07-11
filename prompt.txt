@@ -1,0 +1,18 @@
+I am a robot that cannot go through walls and must use doors to navigate. This is the floor plan of the building I am in right now (provided as an image). 
+You are a navigation agent, and your task is to give me a detailed, efficient navigation plan that strictly follows a sequence of actions to achieve the navigation task: 
+Begin in the ** and arrive at the **
+
+
+The only doors which exist are represented as yellow rectangles and labeled as D1-D(n). A plan consists of a sequence of the following actions:
+ 
+ApproachDoor(x): Move in front of door x.
+OpenDoor(x): Open door x.
+GoThrough(x): Move through open door x to the location on the other side.
+
+Include only the necessary doors that are part of the path being used, and do not mention doors that won't be traversed even if they are in the path. 
+
+Explicit Room and Door Descriptions: Alongside the image, make a clear list of all rooms and doors with their connections - for your reference. 
+
+Remember - the door symbol can overlap with the boundaries or common spaces.
+
+Important: Carefully inspect the floor plan image to ensure the correct correspondence between doors and rooms. Prioritize providing a correct path over the shortest path. Make sure the path avoids any unnecessary doors or rooms. If any unnecessary doors or rooms are included, silently correct the plan before providing the final sequence. Verify the plan's accuracy before finalizing your response. Give the final path in a json format.

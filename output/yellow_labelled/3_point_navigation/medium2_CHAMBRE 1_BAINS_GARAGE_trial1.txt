@@ -1,0 +1,63 @@
+Here is the detailed list of rooms and doors with their connections:
+
+**Rooms:**
+1. CHAMBRE 1
+2. BAINS
+3. GARAGE
+4. WC
+5. CHAMBRE 2
+6. CHAMBRE 3
+7. HALL
+8. CELLIER
+9. PORCHE
+
+**Doors:**
+1. D1: Connects GARAGE and CELLIER
+2. D2: Connects CHAMBRE 1 and HALL
+3. D3: Connects WC and HALL
+4. D4: Connects BAINS and HALL
+5. D5: Connects CHAMBRE 3 and HALL
+6. D6: Connects CHAMBRE 2 and HALL
+7. D7: Connects CELLIER and HALL
+8. D8: Connects HALL and PORCHE
+
+**Navigation Plan:**
+
+1. Start in CHAMBRE 1.
+2. ApproachDoor(D2)
+3. OpenDoor(D2)
+4. GoThrough(D2) to HALL
+5. ApproachDoor(D4)
+6. OpenDoor(D4)
+7. GoThrough(D4) to BAINS
+8. ApproachDoor(D4)
+9. OpenDoor(D4)
+10. GoThrough(D4) to HALL
+11. ApproachDoor(D7)
+12. OpenDoor(D7)
+13. GoThrough(D7) to CELLIER
+14. ApproachDoor(D1)
+15. OpenDoor(D1)
+16. GoThrough(D1) to GARAGE
+
+Here is the final path in JSON format:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"}
+]
+```

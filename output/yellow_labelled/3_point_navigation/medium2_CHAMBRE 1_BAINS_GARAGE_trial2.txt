@@ -1,0 +1,67 @@
+Here is the detailed navigation plan for moving from CHAMBRE 1 to BAINS and then to GARAGE:
+
+### Room and Door Descriptions:
+- **Rooms:**
+  - CHAMBRE 1
+  - BAINS
+  - GARAGE
+  - HALL
+  - WC
+  - CHAMBRE 2
+  - CHAMBRE 3
+  - CELLIER
+
+- **Doors:**
+  - D1: Connects GARAGE and CELLIER
+  - D2: Connects CHAMBRE 1 and HALL
+  - D3: Connects WC and HALL
+  - D4: Connects HALL and BAINS
+  - D5: Connects HALL and CHAMBRE 3
+  - D6: Connects HALL and CHAMBRE 2
+  - D7: Connects CELLIER and HALL
+  - D8: Connects HALL and Porche
+
+### Navigation Plan:
+1. **From CHAMBRE 1 to BAINS:**
+   - ApproachDoor(D2)
+   - OpenDoor(D2)
+   - GoThrough(D2) (Now in HALL)
+   - ApproachDoor(D4)
+   - OpenDoor(D4)
+   - GoThrough(D4) (Now in BAINS)
+
+2. **From BAINS to GARAGE:**
+   - ApproachDoor(D4)
+   - OpenDoor(D4)
+   - GoThrough(D4) (Now in HALL)
+   - ApproachDoor(D7)
+   - OpenDoor(D7)
+   - GoThrough(D7) (Now in CELLIER)
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1) (Now in GARAGE)
+
+### Final Path in JSON Format:
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"}
+  ]
+}
+```
+
+This plan ensures that you navigate efficiently from CHAMBRE 1 to BAINS and then to GARAGE, using the necessary doors only.

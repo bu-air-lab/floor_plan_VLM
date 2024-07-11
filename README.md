@@ -1,4 +1,9 @@
 ## TODO
+	- log all results
+	- make figure
+	- start paper (correct template, references)
+	- plan demo
+	- Evaluate based on planners understanding of door connections
 
 Dataset names:
 
@@ -6,6 +11,7 @@ Dataset names:
 	ablation 1 (one label per room)
 	ablation 2 (original door symbols + multiple labels per room)
 	ablation 3 (original door symbols + 1 label per room)
+	ablation 4 (don't ask VLM to output door and room connections)
 
 
 
@@ -14,7 +20,8 @@ More difficult task:
 1. Harder maps (more rooms)
 2. Dotted lines (add GOTO)
 3. More complex task (A->B->C->D)
-4. 
+
+		- every task contains 3 locations? Or some contains 2, and some contains 4?
 
 
 
@@ -37,3 +44,8 @@ Dashed rooms:
 2. Add new "rooms" for complex maps
 3. Make new prompt for complex maps
 4. Add to room list for pre-defined plans
+
+
+Comment:
+
+	The VLM tells us how it understands the floor layout via room and door connections
