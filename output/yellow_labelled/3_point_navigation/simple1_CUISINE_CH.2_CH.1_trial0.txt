@@ -1,0 +1,52 @@
+Here is the list of rooms and doors with their connections:
+
+Rooms:
+- CUISINE
+- SEJOUR
+- CH.1
+- CH.2
+- CH.3
+
+Doors:
+- D1: Connects CH.3 and SEJOUR
+- D2: Connects CH.2 and SEJOUR
+- D3: Connects CH.2 and SEJOUR
+- D4: Connects CH.1 and SEJOUR
+- D5: Connects CUISINE and SEJOUR
+- D6: Connects CUISINE and SEJOUR
+
+Navigation Plan:
+1. Begin in CUISINE.
+2. ApproachDoor(D6): Move in front of door D6.
+3. OpenDoor(D6): Open door D6.
+4. GoThrough(D6): Move through open door D6 to SEJOUR.
+5. ApproachDoor(D3): Move in front of door D3.
+6. OpenDoor(D3): Open door D3.
+7. GoThrough(D3): Move through open door D3 to CH.2.
+8. ApproachDoor(D3): Move in front of door D3.
+9. OpenDoor(D3): Open door D3.
+10. GoThrough(D3): Move through open door D3 to SEJOUR.
+11. ApproachDoor(D4): Move in front of door D4.
+12. OpenDoor(D4): Open door D4.
+13. GoThrough(D4): Move through open door D4 to CH.1.
+
+Here is the final path in JSON format:
+
+```json
+{
+  "path": [
+    "ApproachDoor(D6)",
+    "OpenDoor(D6)",
+    "GoThrough(D6)",
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)",
+    "GoThrough(D3)",
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)",
+    "GoThrough(D3)",
+    "ApproachDoor(D4)",
+    "OpenDoor(D4)",
+    "GoThrough(D4)"
+  ]
+}
+```

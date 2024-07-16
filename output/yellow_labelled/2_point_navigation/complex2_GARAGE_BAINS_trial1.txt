@@ -1,0 +1,55 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. GARAGE
+2. CELLIER
+3. CHAMBRE 2
+4. HALL
+5. BAINS
+6. WC
+7. CHAMBRE 1
+8. PORCHE
+9. CUISINE
+10. TERRASSE COUVERTE
+
+**Doors:**
+1. D1: Connects CELLIER and HALL
+2. D2: Connects CHAMBRE 2 and HALL
+3. D3: Connects HALL and BAINS
+4. D4: Connects HALL and WC
+5. D5: Connects PORCHE and HALL
+6. D6: Connects CHAMBRE 1 and HALL
+7. D7: Connects CUISINE and HALL
+8. D8: Connects CUISINE and TERRASSE COUVERTE
+9. D9: Connects GARAGE and CELLIER
+
+### Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(D9)",
+    "OpenDoor(D9)",
+    "GoThrough(D9)",
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)",
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)",
+    "GoThrough(D3)"
+  ]
+}
+```
+
+### Explanation
+1. **ApproachDoor(D9)**: Move in front of door D9 (connecting GARAGE and CELLIER).
+2. **OpenDoor(D9)**: Open door D9.
+3. **GoThrough(D9)**: Move through door D9 to enter CELLIER.
+4. **ApproachDoor(D1)**: Move in front of door D1 (connecting CELLIER and HALL).
+5. **OpenDoor(D1)**: Open door D1.
+6. **GoThrough(D1)**: Move through door D1 to enter HALL.
+7. **ApproachDoor(D3)**: Move in front of door D3 (connecting HALL and BAINS).
+8. **OpenDoor(D3)**: Open door D3.
+9. **GoThrough(D3)**: Move through door D3 to enter BAINS.
+
+This plan ensures that you navigate from the GARAGE to the BAINS efficiently, using only the necessary doors.

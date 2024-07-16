@@ -1,0 +1,61 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. BAINS
+2. WC
+3. CHAMBRE 1
+4. CHAMBRE 2
+5. CHAMBRE 3
+6. HALL
+7. CELLIER
+8. GARAGE
+9. PORCHE
+
+**Doors:**
+1. D1: Connects GARAGE and CELLIER
+2. D2: Connects CHAMBRE 1 and HALL
+3. D3: Connects WC and HALL
+4. D4: Connects BAINS and HALL
+5. D5: Connects CHAMBRE 3 and HALL
+6. D6: Connects CHAMBRE 2 and HALL
+7. D7: Connects CELLIER and HALL
+8. D8: Connects HALL and PORCHE
+
+### Navigation Plan
+
+1. **Start in BAINS**
+2. ApproachDoor(D4)
+3. OpenDoor(D4)
+4. GoThrough(D4) to HALL
+5. ApproachDoor(D6)
+6. OpenDoor(D6)
+7. GoThrough(D6) to CHAMBRE 2
+8. ApproachDoor(D6)
+9. OpenDoor(D6)
+10. GoThrough(D6) to HALL
+11. ApproachDoor(D3)
+12. OpenDoor(D3)
+13. GoThrough(D3) to WC
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(D4)",
+    "OpenDoor(D4)",
+    "GoThrough(D4)",
+    "ApproachDoor(D6)",
+    "OpenDoor(D6)",
+    "GoThrough(D6)",
+    "ApproachDoor(D6)",
+    "OpenDoor(D6)",
+    "GoThrough(D6)",
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)",
+    "GoThrough(D3)"
+  ]
+}
+```
+
+This plan ensures that you navigate from BAINS to CHAMBRE 2 and finally to WC, using the necessary doors in the correct sequence.

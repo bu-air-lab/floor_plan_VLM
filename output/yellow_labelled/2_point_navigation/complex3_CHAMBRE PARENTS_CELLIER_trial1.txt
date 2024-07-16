@@ -1,0 +1,30 @@
+Here is the detailed navigation plan to move from the CHAMBRE PARENTS to the CELLIER:
+
+### Rooms and Doors:
+- **CHAMBRE PARENTS**: Connected to HALL via D8
+- **HALL**: Connected to CHAMBRE PARENTS (D8), BAIN (D7), BUREAU (D6), LINGERIE (D5), WC (D4), CELLIER (D11), CHAMBRE ENFANT 1 (D10), CHAMBRE ENFANT 2 (D9)
+- **CELLIER**: Connected to HALL (D11), PORCHE (D3), GARAGE (D1)
+
+### Navigation Plan:
+1. **ApproachDoor(D8)**: Move in front of door D8.
+2. **OpenDoor(D8)**: Open door D8.
+3. **GoThrough(D8)**: Move through door D8 to enter the HALL.
+4. **ApproachDoor(D11)**: Move in front of door D11.
+5. **OpenDoor(D11)**: Open door D11.
+6. **GoThrough(D11)**: Move through door D11 to enter the CELLIER.
+
+### JSON Format:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"}
+  ]
+}
+```
+
+This plan ensures that you move efficiently from the CHAMBRE PARENTS to the CELLIER by only using the necessary doors.

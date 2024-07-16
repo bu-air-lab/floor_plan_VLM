@@ -1,0 +1,39 @@
+### Room and Door Descriptions:
+
+- **Rooms:**
+  - CUISINE
+  - SEJOUR
+  - CH.1
+  - CH.2
+  - CH.3
+
+- **Doors:**
+  - D1: Between CH.3 and SEJOUR
+  - D2: Between CH.2 and SEJOUR
+  - D3: Between CH.2 and SEJOUR
+  - D4: Between CH.1 and SEJOUR
+  - D5: Between CUISINE and SEJOUR
+  - D6: Between CUISINE and SEJOUR
+
+### Navigation Plan:
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D6"},
+  {"action": "OpenDoor", "door": "D6"},
+  {"action": "GoThrough", "door": "D6"},
+  {"action": "ApproachDoor", "door": "D1"},
+  {"action": "OpenDoor", "door": "D1"},
+  {"action": "GoThrough", "door": "D1"}
+]
+```
+
+### Explanation:
+1. **ApproachDoor(D6):** Move in front of door D6 (CUISINE to SEJOUR).
+2. **OpenDoor(D6):** Open door D6.
+3. **GoThrough(D6):** Move through door D6 to SEJOUR.
+4. **ApproachDoor(D1):** Move in front of door D1 (SEJOUR to CH.3).
+5. **OpenDoor(D1):** Open door D1.
+6. **GoThrough(D1):** Move through door D1 to CH.3.
+
+This sequence ensures that you move from CUISINE to CH.3 efficiently by passing through the necessary doors.

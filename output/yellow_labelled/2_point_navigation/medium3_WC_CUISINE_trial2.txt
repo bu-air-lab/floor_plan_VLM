@@ -1,0 +1,45 @@
+### Room and Door Descriptions:
+
+- **Rooms:**
+  - WC
+  - HALL
+  - CUISINE
+  - CELLIER
+  - GARAGES
+  - DOUCHE
+  - CHAMBRE 1
+
+- **Doors:**
+  - D1: Connects GARAGES and HALL
+  - D2: Connects HALL and DOUCHE
+  - D3: Connects CELLIER and WC
+  - D4: Connects WC and HALL
+  - D5: Connects HALL and CHAMBRE 1
+  - D6: Connects HALL and CUISINE
+  - D7: Connects CUISINE and HALL
+
+### Navigation Plan:
+
+1. **ApproachDoor(D4):** Move in front of door D4.
+2. **OpenDoor(D4):** Open door D4.
+3. **GoThrough(D4):** Move through door D4 to enter the HALL.
+4. **ApproachDoor(D6):** Move in front of door D6.
+5. **OpenDoor(D6):** Open door D6.
+6. **GoThrough(D6):** Move through door D6 to enter the CUISINE.
+
+### JSON Format:
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(D4)",
+    "OpenDoor(D4)",
+    "GoThrough(D4)",
+    "ApproachDoor(D6)",
+    "OpenDoor(D6)",
+    "GoThrough(D6)"
+  ]
+}
+```
+
+This plan ensures that you move from the WC to the CUISINE by passing through the necessary doors in the correct sequence.

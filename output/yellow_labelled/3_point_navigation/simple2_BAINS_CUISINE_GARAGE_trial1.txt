@@ -1,0 +1,50 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. BAINS
+2. CH.1
+3. CH.2
+4. HALL
+5. CUISINE
+6. GARAGE
+
+**Doors:**
+1. D1: Connects BAINS and HALL
+2. D2: Connects CH.1 and HALL
+3. D3: Connects CH.2 and HALL
+4. D4: Connects HALL and GARAGE
+5. D5: Connects HALL and CUISINE
+
+### Navigation Plan
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"}
+]
+```
+
+### Explanation
+1. **BAINS to HALL:**
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1)
+
+2. **HALL to CUISINE:**
+   - ApproachDoor(D5)
+   - OpenDoor(D5)
+   - GoThrough(D5)
+
+3. **CUISINE to GARAGE:**
+   - ApproachDoor(D4)
+   - OpenDoor(D4)
+   - GoThrough(D4)
+
+This sequence ensures that the robot moves efficiently from BAINS to CUISINE and then to GARAGE, using the necessary doors in the correct order.

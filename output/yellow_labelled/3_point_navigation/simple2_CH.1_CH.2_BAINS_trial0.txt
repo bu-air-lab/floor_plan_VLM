@@ -1,0 +1,53 @@
+Here is the detailed list of rooms and doors with their connections:
+
+**Rooms:**
+1. CH.1
+2. CH.2
+3. BAINS
+4. HALL
+5. GARAGE
+6. CUISINE
+
+**Doors:**
+1. D1: Connects BAINS and HALL
+2. D2: Connects CH.1 and HALL
+3. D3: Connects CH.2 and HALL
+4. D4: Connects GARAGE and CUISINE
+5. D5: Connects CUISINE and HALL
+
+**Navigation Plan:**
+
+1. Begin in CH.1.
+2. ApproachDoor(D2)
+3. OpenDoor(D2)
+4. GoThrough(D2) to HALL
+5. ApproachDoor(D3)
+6. OpenDoor(D3)
+7. GoThrough(D3) to CH.2
+8. ApproachDoor(D3)
+9. OpenDoor(D3)
+10. GoThrough(D3) to HALL
+11. ApproachDoor(D1)
+12. OpenDoor(D1)
+13. GoThrough(D1) to BAINS
+
+Here is the final path in JSON format:
+
+```json
+{
+  "path": [
+    "ApproachDoor(D2)",
+    "OpenDoor(D2)",
+    "GoThrough(D2)",
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)",
+    "GoThrough(D3)",
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)",
+    "GoThrough(D3)",
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)"
+  ]
+}
+```

@@ -1,0 +1,58 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. CHAMBRE 1
+2. HALL
+3. BATHROOM (BAINS)
+4. WC
+5. CELLAR (CELLIER)
+6. CHAMBRE 2
+7. PORCH (PORCHE)
+8. KITCHEN (CUISINE)
+9. COVERED TERRACE (TERRASSE COUVERTE)
+10. GARAGE
+
+**Doors:**
+1. D1: Between HALL and CELLAR (CELLIER)
+2. D2: Between HALL and BATHROOM (BAINS)
+3. D3: Between HALL and WC
+4. D4: Between HALL and CHAMBRE 1
+5. D5: Between HALL and CHAMBRE 2
+6. D6: Between HALL and PORCH (PORCHE)
+7. D7: Between HALL and KITCHEN (CUISINE)
+8. D8: Between KITCHEN (CUISINE) and COVERED TERRACE (TERRASSE COUVERTE)
+9. D9: Between CELLAR (CELLIER) and GARAGE
+
+### Navigation Plan
+
+Starting in CHAMBRE 1 and arriving at the COVERED TERRACE (TERRASSE COUVERTE):
+
+1. **ApproachDoor(D4)**: Move in front of door D4.
+2. **OpenDoor(D4)**: Open door D4.
+3. **GoThrough(D4)**: Move through door D4 to the HALL.
+4. **ApproachDoor(D7)**: Move in front of door D7.
+5. **OpenDoor(D7)**: Open door D7.
+6. **GoThrough(D7)**: Move through door D7 to the KITCHEN (CUISINE).
+7. **ApproachDoor(D8)**: Move in front of door D8.
+8. **OpenDoor(D8)**: Open door D8.
+9. **GoThrough(D8)**: Move through door D8 to the COVERED TERRACE (TERRASSE COUVERTE).
+
+### Final Path in JSON Format
+
+```json
+{
+  "path": [
+    "ApproachDoor(D4)",
+    "OpenDoor(D4)",
+    "GoThrough(D4)",
+    "ApproachDoor(D7)",
+    "OpenDoor(D7)",
+    "GoThrough(D7)",
+    "ApproachDoor(D8)",
+    "OpenDoor(D8)",
+    "GoThrough(D8)"
+  ]
+}
+```
+
+This plan ensures that you navigate efficiently from CHAMBRE 1 to the COVERED TERRACE (TERRASSE COUVERTE) by passing through the necessary doors and avoiding any unnecessary rooms or doors.

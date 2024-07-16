@@ -1,0 +1,44 @@
+Here is the detailed list of rooms and doors with their connections:
+
+**Rooms:**
+1. CHAMBRE PARENTS
+2. CHAMBRE ENFANT 1
+3. CHAMBRE ENFANT 2
+4. BUREAU
+5. LINGERIE
+6. BAIN
+7. WC
+8. CELLIER
+9. GARAGE
+10. PORCHE
+11. HALL
+
+**Doors:**
+1. D1: GARAGE <-> CELLIER
+2. D2: PORCHE <-> CELLIER
+3. D3: PORCHE <-> HALL
+4. D4: WC <-> HALL
+5. D5: LINGERIE <-> HALL
+6. D6: BUREAU <-> HALL
+7. D7: BAIN <-> HALL
+8. D8: CHAMBRE PARENTS <-> HALL
+9. D9: CHAMBRE ENFANT 2 <-> HALL
+10. D10: CHAMBRE ENFANT 1 <-> HALL
+11. D11: HALL <-> CELLIER
+
+**Navigation Plan:**
+
+```json
+{
+  "steps": [
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"}
+  ]
+}
+```
+
+This plan ensures that you move from the CHAMBRE PARENTS to the CELLIER by passing through the necessary doors in the correct sequence.

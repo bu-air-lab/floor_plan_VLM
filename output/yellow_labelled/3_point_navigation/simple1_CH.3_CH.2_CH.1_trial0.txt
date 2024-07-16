@@ -1,0 +1,50 @@
+Here is the detailed navigation plan for moving from CH.3 to CH.2 and then to CH.1:
+
+### Room and Door Descriptions:
+- **Rooms:**
+  - CH.3
+  - CH.2
+  - CH.1
+  - SEJOUR
+  - CUISINE
+
+- **Doors:**
+  - D1: Between CH.3 and SEJOUR
+  - D2: Between CH.3 and CH.2
+  - D3: Between CH.2 and SEJOUR
+  - D4: Between CH.1 and SEJOUR
+  - D5: Between CUISINE and SEJOUR
+  - D6: Between CUISINE and SEJOUR
+
+### Navigation Plan:
+1. **From CH.3 to CH.2:**
+   - ApproachDoor(D2)
+   - OpenDoor(D2)
+   - GoThrough(D2)
+
+2. **From CH.2 to CH.1:**
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3)
+   - ApproachDoor(D4)
+   - OpenDoor(D4)
+   - GoThrough(D4)
+
+### Final Path in JSON Format:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"}
+  ]
+}
+```
+
+This plan ensures that you move efficiently from CH.3 to CH.2 and then to CH.1, using the necessary doors in the correct sequence.

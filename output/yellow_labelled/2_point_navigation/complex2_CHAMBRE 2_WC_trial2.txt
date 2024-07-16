@@ -1,0 +1,41 @@
+Here is the detailed list of rooms and doors with their connections:
+
+**Rooms:**
+1. CHAMBRE 2
+2. HALL
+3. BAIN
+4. WC
+5. CHAMBRE 1
+6. CUISINE
+7. PORCHE
+8. TERRASSE COUVERTE
+9. CELLIER
+10. GARAGE
+
+**Doors:**
+1. D1: CELLIER <-> HALL
+2. D2: CHAMBRE 2 <-> HALL
+3. D3: BAIN <-> HALL
+4. D4: WC <-> HALL
+5. D5: PORCHE <-> HALL
+6. D6: CHAMBRE 1 <-> HALL
+7. D7: CUISINE <-> HALL
+8. D8: CUISINE <-> TERRASSE COUVERTE
+9. D9: GARAGE <-> CELLIER
+
+**Navigation Plan:**
+
+```json
+{
+  "plan": [
+    "ApproachDoor(D2)",
+    "OpenDoor(D2)",
+    "GoThrough(D2)",
+    "ApproachDoor(D4)",
+    "OpenDoor(D4)",
+    "GoThrough(D4)"
+  ]
+}
+```
+
+This plan ensures that you start in CHAMBRE 2, move through the necessary doors, and arrive at the WC.

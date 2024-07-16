@@ -1,0 +1,40 @@
+Here is the detailed list of rooms and doors with their connections:
+
+**Rooms:**
+1. DOUCHE
+2. TERRASSE COUVERTE
+3. CELLIER
+4. CUISINE
+5. CH. PARENTS
+
+**Doors:**
+1. D1: Connects TERRASSE COUVERTE and CUISINE
+2. D2: Connects CUISINE and CELLIER
+3. D3: Connects CH. PARENTS and CUISINE
+4. D4: Connects DOUCHE and CUISINE
+
+**Navigation Plan:**
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+]
+```
+
+**Explanation:**
+1. Start in the DOUCHE.
+2. Approach and go through D4 to enter the CUISINE.
+3. Approach and go through D1 to enter the TERRASSE COUVERTE.
+4. Approach and go through D1 again to re-enter the CUISINE.
+5. Approach and go through D2 to enter the CELLIER.

@@ -1,0 +1,39 @@
+Here is the detailed navigation plan for moving from the CH. PARENTS to the TERRASSE COUVERTE:
+
+### Rooms and Doors:
+- **Rooms:**
+  - CH. PARENTS
+  - DOUCHE
+  - CUISINE
+  - CELLIER
+  - TERRASSE COUVERTE
+
+- **Doors:**
+  - D1: Between CUISINE and TERRASSE COUVERTE
+  - D2: Between CUISINE and CELLIER
+  - D3: Between CH. PARENTS and CUISINE
+  - D4: Between CUISINE and DOUCHE
+
+### Navigation Plan:
+1. **ApproachDoor(D3):** Move in front of door D3.
+2. **OpenDoor(D3):** Open door D3.
+3. **GoThrough(D3):** Move through door D3 to enter the CUISINE.
+4. **ApproachDoor(D1):** Move in front of door D1.
+5. **OpenDoor(D1):** Open door D1.
+6. **GoThrough(D1):** Move through door D1 to enter the TERRASSE COUVERTE.
+
+### JSON Format:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"}
+  ]
+}
+```
+
+This plan ensures that you move efficiently from the CH. PARENTS to the TERRASSE COUVERTE by passing through the necessary doors.
