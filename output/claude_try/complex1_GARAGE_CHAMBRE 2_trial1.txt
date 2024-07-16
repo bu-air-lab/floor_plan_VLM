@@ -1,0 +1,39 @@
+Explicit Room and Door Descriptions:
+
+Rooms:
+- Garage
+- Cellier (Cellar)
+- Bains (Bathroom)
+- WC (Toilet)
+- Chambre 2 (Bedroom 2)
+- Chambre 1 (Bedroom 1)
+- Cuisine (Kitchen)
+- Terrasse Couverte (Covered Terrace)
+- Porche (Porch)
+
+Doors:
+- D1: Connects Cellier and Hall
+- D2: Connects WC and Hall
+- D3: Connects Hall and Hall
+- D4: Connects Chambre 1 and Hall
+- D5: Connects Chambre 2 and Hall
+- D6: Connects Porche and Hall
+- D7: Connects Cuisine and Hall
+- D8: Connects Cuisine and Terrasse Couverte
+- D9: Connects Garage and Cellier
+
+Final Path (JSON format):
+
+{
+  "path": [
+    "ApproachDoor(D9)",
+    "OpenDoor(D9)",
+    "GoThrough(D9)",
+    "ApproachDoor(D1)", 
+    "OpenDoor(D1)",
+    "GoThrough(D1)",
+    "ApproachDoor(D5)",
+    "OpenDoor(D5)", 
+    "GoThrough(D5)"
+  ]
+}
