@@ -1,0 +1,42 @@
+Here is the list of rooms and their connecting doors:
+
+Rooms:
+GARAGES: D1 connects to HALL
+CELLIER: D3 connects to CUISINE
+CUISINE: D6, D7 connect to HALL, D3 connects to CELLIER
+HALL: D6, D7 connect to CUISINE, D4, D5 connect to CHAMBRE 1, D1 connects to GARAGES, D2 connects to DOUCHE
+DOUCHE: D2 connects to HALL 
+CHAMBRE 1: D4, D5 connect to HALL
+
+And here is the navigation plan in JSON format:
+
+```json
+[
+  {
+    "action": "ApproachDoor",
+    "door": "D5"
+  },
+  {
+    "action": "OpenDoor", 
+    "door": "D5"
+  },
+  {
+    "action": "GoThrough",
+    "door": "D5"
+  },
+  {
+    "action": "ApproachDoor",
+    "door": "D1"
+  },
+  {
+    "action": "OpenDoor",
+    "door": "D1" 
+  },
+  {
+    "action": "GoThrough",
+    "door": "D1"
+  }
+]
+```
+
+The plan has you start in CHAMBRE 1, go through door D5 into the HALL, approach and open door D1, then go through D1 to arrive in the GARAGES, using the most direct route while avoiding unnecessary rooms and doors.

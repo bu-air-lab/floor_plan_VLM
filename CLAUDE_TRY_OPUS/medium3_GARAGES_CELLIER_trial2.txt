@@ -1,0 +1,32 @@
+Here are the rooms and their connections:
+
+Rooms:
+- GARAGES: Connected to HALL via D1
+- HALL: Connected to GARAGES via D1, CELLIER via D3, CUISINE via D6, D7 
+- CELLIER: Connected to HALL via D3
+- CUISINE: Connected to HALL via D6, D7
+- WC: Not connected to any other room
+- DOUCHE: Connected to CHAMBRE 1 via D2
+- CHAMBRE 1: Connected to DOUCHE via D2, HALL via D4, D5
+
+Doors:
+- D1: Connects GARAGES and HALL
+- D2: Connects DOUCHE and CHAMBRE 1 
+- D3: Connects HALL and CELLIER
+- D4, D5: Connect HALL and CHAMBRE 1
+- D6, D7: Connect HALL and CUISINE
+
+The most efficient path from GARAGES to CELLIER is:
+
+```json
+[
+  "ApproachDoor(D1)",
+  "OpenDoor(D1)",
+  "GoThrough(D1)",
+  "ApproachDoor(D3)",
+  "OpenDoor(D3)", 
+  "GoThrough(D3)"
+]
+```
+
+This path goes from GARAGES, through the HALL using door D1, and arrives at the CELLIER using door D3. It avoids any unnecessary rooms or doors.

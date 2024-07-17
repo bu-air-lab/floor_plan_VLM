@@ -1,0 +1,49 @@
+Here are the rooms and their connections:
+
+Rooms:
+- GARAGES: Connected to HALL via D1
+- CELLIER: Connected to HALL via D3 
+- CUISINE: Connected to HALL via D6 and D7
+- HALL: Central connecting area
+- DOUCHE: Connected to HALL via D2
+- CHAMBRE 1: Connected to HALL via D4 and D5
+
+Doors:
+- D1: Connects GARAGES to HALL
+- D2: Connects DOUCHE to HALL 
+- D3: Connects CELLIER to HALL
+- D4, D5: Connect CHAMBRE 1 to HALL
+- D6, D7: Connect CUISINE to HALL
+
+The navigation plan from GARAGES to CELLIER is:
+
+```json
+[
+  {
+    "action": "ApproachDoor",
+    "door": "D1"
+  },
+  {
+    "action": "OpenDoor",
+    "door": "D1"  
+  },
+  {
+    "action": "GoThrough",
+    "door": "D1"
+  },
+  {
+    "action": "ApproachDoor",
+    "door": "D3"
+  },
+  {
+    "action": "OpenDoor", 
+    "door": "D3"
+  },
+  {
+    "action": "GoThrough",
+    "door": "D3"
+  }
+]
+```
+
+The plan goes from GARAGES, through the HALL using D1, and ends in the CELLIER using D3. This is the most direct path between the two rooms based on the provided floor plan.

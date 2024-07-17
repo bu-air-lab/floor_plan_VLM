@@ -112,7 +112,7 @@ plans = {
 
 
 N = 3
-MODEL_NAME = "claude-3-sonnet-20240229"
+MODEL_NAME = "claude-3-5-sonnet-20240620"
 MAX_TOKENS = 2048
 
 def get_base64_encoded_image(image_path):
@@ -166,7 +166,7 @@ def process_images_and_prompts():
                 text_response = query_claude_with_image_and_text(image_path, prompt)
 
                 # Write the text response to a new file
-                filename = f'output/claude_try/{key}_{start}_{end}_trial{n}.txt'
+                filename = f'output/yellow_labelled/2_point_claude/{key}_{start}_{end}_trial{n}.txt'
                 with open(filename, 'w') as file:
                     file.write(text_response)
 

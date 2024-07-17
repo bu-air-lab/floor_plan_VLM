@@ -1,0 +1,28 @@
+Rooms and Doors:
+- GARAGES: Connected to D1
+- CELLIER: Connected to D1, D3
+- CUISINE: Connected to D3, D6, D7
+- WC: Connected to D4
+- HALL: Connected to D2, D4, D5, D7
+- DOUCHE: Connected to D2
+- CHAMBRE 1: Connected to D5
+
+Final Path (JSON format):
+{
+  "path": [
+    "ApproachDoor(D5)",
+    "OpenDoor(D5)",
+    "GoThrough(D5)",
+    "ApproachDoor(D7)", 
+    "OpenDoor(D7)",
+    "GoThrough(D7)",
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)", 
+    "GoThrough(D3)",
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)"
+  ]
+}
+
+The plan avoids unnecessary doors D2, D4, and D6, efficiently navigating from CHAMBRE 1 to the GARAGES by going through the HALL, CUISINE, and CELLIER rooms using only the required doors.

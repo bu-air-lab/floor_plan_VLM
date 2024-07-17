@@ -1,0 +1,18 @@
+Rooms and Doors:
+- CELLIER: Connected to HALL via D1
+- CUISINE: Connected to HALL via D7, D6, D3
+- HALL: Central connecting area
+- WC: Connected to HALL via D4
+- DOUCHE: Connected to HALL via D2
+- CHAMBRE 1: Connected to HALL via D5
+
+Navigation Plan:
+{
+  "plan": [
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)"
+  ]
+}
+
+The plan is to start in the CELLIER, approach and open door D1, then go through D1 directly into the HALL. This is the most efficient path given the layout.

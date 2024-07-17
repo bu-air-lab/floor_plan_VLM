@@ -1,0 +1,41 @@
+Rooms and Doors:
+- CELLIER: Connected to D1
+- CUISINE: Connected to D6, D7
+- HALL: Connected to D4, D5
+- DOUCHE: Connected to D2
+- CHAMBRE 1: Connected to D5
+
+Here is the navigation plan in JSON format:
+
+```json
+{
+  "path": [
+    {
+      "action": "ApproachDoor",
+      "door": "D1"
+    },
+    {
+      "action": "OpenDoor",
+      "door": "D1"  
+    },
+    {
+      "action": "GoThrough",
+      "door": "D1"
+    },
+    {
+      "action": "ApproachDoor",
+      "door": "D4"
+    },
+    {
+      "action": "OpenDoor", 
+      "door": "D4"
+    },
+    {
+      "action": "GoThrough",
+      "door": "D4"
+    }
+  ]
+}
+```
+
+The plan navigates from the CELLIER through D1 into the HALL, then directly to the destination in the HALL, using only the necessary doors D1 and D4.

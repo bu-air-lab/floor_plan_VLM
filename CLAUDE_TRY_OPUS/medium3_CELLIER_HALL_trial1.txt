@@ -1,0 +1,26 @@
+Here are the room and door connections:
+
+Rooms:
+GARAGES, CELLIER, CUISINE, HALL, WC, DOUCHE, CHAMBRE 1
+
+Doors:
+D1: GARAGES to outside
+D2: DOUCHE to HALL
+D3: CELLIER to CUISINE 
+D4: HALL to WC
+D5: HALL to CHAMBRE 1
+D6: CUISINE to HALL
+D7: CUISINE to HALL
+
+To get from the CELLIER to the HALL:
+
+{
+  "path": [
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)", 
+    "GoThrough(D3)",
+    "ApproachDoor(D6)",
+    "OpenDoor(D6)",
+    "GoThrough(D6)"
+  ]
+}

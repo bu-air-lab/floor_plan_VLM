@@ -1,0 +1,36 @@
+Here are the rooms and doors with their connections:
+
+Rooms:
+- GARAGES
+- CELLIER
+- CUISINE
+- HALL
+- DOUCHE
+- CHAMBRE 1
+
+Doors:
+- D1: Connects GARAGES to outside
+- D2: Connects DOUCHE to HALL
+- D3: Connects CELLIER to HALL
+- D4: Connects HALL to WC
+- D5: Connects HALL to CHAMBRE 1
+- D6: Connects CUISINE to HALL
+- D7: Connects CUISINE to outside
+
+The path from GARAGES to CELLIER:
+
+```json
+[
+  "ApproachDoor(D1)",
+  "OpenDoor(D1)",
+  "GoThrough(D1)",
+  "ApproachDoor(D6)",
+  "OpenDoor(D6)", 
+  "GoThrough(D6)",
+  "ApproachDoor(D3)",
+  "OpenDoor(D3)",
+  "GoThrough(D3)"
+]
+```
+
+This path goes from the GARAGES through door D1 into the HALL, then through door D6 into the CUISINE, and finally through door D3 to reach the CELLIER, avoiding any unnecessary rooms or doors.
