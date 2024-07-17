@@ -1,4 +1,12 @@
 api_key.txt
+api_key1.txt
+
+#HRUDAY 
+CLAUDE_TRY/
+CLAUDE_TRY2/
+output__new_trials/
+two_point_gpt.py
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
