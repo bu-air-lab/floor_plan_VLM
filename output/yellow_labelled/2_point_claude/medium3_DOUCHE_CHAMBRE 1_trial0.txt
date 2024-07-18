@@ -1,0 +1,25 @@
+Thank you for providing the floor plan. I'll first list out the rooms and doors with their connections, and then provide the navigation plan.
+
+Rooms and Doors:
+- DOUCHE: Connected to HALL via D2
+- CHAMBRE 1: Connected to HALL via D5
+- WC: Connected to HALL via D4
+- CELLIER: Connected to GARAGES via D1, connected to CUISINE via D3
+- CUISINE: Connected to CELLIER via D3, connected to HALL via D6
+- GARAGES: Connected to CELLIER via D1
+- HALL: Central area connecting multiple rooms
+
+Now, for the navigation plan from DOUCHE to CHAMBRE 1:
+
+{
+  "plan": [
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"}
+  ]
+}
+
+This plan takes you from the DOUCHE, through the HALL, and into CHAMBRE 1 using the most direct route available. It avoids unnecessary doors and rooms, ensuring an efficient path to your destination.

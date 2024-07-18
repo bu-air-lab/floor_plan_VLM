@@ -1,0 +1,33 @@
+Certainly! I'll start by listing the rooms and doors with their connections, then provide the navigation plan in JSON format.
+
+Room and Door Connections:
+1. CELLIER: Connected to HALL via D1
+2. GARAGE: Connected to CELLIER via D9
+3. HALL: Central area connecting multiple rooms
+4. BAINS: Connected to HALL
+5. WC: Connected to HALL via D2
+6. CHAMBRE 2: Connected to HALL via D5
+7. CHAMBRE 1: Connected to HALL via D4
+8. CUISINE: Connected to HALL via D7
+9. PORCHE: Connected to HALL via D6
+10. TERRASSE COUVERTE: Connected to CUISINE via D8
+
+Navigation Plan:
+To go from CELLIER to WC, we need to use two doors: D1 and D2. Here's the efficient navigation plan in JSON format:
+
+```json
+{
+  "start": "CELLIER",
+  "end": "WC",
+  "path": [
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+  ]
+}
+```
+
+This plan efficiently navigates from the CELLIER to the WC using only the necessary doors (D1 and D2) and avoiding any unnecessary rooms or doors.

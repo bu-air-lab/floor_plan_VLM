@@ -1,0 +1,29 @@
+Thank you for providing the floor plan. I'll first describe the rooms and doors, then provide the navigation plan.
+
+Room and Door Descriptions:
+- CHAMBRE 2: Connected to HALL via D2
+- HALL: Central area connecting multiple rooms
+- WC: Connected to HALL via D4
+- CUISINE: Connected to HALL via D7
+- CHAMBRE 1: Connected to HALL via D6
+- BAINS: Connected to HALL via D3
+- PORCHE: Connected to HALL via D5
+- CELLIER: Connected to GARAGE via D9 and to HALL via D1
+- GARAGE: Connected to CELLIER via D9
+- TERRASSE COUVERTE: Connected to CUISINE via D8
+
+Navigation Plan:
+To go from CHAMBRE 2 to WC, the most efficient path is:
+
+{
+  "path": [
+    "ApproachDoor(D2)",
+    "OpenDoor(D2)",
+    "GoThrough(D2)",
+    "ApproachDoor(D4)",
+    "OpenDoor(D4)",
+    "GoThrough(D4)"
+  ]
+}
+
+This plan takes you from CHAMBRE 2 through the HALL and directly to the WC using only the necessary doors. It's the most efficient route based on the floor plan provided.

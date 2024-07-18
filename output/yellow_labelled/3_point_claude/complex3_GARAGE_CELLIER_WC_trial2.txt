@@ -1,0 +1,32 @@
+First, let me describe the rooms and doors as shown in the floor plan:
+
+Rooms and their connections:
+- GARAGE: Connected to CELLIER via D1
+- CELLIER: Connected to GARAGE via D1, to PORCHE via D2, to HALL via D3
+- PORCHE: Connected to CELLIER via D2
+- HALL: Connected to CELLIER via D3, to WC via D4, to LINGERIE via D5
+- WC: Connected to HALL via D4
+- LINGERIE: Connected to HALL via D5
+- BUREAU: Connected to HALL via D6
+- BAINS: Connected to HALL via D7
+- CHAMBRE PARENTS: Connected to HALL via D8
+- CHAMBRE ENFANT 1: Connected to HALL via D10
+- CHAMBRE ENFANT 2: Connected to HALL via D9
+
+Now, for the navigation plan from GARAGE to WC:
+
+{
+  "path": [
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)",
+    "ApproachDoor(D3)",
+    "OpenDoor(D3)",
+    "GoThrough(D3)",
+    "ApproachDoor(D4)",
+    "OpenDoor(D4)",
+    "GoThrough(D4)"
+  ]
+}
+
+This path takes you from the GARAGE, through the CELLIER, into the HALL, and finally to the WC, using only the necessary doors along the way.

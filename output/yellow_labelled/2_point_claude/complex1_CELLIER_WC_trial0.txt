@@ -1,0 +1,28 @@
+Certainly! I'll provide a detailed navigation plan based on the floor plan image. First, let's list out the rooms and doors with their connections:
+
+Rooms and Doors:
+- CELLIER: Connected to HALL via D1
+- HALL: Central area connecting multiple rooms
+- WC: Connected to HALL via D2
+- CHAMBRE 1: Connected to HALL via D4
+- CHAMBRE 2: Connected to HALL via D5
+- CUISINE: Connected to HALL via D7
+- BAINS: Connected to HALL (no specific door, open area)
+- GARAGE: Connected to CELLIER via D9
+- PORCHE: Connected to HALL via D6
+- TERRASSE COUVERTE: Connected to CUISINE via D8
+
+Now, for the navigation plan from CELLIER to WC:
+
+{
+  "path": [
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)",
+    "ApproachDoor(D2)",
+    "OpenDoor(D2)",
+    "GoThrough(D2)"
+  ]
+}
+
+This plan efficiently navigates from the CELLIER to the WC using only the necessary doors. It avoids any unnecessary detours or rooms. The robot will start in the CELLIER, go through D1 to enter the HALL, and then proceed directly to D2 to enter the WC.

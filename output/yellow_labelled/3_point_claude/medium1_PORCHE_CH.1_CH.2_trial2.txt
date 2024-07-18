@@ -1,0 +1,48 @@
+First, let me describe the rooms and doors for reference:
+
+Rooms:
+- PORCHE
+- SEJOUR (large living area)
+- CUISINE (kitchen)
+- CELLIER
+- DEGT (likely a hallway or passageway)
+- CH.1 (bedroom 1)
+- CH.2 (bedroom 2, split into multiple areas)
+- BAINS (bathroom)
+- WC (toilet)
+
+Doors:
+D1: Connects PORCHE to SEJOUR
+D2: Connects SEJOUR to CUISINE
+D3: Connects CUISINE to SEJOUR
+D4: Connects SEJOUR to DEGT
+D5: Connects DEGT to CH.1
+D6: Connects DEGT to CH.2
+D7: Connects DEGT to BAINS
+D8: Connects DEGT to WC
+
+Now, for the navigation plan from PORCHE to CH.1, then to CH.2:
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"}
+  ]
+}
+```
+
+This path takes you from the PORCHE through the SEJOUR and DEGT to reach CH.1, and then back through DEGT to reach CH.2, using only the necessary doors along the way.

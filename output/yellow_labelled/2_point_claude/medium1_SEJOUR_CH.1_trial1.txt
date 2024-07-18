@@ -1,0 +1,28 @@
+Thank you for providing the floor plan. I'll first list out the rooms and doors with their connections, then provide the navigation plan.
+
+Rooms and Doors:
+- SEJOUR: Connected to CUISINE via D1 and D3, to DEGT via D4
+- CUISINE: Connected to SEJOUR via D1 and D3, to CELLIER via D2
+- CELLIER: Connected to CUISINE via D2
+- DEGT: Connected to SEJOUR via D4, to CH.1 via D5, to CH.2 via D6, to BAINS via D7
+- CH.1: Connected to DEGT via D5
+- CH.2: Connected to DEGT via D6
+- BAINS: Connected to DEGT via D7, to WC via D8
+- WC: Connected to BAINS via D8
+
+Now, for the navigation plan from SEJOUR to CH.1:
+
+```json
+{
+  "plan": [
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"}
+  ]
+}
+```
+
+This plan provides the most direct and efficient path from the SEJOUR to CH.1, using only the necessary doors (D4 and D5) and avoiding any unnecessary rooms or doors.

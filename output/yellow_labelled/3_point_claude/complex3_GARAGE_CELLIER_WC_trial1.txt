@@ -1,0 +1,47 @@
+First, let me describe the rooms and doors as shown in the floor plan:
+
+Rooms:
+- GARAGE
+- PORCHE
+- CELLIER (3 separate areas labeled)
+- HALL (multiple areas)
+- WC
+- LINGERIE
+- BUREAU
+- BAINS
+- CHAMBRE PARENTS
+- CHAMBRE ENFANT 1
+- CHAMBRE ENFANT 2
+
+Doors:
+D1: Connects GARAGE to CELLIER
+D2: Connects CELLIER to PORCHE
+D3: Connects PORCHE to HALL
+D4: Connects HALL to WC
+D5: Connects HALL to LINGERIE
+D6: Connects HALL to BUREAU
+D7: Connects HALL to BAINS
+D8: Connects HALL to CHAMBRE PARENTS
+D9: Connects HALL to CHAMBRE ENFANT 2
+D10: Connects HALL to CHAMBRE ENFANT 1
+D11: Connects CELLIER to HALL
+
+Now, for the navigation plan from GARAGE to CELLIER to WC:
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"}
+  ]
+}
+```
+
+This path takes you from the GARAGE through D1 into the CELLIER, then through D11 into the HALL, and finally through D4 to reach the WC. This is the most direct and efficient route based on the floor plan provided.
