@@ -1,0 +1,28 @@
+Thank you for providing the floor plan. I'll first describe the rooms and doors, then provide the navigation plan.
+
+Room and Door Descriptions:
+- CUISINE: Connected to TERRASSE COUVERTE via D1, to CELLIER via D2
+- TERRASSE COUVERTE: Connected to CUISINE via D1
+- CELLIER: Connected to CUISINE via D2
+- CH. PARENTS: Connected to CUISINE via D3
+- DOUCHE: Connected to CUISINE via D4
+
+Now, for the navigation plan from CUISINE to DOUCHE:
+
+The path is straightforward as there's a direct connection between CUISINE and DOUCHE through door D4.
+
+Here's the navigation plan in JSON format:
+
+```json
+{
+  "start": "CUISINE",
+  "end": "DOUCHE",
+  "steps": [
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4}
+  ]
+}
+```
+
+This plan efficiently navigates you from the CUISINE to the DOUCHE using the most direct path available.

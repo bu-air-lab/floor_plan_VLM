@@ -1,0 +1,27 @@
+Thank you for providing the floor plan. I'll first list out the rooms and their door connections, then provide the navigation plan to get from CHAMBRE 1 to TERRASSE COUVERTE.
+
+Room and Door Connections:
+1. CHAMBRE 1 - D6 connects to HALL
+2. HALL - D4 connects to WC, D3 connects to BAINS, D2 connects to CHAMBRE 2, D7 connects to CUISINE
+3. CUISINE - D8 connects to TERRASSE COUVERTE, D7 connects to HALL
+4. TERRASSE COUVERTE - D8 connects to CUISINE
+
+Now, let's create the navigation plan:
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"}
+  ]
+}
+```
+
+This plan will efficiently navigate you from CHAMBRE 1 to TERRASSE COUVERTE using the necessary doors and avoiding any unnecessary detours.

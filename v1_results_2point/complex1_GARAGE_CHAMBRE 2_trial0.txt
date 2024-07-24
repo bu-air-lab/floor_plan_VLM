@@ -1,0 +1,39 @@
+First, let's list out the rooms and doors with their connections based on the floor plan:
+
+Rooms and Doors:
+1. GARAGE - connected to CELLIER via D9
+2. CELLIER - connected to GARAGE via D9, to HALL via D1
+3. HALL - central area connecting multiple rooms
+4. BAINS - connected to HALL via D2
+5. WC - connected to HALL via D3
+6. CHAMBRE 1 - connected to HALL via D4
+7. CHAMBRE 2 - connected to HALL via D5
+8. PORCHE - connected to HALL via D6
+9. CUISINE - connected to HALL via D7
+10. TERRASSE COUVERTE - connected to CUISINE via D8
+
+Now, let's create the navigation plan from GARAGE to CHAMBRE 2:
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D9"},
+    {"action": "OpenDoor", "door": "D9"},
+    {"action": "GoThrough", "door": "D9"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"}
+  ]
+}
+```
+
+This plan provides the most efficient path from the GARAGE to CHAMBRE 2:
+1. Start in GARAGE
+2. Go through D9 to enter CELLIER
+3. Go through D1 to enter the central HALL area
+4. Go through D5 to reach CHAMBRE 2
+
+This path avoids any unnecessary detours and uses only the doors required to reach the destination.

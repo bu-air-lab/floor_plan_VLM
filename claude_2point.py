@@ -12,7 +12,7 @@ os.environ["ANTHROPIC_API_KEY"] = API_KEY
 client = Anthropic()
 
 # Folder to images dataset
-image_folder = 'yellow_labelled_areas'
+image_folder = 'floorplan_dataset_v1'
 
 # Output folder for JSON plans from VLM
 output_folder = 'output'
@@ -28,7 +28,7 @@ prompt_A = """I am a robot that cannot go through walls and must use doors to na
 
 prompt_B = " and arrive at the "
 
-prompt_C = """. The only doors which exist are represented as yellow rectangles and labeled as D1-D(n). A plan consists of a sequence of the following actions:
+prompt_C = """. The only doors which exist are represented as yellow rectangles and labeled with  'D(N)' distinct positive integers(1,2,3...N). A plan consists of a sequence of the following actions:
  
 ApproachDoor(x): Move in front of door x.
 OpenDoor(x): Open door x.
@@ -36,11 +36,13 @@ GoThrough(x): Move through open door x to the location on the other side.
 
 Include only the necessary doors that are part of the path being used, and do not mention doors that won't be traversed even if they are in the path. 
 
-Explicit Room and Door Descriptions: Alongside the image, make a clear list of all rooms and doors with their connections - for your reference. 
+Explicit Room and Door Descriptions: Alongside the image, make a clear list of all rooms and doors with their connections - which is to be used for the navigation task. 
 
-Remember - the door symbol can overlap with the boundaries or common spaces.
+Remember - the door symbol can overlap with the boundaries or common spaces. Remember to only use the generated door room connections for making the action plan.  Double-check if each action is necessary and correct for traversal to the end goal. 
 
-Important: Carefully inspect the floor plan image to ensure the correct correspondence between doors and rooms. Prioritize providing a correct path over the shortest path. Make sure the path avoids any unnecessary doors or rooms. If any unnecessary doors or rooms are included, silently correct the plan before providing the final sequence. Verify the plan's accuracy before finalizing your response. Give the final path in a json format.
+Important: Carefully inspect the floor plan image to ensure the correct correspondence between doors and rooms. Prioritize providing a correct path over the shortest path. Make sure the path avoids any unnecessary doors or rooms. If any unnecessary doors or rooms are included, silently correct the plan before providing the final sequence. Give the final path in a json format.
+
+Remember to make a step by step solution for each navigation and only to use the door-room connections for the correct path. 
 """
 
 # Define the plans
@@ -166,7 +168,7 @@ def process_images_and_prompts():
                 text_response = query_claude_with_image_and_text(image_path, prompt)
 
                 # Write the text response to a new file
-                filename = f'output/yellow_labelled/2_point_claude/{key}_{start}_{end}_trial{n}.txt'
+                filename = f'v1_results_2point/{key}_{start}_{end}_trial{n}.txt'
                 with open(filename, 'w') as file:
                     file.write(text_response)
 
