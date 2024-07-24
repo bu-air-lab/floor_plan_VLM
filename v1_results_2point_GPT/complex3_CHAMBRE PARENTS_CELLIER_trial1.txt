@@ -1,0 +1,51 @@
+### Room and Door Connections
+
+- **CHAMBRE PARENTS**:
+  - Door D8: Connects to HALL
+
+- **HALL**:
+  - Door D8: Connects to CHAMBRE PARENTS
+  - Door D7: Connects to BAINS
+  - Door D6: Connects to BUREAU
+  - Door D5: Connects to LINGERIE
+  - Door D4: Connects to WC
+  - Door D3: Connects to PORCHE
+  - Door D11: Connects to CELLIER
+  - Door D10: Connects to CHAMBRE ENFANT 1
+  - Door D9: Connects to CHAMBRE ENFANT 2
+
+- **CELLIER**:
+  - Door D11: Connects to HALL
+  - Door D2: Connects to PORCHE
+  - Door D1: Connects to GARAGE
+
+- **PORCHE**:
+  - Door D3: Connects to HALL
+  - Door D2: Connects to CELLIER
+
+### Navigation Plan
+
+1. **Start in CHAMBRE PARENTS**
+2. ApproachDoor(8)
+3. OpenDoor(8)
+4. GoThrough(8) to HALL
+5. ApproachDoor(11)
+6. OpenDoor(11)
+7. GoThrough(11) to CELLIER
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8},
+    {"action": "ApproachDoor", "door": 11},
+    {"action": "OpenDoor", "door": 11},
+    {"action": "GoThrough", "door": 11}
+  ]
+}
+```
+
+This plan ensures that you move from CHAMBRE PARENTS to CELLIER by passing through the necessary doors in the correct sequence.

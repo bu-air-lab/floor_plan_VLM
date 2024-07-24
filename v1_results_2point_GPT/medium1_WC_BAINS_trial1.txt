@@ -1,0 +1,42 @@
+### Room and Door Connections
+
+- **WC**:
+  - Connected to DEGT via Door D8
+
+- **DEGT**:
+  - Connected to WC via Door D8
+  - Connected to BAINS via Door D7
+  - Connected to SEJOUR via Door D4
+  - Connected to CH.1 via Door D5
+  - Connected to CH.2 via Door D6
+
+- **BAINS**:
+  - Connected to DEGT via Door D7
+
+### Navigation Plan
+
+To navigate from WC to BAINS, follow these steps:
+
+1. **ApproachDoor(8)**: Move in front of Door D8.
+2. **OpenDoor(8)**: Open Door D8.
+3. **GoThrough(8)**: Move through Door D8 to DEGT.
+4. **ApproachDoor(7)**: Move in front of Door D7.
+5. **OpenDoor(7)**: Open Door D7.
+6. **GoThrough(7)**: Move through Door D7 to BAINS.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7}
+  ]
+}
+```
+
+This plan ensures that you move from WC to BAINS efficiently, using only the necessary doors.

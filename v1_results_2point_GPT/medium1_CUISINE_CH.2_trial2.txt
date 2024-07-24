@@ -1,0 +1,54 @@
+### Room and Door Connections
+
+- **CUISINE**:
+  - Connected to SEJOUR via Door D3
+  - Connected to CELLER via Door D2
+
+- **SEJOUR**:
+  - Connected to CUISINE via Door D3
+  - Connected to CELLER via Door D1
+  - Connected to DEGT via Door D4
+  - Connected to CH.1 via Door D5
+
+- **DEGT**:
+  - Connected to SEJOUR via Door D4
+  - Connected to CH.2 via Door D6
+  - Connected to WC via Door D8
+  - Connected to BAINS via Door D7
+
+- **CH.2**:
+  - Connected to DEGT via Door D6
+
+### Navigation Plan
+
+Starting in the CUISINE and aiming to arrive at CH.2, the following sequence of actions is required:
+
+1. **ApproachDoor(3)**: Move in front of Door D3.
+2. **OpenDoor(3)**: Open Door D3.
+3. **GoThrough(3)**: Move through Door D3 to SEJOUR.
+4. **ApproachDoor(4)**: Move in front of Door D4.
+5. **OpenDoor(4)**: Open Door D4.
+6. **GoThrough(4)**: Move through Door D4 to DEGT.
+7. **ApproachDoor(6)**: Move in front of Door D6.
+8. **OpenDoor(6)**: Open Door D6.
+9. **GoThrough(6)**: Move through Door D6 to CH.2.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6}
+  ]
+}
+```
+
+This plan ensures that you move efficiently from the CUISINE to CH.2, using only the necessary doors.

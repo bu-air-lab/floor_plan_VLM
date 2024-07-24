@@ -1,0 +1,63 @@
+### Room and Door Connections
+
+- **WC**:
+  - Connected to HALL via Door D3
+
+- **HALL**:
+  - Connected to WC via Door D3
+  - Connected to BAIN via Door D4
+  - Connected to CHAMBRE 3 via Door D5
+  - Connected to CHAMBRE 2 via Door D6
+  - Connected to CHAMBRE 1 via Door D2
+  - Connected to CELLIER via Door D7
+  - Connected to PORCHE via Door D8
+
+- **BAIN**:
+  - Connected to HALL via Door D4
+
+- **CHAMBRE 3**:
+  - Connected to HALL via Door D5
+
+- **CHAMBRE 2**:
+  - Connected to HALL via Door D6
+
+- **CHAMBRE 1**:
+  - Connected to HALL via Door D2
+
+- **CELLIER**:
+  - Connected to HALL via Door D7
+  - Connected to GARAGE via Door D1
+
+- **GARAGE**:
+  - Connected to CELLIER via Door D1
+
+- **PORCHE**:
+  - Connected to HALL via Door D8
+
+### Navigation Plan
+
+To navigate from WC to CHAMBRE 2, the following sequence of actions is required:
+
+1. **ApproachDoor(3)**: Move in front of Door D3.
+2. **OpenDoor(3)**: Open Door D3.
+3. **GoThrough(3)**: Move through Door D3 to HALL.
+4. **ApproachDoor(6)**: Move in front of Door D6.
+5. **OpenDoor(6)**: Open Door D6.
+6. **GoThrough(6)**: Move through Door D6 to CHAMBRE 2.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6}
+  ]
+}
+```
+
+This plan ensures that you move from the WC to CHAMBRE 2 efficiently, using only the necessary doors.

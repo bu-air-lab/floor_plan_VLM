@@ -1,0 +1,64 @@
+### Room and Door Connections
+
+- **CUISINE**:
+  - Connected to HALL via Door D7
+  - Connected to PORCHE via Door D6
+  - Connected to TERRASSE COUVERTE via Door D8
+
+- **HALL**:
+  - Connected to CUISINE via Door D7
+  - Connected to CHAMBRE 1 via Door D4
+  - Connected to CHAMBRE 2 via Door D5
+  - Connected to BAIN via Door D2
+  - Connected to WC via Door D3
+  - Connected to CELLIER via Door D1
+
+- **CHAMBRE 1**:
+  - Connected to HALL via Door D4
+
+- **CHAMBRE 2**:
+  - Connected to HALL via Door D5
+
+- **BAIN**:
+  - Connected to HALL via Door D2
+
+- **WC**:
+  - Connected to HALL via Door D3
+
+- **CELLIER**:
+  - Connected to HALL via Door D1
+  - Connected to GARAGE via Door D9
+
+- **PORCHE**:
+  - Connected to CUISINE via Door D6
+
+- **TERRASSE COUVERTE**:
+  - Connected to CUISINE via Door D8
+
+### Navigation Plan
+
+To navigate from CUISINE to CHAMBRE 1, follow these steps:
+
+1. **ApproachDoor(7)**: Move in front of Door D7.
+2. **OpenDoor(7)**: Open Door D7.
+3. **GoThrough(7)**: Move through Door D7 to enter HALL.
+4. **ApproachDoor(4)**: Move in front of Door D4.
+5. **OpenDoor(4)**: Open Door D4.
+6. **GoThrough(4)**: Move through Door D4 to enter CHAMBRE 1.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4}
+  ]
+}
+```
+
+This plan ensures that you navigate efficiently from CUISINE to CHAMBRE 1 using the necessary doors.

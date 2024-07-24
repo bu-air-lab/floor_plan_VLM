@@ -1,0 +1,49 @@
+### Room and Door Connections
+
+- **CELLIER**
+  - Door D1: Connects to GARAGES
+  - Door D3: Connects to CUISINE
+
+- **GARAGES**
+  - Door D1: Connects to CELLIER
+  - Door D2: Connects to HALL
+
+- **CUISINE**
+  - Door D3: Connects to CELLIER
+  - Door D6: Connects to HALL
+  - Door D7: Connects to HALL
+
+- **HALL**
+  - Door D2: Connects to GARAGES
+  - Door D4: Connects to WC
+  - Door D5: Connects to CHAMBRE 1
+  - Door D6: Connects to CUISINE
+  - Door D7: Connects to CUISINE
+
+- **WC**
+  - Door D4: Connects to HALL
+
+- **CHAMBRE 1**
+  - Door D5: Connects to HALL
+
+- **DOUCHE**
+  - No direct door connections to other rooms
+
+### Navigation Plan
+
+To navigate from the CELLIER to the HALL, the most efficient path involves using Door D3 to go through the CUISINE and then Door D6 to enter the HALL.
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"}
+  ]
+}
+```
+
+This plan ensures that you move from the CELLIER to the HALL efficiently by passing through the CUISINE and using the necessary doors.

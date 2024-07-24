@@ -1,0 +1,46 @@
+### Room and Door Connections
+
+- **DOUCHE**:
+  - Connected to CUISINE via Door D4
+
+- **CUISINE**:
+  - Connected to DOUCHE via Door D4
+  - Connected to CH. PARENTS via Door D3
+  - Connected to CELLIER via Door D2
+  - Connected to TERRASSE COUVERTE via Door D1
+
+- **CH. PARENTS**:
+  - Connected to CUISINE via Door D3
+
+- **CELLIER**:
+  - Connected to CUISINE via Door D2
+
+- **TERRASSE COUVERTE**:
+  - Connected to CUISINE via Door D1
+
+### Navigation Plan
+
+1. **Start in DOUCHE**
+2. **Approach Door D4**
+3. **Open Door D4**
+4. **Go Through Door D4 to enter CUISINE**
+5. **Approach Door D2**
+6. **Open Door D2**
+7. **Go Through Door D2 to enter CELLIER**
+
+### JSON Format Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+  ]
+}
+```
+
+This plan ensures that you move from the DOUCHE to the CELLIER by passing through the necessary doors in the correct sequence.

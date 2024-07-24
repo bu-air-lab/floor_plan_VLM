@@ -1,0 +1,60 @@
+### Room and Door Descriptions:
+
+- **Rooms:**
+  - CELLIER
+  - CUISINE
+  - SEJOUR
+  - CH.1
+  - CH.2
+  - DEGT
+  - WC
+  - BAINS
+
+- **Doors:**
+  - **D1:** SEJOUR - Porche
+  - **D2:** CELLIER - CUISINE
+  - **D3:** CUISINE - SEJOUR
+  - **D4:** SEJOUR - DEGT
+  - **D5:** DEGT - CH.1
+  - **D6:** DEGT - CH.2
+  - **D7:** DEGT - BAINS
+  - **D8:** DEGT - WC
+
+### Navigation Plan:
+
+1. **Start in CELLIER**
+2. **ApproachDoor(2)**
+3. **OpenDoor(2)**
+4. **GoThrough(2) to CUISINE**
+5. **ApproachDoor(3)**
+6. **OpenDoor(3)**
+7. **GoThrough(3) to SEJOUR**
+8. **ApproachDoor(4)**
+9. **OpenDoor(4)**
+10. **GoThrough(4) to DEGT**
+11. **ApproachDoor(8)**
+12. **OpenDoor(8)**
+13. **GoThrough(8) to WC**
+
+### JSON Format:
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(2)",
+    "OpenDoor(2)",
+    "GoThrough(2)",
+    "ApproachDoor(3)",
+    "OpenDoor(3)",
+    "GoThrough(3)",
+    "ApproachDoor(4)",
+    "OpenDoor(4)",
+    "GoThrough(4)",
+    "ApproachDoor(8)",
+    "OpenDoor(8)",
+    "GoThrough(8)"
+  ]
+}
+```
+
+This plan ensures that you start in the CELLIER and navigate through the necessary doors to reach the WC, following the correct sequence of actions.

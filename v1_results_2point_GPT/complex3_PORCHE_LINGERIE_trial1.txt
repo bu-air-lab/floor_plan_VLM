@@ -1,0 +1,71 @@
+### Room and Door Connections
+
+- **PORCHE**
+  - Door D2: Connects to CELLIER
+  - Door D3: Connects to HALL
+
+- **CELLIER**
+  - Door D1: Connects to GARAGE
+  - Door D2: Connects to PORCHE
+  - Door D11: Connects to HALL
+
+- **HALL**
+  - Door D3: Connects to PORCHE
+  - Door D4: Connects to WC
+  - Door D5: Connects to LINGERIE
+  - Door D6: Connects to BUREAU
+  - Door D7: Connects to BAINS
+  - Door D8: Connects to CHAMBRE PARENTS
+  - Door D9: Connects to CHAMBRE ENFANT 2
+  - Door D10: Connects to CHAMBRE ENFANT 1
+  - Door D11: Connects to CELLIER
+
+- **WC**
+  - Door D4: Connects to HALL
+
+- **LINGERIE**
+  - Door D5: Connects to HALL
+
+- **BUREAU**
+  - Door D6: Connects to HALL
+
+- **BAINS**
+  - Door D7: Connects to HALL
+
+- **CHAMBRE PARENTS**
+  - Door D8: Connects to HALL
+
+- **CHAMBRE ENFANT 1**
+  - Door D10: Connects to HALL
+
+- **CHAMBRE ENFANT 2**
+  - Door D9: Connects to HALL
+
+- **GARAGE**
+  - Door D1: Connects to CELLIER
+
+### Navigation Plan
+
+To navigate from the PORCHE to the LINGERIE, follow these steps:
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D3"},
+  {"action": "OpenDoor", "door": "D3"},
+  {"action": "GoThrough", "door": "D3"},
+  {"action": "ApproachDoor", "door": "D5"},
+  {"action": "OpenDoor", "door": "D5"},
+  {"action": "GoThrough", "door": "D5"}
+]
+```
+
+### Step-by-Step Solution
+
+1. **ApproachDoor(D3)**: Move in front of door D3 in the PORCHE.
+2. **OpenDoor(D3)**: Open door D3.
+3. **GoThrough(D3)**: Move through door D3 to enter the HALL.
+4. **ApproachDoor(D5)**: Move in front of door D5 in the HALL.
+5. **OpenDoor(D5)**: Open door D5.
+6. **GoThrough(D5)**: Move through door D5 to enter the LINGERIE.
+
+This plan ensures that you navigate efficiently from the PORCHE to the LINGERIE using the necessary doors.

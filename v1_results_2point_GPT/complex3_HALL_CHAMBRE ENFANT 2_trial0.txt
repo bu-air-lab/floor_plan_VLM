@@ -1,0 +1,55 @@
+### Room and Door Connections
+
+- **HALL**:
+  - Connected to CELLIER via Door D3
+  - Connected to LINGERIE via Door D4
+  - Connected to BUREAU via Door D5
+  - Connected to BAIN via Door D7
+  - Connected to CHAMBRE ENFANT 1 via Door D10
+  - Connected to CHAMBRE ENFANT 2 via Door D9
+
+- **CELLIER**:
+  - Connected to PORCHE via Door D2
+  - Connected to HALL via Door D3
+  - Connected to GARAGE via Door D1
+  - Connected to HALL via Door D11
+
+- **LINGERIE**:
+  - Connected to HALL via Door D4
+
+- **BUREAU**:
+  - Connected to HALL via Door D5
+
+- **BAINS**:
+  - Connected to HALL via Door D7
+
+- **CHAMBRE PARENTS**:
+  - Connected to HALL via Door D8
+
+- **CHAMBRE ENFANT 1**:
+  - Connected to HALL via Door D10
+
+- **CHAMBRE ENFANT 2**:
+  - Connected to HALL via Door D9
+
+### Navigation Plan
+
+To navigate from the HALL to CHAMBRE ENFANT 2, follow these steps:
+
+1. **ApproachDoor(9)**: Move in front of Door D9.
+2. **OpenDoor(9)**: Open Door D9.
+3. **GoThrough(9)**: Move through Door D9 to CHAMBRE ENFANT 2.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 9},
+    {"action": "OpenDoor", "door": 9},
+    {"action": "GoThrough", "door": 9}
+  ]
+}
+```
+
+This plan ensures that you move efficiently from the HALL to CHAMBRE ENFANT 2, using only the necessary doors.

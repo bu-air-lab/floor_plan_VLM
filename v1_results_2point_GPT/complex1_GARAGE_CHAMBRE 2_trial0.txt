@@ -1,0 +1,45 @@
+### Room and Door Connections
+
+- **Garage**: Connected to Cellier via Door D9.
+- **Cellier**: Connected to Hall via Door D1.
+- **Hall**: 
+  - Connected to Bains via Door D2.
+  - Connected to WC via Door D3.
+  - Connected to Chambre 1 via Door D4.
+  - Connected to Chambre 2 via Door D5.
+  - Connected to Porche via Door D6.
+  - Connected to Cuisine via Door D7.
+- **Cuisine**: Connected to Terrasse Couverte via Door D8.
+
+### Navigation Plan
+
+1. **Start in the Garage**
+2. **Approach Door D9**
+3. **Open Door D9**
+4. **Go Through Door D9** (Move from Garage to Cellier)
+5. **Approach Door D1**
+6. **Open Door D1**
+7. **Go Through Door D1** (Move from Cellier to Hall)
+8. **Approach Door D5**
+9. **Open Door D5**
+10. **Go Through Door D5** (Move from Hall to Chambre 2)
+
+### JSON Format Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D9"},
+    {"action": "OpenDoor", "door": "D9"},
+    {"action": "GoThrough", "door": "D9"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"}
+  ]
+}
+```
+
+This plan ensures that you move efficiently from the Garage to Chambre 2 by using the necessary doors in the correct sequence.

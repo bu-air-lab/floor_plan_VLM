@@ -1,0 +1,55 @@
+### Room and Door Connections
+
+- **CHAMBRE 1**
+  - Door D1: Connects to GARAGE
+  - Door D2: Connects to HALL
+
+- **GARAGE**
+  - Door D1: Connects to CHAMBRE 1
+
+- **HALL**
+  - Door D2: Connects to CHAMBRE 1
+  - Door D3: Connects to WC
+  - Door D4: Connects to BAINS
+  - Door D5: Connects to CHAMBRE 3
+  - Door D6: Connects to CHAMBRE 2
+  - Door D7: Connects to CELLIER
+  - Door D8: Connects to PORCHE
+
+- **WC**
+  - Door D3: Connects to HALL
+
+- **BAINS**
+  - Door D4: Connects to HALL
+
+- **CHAMBRE 3**
+  - Door D5: Connects to HALL
+
+- **CHAMBRE 2**
+  - Door D6: Connects to HALL
+
+- **CELLIER**
+  - Door D7: Connects to HALL
+
+- **PORCHE**
+  - Door D8: Connects to HALL
+
+### Navigation Plan
+
+To navigate from CHAMBRE 1 to the HALL, follow these steps:
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D2"},
+  {"action": "OpenDoor", "door": "D2"},
+  {"action": "GoThrough", "door": "D2"}
+]
+```
+
+### Explanation
+
+1. **ApproachDoor(D2)**: Move in front of door D2, which connects CHAMBRE 1 to the HALL.
+2. **OpenDoor(D2)**: Open door D2.
+3. **GoThrough(D2)**: Move through door D2 to enter the HALL.
+
+This sequence ensures that you efficiently navigate from CHAMBRE 1 to the HALL using the necessary doors.

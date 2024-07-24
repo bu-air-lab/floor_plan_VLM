@@ -1,0 +1,73 @@
+### Room and Door Connections
+
+- **CHAMBRE PARENTS**
+  - Door D8: Connects to HALL
+
+- **HALL**
+  - Door D8: Connects to CHAMBRE PARENTS
+  - Door D7: Connects to BAINS
+  - Door D6: Connects to BUREAU
+  - Door D5: Connects to LINGERIE
+  - Door D4: Connects to WC
+  - Door D3: Connects to PORCHE
+  - Door D10: Connects to CHAMBRE ENFANT 1
+  - Door D9: Connects to CHAMBRE ENFANT 2
+  - Door D11: Connects to CELLIER
+
+- **BAINS**
+  - Door D7: Connects to HALL
+
+- **BUREAU**
+  - Door D6: Connects to HALL
+
+- **LINGERIE**
+  - Door D5: Connects to HALL
+
+- **WC**
+  - Door D4: Connects to HALL
+
+- **PORCHE**
+  - Door D3: Connects to HALL
+  - Door D2: Connects to CELLIER
+
+- **CELLIER**
+  - Door D2: Connects to PORCHE
+  - Door D11: Connects to HALL
+  - Door D1: Connects to GARAGE
+
+- **CHAMBRE ENFANT 1**
+  - Door D10: Connects to HALL
+
+- **CHAMBRE ENFANT 2**
+  - Door D9: Connects to HALL
+
+- **GARAGE**
+  - Door D1: Connects to CELLIER
+
+### Navigation Plan
+
+To navigate from CHAMBRE PARENTS to CELLIER, follow these steps:
+
+1. **ApproachDoor(D8)**: Move in front of door D8.
+2. **OpenDoor(D8)**: Open door D8.
+3. **GoThrough(D8)**: Move through door D8 to enter HALL.
+4. **ApproachDoor(D11)**: Move in front of door D11.
+5. **OpenDoor(D11)**: Open door D11.
+6. **GoThrough(D11)**: Move through door D11 to enter CELLIER.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"}
+  ]
+}
+```
+
+This plan ensures that you navigate efficiently from CHAMBRE PARENTS to CELLIER using the necessary doors.

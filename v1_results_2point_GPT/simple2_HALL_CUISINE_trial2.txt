@@ -1,0 +1,38 @@
+### Room and Door Descriptions
+
+**Rooms:**
+1. HALL
+2. CH.1
+3. CH.2
+4. Bains
+5. Garage
+6. Cuisine
+
+**Doors:**
+1. D1: Connects HALL and Bains
+2. D2: Connects HALL and CH.1
+3. D3: Connects HALL and CH.2
+4. D4: Connects HALL and Garage
+5. D5: Connects HALL and Cuisine
+
+### Navigation Plan
+
+To navigate from the HALL to the CUISINE, follow these steps:
+
+1. **ApproachDoor(5)**: Move in front of door D5.
+2. **OpenDoor(5)**: Open door D5.
+3. **GoThrough(5)**: Move through open door D5 to the CUISINE.
+
+### JSON Format Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5}
+  ]
+}
+```
+
+This plan ensures that you move efficiently from the HALL to the CUISINE by using the necessary door D5.

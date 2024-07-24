@@ -1,0 +1,59 @@
+### Room and Door Connections
+
+- **BAINS**
+  - Connected to WC via Door D3
+  - Connected to HALL via Door D4
+
+- **WC**
+  - Connected to BAINS via Door D3
+
+- **HALL**
+  - Connected to BAINS via Door D4
+  - Connected to CHAMBRE 3 via Door D5
+  - Connected to CHAMBRE 2 via Door D6
+  - Connected to CHAMBRE 1 via Door D2
+  - Connected to CELLIER via Door D7
+  - Connected to PORCHE via Door D8
+
+- **CHAMBRE 3**
+  - Connected to HALL via Door D5
+
+- **CHAMBRE 2**
+  - Connected to HALL via Door D6
+
+- **CHAMBRE 1**
+  - Connected to HALL via Door D2
+
+- **CELLIER**
+  - Connected to HALL via Door D7
+
+- **PORCHE**
+  - Connected to HALL via Door D8
+
+### Navigation Plan
+
+Starting in BAINS and arriving at PORCHE:
+
+1. **ApproachDoor(4)**: Move in front of Door D4.
+2. **OpenDoor(4)**: Open Door D4.
+3. **GoThrough(4)**: Move through Door D4 to HALL.
+4. **ApproachDoor(8)**: Move in front of Door D8.
+5. **OpenDoor(8)**: Open Door D8.
+6. **GoThrough(8)**: Move through Door D8 to PORCHE.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8}
+  ]
+}
+```
+
+This plan ensures that you navigate efficiently from BAINS to PORCHE using the necessary doors.
