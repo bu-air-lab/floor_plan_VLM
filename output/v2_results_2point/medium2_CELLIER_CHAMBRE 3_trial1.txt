@@ -1,0 +1,28 @@
+Thank you for providing the floor plan image. I'll analyze the layout, list the room and door connections, and then provide a navigation plan from the CELLIER to CHAMBRE 3.
+
+Room and Door Connections:
+1. D1 connects GARAGE to GARAGE (internal door)
+2. D2 connects CHAMBRE 1 to HALL
+3. D3 connects HALL to WC
+4. D4 connects HALL to BAINS
+5. D5 connects HALL to CHAMBRE 3
+6. D6 connects HALL to CHAMBRE 2
+7. D7 connects CELLIER to HALL
+8. D8 connects HALL to Porche (external door)
+
+Now, let's create the navigation plan from CELLIER to CHAMBRE 3:
+
+```json
+{
+  "navigationPlan": [
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7},
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5}
+  ]
+}
+```
+
+This plan provides the most efficient path from the CELLIER to CHAMBRE 3, using only the necessary doors and avoiding any unnecessary rooms or detours. The robot will start in the CELLIER, go through door D7 to enter the HALL, and then use door D5 to reach CHAMBRE 3.

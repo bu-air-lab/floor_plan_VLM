@@ -1,0 +1,27 @@
+Thank you for providing the floor plan. I'll start by listing the rooms and doors with their connections, then provide the navigation plan.
+
+Room and Door Connections:
+- D1: Connects GARAGES and CELLIER
+- D2: Connects GARAGES and HALL (near DOUCHE)
+- D3: Connects CELLIER and CUISINE
+- D4: Connects WC and HALL
+- D5: Connects HALL and CHAMBRE 1
+- D6: Connects HALL and CUISINE
+- D7: Connects CUISINE and HALL (lower part)
+
+Now, for the navigation plan from CHAMBRE 1 to GARAGES:
+
+```json
+{
+  "navigationPlan": [
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5},
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2}
+  ]
+}
+```
+
+This plan provides the most direct and efficient route from CHAMBRE 1 to GARAGES, using only the necessary doors and avoiding any unnecessary detours or rooms.

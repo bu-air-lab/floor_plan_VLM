@@ -1,0 +1,22 @@
+Thank you for providing the floor plan. I'll analyze the rooms and doors, create a list of connections, and then provide a navigation plan from CUISINE to DOUCHE.
+
+Room and Door Connections:
+1. D1 connects TERRASSE COUVERTE and CUISINE
+2. D2 connects CUISINE and CELLIER
+3. D3 connects CUISINE and CH. PARENTS
+4. D4 connects CH. PARENTS and DOUCHE
+
+Now, let's create the navigation plan from CUISINE to DOUCHE:
+
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4}
+  ]
+}
+
+This plan will efficiently guide you from the CUISINE to the DOUCHE using the necessary doors (D3 and D4) without any unnecessary detours or actions.
