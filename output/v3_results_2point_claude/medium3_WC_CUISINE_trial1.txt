@@ -1,0 +1,50 @@
+Thank you for providing the floor plan. I'll first list out the rooms and doors with their connections, then provide the navigation plan.
+
+Room and Door Connections:
+- WC: Connected to Hall via D4
+- Hall: Connected to WC (D4), Douche (D2), Chambre 1 (D5), Cuisine (D6)
+- Douche: Connected to Hall via D2
+- Chambre 1: Connected to Hall via D5
+- Cuisine: Connected to Hall via D6, Cellier via D3
+- Cellier: Connected to Cuisine via D3, Garages via D1
+- Garages: Connected to Cellier via D1
+
+Navigation Plan:
+To go from WC to Cuisine, we need to:
+1. Exit WC to Hall
+2. Go from Hall to Cuisine
+
+Here's the detailed action plan in JSON format:
+
+```json
+{
+  "navigation_plan": [
+    {
+      "action": "ApproachDoor",
+      "door": "D4"
+    },
+    {
+      "action": "OpenDoor",
+      "door": "D4"
+    },
+    {
+      "action": "GoThrough",
+      "door": "D4"
+    },
+    {
+      "action": "ApproachDoor",
+      "door": "D6"
+    },
+    {
+      "action": "OpenDoor",
+      "door": "D6"
+    },
+    {
+      "action": "GoThrough",
+      "door": "D6"
+    }
+  ]
+}
+```
+
+This plan efficiently navigates from the WC to the Cuisine using only the necessary doors (D4 and D6) and avoiding any unnecessary rooms or doors.

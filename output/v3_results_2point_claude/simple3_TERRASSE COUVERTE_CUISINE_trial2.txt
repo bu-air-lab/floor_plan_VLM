@@ -1,0 +1,19 @@
+Thank you for providing the floor plan. I'll analyze the rooms, doors, and their connections, then provide a navigation plan for you to move from the TERRASSE COUVERTE to the CUISINE.
+
+Room and Door Connections:
+1. TERRASSE COUVERTE <-> D1 <-> CUISINE
+2. CUISINE <-> D2 <-> CELLIER
+3. CUISINE <-> D3 <-> CH. PARENTS
+4. CH. PARENTS <-> D4 <-> DOUCHE
+
+Based on these connections, here's the efficient navigation plan from TERRASSE COUVERTE to CUISINE:
+
+{
+  "navigationPlan": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1}
+  ]
+}
+
+This plan will take you directly from the TERRASSE COUVERTE to the CUISINE using the most efficient path. There's no need to go through any other doors or rooms, as D1 connects these two areas directly.

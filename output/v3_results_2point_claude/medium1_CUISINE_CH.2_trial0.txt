@@ -1,0 +1,29 @@
+Thank you for providing the floor plan. I'll first list the rooms and doors with their connections, then provide the navigation plan.
+
+Room and Door Connections:
+- D1 connects SEJOUR and Porche
+- D2 connects CUISINE and CELLIER
+- D3 connects CUISINE and SEJOUR
+- D4 connects SEJOUR and DEGT
+- D5 connects DEGT and CH.1
+- D6 connects DEGT and CH.2
+- D7 connects DEGT and BAINS
+- D8 connects CUISINE and DEGT
+
+Navigation Plan:
+To go from CUISINE to CH.2, we need to use doors D8 and D6. Here's the detailed plan:
+
+```json
+{
+  "plan": [
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6}
+  ]
+}
+```
+
+This plan will efficiently navigate you from the CUISINE to CH.2 using only the necessary doors. You'll start in the CUISINE, go through D8 to enter the DEGT (dégagement or hallway), and then through D6 to reach CH.2.

@@ -1,0 +1,36 @@
+Thank you for providing the floor plan image. I'll start by listing the rooms and doors with their connections, then provide the navigation plan as requested.
+
+Room and Door Connections:
+- CELLIER connects to CUISINE through D2
+- CUISINE connects to SEJOUR through D3
+- SEJOUR connects to DEGT through D4
+- DEGT connects to CH.1 through D5
+- DEGT connects to CH.2 through D6
+- DEGT connects to BAINS through D7
+- BAINS connects to WC through D8
+
+Now, for the navigation plan from CELLIER to WC:
+
+```json
+{
+  "plan": [
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7},
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8}
+  ]
+}
+```
+
+This plan will efficiently navigate you from the CELLIER to the WC using only the necessary doors and rooms. The path goes through CELLIER -> CUISINE -> SEJOUR -> DEGT -> BAINS -> WC, which is the most direct route based on the floor plan provided.

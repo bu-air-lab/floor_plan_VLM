@@ -1,4 +1,4 @@
-Thank you for providing the floor plan. I'll start by listing the rooms and doors with their connections, then provide a navigation plan to get from the GARAGE to CHAMBRE 2.
+Thank you for providing the floor plan. I'll analyze the rooms and doors, create a list of connections, and then provide a navigation plan from the GARAGE to CHAMBRE 2.
 
 Room and Door Connections:
 D1: Connects CELLIER to HALL
@@ -30,4 +30,4 @@ To go from the GARAGE to CHAMBRE 2, we need to use doors D9, D1, and D5. Here's 
 }
 ```
 
-This plan will efficiently navigate you from the GARAGE to CHAMBRE 2 using only the necessary doors along the path.
+This plan will efficiently navigate you from the GARAGE to CHAMBRE 2 using only the necessary doors and avoiding any unnecessary detours.

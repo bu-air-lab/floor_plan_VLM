@@ -1,0 +1,25 @@
+Thank you for providing the floor plan. I'll first list the rooms and doors with their connections, then provide the navigation plan.
+
+Room and Door Connections:
+- DOUCHE: Connected to HALL via D2
+- HALL: Connected to WC via D4, CHAMBRE 1 via D5, CUISINE via D6
+- CUISINE: Connected to HALL via D6, CELLIER via D3
+- CELLIER: Connected to CUISINE via D3, GARAGES via D1
+- GARAGES: Connected to CELLIER via D1
+- CHAMBRE 1: Connected to HALL via D5
+- WC: Connected to HALL via D4
+
+Now, for the navigation plan from DOUCHE to CHAMBRE 1:
+
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"}
+  ]
+}
+
+This plan efficiently navigates from the DOUCHE to CHAMBRE 1 using only the necessary doors. The robot will exit the DOUCHE through D2 into the HALL, then proceed directly to CHAMBRE 1 through D5.

@@ -1,0 +1,29 @@
+Thank you for providing the floor plan. I'll analyze the rooms, doors, and their connections, then provide a navigation plan from the WC to CHAMBRE 2.
+
+Room and Door Connections:
+1. WC connects to HALL via D3
+2. HALL connects to CHAMBRE 1 via D2
+3. HALL connects to CHAMBRE 3 via D5
+4. HALL connects to CHAMBRE 2 via D6
+5. HALL connects to CELLIER via D7
+6. CELLIER connects to GARAGE via D1
+7. HALL connects to Porche via D8
+8. BAINS connects to HALL via D4
+
+Navigation Plan:
+To go from WC to CHAMBRE 2, we need to use the following sequence of actions:
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6}
+  ]
+}
+```
+
+This plan will efficiently navigate you from the WC to CHAMBRE 2 using only the necessary doors and avoiding any unnecessary detours.

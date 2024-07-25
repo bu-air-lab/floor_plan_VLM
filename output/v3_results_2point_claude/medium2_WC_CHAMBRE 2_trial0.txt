@@ -1,0 +1,45 @@
+Thank you for providing the floor plan. I'll analyze the connections and provide a navigation plan as requested.
+
+Explicit Room and Door Descriptions:
+
+D1: Connects GARAGE and CELLIER
+D2: Connects CHAMBRE 1 and HALL
+D3: Connects WC and HALL
+D4: Connects BAINS and HALL
+D5: Connects CHAMBRE 3 and HALL
+D6: Connects CHAMBRE 2 and HALL
+D7: Connects CELLIER and HALL
+D8: Connects HALL and Porche
+
+Now, I'll create a navigation plan from the WC to CHAMBRE 2:
+
+{
+  "plan": [
+    {
+      "action": "ApproachDoor",
+      "door": 3
+    },
+    {
+      "action": "OpenDoor",
+      "door": 3
+    },
+    {
+      "action": "GoThrough",
+      "door": 3
+    },
+    {
+      "action": "ApproachDoor",
+      "door": 6
+    },
+    {
+      "action": "OpenDoor",
+      "door": 6
+    },
+    {
+      "action": "GoThrough",
+      "door": 6
+    }
+  ]
+}
+
+This plan provides the most efficient path from the WC to CHAMBRE 2, using only the necessary doors and avoiding any unnecessary detours.

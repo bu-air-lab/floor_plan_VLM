@@ -1,0 +1,30 @@
+Thank you for providing the floor plan. I'll first list the rooms and their door connections, then provide the navigation plan to get from CHAMBRE 2 to WC.
+
+Room and Door Connections:
+1. GARAGE - D9 connects to CELLIER
+2. CELLIER - D9 connects to GARAGE, D1 connects to HALL
+3. CHAMBRE 2 - D2 connects to HALL
+4. HALL - D1 connects to CELLIER, D2 connects to CHAMBRE 2, D3 connects to BAINS, D4 connects to WC, D5 connects to PORCHE, D6 connects to CHAMBRE 1, D7 connects to CUISINE
+5. BAINS - D3 connects to HALL
+6. WC - D4 connects to HALL
+7. PORCHE - D5 connects to HALL
+8. CHAMBRE 1 - D6 connects to HALL
+9. CUISINE - D7 connects to HALL, D8 connects to TERRASSE COUVERTE
+10. TERRASSE COUVERTE - D8 connects to CUISINE
+
+Navigation Plan from CHAMBRE 2 to WC:
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"}
+  ]
+}
+```
+
+This plan efficiently navigates from CHAMBRE 2 to WC using only the necessary doors (D2 and D4) and passing through the HALL. The plan avoids any unnecessary detours or rooms, providing a direct path to the destination.

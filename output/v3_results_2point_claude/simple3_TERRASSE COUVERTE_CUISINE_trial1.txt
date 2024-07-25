@@ -1,0 +1,28 @@
+Thank you for providing the floor plan. I'll analyze the layout, list the rooms and doors with their connections, and then provide a navigation plan to get from the TERRASSE COUVERTE to the CUISINE.
+
+Room and Door Connections:
+1. TERRASSE COUVERTE <-> D1 <-> CUISINE
+2. CUISINE <-> D2 <-> CELLIER
+3. CH. PARENTS <-> D3 <-> CUISINE
+4. CUISINE <-> D4 <-> DOUCHE
+
+Based on these connections, here's the navigation plan to get from the TERRASSE COUVERTE to the CUISINE:
+
+{
+  "navigationPlan": [
+    {
+      "action": "ApproachDoor",
+      "door": 1
+    },
+    {
+      "action": "OpenDoor",
+      "door": 1
+    },
+    {
+      "action": "GoThrough",
+      "door": 1
+    }
+  ]
+}
+
+This plan will efficiently navigate you from the TERRASSE COUVERTE to the CUISINE using the most direct path available. You'll approach Door 1 (D1), open it, and go through it to enter the CUISINE, which is your destination.

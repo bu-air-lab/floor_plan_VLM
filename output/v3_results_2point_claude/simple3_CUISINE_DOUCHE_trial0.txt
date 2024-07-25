@@ -1,0 +1,31 @@
+Thank you for providing the floor plan. Let me analyze the rooms and doors, and then provide you with a navigation plan.
+
+Explicit Room and Door Descriptions:
+
+Rooms:
+1. CUISINE (multiple instances)
+2. CELLIER (two instances)
+3. TERRASSE COUVERTE
+4. CH. PARENTS (two instances)
+5. DOUCHE (two instances)
+
+Doors and their connections:
+D1: Connects CUISINE to TERRASSE COUVERTE
+D2: Connects CUISINE to CELLIER
+D3: Connects CUISINE to CH. PARENTS
+D4: Connects CH. PARENTS to DOUCHE
+
+Now, let's create a navigation plan to get from CUISINE to DOUCHE:
+
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4}
+  ]
+}
+
+This navigation plan will efficiently guide you from the CUISINE to the DOUCHE using the necessary doors and avoiding any unnecessary detours or rooms.

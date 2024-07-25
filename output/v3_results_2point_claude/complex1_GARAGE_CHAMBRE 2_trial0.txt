@@ -1,4 +1,4 @@
-Thank you for providing the floor plan. I'll start by listing the rooms and doors with their connections, then provide a navigation plan to get from the GARAGE to CHAMBRE 2.
+Thank you for providing the floor plan. I'll analyze the rooms and doors, create a list of connections, and then provide a navigation plan from the GARAGE to CHAMBRE 2.
 
 Room and Door Connections:
 D1: Connects CELLIER to HALL
@@ -11,12 +11,11 @@ D7: Connects HALL to CUISINE
 D8: Connects CUISINE to TERRASSE COUVERTE
 D9: Connects CELLIER to GARAGE
 
-Navigation Plan:
-To go from the GARAGE to CHAMBRE 2, we need to use doors D9, D1, and D5. Here's the detailed plan in JSON format:
+Now, let's create the navigation plan from GARAGE to CHAMBRE 2:
 
 ```json
 {
-  "navigationPlan": [
+  "navigation_plan": [
     {"action": "ApproachDoor", "door": 9},
     {"action": "OpenDoor", "door": 9},
     {"action": "GoThrough", "door": 9},
@@ -30,4 +29,4 @@ To go from the GARAGE to CHAMBRE 2, we need to use doors D9, D1, and D5. Here's 
 }
 ```
 
-This plan will efficiently navigate you from the GARAGE to CHAMBRE 2 using only the necessary doors along the path.
+This plan will efficiently guide you from the GARAGE to CHAMBRE 2 using only the necessary doors. The path goes through the CELLIER and HALL before reaching the final destination, CHAMBRE 2.
