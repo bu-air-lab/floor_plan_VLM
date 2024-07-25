@@ -1,0 +1,27 @@
+Thank you for providing the floor plan. Let me first describe the rooms and doors with their connections based on the image:
+
+Room and Door Connections:
+1. CUISINE connects to SEJOUR through D5
+2. SEJOUR connects to CH.2 through D3
+3. SEJOUR connects to CH.1 through D4
+4. CH.2 connects to CH.3 through D2
+5. CH.3 connects to SEJOUR through D1
+6. SEJOUR connects to CUISINE through D6
+
+Now, let's create the navigation plan to go from CUISINE to CH.3:
+
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2}
+  ]
+}
+
+This plan will efficiently navigate you from the CUISINE to CH.3 using the necessary doors and rooms. The path goes through CUISINE -> SEJOUR -> CH.2 -> CH.3, which is the most direct route based on the floor plan provided.

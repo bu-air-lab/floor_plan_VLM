@@ -1,0 +1,36 @@
+Thank you for providing the floor plan and the navigation task. Let me first list out the rooms and doors with their connections based on the image:
+
+Room and Door Connections:
+- WC connects to Hall through D4
+- Hall connects to Douche through D2
+- Hall connects to Chambre 1 through D5
+- Hall connects to Cuisine through D6
+- Cuisine connects to Cellier through D3
+- Garages connects to Cellier through D1
+- Cuisine connects to Hall through D7
+
+Now, let's create the navigation plan to go from WC to Cuisine:
+
+1. ApproachDoor(4)
+2. OpenDoor(4)
+3. GoThrough(4)
+4. ApproachDoor(6)
+5. OpenDoor(6)
+6. GoThrough(6)
+
+Here's the final path in JSON format:
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6}
+  ]
+}
+```
+
+This path takes you from the WC, through the Hall, and directly into the Cuisine using the most efficient route based on the provided floor plan and door connections.
