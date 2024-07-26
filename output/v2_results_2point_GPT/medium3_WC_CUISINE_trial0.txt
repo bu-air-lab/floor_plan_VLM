@@ -1,0 +1,54 @@
+### Room and Door Connections
+
+- **WC**
+  - Connected to Hall via Door D4
+
+- **Hall**
+  - Connected to WC via Door D4
+  - Connected to Douche via Door D2
+  - Connected to Chambre 1 via Door D5
+  - Connected to Cuisine via Door D6
+  - Connected to Hall (another section) via Door D7
+
+- **Douche**
+  - Connected to Hall via Door D2
+
+- **Chambre 1**
+  - Connected to Hall via Door D5
+
+- **Cuisine**
+  - Connected to Hall via Door D6
+  - Connected to Cellier via Door D3
+
+- **Cellier**
+  - Connected to Cuisine via Door D3
+  - Connected to Garages via Door D1
+
+- **Garages**
+  - Connected to Cellier via Door D1
+
+### Navigation Plan
+
+1. **ApproachDoor(4)**: Move in front of Door D4.
+2. **OpenDoor(4)**: Open Door D4.
+3. **GoThrough(4)**: Move through Door D4 to enter the Hall.
+4. **ApproachDoor(6)**: Move in front of Door D6.
+5. **OpenDoor(6)**: Open Door D6.
+6. **GoThrough(6)**: Move through Door D6 to enter the Cuisine.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6}
+  ]
+}
+```
+
+This plan ensures that you move from the WC to the Cuisine by passing through the necessary doors in the correct sequence.

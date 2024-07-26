@@ -1,0 +1,65 @@
+### Room and Door Connections
+
+- **CHAMBRE 1**:
+  - Connected to HALL via Door D5
+
+- **HALL**:
+  - Connected to CHAMBRE 1 via Door D5
+  - Connected to DOUCHE via Door D2
+  - Connected to WC via Door D4
+  - Connected to CUISINE via Door D6
+  - Connected to HALL (other section) via Door D7
+
+- **DOUCHE**:
+  - Connected to HALL via Door D2
+
+- **WC**:
+  - Connected to HALL via Door D4
+
+- **CUISINE**:
+  - Connected to HALL via Door D6
+  - Connected to CELLIER via Door D3
+
+- **CELLIER**:
+  - Connected to CUISINE via Door D3
+  - Connected to GARAGES via Door D1
+
+- **GARAGES**:
+  - Connected to CELLIER via Door D1
+
+### Navigation Plan
+
+```json
+{
+  "steps": [
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"}
+  ]
+}
+```
+
+### Explanation of Steps
+
+1. **From CHAMBRE 1 to HALL**:
+   - Approach Door D5
+   - Open Door D5
+   - Go Through Door D5 to enter HALL
+
+2. **From HALL to CUISINE**:
+   - Approach Door D6
+   - Open Door D6
+   - Go Through Door D6 to enter CUISINE
+
+3. **From CUISINE to CELLIER**:
+   - Approach Door D3
+   - Open Door D3
+   - Go Through Door D3 to enter CELLIER
+
+This sequence ensures that you move efficiently from CHAMBRE 1 to HALL and finally to CELLIER, using the necessary doors in the correct order.

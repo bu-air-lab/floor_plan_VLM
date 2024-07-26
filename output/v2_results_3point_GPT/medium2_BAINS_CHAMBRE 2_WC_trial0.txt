@@ -1,0 +1,56 @@
+### Room and Door Connections
+
+- **BAINS**:
+  - Connected to HALL via Door D4
+
+- **CHAMBRE 2**:
+  - Connected to HALL via Door D6
+
+- **WC**:
+  - Connected to HALL via Door D3
+
+- **HALL**:
+  - Connected to BAINS via Door D4
+  - Connected to WC via Door D3
+  - Connected to CHAMBRE 2 via Door D6
+
+### Navigation Plan
+
+1. **Start in BAINS**
+2. **Move to CHAMBRE 2**
+   - ApproachDoor(D4)
+   - OpenDoor(D4)
+   - GoThrough(D4)
+   - ApproachDoor(D6)
+   - OpenDoor(D6)
+   - GoThrough(D6)
+3. **Move to WC**
+   - ApproachDoor(D6)
+   - OpenDoor(D6)
+   - GoThrough(D6)
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3)
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"},
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"}
+  ]
+}
+```
+
+This plan ensures that the robot navigates from BAINS to CHAMBRE 2 and then to WC, using the necessary doors in the correct sequence.

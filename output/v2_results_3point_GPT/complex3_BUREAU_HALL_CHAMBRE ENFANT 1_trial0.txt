@@ -1,0 +1,43 @@
+### Room and Door Connections
+
+- **BUREAU**:
+  - Connected to HALL via Door D6
+
+- **HALL**:
+  - Connected to BUREAU via Door D6
+  - Connected to LINGERIE via Door D5
+  - Connected to BATHROOM via Door D7
+  - Connected to CHAMBRE PARENTS via Door D8
+  - Connected to CHAMBRE ENFANT 1 via Door D10
+  - Connected to CHAMBRE ENFANT 2 via Door D9
+  - Connected to PORCHE via Door D3
+
+- **CHAMBRE ENFANT 1**:
+  - Connected to HALL via Door D10
+
+### Navigation Plan
+
+1. **Start in BUREAU**
+2. **Move to HALL**
+   - ApproachDoor(6)
+   - OpenDoor(6)
+   - GoThrough(6)
+3. **Move to CHAMBRE ENFANT 1**
+   - ApproachDoor(10)
+   - OpenDoor(10)
+   - GoThrough(10)
+
+### JSON Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": 6},
+  {"action": "OpenDoor", "door": 6},
+  {"action": "GoThrough", "door": 6},
+  {"action": "ApproachDoor", "door": 10},
+  {"action": "OpenDoor", "door": 10},
+  {"action": "GoThrough", "door": 10}
+]
+```
+
+This plan ensures that you move from the BUREAU to the HALL and then to CHAMBRE ENFANT 1 by using the necessary doors in the correct sequence.

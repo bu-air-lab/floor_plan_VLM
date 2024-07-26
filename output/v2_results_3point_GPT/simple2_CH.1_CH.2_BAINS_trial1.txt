@@ -1,0 +1,56 @@
+### Room and Door Connections
+
+- **CH.1**:
+  - Connected to HALL via Door D2
+
+- **CH.2**:
+  - Connected to HALL via Door D3
+
+- **BAINS**:
+  - Connected to HALL via Door D1
+
+- **HALL**:
+  - Connected to CH.1 via Door D2
+  - Connected to CH.2 via Door D3
+  - Connected to BAINS via Door D1
+  - Connected to GARAGE via Door D4
+  - Connected to CUISINE via Door D5
+
+### Navigation Plan
+
+1. **Start in CH.1**
+2. ApproachDoor(2)
+3. OpenDoor(2)
+4. GoThrough(2) to HALL
+5. ApproachDoor(3)
+6. OpenDoor(3)
+7. GoThrough(3) to CH.2
+8. ApproachDoor(3)
+9. OpenDoor(3)
+10. GoThrough(3) to HALL
+11. ApproachDoor(1)
+12. OpenDoor(1)
+13. GoThrough(1) to BAINS
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(2)",
+    "OpenDoor(2)",
+    "GoThrough(2)",
+    "ApproachDoor(3)",
+    "OpenDoor(3)",
+    "GoThrough(3)",
+    "ApproachDoor(3)",
+    "OpenDoor(3)",
+    "GoThrough(3)",
+    "ApproachDoor(1)",
+    "OpenDoor(1)",
+    "GoThrough(1)"
+  ]
+}
+```
+
+This plan ensures that you start in CH.1, move to CH.2, and finally arrive at BAINS, using the necessary doors in the correct sequence.

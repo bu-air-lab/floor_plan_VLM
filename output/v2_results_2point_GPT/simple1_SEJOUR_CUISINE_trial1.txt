@@ -1,0 +1,28 @@
+### Room and Door Connections
+
+- **D1**: Connects SEJOUR and CH.3
+- **D2**: Connects SEJOUR and CH.2
+- **D3**: Connects SEJOUR and CH.2
+- **D4**: Connects SEJOUR and CH.1
+- **D5**: Connects SEJOUR and CUISINE
+- **D6**: Connects SEJOUR and CUISINE
+
+### Navigation Plan
+
+1. **ApproachDoor(5)**: Move in front of door D5.
+2. **OpenDoor(5)**: Open door D5.
+3. **GoThrough(5)**: Move through open door D5 to the CUISINE.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5}
+  ]
+}
+```
+
+This plan ensures that you move from SEJOUR to CUISINE using the most direct and efficient path, strictly following the sequence of actions required to navigate through the necessary door.

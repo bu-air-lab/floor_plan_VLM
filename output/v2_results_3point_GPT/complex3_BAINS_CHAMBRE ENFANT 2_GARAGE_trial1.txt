@@ -1,0 +1,83 @@
+### Room and Door Connections
+
+- **BAINS**:
+  - Connected to HALL via Door D7
+
+- **CHAMBRE ENFANT 2**:
+  - Connected to HALL via Door D9
+
+- **GARAGE**:
+  - Connected to CELLIER via Door D1
+
+- **CELLIER**:
+  - Connected to PORCHE via Door D2
+  - Connected to HALL via Door D3
+  - Connected to HALL via Door D11
+
+- **PORCHE**:
+  - Connected to CELLIER via Door D2
+  - Connected to HALL via Door D3
+
+- **HALL**:
+  - Connected to CELLIER via Door D3
+  - Connected to CELLIER via Door D11
+  - Connected to PORCHE via Door D3
+  - Connected to LINGERIE via Door D5
+  - Connected to BUREAU via Door D6
+  - Connected to BAINS via Door D7
+  - Connected to CHAMBRE PARENTS via Door D8
+  - Connected to CHAMBRE ENFANT 2 via Door D9
+  - Connected to CHAMBRE ENFANT 1 via Door D10
+
+### Navigation Plan
+
+1. **Start in BAINS**
+2. **Move to CHAMBRE ENFANT 2**
+   - ApproachDoor(D7)
+   - OpenDoor(D7)
+   - GoThrough(D7) to HALL
+   - ApproachDoor(D9)
+   - OpenDoor(D9)
+   - GoThrough(D9) to CHAMBRE ENFANT 2
+3. **Move to GARAGE**
+   - ApproachDoor(D9)
+   - OpenDoor(D9)
+   - GoThrough(D9) to HALL
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3) to PORCHE
+   - ApproachDoor(D2)
+   - OpenDoor(D2)
+   - GoThrough(D2) to CELLIER
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1) to GARAGE
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D9"},
+    {"action": "OpenDoor", "door": "D9"},
+    {"action": "GoThrough", "door": "D9"},
+    {"action": "ApproachDoor", "door": "D9"},
+    {"action": "OpenDoor", "door": "D9"},
+    {"action": "GoThrough", "door": "D9"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"}
+  ]
+}
+```
+
+This plan ensures that the robot navigates efficiently from BAINS to CHAMBRE ENFANT 2 and finally to GARAGE, using the necessary doors and avoiding unnecessary ones.

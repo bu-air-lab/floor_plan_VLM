@@ -1,0 +1,49 @@
+### Room and Door Connections
+
+- **DOUCHE**
+  - Connected to HALL via Door D2
+
+- **CHAMBRE 1**
+  - Connected to HALL via Door D5
+
+- **HALL**
+  - Connected to DOUCHE via Door D2
+  - Connected to CHAMBRE 1 via Door D5
+  - Connected to WC via Door D4
+  - Connected to CUISINE via Door D6
+  - Connected to CUISINE via Door D7
+
+### Navigation Plan
+
+1. **Start in DOUCHE**
+2. **Move to CHAMBRE 1**
+   - ApproachDoor(D2)
+   - OpenDoor(D2)
+   - GoThrough(D2)
+   - ApproachDoor(D5)
+   - OpenDoor(D5)
+   - GoThrough(D5)
+3. **Move to HALL**
+   - ApproachDoor(D5)
+   - OpenDoor(D5)
+   - GoThrough(D5)
+
+### JSON Format Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"}
+  ]
+}
+```
+
+This plan ensures that you start in the DOUCHE, move to CHAMBRE 1, and then arrive at HALL, using only the necessary doors for the path.

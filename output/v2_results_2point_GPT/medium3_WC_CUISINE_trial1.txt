@@ -1,0 +1,53 @@
+### Room and Door Connections
+
+- **WC**:
+  - Connected to HALL via Door D4
+
+- **HALL**:
+  - Connected to WC via Door D4
+  - Connected to DOUCHE via Door D2
+  - Connected to CHAMBRE 1 via Door D5
+  - Connected to CUISINE via Door D6
+  - Connected to HALL via Door D7
+
+- **DOUCHE**:
+  - Connected to HALL via Door D2
+
+- **CHAMBRE 1**:
+  - Connected to HALL via Door D5
+
+- **CUISINE**:
+  - Connected to HALL via Door D6
+  - Connected to HALL via Door D7
+  - Connected to CELLIER via Door D3
+
+- **CELLIER**:
+  - Connected to CUISINE via Door D3
+  - Connected to GARAGES via Door D1
+
+- **GARAGES**:
+  - Connected to CELLIER via Door D1
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D4"},
+  {"action": "OpenDoor", "door": "D4"},
+  {"action": "GoThrough", "door": "D4"},
+  {"action": "ApproachDoor", "door": "D6"},
+  {"action": "OpenDoor", "door": "D6"},
+  {"action": "GoThrough", "door": "D6"}
+]
+```
+
+### Explanation
+
+1. **ApproachDoor(D4)**: Move in front of Door D4 (WC to HALL).
+2. **OpenDoor(D4)**: Open Door D4.
+3. **GoThrough(D4)**: Move through Door D4 to HALL.
+4. **ApproachDoor(D6)**: Move in front of Door D6 (HALL to CUISINE).
+5. **OpenDoor(D6)**: Open Door D6.
+6. **GoThrough(D6)**: Move through Door D6 to CUISINE.
+
+This plan ensures that you navigate from the WC to the CUISINE efficiently, using only the necessary doors.

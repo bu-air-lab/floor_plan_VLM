@@ -1,0 +1,44 @@
+### Room and Door Connections
+
+- **Door D1**: Connects HALL and GARAGES
+- **Door D2**: Connects HALL and DOUCHE
+- **Door D3**: Connects CELLIER and CUISINE
+- **Door D4**: Connects HALL and WC
+- **Door D5**: Connects HALL and CHAMBRE 1
+- **Door D6**: Connects HALL and CUISINE
+- **Door D7**: Connects HALL and HALL
+
+### Navigation Plan
+
+1. **Start in HALL**
+2. **Move to GARAGES**
+   - ApproachDoor(1)
+   - OpenDoor(1)
+   - GoThrough(1)
+3. **Move to CHAMBRE 1**
+   - ApproachDoor(1)
+   - OpenDoor(1)
+   - GoThrough(1)
+   - ApproachDoor(5)
+   - OpenDoor(5)
+   - GoThrough(5)
+
+### JSON Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5}
+  ]
+}
+```
+
+This plan ensures that you start in the HALL, move to the GARAGES, and then arrive at CHAMBRE 1, using the necessary doors in the correct sequence.

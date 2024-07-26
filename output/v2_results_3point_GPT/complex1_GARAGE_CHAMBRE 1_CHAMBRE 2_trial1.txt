@@ -1,0 +1,84 @@
+### Room and Door Connections
+
+- **Garage**
+  - Connected to Cellier via Door D9
+
+- **Cellier**
+  - Connected to Hall via Door D1
+  - Connected to Garage via Door D9
+
+- **Hall**
+  - Connected to Cellier via Door D1
+  - Connected to Bains via Door D2
+  - Connected to WC via Door D3
+  - Connected to Chambre 1 via Door D4
+  - Connected to Chambre 2 via Door D5
+  - Connected to Porche via Door D6
+  - Connected to Cuisine via Door D7
+
+- **Chambre 1**
+  - Connected to Hall via Door D4
+
+- **Chambre 2**
+  - Connected to Hall via Door D5
+
+- **Bains**
+  - Connected to Hall via Door D2
+
+- **WC**
+  - Connected to Hall via Door D3
+
+- **Porche**
+  - Connected to Hall via Door D6
+
+- **Cuisine**
+  - Connected to Hall via Door D7
+  - Connected to Terrasse Couverte via Door D8
+
+- **Terrasse Couverte**
+  - Connected to Cuisine via Door D8
+
+### Navigation Plan
+
+1. **Start in Garage**
+2. ApproachDoor(9)
+3. OpenDoor(9)
+4. GoThrough(9) to Cellier
+5. ApproachDoor(1)
+6. OpenDoor(1)
+7. GoThrough(1) to Hall
+8. ApproachDoor(4)
+9. OpenDoor(4)
+10. GoThrough(4) to Chambre 1
+11. ApproachDoor(4)
+12. OpenDoor(4)
+13. GoThrough(4) to Hall
+14. ApproachDoor(5)
+15. OpenDoor(5)
+16. GoThrough(5) to Chambre 2
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(9)",
+    "OpenDoor(9)",
+    "GoThrough(9)",
+    "ApproachDoor(1)",
+    "OpenDoor(1)",
+    "GoThrough(1)",
+    "ApproachDoor(4)",
+    "OpenDoor(4)",
+    "GoThrough(4)",
+    "ApproachDoor(4)",
+    "OpenDoor(4)",
+    "GoThrough(4)",
+    "ApproachDoor(5)",
+    "OpenDoor(5)",
+    "GoThrough(5)"
+  ]
+}
+```
+
+This plan ensures that you move from the Garage to Chambre 1 and then to Chambre 2, using the necessary doors and avoiding any unnecessary rooms or doors.

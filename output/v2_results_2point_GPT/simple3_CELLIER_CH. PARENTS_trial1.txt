@@ -1,0 +1,47 @@
+### Room and Door Connections
+
+1. **CELLIER**
+   - Door D2: Connects to CUISINE
+
+2. **CUISINE**
+   - Door D1: Connects to TERRASSE COUVERTE
+   - Door D2: Connects to CELLIER
+   - Door D3: Connects to CH. PARENTS
+   - Door D4: Connects to DOUCHE
+
+3. **TERRASSE COUVERTE**
+   - Door D1: Connects to CUISINE
+
+4. **CH. PARENTS**
+   - Door D3: Connects to CUISINE
+
+5. **DOUCHE**
+   - Door D4: Connects to CUISINE
+
+### Navigation Plan
+
+Starting in the CELLIER and arriving at the CH. PARENTS:
+
+1. **ApproachDoor(2)**: Move in front of door D2.
+2. **OpenDoor(2)**: Open door D2.
+3. **GoThrough(2)**: Move through door D2 to CUISINE.
+4. **ApproachDoor(3)**: Move in front of door D3.
+5. **OpenDoor(3)**: Open door D3.
+6. **GoThrough(3)**: Move through door D3 to CH. PARENTS.
+
+### Final Navigation Plan in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3}
+  ]
+}
+```
+
+This plan ensures that you move efficiently from the CELLIER to the CH. PARENTS, using only the necessary doors.

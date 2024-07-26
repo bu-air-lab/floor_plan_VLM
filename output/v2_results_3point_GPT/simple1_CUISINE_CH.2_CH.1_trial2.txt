@@ -1,0 +1,60 @@
+### Room and Door Connections
+
+- **CUISINE**:
+  - Connected to SEJOUR via Door D6
+
+- **CH.1**:
+  - Connected to SEJOUR via Door D4
+
+- **CH.2**:
+  - Connected to SEJOUR via Door D3
+
+- **CH.3**:
+  - Connected to SEJOUR via Door D1
+
+- **SEJOUR**:
+  - Connected to CUISINE via Door D6
+  - Connected to CH.1 via Door D4
+  - Connected to CH.2 via Door D3
+  - Connected to CH.3 via Door D1
+
+### Navigation Plan
+
+1. **Start in CUISINE**
+2. **Move to CH.2**:
+   - ApproachDoor(D6)
+   - OpenDoor(D6)
+   - GoThrough(D6) to SEJOUR
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3) to CH.2
+3. **Move to CH.1**:
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3) to SEJOUR
+   - ApproachDoor(D4)
+   - OpenDoor(D4)
+   - GoThrough(D4) to CH.1
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"}
+  ]
+}
+```
+
+This plan ensures that the robot moves efficiently from CUISINE to CH.2 and then to CH.1, using only the necessary doors.

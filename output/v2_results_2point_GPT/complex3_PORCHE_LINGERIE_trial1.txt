@@ -1,0 +1,50 @@
+### Room and Door Connections
+
+- **PORCHE**
+  - Connected to CELLIER via Door D2
+  - Connected to HALL via Door D3
+
+- **CELLIER**
+  - Connected to PORCHE via Door D2
+  - Connected to GARAGE via Door D1
+  - Connected to HALL via Door D11
+
+- **HALL**
+  - Connected to PORCHE via Door D3
+  - Connected to CELLIER via Door D11
+  - Connected to LINGERIE via Door D5
+  - Connected to BUREAU via Door D6
+  - Connected to WC via Door D4
+  - Connected to BAINS via Door D7
+  - Connected to CHAMBRE PARENTS via Door D8
+  - Connected to CHAMBRE ENFANT 2 via Door D9
+  - Connected to CHAMBRE ENFANT 1 via Door D10
+
+- **LINGERIE**
+  - Connected to HALL via Door D5
+
+### Navigation Plan
+
+1. **ApproachDoor(3)**: Move in front of Door D3.
+2. **OpenDoor(3)**: Open Door D3.
+3. **GoThrough(3)**: Move through Door D3 to HALL.
+4. **ApproachDoor(5)**: Move in front of Door D5.
+5. **OpenDoor(5)**: Open Door D5.
+6. **GoThrough(5)**: Move through Door D5 to LINGERIE.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5}
+  ]
+}
+```
+
+This plan ensures that you move from the PORCHE to the LINGERIE efficiently, using only the necessary doors.

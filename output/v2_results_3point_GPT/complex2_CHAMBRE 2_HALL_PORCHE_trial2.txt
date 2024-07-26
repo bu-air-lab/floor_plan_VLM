@@ -1,0 +1,46 @@
+### Room and Door Connections
+
+- **CHAMBRE 2**
+  - Door D2: Connects to HALL
+
+- **HALL**
+  - Door D2: Connects to CHAMBRE 2
+  - Door D5: Connects to PORCHE
+  - Door D1: Connects to CELLIER
+  - Door D3: Connects to BAINS
+  - Door D4: Connects to WC
+  - Door D6: Connects to CHAMBRE 1
+  - Door D7: Connects to CUISINE
+  - Door D8: Connects to CUISINE
+
+- **PORCHE**
+  - Door D5: Connects to HALL
+
+### Navigation Plan
+
+1. **Start in CHAMBRE 2**
+2. **Move to HALL**
+   - ApproachDoor(2)
+   - OpenDoor(2)
+   - GoThrough(2)
+3. **Move to PORCHE**
+   - ApproachDoor(5)
+   - OpenDoor(5)
+   - GoThrough(5)
+
+### Final Navigation Plan in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2},
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5}
+  ]
+}
+```
+
+This plan ensures that you move from CHAMBRE 2 to HALL and then to PORCHE, using only the necessary doors.

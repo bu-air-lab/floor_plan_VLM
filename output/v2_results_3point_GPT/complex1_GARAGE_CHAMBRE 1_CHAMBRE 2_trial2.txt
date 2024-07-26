@@ -1,0 +1,84 @@
+### Room and Door Connections
+
+- **Garage**:
+  - Connected to Cellier via Door D9
+
+- **Cellier**:
+  - Connected to Hall via Door D1
+  - Connected to Garage via Door D9
+
+- **Hall**:
+  - Connected to Cellier via Door D1
+  - Connected to Bains via Door D2
+  - Connected to WC via Door D3
+  - Connected to Chambre 1 via Door D4
+  - Connected to Chambre 2 via Door D5
+  - Connected to Porche via Door D6
+  - Connected to Cuisine via Door D7
+
+- **Bains**:
+  - Connected to Hall via Door D2
+
+- **WC**:
+  - Connected to Hall via Door D3
+
+- **Chambre 1**:
+  - Connected to Hall via Door D4
+
+- **Chambre 2**:
+  - Connected to Hall via Door D5
+
+- **Porche**:
+  - Connected to Hall via Door D6
+
+- **Cuisine**:
+  - Connected to Hall via Door D7
+  - Connected to Terrasse Couverte via Door D8
+
+- **Terrasse Couverte**:
+  - Connected to Cuisine via Door D8
+
+### Navigation Plan
+
+1. **Start in Garage**
+2. **Move to Chambre 1**
+   - ApproachDoor(9)
+   - OpenDoor(9)
+   - GoThrough(9) to Cellier
+   - ApproachDoor(1)
+   - OpenDoor(1)
+   - GoThrough(1) to Hall
+   - ApproachDoor(4)
+   - OpenDoor(4)
+   - GoThrough(4) to Chambre 1
+3. **Move to Chambre 2**
+   - ApproachDoor(4)
+   - OpenDoor(4)
+   - GoThrough(4) to Hall
+   - ApproachDoor(5)
+   - OpenDoor(5)
+   - GoThrough(5) to Chambre 2
+
+### Final Navigation Plan in JSON Format
+
+```json
+{
+  "actions": [
+    {"action": "ApproachDoor", "door": 9},
+    {"action": "OpenDoor", "door": 9},
+    {"action": "GoThrough", "door": 9},
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5}
+  ]
+}
+```

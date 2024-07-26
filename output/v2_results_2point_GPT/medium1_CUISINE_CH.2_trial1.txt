@@ -1,0 +1,59 @@
+### Room and Door Connections
+
+- **CUISINE**:
+  - Connected to SEJOUR via Door D3
+  - Connected to DEGGT via Door D4
+
+- **SEJOUR**:
+  - Connected to CUISINE via Door D3
+  - Connected to DEGGT via Door D4
+  - Connected to PORCHE via Door D1
+
+- **DEGGT**:
+  - Connected to SEJOUR via Door D4
+  - Connected to CUISINE via Door D4
+  - Connected to CH.1 via Door D5
+  - Connected to CH.2 via Door D6
+  - Connected to WC via Door D8
+  - Connected to BAINS via Door D7
+
+- **CH.1**:
+  - Connected to DEGGT via Door D5
+
+- **CH.2**:
+  - Connected to DEGGT via Door D6
+
+- **WC**:
+  - Connected to DEGGT via Door D8
+
+- **BAINS**:
+  - Connected to DEGGT via Door D7
+
+### Navigation Plan
+
+Starting in the CUISINE and aiming to reach CH.2, the following sequence of actions is required:
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D4"},
+  {"action": "OpenDoor", "door": "D4"},
+  {"action": "GoThrough", "door": "D4"},
+  {"action": "ApproachDoor", "door": "D6"},
+  {"action": "OpenDoor", "door": "D6"},
+  {"action": "GoThrough", "door": "D6"}
+]
+```
+
+### Step-by-Step Solution
+
+1. **CUISINE**:
+   - Approach Door D4
+   - Open Door D4
+   - Go Through Door D4 to enter DEGGT
+
+2. **DEGGT**:
+   - Approach Door D6
+   - Open Door D6
+   - Go Through Door D6 to enter CH.2
+
+This plan ensures that you move efficiently from the CUISINE to CH.2, using only the necessary doors and avoiding any unnecessary rooms or doors.

@@ -1,0 +1,50 @@
+### Room and Door Connections
+
+- **CUISINE**
+  - Connected to HALL via Door D5
+
+- **HALL**
+  - Connected to CUISINE via Door D5
+  - Connected to GARAGE via Door D4
+  - Connected to BATHROOM via Door D1
+  - Connected to CH.2 via Door D3
+  - Connected to CH.1 via Door D2
+
+- **GARAGE**
+  - Connected to HALL via Door D4
+
+- **BATHROOM**
+  - Connected to HALL via Door D1
+
+- **CH.2**
+  - Connected to HALL via Door D3
+
+- **CH.1**
+  - Connected to HALL via Door D2
+
+### Navigation Plan
+
+1. **Start in CUISINE**
+2. **Approach Door D5**
+3. **Open Door D5**
+4. **Go Through Door D5** (Now in HALL)
+5. **Approach Door D2**
+6. **Open Door D2**
+7. **Go Through Door D2** (Now in CH.1)
+
+### JSON Format Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+  ]
+}
+```
+
+This plan ensures that you move from the CUISINE to CH.1 by passing through the necessary doors in the correct sequence.

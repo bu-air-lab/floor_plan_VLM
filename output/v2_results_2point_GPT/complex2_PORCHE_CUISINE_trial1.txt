@@ -1,0 +1,63 @@
+### Room and Door Connections
+
+1. **PORCHE**
+   - Door D5: Connects to HALL
+
+2. **HALL**
+   - Door D5: Connects to PORCHE
+   - Door D2: Connects to CHAMBRE 2
+   - Door D7: Connects to CUISINE
+   - Door D8: Connects to CUISINE
+   - Door D6: Connects to CHAMBRE 1
+   - Door D3: Connects to BAINS
+   - Door D4: Connects to WC
+   - Door D1: Connects to CELLIER
+
+3. **CUISINE**
+   - Door D7: Connects to HALL
+   - Door D8: Connects to HALL
+
+4. **CHAMBRE 2**
+   - Door D2: Connects to HALL
+
+5. **CHAMBRE 1**
+   - Door D6: Connects to HALL
+
+6. **BAINS**
+   - Door D3: Connects to HALL
+
+7. **WC**
+   - Door D4: Connects to HALL
+
+8. **CELLIER**
+   - Door D1: Connects to HALL
+   - Door D9: Connects to GARAGE
+
+9. **GARAGE**
+   - Door D9: Connects to CELLIER
+
+### Navigation Plan
+
+Starting in the PORCHE and arriving at the CUISINE:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"}
+]
+```
+
+### Explanation
+
+1. **ApproachDoor(D5)**: Move in front of door D5 in the PORCHE.
+2. **OpenDoor(D5)**: Open door D5.
+3. **GoThrough(D5)**: Move through door D5 to enter the HALL.
+4. **ApproachDoor(D7)**: Move in front of door D7 in the HALL.
+5. **OpenDoor(D7)**: Open door D7.
+6. **GoThrough(D7)**: Move through door D7 to enter the CUISINE.
+
+This plan ensures that you move from the PORCHE to the CUISINE efficiently, using the necessary doors and avoiding any unnecessary rooms or doors.

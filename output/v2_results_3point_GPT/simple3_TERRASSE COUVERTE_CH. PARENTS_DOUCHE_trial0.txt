@@ -1,0 +1,54 @@
+### Room and Door Connections
+
+- **TERRASSE COUVERTE**:
+  - Connected to CUISINE via Door D1
+
+- **CUISINE**:
+  - Connected to TERRASSE COUVERTE via Door D1
+  - Connected to CELLIER via Door D2
+  - Connected to CH. PARENTS via Door D3
+  - Connected to DOUCHE via Door D4
+
+- **CELLIER**:
+  - Connected to CUISINE via Door D2
+
+- **CH. PARENTS**:
+  - Connected to CUISINE via Door D3
+
+- **DOUCHE**:
+  - Connected to CUISINE via Door D4
+
+### Navigation Plan
+
+1. **Start in TERRASSE COUVERTE**
+2. **Move to CH. PARENTS**
+   - ApproachDoor(1)
+   - OpenDoor(1)
+   - GoThrough(1)
+   - ApproachDoor(3)
+   - OpenDoor(3)
+   - GoThrough(3)
+3. **Move to DOUCHE**
+   - ApproachDoor(4)
+   - OpenDoor(4)
+   - GoThrough(4)
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4}
+  ]
+}
+```
+
+This plan ensures that you move from TERRASSE COUVERTE to CH. PARENTS and finally to DOUCHE, using the necessary doors in the correct sequence.

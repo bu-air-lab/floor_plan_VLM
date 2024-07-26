@@ -1,0 +1,95 @@
+### Room and Door Connections
+
+- **CH.1**:
+  - Connected to DEGT via Door D5
+
+- **DEGT**:
+  - Connected to CH.1 via Door D5
+  - Connected to SEJOUR via Door D4
+  - Connected to CH.2 via Door D6
+  - Connected to WC via Door D8
+  - Connected to BAINS via Door D7
+
+- **SEJOUR**:
+  - Connected to DEGT via Door D4
+  - Connected to CUISINE via Door D3
+  - Connected to Porche via Door D1
+
+- **CUISINE**:
+  - Connected to SEJOUR via Door D3
+  - Connected to CELLIER via Door D2
+
+- **CELLIER**:
+  - Connected to CUISINE via Door D2
+
+- **WC**:
+  - Connected to DEGT via Door D8
+
+- **BAINS**:
+  - Connected to DEGT via Door D7
+
+- **CH.2**:
+  - Connected to DEGT via Door D6
+
+### Navigation Plan
+
+1. **Start in CH.1**
+2. ApproachDoor(5)
+3. OpenDoor(5)
+4. GoThrough(5) to DEGT
+5. ApproachDoor(4)
+6. OpenDoor(4)
+7. GoThrough(4) to SEJOUR
+8. ApproachDoor(3)
+9. OpenDoor(3)
+10. GoThrough(3) to CUISINE
+11. ApproachDoor(2)
+12. OpenDoor(2)
+13. GoThrough(2) to CELLIER
+14. ApproachDoor(2)
+15. OpenDoor(2)
+16. GoThrough(2) to CUISINE
+17. ApproachDoor(3)
+18. OpenDoor(3)
+19. GoThrough(3) to SEJOUR
+20. ApproachDoor(4)
+21. OpenDoor(4)
+22. GoThrough(4) to DEGT
+23. ApproachDoor(7)
+24. OpenDoor(7)
+25. GoThrough(7) to BAINS
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(5)",
+    "OpenDoor(5)",
+    "GoThrough(5)",
+    "ApproachDoor(4)",
+    "OpenDoor(4)",
+    "GoThrough(4)",
+    "ApproachDoor(3)",
+    "OpenDoor(3)",
+    "GoThrough(3)",
+    "ApproachDoor(2)",
+    "OpenDoor(2)",
+    "GoThrough(2)",
+    "ApproachDoor(2)",
+    "OpenDoor(2)",
+    "GoThrough(2)",
+    "ApproachDoor(3)",
+    "OpenDoor(3)",
+    "GoThrough(3)",
+    "ApproachDoor(4)",
+    "OpenDoor(4)",
+    "GoThrough(4)",
+    "ApproachDoor(7)",
+    "OpenDoor(7)",
+    "GoThrough(7)"
+  ]
+}
+```
+
+This plan ensures that you navigate from CH.1 to CELLIER and then to BAINS, following the correct sequence of actions and using the necessary doors.

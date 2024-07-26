@@ -1,0 +1,55 @@
+### Room and Door Connections
+
+**Rooms:**
+1. PORCHE
+2. CELLIER
+3. HALL
+4. LINGERIE
+5. BUREAU
+6. WC
+7. BAINS
+8. CHAMBRE PARENTS
+9. CHAMBRE ENFANT 1
+10. CHAMBRE ENFANT 2
+11. GARAGE
+
+**Doors:**
+1. D1: GARAGE <-> CELLIER
+2. D2: PORCHE <-> CELLIER
+3. D3: PORCHE <-> HALL
+4. D4: WC <-> HALL
+5. D5: LINGERIE <-> HALL
+6. D6: BUREAU <-> HALL
+7. D7: BAINS <-> HALL
+8. D8: CHAMBRE PARENTS <-> HALL
+9. D9: CHAMBRE ENFANT 2 <-> HALL
+10. D10: CHAMBRE ENFANT 1 <-> HALL
+11. D11: CELLIER <-> HALL
+
+### Navigation Plan
+
+Starting in the PORCHE and aiming to reach the LINGERIE, the most efficient path is as follows:
+
+1. **ApproachDoor(3)**: Move in front of door D3.
+2. **OpenDoor(3)**: Open door D3.
+3. **GoThrough(3)**: Move through door D3 to enter the HALL.
+4. **ApproachDoor(5)**: Move in front of door D5.
+5. **OpenDoor(5)**: Open door D5.
+6. **GoThrough(5)**: Move through door D5 to enter the LINGERIE.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5}
+  ]
+}
+```
+
+This plan ensures that you move efficiently from the PORCHE to the LINGERIE, using only the necessary doors.

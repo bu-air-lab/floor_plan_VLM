@@ -1,0 +1,78 @@
+### Room and Door Connections
+
+- **CHAMBRE 1**:
+  - Connected to HALL via Door D6
+
+- **TERRASSE COUVERTE**:
+  - Connected to PORCHE via Door D5
+
+- **HALL**:
+  - Connected to CHAMBRE 1 via Door D6
+  - Connected to CUISINE via Door D7
+  - Connected to PORCHE via Door D5
+  - Connected to CHAMBRE 2 via Door D2
+  - Connected to BATHROOM via Door D3
+  - Connected to WC via Door D4
+
+- **CUISINE**:
+  - Connected to HALL via Door D7
+  - Connected to TERRASSE COUVERTE via Door D8
+
+### Navigation Plan
+
+1. **Start in CHAMBRE 1**
+2. **Move to TERRASSE COUVERTE**
+3. **Arrive at HALL**
+
+### Detailed Navigation Steps
+
+1. **From CHAMBRE 1 to HALL**:
+   - ApproachDoor(D6)
+   - OpenDoor(D6)
+   - GoThrough(D6)
+
+2. **From HALL to CUISINE**:
+   - ApproachDoor(D7)
+   - OpenDoor(D7)
+   - GoThrough(D7)
+
+3. **From CUISINE to TERRASSE COUVERTE**:
+   - ApproachDoor(D8)
+   - OpenDoor(D8)
+   - GoThrough(D8)
+
+4. **From TERRASSE COUVERTE to PORCHE**:
+   - ApproachDoor(D5)
+   - OpenDoor(D5)
+   - GoThrough(D5)
+
+5. **From PORCHE to HALL**:
+   - ApproachDoor(D5)
+   - OpenDoor(D5)
+   - GoThrough(D5)
+
+### Final Navigation Plan in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"}
+  ]
+}
+```
+
+This plan ensures that you navigate from CHAMBRE 1 to TERRASSE COUVERTE and finally arrive at HALL, following the necessary sequence of actions and using the correct doors.

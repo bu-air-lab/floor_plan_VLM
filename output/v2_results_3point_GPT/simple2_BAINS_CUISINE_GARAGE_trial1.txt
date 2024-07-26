@@ -1,0 +1,48 @@
+### Room and Door Connections
+
+- **D1**: Connects Bains and Hall
+- **D2**: Connects CH.1 and Hall
+- **D3**: Connects CH.2 and Hall
+- **D4**: Connects Hall and Garage
+- **D5**: Connects Hall and Cuisine
+
+### Navigation Plan
+
+1. **Start in Bains**
+2. **Move to Cuisine**
+   - ApproachDoor(1)
+   - OpenDoor(1)
+   - GoThrough(1)
+   - ApproachDoor(5)
+   - OpenDoor(5)
+   - GoThrough(5)
+3. **Move to Garage**
+   - ApproachDoor(5)
+   - OpenDoor(5)
+   - GoThrough(5)
+   - ApproachDoor(4)
+   - OpenDoor(4)
+   - GoThrough(4)
+
+### JSON Format Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5},
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4}
+  ]
+}
+```
+
+This plan ensures that you move from Bains to Cuisine and then to Garage, using the necessary doors in the correct sequence.

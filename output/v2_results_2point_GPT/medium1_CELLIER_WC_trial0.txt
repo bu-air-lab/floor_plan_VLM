@@ -1,0 +1,67 @@
+### Room and Door Connections
+
+- **CELLIER**
+  - Door D2: Connects CELLIER to CUISINE
+
+- **CUISINE**
+  - Door D2: Connects CUISINE to CELLIER
+  - Door D3: Connects CUISINE to DEGT
+
+- **DEGT**
+  - Door D3: Connects DEGT to CUISINE
+  - Door D4: Connects DEGT to SEJOUR
+  - Door D5: Connects DEGT to CH.1
+  - Door D6: Connects DEGT to CH.2
+  - Door D7: Connects DEGT to BAINS
+  - Door D8: Connects DEGT to WC
+
+- **SEJOUR**
+  - Door D1: Connects SEJOUR to PORCHE
+  - Door D4: Connects SEJOUR to DEGT
+
+- **CH.1**
+  - Door D5: Connects CH.1 to DEGT
+
+- **CH.2**
+  - Door D6: Connects CH.2 to DEGT
+
+- **BAINS**
+  - Door D7: Connects BAINS to DEGT
+
+- **WC**
+  - Door D8: Connects WC to DEGT
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D2"},
+  {"action": "OpenDoor", "door": "D2"},
+  {"action": "GoThrough", "door": "D2"},
+  {"action": "ApproachDoor", "door": "D3"},
+  {"action": "OpenDoor", "door": "D3"},
+  {"action": "GoThrough", "door": "D3"},
+  {"action": "ApproachDoor", "door": "D8"},
+  {"action": "OpenDoor", "door": "D8"},
+  {"action": "GoThrough", "door": "D8"}
+]
+```
+
+### Step-by-Step Solution
+
+1. **CELLIER**
+   - ApproachDoor(D2)
+   - OpenDoor(D2)
+   - GoThrough(D2) to CUISINE
+
+2. **CUISINE**
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3) to DEGT
+
+3. **DEGT**
+   - ApproachDoor(D8)
+   - OpenDoor(D8)
+   - GoThrough(D8) to WC
+
+This plan ensures that you move from the CELLIER to the WC by passing through the necessary doors in the correct sequence.

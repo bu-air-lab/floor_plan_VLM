@@ -1,0 +1,66 @@
+### Room and Door Connections
+
+- **Garage**:
+  - Connected to Cellier via Door D1
+
+- **Cellier**:
+  - Connected to Garage via Door D1
+  - Connected to Chambre 1 via Door D7
+  - Connected to Hall via Door D8
+
+- **Chambre 1**:
+  - Connected to Cellier via Door D7
+  - Connected to Hall via Door D2
+
+- **Hall**:
+  - Connected to Chambre 1 via Door D2
+  - Connected to Bains via Door D4
+  - Connected to Chambre 3 via Door D5
+  - Connected to Chambre 2 via Door D6
+  - Connected to Cellier via Door D8
+
+- **Bains**:
+  - Connected to Hall via Door D4
+
+- **Chambre 3**:
+  - Connected to Hall via Door D5
+
+- **Chambre 2**:
+  - Connected to Hall via Door D6
+
+### Navigation Plan
+
+```json
+{
+  "steps": [
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"}
+  ]
+}
+```
+
+### Explanation
+1. **ApproachDoor(D1)**: Move in front of Door D1 (Garage to Cellier).
+2. **OpenDoor(D1)**: Open Door D1.
+3. **GoThrough(D1)**: Move through Door D1 to Cellier.
+4. **ApproachDoor(D7)**: Move in front of Door D7 (Cellier to Chambre 1).
+5. **OpenDoor(D7)**: Open Door D7.
+6. **GoThrough(D7)**: Move through Door D7 to Chambre 1.
+7. **ApproachDoor(D2)**: Move in front of Door D2 (Chambre 1 to Hall).
+8. **OpenDoor(D2)**: Open Door D2.
+9. **GoThrough(D2)**: Move through Door D2 to Hall.
+10. **ApproachDoor(D4)**: Move in front of Door D4 (Hall to Bains).
+11. **OpenDoor(D4)**: Open Door D4.
+12. **GoThrough(D4)**: Move through Door D4 to Bains.
+
+This plan ensures that the robot navigates efficiently from the Garage to the Bains, using only the necessary doors.

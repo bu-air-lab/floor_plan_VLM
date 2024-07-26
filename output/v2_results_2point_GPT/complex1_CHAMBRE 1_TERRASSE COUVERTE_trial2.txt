@@ -1,0 +1,76 @@
+### Room and Door Connections
+
+1. **CHAMBRE 1**
+   - Connected to HALL via Door D4
+
+2. **HALL**
+   - Connected to CHAMBRE 1 via Door D4
+   - Connected to WC via Door D3
+   - Connected to BAIN via Door D2
+   - Connected to CELLIER via Door D1
+   - Connected to CHAMBRE 2 via Door D5
+   - Connected to PORCHE via Door D6
+   - Connected to CUISINE via Door D7
+
+3. **WC**
+   - Connected to HALL via Door D3
+
+4. **BAIN**
+   - Connected to HALL via Door D2
+
+5. **CELLIER**
+   - Connected to HALL via Door D1
+   - Connected to GARAGE via Door D9
+
+6. **CHAMBRE 2**
+   - Connected to HALL via Door D5
+
+7. **PORCHE**
+   - Connected to HALL via Door D6
+
+8. **CUISINE**
+   - Connected to HALL via Door D7
+   - Connected to TERRASSE COUVERTE via Door D8
+
+9. **GARAGE**
+   - Connected to CELLIER via Door D9
+
+10. **TERRASSE COUVERTE**
+    - Connected to CUISINE via Door D8
+
+### Navigation Plan
+
+Starting in CHAMBRE 1 and arriving at TERRASSE COUVERTE:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"}
+]
+```
+
+### Step-by-Step Solution
+
+1. **CHAMBRE 1 to HALL**
+   - Approach Door D4
+   - Open Door D4
+   - Go Through Door D4 to HALL
+
+2. **HALL to CUISINE**
+   - Approach Door D7
+   - Open Door D7
+   - Go Through Door D7 to CUISINE
+
+3. **CUISINE to TERRASSE COUVERTE**
+   - Approach Door D8
+   - Open Door D8
+   - Go Through Door D8 to TERRASSE COUVERTE
+
+This plan ensures that you navigate efficiently from CHAMBRE 1 to TERRASSE COUVERTE using the necessary doors.

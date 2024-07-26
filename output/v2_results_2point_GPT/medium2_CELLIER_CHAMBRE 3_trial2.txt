@@ -1,0 +1,45 @@
+### Room and Door Connections
+
+- **CELLIER**:
+  - Connected to CHAMBRE 1 via Door D2
+  - Connected to HALL via Door D7
+
+- **CHAMBRE 1**:
+  - Connected to CELLIER via Door D2
+  - Connected to HALL via Door D7
+
+- **HALL**:
+  - Connected to CELLIER via Door D7
+  - Connected to CHAMBRE 1 via Door D2
+  - Connected to CHAMBRE 2 via Door D6
+  - Connected to CHAMBRE 3 via Door D5
+
+- **CHAMBRE 2**:
+  - Connected to HALL via Door D6
+
+- **CHAMBRE 3**:
+  - Connected to HALL via Door D5
+
+### Navigation Plan
+
+1. **ApproachDoor(7)**: Move in front of Door D7.
+2. **OpenDoor(7)**: Open Door D7.
+3. **GoThrough(7)**: Move through Door D7 to HALL.
+4. **ApproachDoor(5)**: Move in front of Door D5.
+5. **OpenDoor(5)**: Open Door D5.
+6. **GoThrough(5)**: Move through Door D5 to CHAMBRE 3.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7},
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5}
+  ]
+}
+```

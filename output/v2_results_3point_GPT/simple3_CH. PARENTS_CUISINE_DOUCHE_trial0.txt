@@ -1,0 +1,44 @@
+### Room and Door Connections
+
+- **CH. PARENTS**:
+  - Connected to CUISINE via Door D3
+
+- **CUISINE**:
+  - Connected to TERRASSE COUVERTE via Door D1
+  - Connected to CELLIER via Door D2
+  - Connected to CH. PARENTS via Door D3
+  - Connected to DOUCHE via Door D4
+
+- **TERRASSE COUVERTE**:
+  - Connected to CUISINE via Door D1
+
+- **CELLIER**:
+  - Connected to CUISINE via Door D2
+
+- **DOUCHE**:
+  - Connected to CUISINE via Door D4
+
+### Navigation Plan
+
+1. **Start in CH. PARENTS**
+2. ApproachDoor(3)
+3. OpenDoor(3)
+4. GoThrough(3) to enter CUISINE
+5. ApproachDoor(4)
+6. OpenDoor(4)
+7. GoThrough(4) to enter DOUCHE
+
+### JSON Format Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(3)",
+    "OpenDoor(3)",
+    "GoThrough(3)",
+    "ApproachDoor(4)",
+    "OpenDoor(4)",
+    "GoThrough(4)"
+  ]
+}
+```

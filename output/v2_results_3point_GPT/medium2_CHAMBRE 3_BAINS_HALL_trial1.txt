@@ -1,0 +1,51 @@
+### Room and Door Connections
+
+- **CHAMBRE 3**
+  - Door D5: Connects to HALL
+
+- **BAINS**
+  - Door D4: Connects to HALL
+
+- **HALL**
+  - Door D3: Connects to WC
+  - Door D4: Connects to BAINS
+  - Door D5: Connects to CHAMBRE 3
+  - Door D6: Connects to CHAMBRE 2
+  - Door D7: Connects to CELLIER
+  - Door D8: Connects to PORCHE
+  - Door D2: Connects to CHAMBRE 1
+
+### Navigation Plan
+
+1. **Start in CHAMBRE 3**
+2. **Move to BAINS**
+   - ApproachDoor(5)
+   - OpenDoor(5)
+   - GoThrough(5)
+   - ApproachDoor(4)
+   - OpenDoor(4)
+   - GoThrough(4)
+3. **Move to HALL**
+   - ApproachDoor(4)
+   - OpenDoor(4)
+   - GoThrough(4)
+
+### JSON Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4}
+  ]
+}
+```
+
+This plan ensures that you move from CHAMBRE 3 to BAINS and then to HALL, using the necessary doors in the correct sequence.

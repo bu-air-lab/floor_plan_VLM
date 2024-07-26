@@ -1,0 +1,55 @@
+### Room and Door Connections
+
+- **DOUCHE**
+  - Connected to HALL via Door D2
+
+- **HALL**
+  - Connected to DOUCHE via Door D2
+  - Connected to WC via Door D4
+  - Connected to CHAMBRE 1 via Door D5
+  - Connected to CUISINE via Door D6
+  - Connected to CUISINE via Door D7
+
+- **WC**
+  - Connected to HALL via Door D4
+
+- **CHAMBRE 1**
+  - Connected to HALL via Door D5
+
+- **CUISINE**
+  - Connected to HALL via Door D6
+  - Connected to HALL via Door D7
+  - Connected to CELLIER via Door D3
+
+- **CELLIER**
+  - Connected to CUISINE via Door D3
+  - Connected to GARAGES via Door D1
+
+- **GARAGES**
+  - Connected to CELLIER via Door D1
+
+### Navigation Plan
+
+Starting in the DOUCHE, the goal is to reach CHAMBRE 1. The sequence of actions is as follows:
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D2"},
+  {"action": "OpenDoor", "door": "D2"},
+  {"action": "GoThrough", "door": "D2"},
+  {"action": "ApproachDoor", "door": "D5"},
+  {"action": "OpenDoor", "door": "D5"},
+  {"action": "GoThrough", "door": "D5"}
+]
+```
+
+### Explanation
+
+1. **ApproachDoor(D2)**: Move in front of Door D2 in the DOUCHE.
+2. **OpenDoor(D2)**: Open Door D2.
+3. **GoThrough(D2)**: Move through Door D2 to enter the HALL.
+4. **ApproachDoor(D5)**: Move in front of Door D5 in the HALL.
+5. **OpenDoor(D5)**: Open Door D5.
+6. **GoThrough(D5)**: Move through Door D5 to enter CHAMBRE 1.
+
+This plan ensures that you navigate efficiently from the DOUCHE to CHAMBRE 1 using the necessary doors.

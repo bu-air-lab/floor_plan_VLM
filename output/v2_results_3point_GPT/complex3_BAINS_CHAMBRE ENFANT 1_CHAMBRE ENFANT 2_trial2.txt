@@ -1,0 +1,56 @@
+### Room and Door Connections
+
+- **BAINS**:
+  - Connected to HALL via Door D7
+
+- **CHAMBRE ENFANT 1**:
+  - Connected to HALL via Door D10
+
+- **CHAMBRE ENFANT 2**:
+  - Connected to HALL via Door D9
+
+- **HALL**:
+  - Connected to BAINS via Door D7
+  - Connected to CHAMBRE ENFANT 1 via Door D10
+  - Connected to CHAMBRE ENFANT 2 via Door D9
+
+### Navigation Plan
+
+1. **Start in BAINS**
+2. **Move to CHAMBRE ENFANT 1**
+   - ApproachDoor(D7)
+   - OpenDoor(D7)
+   - GoThrough(D7)
+   - ApproachDoor(D10)
+   - OpenDoor(D10)
+   - GoThrough(D10)
+3. **Move to CHAMBRE ENFANT 2**
+   - ApproachDoor(D10)
+   - OpenDoor(D10)
+   - GoThrough(D10)
+   - ApproachDoor(D9)
+   - OpenDoor(D9)
+   - GoThrough(D9)
+
+### JSON Format Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"},
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"},
+    {"action": "ApproachDoor", "door": "D9"},
+    {"action": "OpenDoor", "door": "D9"},
+    {"action": "GoThrough", "door": "D9"}
+  ]
+}
+```
+
+This plan ensures that you move from BAINS to CHAMBRE ENFANT 1 and then to CHAMBRE ENFANT 2, using the necessary doors in the correct sequence.

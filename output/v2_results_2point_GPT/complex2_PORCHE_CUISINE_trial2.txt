@@ -1,0 +1,59 @@
+### Room and Door Connections
+
+- **PORCHE**
+  - Door D5 to HALL
+
+- **HALL**
+  - Door D5 to PORCHE
+  - Door D2 to CHAMBRE 2
+  - Door D7 to CUISINE
+  - Door D8 to CUISINE
+  - Door D6 to CHAMBRE 1
+  - Door D3 to BAINS
+  - Door D1 to CELLIER
+
+- **CUISINE**
+  - Door D7 to HALL
+  - Door D8 to HALL
+
+- **CHAMBRE 2**
+  - Door D2 to HALL
+
+- **CHAMBRE 1**
+  - Door D6 to HALL
+
+- **BAINS**
+  - Door D3 to HALL
+
+- **CELLIER**
+  - Door D1 to HALL
+  - Door D9 to GARAGE
+
+- **GARAGE**
+  - Door D9 to CELLIER
+
+### Navigation Plan
+
+1. **ApproachDoor(5)**: Move in front of door D5.
+2. **OpenDoor(5)**: Open door D5.
+3. **GoThrough(5)**: Move through door D5 to HALL.
+4. **ApproachDoor(7)**: Move in front of door D7.
+5. **OpenDoor(7)**: Open door D7.
+6. **GoThrough(7)**: Move through door D7 to CUISINE.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7}
+  ]
+}
+```
+
+This plan ensures that you move from the PORCHE to the CUISINE by passing through the necessary doors in the correct sequence.

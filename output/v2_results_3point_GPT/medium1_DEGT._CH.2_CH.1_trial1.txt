@@ -1,0 +1,49 @@
+### Room and Door Connections
+
+- **DEGT.**
+  - Door D4: Connects DEGT. to SEJOUR
+  - Door D5: Connects DEGT. to CH.1
+  - Door D6: Connects DEGT. to CH.2
+  - Door D7: Connects DEGT. to BAINS
+  - Door D8: Connects DEGT. to WC
+
+- **CH.2**
+  - Door D6: Connects CH.2 to DEGT.
+
+- **CH.1**
+  - Door D5: Connects CH.1 to DEGT.
+
+### Navigation Plan
+
+1. **Start in DEGT.**
+2. **Move to CH.2:**
+   - ApproachDoor(6)
+   - OpenDoor(6)
+   - GoThrough(6)
+3. **Move to CH.1:**
+   - ApproachDoor(6)
+   - OpenDoor(6)
+   - GoThrough(6)
+   - ApproachDoor(5)
+   - OpenDoor(5)
+   - GoThrough(5)
+
+### JSON Format Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6},
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5}
+  ]
+}
+```
+
+This plan ensures that you start in DEGT., move to CH.2, and then arrive at CH.1, using the necessary doors in the correct sequence.

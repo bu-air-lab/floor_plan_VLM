@@ -1,0 +1,56 @@
+### Room and Door Connections
+
+- **CH.1**:
+  - Connected to HALL via Door D2
+
+- **CH.2**:
+  - Connected to HALL via Door D3
+
+- **BAINS**:
+  - Connected to HALL via Door D1
+
+- **HALL**:
+  - Connected to CH.1 via Door D2
+  - Connected to CH.2 via Door D3
+  - Connected to BAINS via Door D1
+  - Connected to GARAGE via Door D4
+  - Connected to CUISINE via Door D5
+
+- **GARAGE**:
+  - Connected to HALL via Door D4
+
+- **CUISINE**:
+  - Connected to HALL via Door D5
+
+### Navigation Plan
+
+1. **Start in CH.1**
+2. **Move to CH.2**:
+   - ApproachDoor(2)
+   - OpenDoor(2)
+   - GoThrough(2)
+   - ApproachDoor(3)
+   - OpenDoor(3)
+   - GoThrough(3)
+3. **Move to BAINS**:
+   - ApproachDoor(1)
+   - OpenDoor(1)
+   - GoThrough(1)
+
+### Final Path in JSON Format
+
+```json
+{
+  "steps": [
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1}
+  ]
+}
+```

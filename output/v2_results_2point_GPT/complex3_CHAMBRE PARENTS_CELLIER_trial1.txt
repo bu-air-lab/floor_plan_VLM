@@ -1,0 +1,72 @@
+### Room and Door Connections
+
+- **CHAMBRE PARENTS**
+  - Door D8 to HALL
+
+- **HALL**
+  - Door D8 to CHAMBRE PARENTS
+  - Door D7 to BAINS
+  - Door D6 to BUREAU
+  - Door D5 to LINGERIE
+  - Door D4 to WC
+  - Door D3 to PORCHE
+  - Door D9 to CHAMBRE ENFANT 2
+  - Door D10 to CHAMBRE ENFANT 1
+  - Door D11 to CELLIER
+
+- **BAINS**
+  - Door D7 to HALL
+
+- **BUREAU**
+  - Door D6 to HALL
+
+- **LINGERIE**
+  - Door D5 to HALL
+
+- **WC**
+  - Door D4 to HALL
+
+- **PORCHE**
+  - Door D3 to HALL
+  - Door D2 to CELLIER
+
+- **CELLIER**
+  - Door D2 to PORCHE
+  - Door D11 to HALL
+  - Door D1 to GARAGE
+
+- **GARAGE**
+  - Door D1 to CELLIER
+
+- **CHAMBRE ENFANT 1**
+  - Door D10 to HALL
+
+- **CHAMBRE ENFANT 2**
+  - Door D9 to HALL
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D8"},
+  {"action": "OpenDoor", "door": "D8"},
+  {"action": "GoThrough", "door": "D8"},
+  {"action": "ApproachDoor", "door": "D11"},
+  {"action": "OpenDoor", "door": "D11"},
+  {"action": "GoThrough", "door": "D11"}
+]
+```
+
+### Step-by-Step Solution
+
+1. **Start in CHAMBRE PARENTS**
+   - ApproachDoor(D8)
+   - OpenDoor(D8)
+   - GoThrough(D8) to HALL
+
+2. **In HALL**
+   - ApproachDoor(D11)
+   - OpenDoor(D11)
+   - GoThrough(D11) to CELLIER
+
+This plan ensures that you move from CHAMBRE PARENTS to CELLIER by passing through the necessary doors in the correct sequence.

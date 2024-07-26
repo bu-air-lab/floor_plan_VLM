@@ -1,0 +1,60 @@
+### Room and Door Connections
+
+#### Rooms:
+1. CHAMBRE PARENTS
+2. BUREAU
+3. LINGERIE
+4. WC
+5. BAINS
+6. CHAMBRE ENFANT 1
+7. CHAMBRE ENFANT 2
+8. CELLIER
+9. PORCHE
+10. HALL
+11. GARAGE
+
+#### Doors:
+- **D1**: GARAGE - CELLIER
+- **D2**: CELLIER - PORCHE
+- **D3**: PORCHE - HALL
+- **D4**: WC - HALL
+- **D5**: LINGERIE - HALL
+- **D6**: BUREAU - HALL
+- **D7**: BAINS - HALL
+- **D8**: CHAMBRE PARENTS - HALL
+- **D9**: CHAMBRE ENFANT 2 - HALL
+- **D10**: CHAMBRE ENFANT 1 - HALL
+- **D11**: CELLIER - HALL
+
+### Navigation Plan
+
+#### Step-by-Step Solution:
+1. **Start in CHAMBRE PARENTS**
+2. ApproachDoor(D8)
+3. OpenDoor(D8)
+4. GoThrough(D8) to HALL
+5. ApproachDoor(D3)
+6. OpenDoor(D3)
+7. GoThrough(D3) to PORCHE
+8. ApproachDoor(D2)
+9. OpenDoor(D2)
+10. GoThrough(D2) to CELLIER
+
+### Final Navigation Plan in JSON Format:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+  ]
+}
+```
+
+This plan ensures that you move from CHAMBRE PARENTS to CELLIER by passing through the necessary doors in the correct sequence.

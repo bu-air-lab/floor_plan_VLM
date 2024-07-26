@@ -1,0 +1,68 @@
+### Room and Door Connections
+
+- **CHAMBRE 1**
+  - Door D6 to HALL
+
+- **TERRASSE COUVERTE**
+  - Door D5 to PORCHE
+
+- **HALL**
+  - Door D6 to CHAMBRE 1
+  - Door D5 to PORCHE
+  - Door D2 to CHAMBRE 2
+  - Door D3 to BAINS
+  - Door D4 to WC
+  - Door D7 to CUISINE
+  - Door D8 to CUISINE
+
+- **PORCHE**
+  - Door D5 to HALL
+
+- **CUISINE**
+  - Door D7 to HALL
+  - Door D8 to HALL
+
+### Navigation Plan
+
+1. **Start in CHAMBRE 1**
+2. **Approach Door D6**
+3. **Open Door D6**
+4. **Go Through Door D6 to HALL**
+5. **Approach Door D7**
+6. **Open Door D7**
+7. **Go Through Door D7 to CUISINE**
+8. **Approach Door D8**
+9. **Open Door D8**
+10. **Go Through Door D8 to HALL**
+11. **Approach Door D5**
+12. **Open Door D5**
+13. **Go Through Door D5 to PORCHE**
+14. **Approach Door D5**
+15. **Open Door D5**
+16. **Go Through Door D5 to TERRASSE COUVERTE**
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"}
+  ]
+}
+```
+
+This plan ensures that you navigate from CHAMBRE 1 to TERRASSE COUVERTE and finally to HALL, using the necessary doors in the correct sequence.

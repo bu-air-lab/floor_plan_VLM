@@ -1,0 +1,46 @@
+### Room and Door Connections
+
+- **D1**: Connects Bains and Hall
+- **D2**: Connects CH.1 and Hall
+- **D3**: Connects CH.2 and Hall
+- **D4**: Connects Garage and Hall
+- **D5**: Connects Cuisine and Hall
+
+### Navigation Plan
+
+1. **Start in Bains**
+2. **Move to Cuisine**
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1) to Hall
+   - ApproachDoor(D5)
+   - OpenDoor(D5)
+   - GoThrough(D5) to Cuisine
+3. **Move to CH.2**
+   - ApproachDoor(D5)
+   - OpenDoor(D5)
+   - GoThrough(D5) to Hall
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3) to CH.2
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"}
+  ]
+}
+```

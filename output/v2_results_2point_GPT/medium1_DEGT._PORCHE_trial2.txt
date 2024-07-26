@@ -1,0 +1,59 @@
+### Room and Door Connections
+
+- **DEGT**:
+  - Door D4 to SEJOUR
+  - Door D5 to CH.1
+  - Door D6 to CH.2
+  - Door D7 to BAINS
+  - Door D8 to WC
+
+- **SEJOUR**:
+  - Door D1 to PORCHE
+  - Door D4 to DEGT
+  - Door D3 to CUISINE
+
+- **CH.1**:
+  - Door D5 to DEGT
+
+- **CH.2**:
+  - Door D6 to DEGT
+
+- **BAINS**:
+  - Door D7 to DEGT
+
+- **WC**:
+  - Door D8 to DEGT
+
+- **CUISINE**:
+  - Door D2 to CELLIER
+  - Door D3 to SEJOUR
+
+- **CELLIER**:
+  - Door D2 to CUISINE
+
+- **PORCHE**:
+  - Door D1 to SEJOUR
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D4"},
+  {"action": "OpenDoor", "door": "D4"},
+  {"action": "GoThrough", "door": "D4"},
+  {"action": "ApproachDoor", "door": "D1"},
+  {"action": "OpenDoor", "door": "D1"},
+  {"action": "GoThrough", "door": "D1"}
+]
+```
+
+### Explanation
+
+1. **ApproachDoor(D4)**: Move in front of door D4 in DEGT.
+2. **OpenDoor(D4)**: Open door D4.
+3. **GoThrough(D4)**: Move through door D4 to SEJOUR.
+4. **ApproachDoor(D1)**: Move in front of door D1 in SEJOUR.
+5. **OpenDoor(D1)**: Open door D1.
+6. **GoThrough(D1)**: Move through door D1 to PORCHE.
+
+This plan ensures that you move from DEGT to PORCHE efficiently, using only the necessary doors.

@@ -1,0 +1,41 @@
+### Room and Door Connections
+
+- **CH.1**:
+  - Connected to SEJOUR via Door D4
+
+- **CH.2**:
+  - Connected to SEJOUR via Door D3
+  - Connected to CH.3 via Door D2
+
+- **CH.3**:
+  - Connected to SEJOUR via Door D1
+  - Connected to CH.2 via Door D2
+
+- **SEJOUR**:
+  - Connected to CH.1 via Door D4
+  - Connected to CH.2 via Door D3
+  - Connected to CH.3 via Door D1
+  - Connected to CUISINE via Door D5
+
+- **CUISINE**:
+  - Connected to SEJOUR via Door D5
+
+### Navigation Plan
+
+Starting in CH.2 and aiming to arrive at SEJOUR, the sequence of actions is as follows:
+
+1. **ApproachDoor(3)**: Move in front of door D3.
+2. **OpenDoor(3)**: Open door D3.
+3. **GoThrough(3)**: Move through door D3 to SEJOUR.
+
+### Final Navigation Plan in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3}
+  ]
+}
+```

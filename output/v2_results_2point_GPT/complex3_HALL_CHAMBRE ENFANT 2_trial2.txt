@@ -1,0 +1,51 @@
+### Room and Door Connections
+
+1. **HALL**
+   - Connected to: PORCHE (D3), HALL (D8), HALL (D9), HALL (D10), HALL (D11)
+   
+2. **PORCHE**
+   - Connected to: HALL (D3), CELLIER (D2)
+   
+3. **CELLIER**
+   - Connected to: PORCHE (D2), GARAGE (D1), HALL (D11)
+   
+4. **GARAGE**
+   - Connected to: CELLIER (D1)
+   
+5. **LINGERIE**
+   - Connected to: HALL (D5)
+   
+6. **BUREAU**
+   - Connected to: HALL (D6)
+   
+7. **BATHROOM (BAINS)**
+   - Connected to: HALL (D7)
+   
+8. **CHAMBRE PARENTS**
+   - Connected to: HALL (D8)
+   
+9. **CHAMBRE ENFANT 1**
+   - Connected to: HALL (D10)
+   
+10. **CHAMBRE ENFANT 2**
+    - Connected to: HALL (D9)
+
+### Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(9)",
+    "OpenDoor(9)",
+    "GoThrough(9)"
+  ]
+}
+```
+
+### Explanation
+
+1. **ApproachDoor(9)**: Move in front of door D9, which connects the HALL to CHAMBRE ENFANT 2.
+2. **OpenDoor(9)**: Open door D9.
+3. **GoThrough(9)**: Move through door D9 to enter CHAMBRE ENFANT 2.
+
+This plan ensures that you move directly from the HALL to CHAMBRE ENFANT 2 using the shortest and most efficient path.

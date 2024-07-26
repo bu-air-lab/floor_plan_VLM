@@ -1,0 +1,60 @@
+### Room and Door Connections
+
+- **CHAMBRE 2**
+  - Door D2: Connects to HALL
+
+- **HALL**
+  - Door D2: Connects to CHAMBRE 2
+  - Door D1: Connects to CELLIER
+  - Door D9: Connects to GARAGE
+  - Door D3: Connects to BAINS
+  - Door D4: Connects to WC
+  - Door D5: Connects to PORCHE
+  - Door D6: Connects to CHAMBRE 1
+  - Door D7: Connects to CUISINE
+  - Door D8: Connects to CUISINE
+
+- **CELLIER**
+  - Door D1: Connects to HALL
+
+- **GARAGE**
+  - Door D9: Connects to HALL
+
+### Navigation Plan
+
+1. **Start in CHAMBRE 2**
+2. ApproachDoor(D2)
+3. OpenDoor(D2)
+4. GoThrough(D2) to HALL
+5. ApproachDoor(D9)
+6. OpenDoor(D9)
+7. GoThrough(D9) to GARAGE
+8. ApproachDoor(D9)
+9. OpenDoor(D9)
+10. GoThrough(D9) to HALL
+11. ApproachDoor(D1)
+12. OpenDoor(D1)
+13. GoThrough(D1) to CELLIER
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(D2)",
+    "OpenDoor(D2)",
+    "GoThrough(D2)",
+    "ApproachDoor(D9)",
+    "OpenDoor(D9)",
+    "GoThrough(D9)",
+    "ApproachDoor(D9)",
+    "OpenDoor(D9)",
+    "GoThrough(D9)",
+    "ApproachDoor(D1)",
+    "OpenDoor(D1)",
+    "GoThrough(D1)"
+  ]
+}
+```
+
+This plan ensures that you navigate from CHAMBRE 2 to the GARAGE and finally to the CELLIER, following the correct sequence of actions and using the necessary doors.

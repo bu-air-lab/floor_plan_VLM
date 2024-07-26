@@ -1,0 +1,54 @@
+### Room and Door Connections
+
+- **CUISINE**:
+  - Connected to HALL via Door D7
+  - Connected to TERRASSE COUVERTE via Door D8
+
+- **CELLIER**:
+  - Connected to HALL via Door D1
+  - Connected to GARAGE via Door D9
+
+- **GARAGE**:
+  - Connected to CELLIER via Door D9
+
+- **HALL**:
+  - Connected to CELLIER via Door D1
+  - Connected to BAIN via Door D2
+  - Connected to WC via Door D3
+  - Connected to CHAMBRE 1 via Door D4
+  - Connected to CHAMBRE 2 via Door D5
+  - Connected to PORCHE via Door D6
+  - Connected to CUISINE via Door D7
+
+### Navigation Plan
+
+1. **Start in CUISINE**
+2. **Move to CELLIER**:
+   - ApproachDoor(D7)
+   - OpenDoor(D7)
+   - GoThrough(D7)
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1)
+3. **Move to GARAGE**:
+   - ApproachDoor(D9)
+   - OpenDoor(D9)
+   - GoThrough(D9)
+
+### Final Navigation Plan in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D9"},
+    {"action": "OpenDoor", "door": "D9"},
+    {"action": "GoThrough", "door": "D9"}
+  ]
+}
+```

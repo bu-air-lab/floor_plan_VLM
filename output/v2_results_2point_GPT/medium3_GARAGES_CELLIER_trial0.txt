@@ -1,0 +1,61 @@
+### Room and Door Connections
+
+- **GARAGES**
+  - Connected to HALL via Door D1
+
+- **HALL**
+  - Connected to GARAGES via Door D1
+  - Connected to DOUCHE via Door D2
+  - Connected to WC via Door D4
+  - Connected to CUISINE via Door D6
+  - Connected to CUISINE via Door D7
+  - Connected to CHAMBRE 1 via Door D5
+
+- **DOUCHE**
+  - Connected to HALL via Door D2
+
+- **WC**
+  - Connected to HALL via Door D4
+
+- **CUISINE**
+  - Connected to HALL via Door D6
+  - Connected to HALL via Door D7
+  - Connected to CELLIER via Door D3
+
+- **CELLIER**
+  - Connected to CUISINE via Door D3
+
+- **CHAMBRE 1**
+  - Connected to HALL via Door D5
+
+### Navigation Plan
+
+1. **ApproachDoor(1)**: Move in front of Door D1.
+2. **OpenDoor(1)**: Open Door D1.
+3. **GoThrough(1)**: Move through Door D1 to HALL.
+4. **ApproachDoor(6)**: Move in front of Door D6.
+5. **OpenDoor(6)**: Open Door D6.
+6. **GoThrough(6)**: Move through Door D6 to CUISINE.
+7. **ApproachDoor(3)**: Move in front of Door D3.
+8. **OpenDoor(3)**: Open Door D3.
+9. **GoThrough(3)**: Move through Door D3 to CELLIER.
+
+### Final Path in JSON Format
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3}
+  ]
+}
+```
+
+This plan ensures that you move from the GARAGES to the CELLIER efficiently, using only the necessary doors.

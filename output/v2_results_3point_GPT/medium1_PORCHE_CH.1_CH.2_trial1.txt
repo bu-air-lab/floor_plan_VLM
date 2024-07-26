@@ -1,0 +1,88 @@
+### Room and Door Connections
+
+- **Porche**:
+  - Connected to SEJOUR via Door D1.
+
+- **SEJOUR**:
+  - Connected to Porche via Door D1.
+  - Connected to CUISINE via Door D3.
+  - Connected to DEGT via Door D4.
+
+- **CUISINE**:
+  - Connected to SEJOUR via Door D3.
+  - Connected to CELLER via Door D2.
+
+- **CELLER**:
+  - Connected to CUISINE via Door D2.
+
+- **DEGT**:
+  - Connected to SEJOUR via Door D4.
+  - Connected to CH.1 via Door D5.
+  - Connected to CH.2 via Door D6.
+  - Connected to WC via Door D8.
+  - Connected to BAINS via Door D7.
+
+- **CH.1**:
+  - Connected to DEGT via Door D5.
+
+- **CH.2**:
+  - Connected to DEGT via Door D6.
+
+- **WC**:
+  - Connected to DEGT via Door D8.
+
+- **BAINS**:
+  - Connected to DEGT via Door D7.
+
+### Navigation Plan
+
+Starting in the Porche, the goal is to navigate to CH.1 and then to CH.2. The sequence of actions is as follows:
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D1"},
+  {"action": "OpenDoor", "door": "D1"},
+  {"action": "GoThrough", "door": "D1"},
+  {"action": "ApproachDoor", "door": "D4"},
+  {"action": "OpenDoor", "door": "D4"},
+  {"action": "GoThrough", "door": "D4"},
+  {"action": "ApproachDoor", "door": "D5"},
+  {"action": "OpenDoor", "door": "D5"},
+  {"action": "GoThrough", "door": "D5"},
+  {"action": "ApproachDoor", "door": "D5"},
+  {"action": "OpenDoor", "door": "D5"},
+  {"action": "GoThrough", "door": "D5"},
+  {"action": "ApproachDoor", "door": "D6"},
+  {"action": "OpenDoor", "door": "D6"},
+  {"action": "GoThrough", "door": "D6"}
+]
+```
+
+### Explanation of Steps
+
+1. **Porche to SEJOUR**:
+   - Approach Door D1.
+   - Open Door D1.
+   - Go through Door D1 to enter SEJOUR.
+
+2. **SEJOUR to DEGT**:
+   - Approach Door D4.
+   - Open Door D4.
+   - Go through Door D4 to enter DEGT.
+
+3. **DEGT to CH.1**:
+   - Approach Door D5.
+   - Open Door D5.
+   - Go through Door D5 to enter CH.1.
+
+4. **CH.1 to DEGT**:
+   - Approach Door D5.
+   - Open Door D5.
+   - Go through Door D5 to enter DEGT.
+
+5. **DEGT to CH.2**:
+   - Approach Door D6.
+   - Open Door D6.
+   - Go through Door D6 to enter CH.2.
+
+This plan ensures that the robot navigates efficiently from the Porche to CH.1 and then to CH.2, using the necessary doors in the correct sequence.

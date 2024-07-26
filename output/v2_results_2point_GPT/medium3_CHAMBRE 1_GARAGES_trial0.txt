@@ -1,0 +1,35 @@
+### Room and Door Connections
+
+- **D1**: Connects GARAGES and HALL
+- **D2**: Connects HALL and DOUCHE
+- **D3**: Connects CELLIER and CUISINE
+- **D4**: Connects WC and HALL
+- **D5**: Connects CHAMBRE 1 and HALL
+- **D6**: Connects CUISINE and HALL
+- **D7**: Connects HALL and HALL
+
+### Navigation Plan
+
+1. **ApproachDoor(5)**: Move in front of door D5.
+2. **OpenDoor(5)**: Open door D5.
+3. **GoThrough(5)**: Move through door D5 to enter the HALL.
+4. **ApproachDoor(1)**: Move in front of door D1.
+5. **OpenDoor(1)**: Open door D1.
+6. **GoThrough(1)**: Move through door D1 to enter the GARAGES.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5},
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1}
+  ]
+}
+```
+
+This plan ensures that you move from CHAMBRE 1 to GARAGES efficiently, using only the necessary doors.

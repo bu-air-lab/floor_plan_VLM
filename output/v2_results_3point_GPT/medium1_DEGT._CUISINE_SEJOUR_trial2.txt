@@ -1,0 +1,63 @@
+### Room and Door Connections
+
+- **DEGT.**:
+  - Connected to SEJOUR via Door D4
+  - Connected to CH.1 via Door D5
+  - Connected to CH.2 via Door D6
+  - Connected to WC via Door D8
+
+- **SEJOUR**:
+  - Connected to DEGT. via Door D4
+  - Connected to CUISINE via Door D3
+  - Connected to Porche via Door D1
+
+- **CUISINE**:
+  - Connected to SEJOUR via Door D3
+  - Connected to CELLER via Door D2
+
+- **CELLER**:
+  - Connected to CUISINE via Door D2
+
+- **CH.1**:
+  - Connected to DEGT. via Door D5
+
+- **CH.2**:
+  - Connected to DEGT. via Door D6
+
+- **WC**:
+  - Connected to DEGT. via Door D8
+
+- **BAINS**:
+  - Connected to WC via Door D7
+
+### Navigation Plan
+
+1. **Start in DEGT.**
+2. **Move to CUISINE:**
+   - ApproachDoor(4)
+   - OpenDoor(4)
+   - GoThrough(4)
+   - ApproachDoor(3)
+   - OpenDoor(3)
+   - GoThrough(3)
+3. **Move to SEJOUR:**
+   - ApproachDoor(3)
+   - OpenDoor(3)
+   - GoThrough(3)
+
+### JSON Format Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3}
+  ]
+}
+```
+
+This plan ensures that you start in DEGT., move to CUISINE, and then arrive at SEJOUR by following the necessary sequence of actions and using the correct doors.

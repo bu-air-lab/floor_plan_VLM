@@ -1,0 +1,41 @@
+### Room and Door Connections
+
+- **BUREAU**
+  - Connected to HALL via Door D6
+
+- **HALL**
+  - Connected to BUREAU via Door D6
+  - Connected to BAINS via Door D7
+  - Connected to LINGERIE via Door D5
+  - Connected to CHAMBRE PARENTS via Door D8
+  - Connected to CHAMBRE ENFANT 2 via Door D9
+  - Connected to CHAMBRE ENFANT 1 via Door D10
+  - Connected to PORCHE via Door D3
+  - Connected to CELLIER via Door D11
+
+- **BAINS**
+  - Connected to HALL via Door D7
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D6"},
+  {"action": "OpenDoor", "door": "D6"},
+  {"action": "GoThrough", "door": "D6"},
+  {"action": "ApproachDoor", "door": "D7"},
+  {"action": "OpenDoor", "door": "D7"},
+  {"action": "GoThrough", "door": "D7"}
+]
+```
+
+### Step-by-Step Navigation
+
+1. **ApproachDoor(D6)**: Move in front of Door D6 in the BUREAU.
+2. **OpenDoor(D6)**: Open Door D6.
+3. **GoThrough(D6)**: Move through Door D6 to enter the HALL.
+4. **ApproachDoor(D7)**: Move in front of Door D7 in the HALL.
+5. **OpenDoor(D7)**: Open Door D7.
+6. **GoThrough(D7)**: Move through Door D7 to enter the BAINS.
+
+This plan ensures that you move from the BUREAU to the BAINS efficiently by only using the necessary doors.

@@ -1,0 +1,50 @@
+### Room and Door Connections
+
+- **HALL**
+  - Connected to CELLIER via Door D8
+  - Connected to CHAMBRE 1 via Door D2
+  - Connected to WC via Door D3
+  - Connected to BAIN via Door D4
+  - Connected to CHAMBRE 3 via Door D5
+  - Connected to CHAMBRE 2 via Door D6
+
+- **CELLIER**
+  - Connected to HALL via Door D8
+  - Connected to CHAMBRE 1 via Door D7
+  - Connected to GARAGE via Door D1
+
+- **CHAMBRE 1**
+  - Connected to HALL via Door D2
+  - Connected to CELLIER via Door D7
+
+- **GARAGE**
+  - Connected to CELLIER via Door D1
+
+### Navigation Plan
+
+1. **Start in HALL**
+2. **Move to CELLIER**
+   - ApproachDoor(D8)
+   - OpenDoor(D8)
+   - GoThrough(D8)
+3. **Move to GARAGE**
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1)
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"}
+  ]
+}
+```
+
+This plan ensures that you move from the HALL to the CELLIER and then to the GARAGE, using only the necessary doors and actions.

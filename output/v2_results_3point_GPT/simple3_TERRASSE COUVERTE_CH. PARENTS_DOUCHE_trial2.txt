@@ -1,0 +1,60 @@
+### Room and Door Connections
+
+- **TERRASSE COUVERTE**
+  - Connected to CUISINE via Door D1
+
+- **CUISINE**
+  - Connected to TERRASSE COUVERTE via Door D1
+  - Connected to CELLIER via Door D2
+  - Connected to CH. PARENTS via Door D3
+  - Connected to DOUCHE via Door D4
+
+- **CELLIER**
+  - Connected to CUISINE via Door D2
+
+- **CH. PARENTS**
+  - Connected to CUISINE via Door D3
+
+- **DOUCHE**
+  - Connected to CUISINE via Door D4
+
+### Navigation Plan
+
+1. **Start in TERRASSE COUVERTE**
+2. **Move to CH. PARENTS**
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1) to CUISINE
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3) to CH. PARENTS
+3. **Move to DOUCHE**
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3) to CUISINE
+   - ApproachDoor(D4)
+   - OpenDoor(D4)
+   - GoThrough(D4) to DOUCHE
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"}
+  ]
+}
+```
+
+This plan ensures that you navigate from TERRASSE COUVERTE to CH. PARENTS and then to DOUCHE, using the necessary doors in the correct sequence.

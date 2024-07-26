@@ -1,0 +1,56 @@
+### Room and Door Connections
+
+- **CHAMBRE 2**:
+  - Connected to HALL via Door D5
+
+- **HALL**:
+  - Connected to CHAMBRE 2 via Door D5
+  - Connected to PORCHE via Door D6
+  - Connected to BAINS via Door D2
+
+- **PORCHE**:
+  - Connected to HALL via Door D6
+
+- **BAINS**:
+  - Connected to HALL via Door D2
+
+### Navigation Plan
+
+1. **Start in CHAMBRE 2**
+2. **Move to PORCHE**
+   - ApproachDoor(5)
+   - OpenDoor(5)
+   - GoThrough(5)
+   - ApproachDoor(6)
+   - OpenDoor(6)
+   - GoThrough(6)
+3. **Move to BAINS**
+   - ApproachDoor(6)
+   - OpenDoor(6)
+   - GoThrough(6)
+   - ApproachDoor(2)
+   - OpenDoor(2)
+   - GoThrough(2)
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6},
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2}
+  ]
+}
+```
+
+This plan ensures that you move from CHAMBRE 2 to PORCHE and then to BAINS, using the necessary doors in the correct sequence.

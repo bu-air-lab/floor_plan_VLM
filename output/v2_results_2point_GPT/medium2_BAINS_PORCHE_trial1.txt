@@ -1,0 +1,57 @@
+### Room and Door Connections
+
+- **BAINS**:
+  - Connected to WC via Door D3
+  - Connected to HALL via Door D4
+
+- **WC**:
+  - Connected to BAINS via Door D3
+  - Connected to HALL via Door D4
+
+- **HALL**:
+  - Connected to BAINS via Door D4
+  - Connected to WC via Door D4
+  - Connected to CHAMBRE 1 via Door D2
+  - Connected to CHAMBRE 3 via Door D5
+  - Connected to CHAMBRE 2 via Door D6
+  - Connected to CELLIER via Door D7
+  - Connected to PORCHE via Door D8
+
+- **CHAMBRE 1**:
+  - Connected to HALL via Door D2
+
+- **CHAMBRE 2**:
+  - Connected to HALL via Door D6
+
+- **CHAMBRE 3**:
+  - Connected to HALL via Door D5
+
+- **CELLIER**:
+  - Connected to HALL via Door D7
+
+- **PORCHE**:
+  - Connected to HALL via Door D8
+
+### Navigation Plan
+
+```json
+{
+  "steps": [
+    "ApproachDoor(4)",
+    "OpenDoor(4)",
+    "GoThrough(4)",
+    "ApproachDoor(8)",
+    "OpenDoor(8)",
+    "GoThrough(8)"
+  ]
+}
+```
+
+### Explanation of Steps
+
+1. **ApproachDoor(4)**: Move in front of Door D4 which connects BAINS to HALL.
+2. **OpenDoor(4)**: Open Door D4.
+3. **GoThrough(4)**: Move through Door D4 to enter HALL.
+4. **ApproachDoor(8)**: Move in front of Door D8 which connects HALL to PORCHE.
+5. **OpenDoor(8)**: Open Door D8.
+6. **GoThrough(8)**: Move through Door D8 to enter PORCHE.
