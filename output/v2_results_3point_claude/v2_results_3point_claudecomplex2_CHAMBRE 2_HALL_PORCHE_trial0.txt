@@ -1,0 +1,30 @@
+Thank you for providing the floor plan. I'll analyze the layout, list the room and door connections, and then provide a navigation plan as requested.
+
+Room and Door Connections:
+D1: Connects CELLIER to HALL
+D2: Connects CHAMBRE 2 to HALL
+D3: Connects HALL to BAINS
+D4: Connects HALL to WC
+D5: Connects CHAMBRE 2 to PORCHE
+D6: Connects HALL to CHAMBRE 1
+D7: Connects HALL to CUISINE
+D8: Connects CUISINE to TERRASSE COUVERTE
+D9: Connects GARAGE to CELLIER
+
+Step-by-step navigation plan:
+1. Start in CHAMBRE 2
+2. Use D5 to go from CHAMBRE 2 to PORCHE
+
+Final navigation plan in JSON format:
+
+```json
+{
+  "plan": [
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"}
+  ]
+}
+```
+
+This plan provides the most direct and efficient route from CHAMBRE 2 to PORCHE, using only the necessary door (D5) to complete the task. The plan avoids any unnecessary rooms or doors, ensuring a straightforward path to the destination.

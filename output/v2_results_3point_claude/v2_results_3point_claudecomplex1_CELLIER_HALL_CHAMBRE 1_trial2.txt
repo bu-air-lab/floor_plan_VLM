@@ -1,0 +1,52 @@
+Thank you for providing the floor plan. I'll first list the rooms and doors with their connections, then provide a step-by-step navigation plan to get from CELLIER to CHAMBRE 1.
+
+Room and Door Connections:
+- D1: Connects CELLIER to HALL
+- D2: Connects HALL to BAINS
+- D3: Connects HALL to WC
+- D4: Connects HALL to CHAMBRE 1
+- D5: Connects HALL to CHAMBRE 2
+- D6: Connects HALL to PORCHE
+- D7: Connects HALL to CUISINE
+- D8: Connects CUISINE to TERRASSE COUVERTE
+- D9: Connects CELLIER to GARAGE
+
+Step-by-step navigation plan:
+1. Start in CELLIER
+2. Use D1 to enter HALL
+3. Use D4 to enter CHAMBRE 1
+
+Here's the detailed action plan in JSON format:
+
+```json
+{
+  "navigationPlan": [
+    {
+      "action": "ApproachDoor",
+      "door": "D1"
+    },
+    {
+      "action": "OpenDoor",
+      "door": "D1"
+    },
+    {
+      "action": "GoThrough",
+      "door": "D1"
+    },
+    {
+      "action": "ApproachDoor",
+      "door": "D4"
+    },
+    {
+      "action": "OpenDoor",
+      "door": "D4"
+    },
+    {
+      "action": "GoThrough",
+      "door": "D4"
+    }
+  ]
+}
+```
+
+This plan efficiently navigates from CELLIER to CHAMBRE 1 using only the necessary doors (D1 and D4) without any unnecessary detours.
