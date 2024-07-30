@@ -1,0 +1,50 @@
+Thank you for providing the floor plan. Let me first describe the rooms and doors with their connections, and then I'll provide the navigation plan.
+
+Room and Door Connections:
+- CH.3 is connected to SEJOUR through D1
+- CH.2 is connected to SEJOUR through D2
+- CH.2 is connected to SEJOUR through D3
+- CH.1 is connected to SEJOUR through D4
+- CUISINE is connected to SEJOUR through D5
+- CUISINE is connected to SEJOUR through D6
+
+Now, for the navigation plan from CH.3 to CH.1:
+
+Step 1: Exit CH.3 to enter SEJOUR
+Step 2: Move through SEJOUR
+Step 3: Enter CH.1 from SEJOUR
+
+Here's the detailed action plan in JSON format:
+
+```json
+{
+  "navigationPlan": [
+    {
+      "action": "ApproachDoor",
+      "door": "D1"
+    },
+    {
+      "action": "OpenDoor",
+      "door": "D1"
+    },
+    {
+      "action": "GoThrough",
+      "door": "D1"
+    },
+    {
+      "action": "ApproachDoor",
+      "door": "D4"
+    },
+    {
+      "action": "OpenDoor",
+      "door": "D4"
+    },
+    {
+      "action": "GoThrough",
+      "door": "D4"
+    }
+  ]
+}
+```
+
+This plan provides the most efficient route from CH.3 to CH.1, using only the necessary doors (D1 and D4) and avoiding any unnecessary rooms or doors.

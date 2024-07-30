@@ -1,0 +1,47 @@
+Thank you for providing the floor plan. I'll first list out the rooms and door connections, then provide a navigation plan to get from the CELLIER to the WC.
+
+Room and Door Connections:
+1. D2: Connects CELLIER and CUISINE
+2. D3: Connects CUISINE and SEJOUR
+3. D4: Connects SEJOUR and DEGT
+4. D8: Connects DEGT and WC
+
+Navigation Plan:
+
+1. ApproachDoor(2)
+2. OpenDoor(2)
+3. GoThrough(2)
+4. ApproachDoor(3)
+5. OpenDoor(3)
+6. GoThrough(3)
+7. ApproachDoor(4)
+8. OpenDoor(4)
+9. GoThrough(4)
+10. ApproachDoor(8)
+11. OpenDoor(8)
+12. GoThrough(8)
+
+Here's the navigation plan in JSON format:
+
+```json
+{
+  "start": "CELLIER",
+  "end": "WC",
+  "path": [
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8}
+  ]
+}
+```
+
+This plan will efficiently navigate you from the CELLIER to the WC using only the necessary doors along the path.

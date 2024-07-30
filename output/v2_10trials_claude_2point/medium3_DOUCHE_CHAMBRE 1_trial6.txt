@@ -1,0 +1,36 @@
+Certainly! I'll provide you with a detailed navigation plan based on the floor plan image you've shared. Let's start by listing the rooms and doors with their connections:
+
+Room and Door Connections:
+1. DOUCHE - connected to HALL via D2
+2. HALL - connected to WC via D4
+3. HALL - connected to CHAMBRE 1 via D5
+4. HALL - connected to CUISINE via D6
+5. CELLIER - connected to CUISINE via D3
+6. GARAGES - connected to CELLIER via D1
+7. CUISINE - connected to HALL via D7
+
+Now, let's create a step-by-step navigation plan to go from DOUCHE to CHAMBRE 1:
+
+1. ApproachDoor(D2)
+2. OpenDoor(D2)
+3. GoThrough(D2)
+4. ApproachDoor(D5)
+5. OpenDoor(D5)
+6. GoThrough(D5)
+
+Here's the final path in JSON format:
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"}
+  ]
+}
+```
+
+This plan provides the most efficient route from DOUCHE to CHAMBRE 1, using only the necessary doors and avoiding any unnecessary rooms or detours. The robot will start in DOUCHE, go through D2 to enter the HALL, and then proceed through D5 to reach CHAMBRE 1.

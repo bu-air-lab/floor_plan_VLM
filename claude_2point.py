@@ -12,7 +12,7 @@ os.environ["ANTHROPIC_API_KEY"] = API_KEY
 client = Anthropic()
 
 # Folder to images dataset
-image_folder = 'updated_v2'
+image_folder = 'floorplans_v5'
 
 # Output folder for JSON plans from VLM
 output_folder = 'output'
@@ -51,69 +51,69 @@ Remember to make explicit connections for each door, then make a step by step so
 
 # Define the plans
 plans = {
-    'simple1': [
-        ('CH.3', 'CH.1'),
-        ('SEJOUR', 'CUISINE'),
-        ('CH.2', 'SEJOUR'),
-        ('CH.1', 'CH.2'),
-        ('CUISINE', 'CH.3')
-    ],
-    'simple2': [
-        ('CH.1', 'GARAGE'),
-        ('BAINS', 'HALL'),
-        ('GARAGE', 'CH.2'),
-        ('HALL', 'CUISINE'),
-        ('CUISINE', 'CH.1')
-    ],
+    # 'simple1': [
+    #     ('CH.3', 'CH.1'),
+    #     ('SEJOUR', 'CUISINE'),
+    #     ('CH.2', 'SEJOUR'),
+    #     ('CH.1', 'CH.2'),
+    #     ('CUISINE', 'CH.3')
+    # ],
+    # 'simple2': [
+    #     ('CH.1', 'GARAGE'),
+    #     ('BAINS', 'HALL'),
+    #     ('GARAGE', 'CH.2'),
+    #     ('HALL', 'CUISINE'),
+    #     ('CUISINE', 'CH.1')
+    # ],
     'simple3': [
         ('CUISINE', 'DOUCHE'),
         ('CELLIER', 'CH. PARENTS'),
         ('TERRASSE COUVERTE', 'CUISINE'),
         ('DOUCHE', 'CELLIER'),
         ('CH. PARENTS', 'TERRASSE COUVERTE')
-    ],
-    'medium1': [
-        ('CELLIER', 'WC'),
-        ('SEJOUR', 'CH.1'),
-        ('CUISINE', 'CH.2'),
-        ('DEGT.', 'PORCHE'),
-        ('WC', 'BAINS')
-    ],
-    'medium2': [
-        ('GARAGE', 'BAINS'),
-        ('CHAMBRE 1', 'HALL'),
-        ('CELLIER', 'CHAMBRE 3'),
-        ('BAINS', 'PORCHE'),
-        ('WC', 'CHAMBRE 2')
-    ],
-    'medium3': [
-        ('GARAGES', 'CELLIER'),
-        ('DOUCHE', 'CHAMBRE 1'),
-        ('CELLIER', 'HALL'),
-        ('WC', 'CUISINE'),
-        ('CHAMBRE 1', 'GARAGES')
-    ],
-    'complex1': [
-        ('GARAGE', 'CHAMBRE 2'),
-        ('CELLIER', 'WC'),
-        ('BAINS', 'TERRASSE COUVERTE'),
-        ('CHAMBRE 1', 'TERRASSE COUVERTE'),
-        ('CUISINE', 'CHAMBRE 1')
-    ],
-    'complex2': [
-        ('GARAGE', 'BAINS'),
-        ('CELLIER', 'HALL'),
-        ('CHAMBRE 2', 'WC'),
-        ('PORCHE', 'CUISINE'),
-        ('CHAMBRE 1', 'TERRASSE COUVERTE')
-    ],
-    'complex3': [
-        ('PORCHE', 'LINGERIE'),
-        ('BUREAU', 'BAINS'),
-        ('CHAMBRE PARENTS', 'CELLIER'),
-        ('GARAGE', 'CHAMBRE ENFANT 1'),
-        ('HALL', 'CHAMBRE ENFANT 2')
     ]
+    # 'medium1': [
+    #     ('CELLIER', 'WC'),
+    #     ('SEJOUR', 'CH.1'),
+    #     ('CUISINE', 'CH.2'),
+    #     ('DEGT.', 'PORCHE'),
+    #     ('WC', 'BAINS')
+    # ],
+    # 'medium2': [
+    #     ('GARAGE', 'BAINS'),
+    #     ('CHAMBRE 1', 'HALL'),
+    #     ('CELLIER', 'CHAMBRE 3'),
+    #     ('BAINS', 'PORCHE'),
+    #     ('WC', 'CHAMBRE 2')
+    # ],
+    # 'medium3': [
+    #     ('GARAGES', 'CELLIER'),
+    #     ('DOUCHE', 'CHAMBRE 1'),
+    #     ('CELLIER', 'HALL'),
+    #     ('WC', 'CUISINE'),
+    #     ('CHAMBRE 1', 'GARAGES')
+    # ],
+    # 'complex1': [
+    #     ('GARAGE', 'CHAMBRE 2'),
+    #     ('CELLIER', 'WC'),
+    #     ('BAINS', 'TERRASSE COUVERTE'),
+    #     ('CHAMBRE 1', 'TERRASSE COUVERTE'),
+    #     ('CUISINE', 'CHAMBRE 1')
+    # ],
+    # 'complex2': [
+    #     ('GARAGE', 'BAINS'),
+    #     ('CELLIER', 'HALL'),
+    #     ('CHAMBRE 2', 'WC'),
+    #     ('PORCHE', 'CUISINE'),
+    #     ('CHAMBRE 1', 'TERRASSE COUVERTE')
+    # ],
+    # 'complex3': [
+    #     ('PORCHE', 'LINGERIE'),
+    #     ('BUREAU', 'BAINS'),
+    #     ('CHAMBRE PARENTS', 'CELLIER'),
+    #     ('GARAGE', 'CHAMBRE ENFANT 1'),
+    #     ('HALL', 'CHAMBRE ENFANT 2')
+    # ]
 }
 
 
@@ -158,31 +158,33 @@ def query_claude_with_image_and_text(image_path, text_prompt):
 
 def process_images_and_prompts():
     for image_file in image_files:
-        image_path = os.path.join(image_folder, image_file)
+         if image_file.startswith('simple3'):
         
-        key = image_file[:-4]
+            image_path = os.path.join(image_folder, image_file)
+            
+            key = image_file[:-4]
 
-        for plan in plans[key]:
-            start, end = plan
+            for plan in plans[key]:
+                start, end = plan
 
-            prompt = prompt_A + start + prompt_B + end + prompt_C
+                prompt = prompt_A + start + prompt_B + end + prompt_C
 
-            for n in range(N):
-                # Call Claude API
-                text_response = query_claude_with_image_and_text(image_path, prompt)
+                for n in range(N):
+                    # Call Claude API
+                    text_response = query_claude_with_image_and_text(image_path, prompt)
 
-                # Write the text response to a new file
-                filename = f'output/v2_10trials_claude_2point/{key}_{start}_{end}_trial{n}.txt'
-                with open(filename, 'w') as file:
-                    file.write(text_response)
+                    # Write the text response to a new file
+                    filename = f'output/v2_10trials_claude_2point/{key}_{start}_{end}_trial{n}.txt'
+                    with open(filename, 'w') as file:
+                        file.write(text_response)
 
-                print(f"Done with trial {n}")
+                    print(f"Done with trial {n}")
+                    
+
+                print(f"Done with plan: {plan}")
                 
 
-            print(f"Done with plan: {plan}")
-            
-
-        print(f"Done with {image_file}")
+            print(f"Done with {image_file}")
 
 # Run the process
 process_images_and_prompts()

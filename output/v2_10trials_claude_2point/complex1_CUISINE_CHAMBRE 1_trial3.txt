@@ -1,0 +1,43 @@
+Thank you for providing the floor plan. I'll analyze the layout, list the room and door connections, and then provide a navigation plan from the CUISINE to CHAMBRE 1.
+
+Room and Door Connections:
+D1: Connects CELLIER and HALL
+D2: Connects BAINS and HALL
+D3: Connects WC and HALL
+D4: Connects HALL and CHAMBRE 1
+D5: Connects HALL and CHAMBRE 2
+D6: Connects HALL and PORCHE
+D7: Connects HALL and CUISINE
+D8: Connects CUISINE and TERRASSE COUVERTE
+D9: Connects CELLIER and GARAGE
+
+Navigation Plan:
+To go from CUISINE to CHAMBRE 1, we need to use two doors: D7 and D4. Here's the step-by-step plan:
+
+1. ApproachDoor(7)
+2. OpenDoor(7)
+3. GoThrough(7)
+4. ApproachDoor(4)
+5. OpenDoor(4)
+6. GoThrough(4)
+
+This plan takes you from the CUISINE through the HALL and into CHAMBRE 1 using the most direct route.
+
+Here's the navigation plan in JSON format:
+
+```json
+{
+  "start": "CUISINE",
+  "end": "CHAMBRE 1",
+  "steps": [
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4}
+  ]
+}
+```
+
+This plan ensures you navigate efficiently from the CUISINE to CHAMBRE 1 using only the necessary doors and avoiding any unnecessary detours.

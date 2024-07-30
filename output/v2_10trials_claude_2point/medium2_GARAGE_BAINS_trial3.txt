@@ -1,0 +1,36 @@
+Thank you for providing the floor plan. I'll first list out the rooms and doors with their connections, then provide a step-by-step navigation plan to get from the GARAGE to the BAINS.
+
+Room and Door Connections:
+- D1: Connects GARAGE to HALL
+- D2: Connects CHAMBRE1 to HALL
+- D3: Connects HALL to WC
+- D4: Connects HALL to BAINS
+- D5: Connects HALL to CHAMBRE3
+- D6: Connects HALL to CHAMBRE2
+- D7: Connects CELLIER to HALL
+- D8: Connects HALL to Porche
+
+Step-by-step Navigation Plan:
+1. Start in GARAGE
+2. ApproachDoor(1)
+3. OpenDoor(1)
+4. GoThrough(1) - Now in HALL
+5. ApproachDoor(4)
+6. OpenDoor(4)
+7. GoThrough(4) - Now in BAINS
+
+JSON format of the final path:
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4}
+  ]
+}
+```
+
+This path takes you directly from the GARAGE to the BAINS using only the necessary doors (D1 and D4) and avoiding any unnecessary rooms or doors.
