@@ -117,7 +117,7 @@ plans = {
 }
 
 
-N = 3
+N = 10
 MODEL_NAME = "claude-3-5-sonnet-20240620"
 MAX_TOKENS = 2048
 
@@ -172,7 +172,7 @@ def process_images_and_prompts():
                 text_response = query_claude_with_image_and_text(image_path, prompt)
 
                 # Write the text response to a new file
-                filename = f'output/updated_v2_claude/{key}_{start}_{end}_trial{n}.txt'
+                filename = f'output/v2_10trials_claude_2point/{key}_{start}_{end}_trial{n}.txt'
                 with open(filename, 'w') as file:
                     file.write(text_response)
 
