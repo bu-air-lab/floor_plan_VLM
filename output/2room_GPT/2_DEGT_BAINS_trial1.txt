@@ -1,0 +1,45 @@
+### Room and Door Connections
+
+**Rooms:**
+1. DEGT
+2. SEJOUR
+3. CH.1
+4. CH.2
+5. CUISINE
+6. WC
+7. BAINS
+8. CELLER
+9. PORCHE
+
+**Doors:**
+1. D1: SEJOUR - PORCHE
+2. D2: CUISINE - CELLER
+3. D3: SEJOUR - CUISINE
+4. D4: SEJOUR - DEGT
+5. D5: DEGT - CH.1
+6. D6: DEGT - CH.2
+7. D7: DEGT - BAINS
+8. D8: DEGT - WC
+
+### Navigation Plan
+
+**Objective:** Navigate from DEGT to BAINS.
+
+**Steps:**
+1. ApproachDoor(7): Move in front of door D7.
+2. OpenDoor(7): Open door D7.
+3. GoThrough(7): Move through door D7 to BAINS.
+
+### Final Navigation Plan in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7}
+  ]
+}
+```
+
+This plan ensures that you move efficiently from DEGT to BAINS by using the necessary door D7.

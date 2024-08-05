@@ -1,0 +1,52 @@
+### Room and Door Connections
+
+#### Rooms:
+1. CELLIER
+2. GARAGE
+3. BAIN
+4. WC
+5. CHAMBRE 1
+6. CHAMBRE 2
+7. HALL
+8. PORCHE
+9. CUISINE
+10. TERRASSE COUVERTE
+
+#### Doors:
+1. D1: Connects CELLIER and HALL
+2. D2: Connects BAIN and HALL
+3. D3: Connects WC and HALL
+4. D4: Connects CHAMBRE 1 and HALL
+5. D5: Connects CHAMBRE 2 and HALL
+6. D6: Connects HALL and PORCHE
+7. D7: Connects HALL and CUISINE
+8. D8: Connects CUISINE and TERRASSE COUVERTE
+9. D9: Connects CELLIER and GARAGE
+
+### Navigation Plan
+
+#### Task: Navigate from CELLIER to GARAGE
+
+1. **ApproachDoor(1)**: Move in front of door D1.
+2. **OpenDoor(1)**: Open door D1.
+3. **GoThrough(1)**: Move through door D1 to HALL.
+4. **ApproachDoor(9)**: Move in front of door D9.
+5. **OpenDoor(9)**: Open door D9.
+6. **GoThrough(9)**: Move through door D9 to GARAGE.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 9},
+    {"action": "OpenDoor", "door": 9},
+    {"action": "GoThrough", "door": 9}
+  ]
+}
+```
+
+This plan ensures that the robot navigates efficiently from the CELLIER to the GARAGE, using only the necessary doors.

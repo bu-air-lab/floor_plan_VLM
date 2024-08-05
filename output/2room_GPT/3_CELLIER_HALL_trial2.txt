@@ -1,0 +1,43 @@
+### Room and Door Connections
+
+- **CELLIER**
+  - Connected to PORCHE via Door D2
+  - Connected to HALL via Door D3
+  - Connected to HALL via Door D11
+
+- **PORCHE**
+  - Connected to CELLIER via Door D2
+  - Connected to HALL via Door D3
+
+- **HALL**
+  - Connected to CELLIER via Door D3
+  - Connected to CELLIER via Door D11
+  - Connected to PORCHE via Door D3
+  - Connected to LINGERIE via Door D5
+  - Connected to BUREAU via Door D6
+  - Connected to BAINS via Door D7
+  - Connected to CHAMBRE PARENTS via Door D8
+  - Connected to CHAMBRE ENFANT 2 via Door D9
+  - Connected to CHAMBRE ENFANT 1 via Door D10
+
+### Navigation Plan
+
+Starting in the CELLIER and arriving at the HALL:
+
+1. **ApproachDoor(3)**: Move in front of Door D3.
+2. **OpenDoor(3)**: Open Door D3.
+3. **GoThrough(3)**: Move through Door D3 to the HALL.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(3)",
+    "OpenDoor(3)",
+    "GoThrough(3)"
+  ]
+}
+```
+
+This plan ensures that you move from the CELLIER to the HALL using the shortest and most efficient path, strictly following the sequence of actions required to navigate through the necessary doors.

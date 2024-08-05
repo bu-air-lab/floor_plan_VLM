@@ -1,0 +1,58 @@
+### Explicit Room and Door Descriptions
+
+#### Rooms and Doors Connections:
+1. **WC 1**:
+   - Door D31 to Hall 1
+
+2. **Hall 1**:
+   - Door D31 to WC 1
+   - Door D21 to Bains 1
+   - Door D41 to Chambre 4
+   - Door D51 to Chambre 3
+   - Door D61 to Porche 1
+   - Door D81 to Cuisine 1
+   - Door D11 to Cellier 1
+   - Door D10 to Terrasse Couverte 1
+
+3. **Bains 1**:
+   - Door D21 to Hall 1
+
+4. **Chambre 4**:
+   - Door D41 to Hall 1
+
+5. **Chambre 3**:
+   - Door D51 to Hall 1
+
+6. **Porche 1**:
+   - Door D61 to Hall 1
+
+7. **Cuisine 1**:
+   - Door D81 to Hall 1
+
+8. **Cellier 1**:
+   - Door D11 to Hall 1
+
+9. **Terrasse Couverte 1**:
+   - Door D10 to Hall 1
+
+### Navigation Plan
+
+#### Starting Point: WC 1
+#### Destination: Hall 1
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D31"},
+    {"action": "OpenDoor", "door": "D31"},
+    {"action": "GoThrough", "door": "D31"}
+  ]
+}
+```
+
+### Explanation:
+1. **ApproachDoor(D31)**: Move in front of door D31 which connects WC 1 to Hall 1.
+2. **OpenDoor(D31)**: Open door D31.
+3. **GoThrough(D31)**: Move through the open door D31 to enter Hall 1.
+
+This plan ensures that the robot moves efficiently from WC 1 to Hall 1 by using the necessary door D31.

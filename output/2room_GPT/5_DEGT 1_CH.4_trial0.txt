@@ -1,0 +1,40 @@
+### Room and Door Connections
+
+#### Rooms:
+1. DEGT
+2. CH.4
+3. CH.3
+4. DEGT 1
+5. WC 1
+6. Bains 1
+
+#### Doors:
+1. D41: Connects DEGT 1 and SEJOUR 1
+2. D51: Connects DEGT 1 and CH.3
+3. D61: Connects DEGT 1 and CH.4
+4. D81: Connects DEGT 1 and WC 1
+5. D71: Connects DEGT 1 and Bains 1
+
+### Navigation Plan
+
+#### Step-by-Step Solution:
+1. **Start in DEGT 1**
+2. **Move to CH.4**
+
+#### Actions:
+1. ApproachDoor(61)
+2. OpenDoor(61)
+3. GoThrough(61)
+
+### Final Navigation Plan in JSON Format:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 61},
+    {"action": "OpenDoor", "door": 61},
+    {"action": "GoThrough", "door": 61}
+  ]
+}
+```
+
+This plan ensures that you move from DEGT 1 to CH.4 efficiently by using the necessary door D61.

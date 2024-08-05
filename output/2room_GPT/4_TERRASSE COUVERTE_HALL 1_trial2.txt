@@ -1,0 +1,50 @@
+### Room and Door Connections
+
+**Rooms and their connected doors:**
+
+1. **TERRASSE COUVERTE**
+   - Connected to: CUISINE (via D8), HALL 1 (via D10)
+
+2. **CUISINE**
+   - Connected to: TERRASSE COUVERTE (via D8), HALL (via D7)
+
+3. **HALL**
+   - Connected to: CUISINE (via D7), CHAMBRE 1 (via D4), WC (via D3), HALL 1 (via D6), CHAMBRE 2 (via D5), CELLIER (via D1)
+
+4. **HALL 1**
+   - Connected to: TERRASSE COUVERTE (via D10), PORCHE 1 (via D61), CUISINE 1 (via D81), CHAMBRE 4 (via D41), BAIN 1 (via D21), CHAMBRE 3 (via D51)
+
+5. **PORCHE 1**
+   - Connected to: HALL 1 (via D61)
+
+6. **CUISINE 1**
+   - Connected to: HALL 1 (via D81)
+
+7. **CHAMBRE 4**
+   - Connected to: HALL 1 (via D41)
+
+8. **BAIN 1**
+   - Connected to: HALL 1 (via D21)
+
+9. **CHAMBRE 3**
+   - Connected to: HALL 1 (via D51)
+
+### Navigation Plan
+
+Starting in **TERRASSE COUVERTE**, the goal is to reach **HALL 1**. The sequence of actions is as follows:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"}
+]
+```
+
+### Explanation
+
+1. **ApproachDoor(D10)**: Move in front of door D10, which connects TERRASSE COUVERTE to HALL 1.
+2. **OpenDoor(D10)**: Open door D10.
+3. **GoThrough(D10)**: Move through door D10 to enter HALL 1.
+
+This plan ensures that you move directly from TERRASSE COUVERTE to HALL 1 using the shortest and most efficient path.

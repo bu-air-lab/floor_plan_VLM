@@ -1,0 +1,65 @@
+### Room and Door Connections
+
+- **CHAMBRE ENFANT 1**
+  - Door D10: Connects to HALL
+
+- **HALL**
+  - Door D10: Connects to CHAMBRE ENFANT 1
+  - Door D9: Connects to CHAMBRE ENFANT 2
+  - Door D8: Connects to CHAMBRE PARENTS
+  - Door D7: Connects to BAINS
+  - Door D6: Connects to BUREAU
+  - Door D5: Connects to LINGERIE
+  - Door D4: Connects to WC
+  - Door D3: Connects to PORCHE
+  - Door D2: Connects to PORCHE
+  - Door D11: Connects to CELLIER
+
+- **CHAMBRE ENFANT 2**
+  - Door D9: Connects to HALL
+
+- **CHAMBRE PARENTS**
+  - Door D8: Connects to HALL
+
+- **BAINS**
+  - Door D7: Connects to HALL
+
+- **BUREAU**
+  - Door D6: Connects to HALL
+
+- **LINGERIE**
+  - Door D5: Connects to HALL
+
+- **WC**
+  - Door D4: Connects to HALL
+
+- **PORCHE**
+  - Door D3: Connects to HALL
+  - Door D2: Connects to HALL
+
+- **CELLIER**
+  - Door D11: Connects to HALL
+  - Door D1: Connects to GARAGE
+
+- **GARAGE**
+  - Door D1: Connects to CELLIER
+
+### Navigation Plan
+
+```json
+{
+  "steps": [
+    "ApproachDoor(D10)",
+    "OpenDoor(D10)",
+    "GoThrough(D10)"
+  ]
+}
+```
+
+### Explanation
+
+1. **ApproachDoor(D10)**: Move in front of door D10 in CHAMBRE ENFANT 1.
+2. **OpenDoor(D10)**: Open door D10.
+3. **GoThrough(D10)**: Move through door D10 to enter the HALL.
+
+This plan ensures that you move from CHAMBRE ENFANT 1 to the HALL efficiently by using the necessary door D10.

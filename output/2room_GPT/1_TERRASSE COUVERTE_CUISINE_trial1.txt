@@ -1,0 +1,48 @@
+### Room and Door Connections
+
+**Rooms:**
+1. TERRASSE COUVERTE
+2. CUISINE
+3. PORCHE
+4. HALL
+5. CHAMBRE 1
+6. CHAMBRE 2
+7. BAIN
+8. WC
+9. CELLIER
+10. GARAGE
+
+**Doors:**
+1. D1: HALL - CELLIER
+2. D2: HALL - BAIN
+3. D3: HALL - WC
+4. D4: HALL - CHAMBRE 1
+5. D5: HALL - CHAMBRE 2
+6. D6: HALL - PORCHE
+7. D7: HALL - CUISINE
+8. D8: TERRASSE COUVERTE - CUISINE
+9. D9: CELLIER - GARAGE
+
+### Navigation Plan
+
+**Start:** TERRASSE COUVERTE
+**End:** CUISINE
+
+**Steps:**
+1. ApproachDoor(8)
+2. OpenDoor(8)
+3. GoThrough(8)
+
+### JSON Format Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8}
+  ]
+}
+```
+
+This plan ensures that you move from the TERRASSE COUVERTE to the CUISINE by using the door D8.

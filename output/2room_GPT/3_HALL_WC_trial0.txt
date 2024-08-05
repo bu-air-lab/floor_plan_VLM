@@ -1,0 +1,29 @@
+### Room and Door Connections
+
+- **HALL**:
+  - Connected to **WC** via **D4**
+  - Connected to **PORCHE** via **D3**
+  - Connected to **LINGERIE** via **D5**
+  - Connected to **BUREAU** via **D6**
+  - Connected to **BAINS** via **D7**
+  - Connected to **CHAMBRE PARENTS** via **D8**
+  - Connected to **CHAMBRE ENFANT 2** via **D9**
+  - Connected to **CHAMBRE ENFANT 1** via **D10**
+  - Connected to **CELLIER** via **D11**
+
+- **WC**:
+  - Connected to **HALL** via **D4**
+
+### Navigation Plan
+
+To navigate from the HALL to the WC, you need to use the following sequence of actions:
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D4"},
+  {"action": "OpenDoor", "door": "D4"},
+  {"action": "GoThrough", "door": "D4"}
+]
+```
+
+This plan ensures that you move from the HALL to the WC by approaching, opening, and going through the necessary door (D4).

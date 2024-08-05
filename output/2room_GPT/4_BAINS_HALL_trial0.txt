@@ -1,0 +1,67 @@
+### Room and Door Connections
+
+#### Rooms:
+1. BAINS
+2. WC
+3. HALL
+4. CHAMBRE 1
+5. CHAMBRE 2
+6. CHAMBRE 3
+7. CHAMBRE 4
+8. CUISINE
+9. TERRASSE COUVERTE
+10. CELLER
+11. GARAGE
+12. PORCHE
+13. HALL1
+14. CUISINE1
+15. TERRASSE COUVERTE 1
+16. CELLER1
+17. GARAGE1
+18. PORCHE1
+19. BAINS 1
+20. WC 1
+
+#### Doors:
+1. D1: CELLER - HALL
+2. D2: BAINS - HALL
+3. D3: WC - HALL
+4. D4: CHAMBRE 1 - HALL
+5. D5: CHAMBRE 2 - HALL
+6. D6: PORCHE - HALL
+7. D7: CUISINE - HALL
+8. D8: CUISINE - TERRASSE COUVERTE
+9. D9: CELLER - GARAGE
+10. D10: HALL - TERRASSE COUVERTE
+11. D11: CELLER1 - HALL1
+12. D21: BAINS 1 - HALL1
+13. D31: WC 1 - HALL1
+14. D41: CHAMBRE 4 - HALL1
+15. D51: CHAMBRE 3 - HALL1
+16. D61: PORCHE1 - HALL1
+17. D71: CUISINE1 - HALL1
+18. D81: CUISINE1 - TERRASSE COUVERTE 1
+19. D91: CELLER1 - GARAGE1
+
+### Navigation Plan
+
+#### Start: BAINS
+#### Goal: HALL
+
+1. **ApproachDoor(2)**: Move in front of door D2.
+2. **OpenDoor(2)**: Open door D2.
+3. **GoThrough(2)**: Move through door D2 to HALL.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2}
+  ]
+}
+```
+
+This plan ensures that you start in the BAINS and arrive at the HALL by using the necessary door D2.

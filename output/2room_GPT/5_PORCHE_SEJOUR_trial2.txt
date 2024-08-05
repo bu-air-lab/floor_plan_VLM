@@ -1,0 +1,40 @@
+### Room and Door Connections
+
+#### Rooms:
+1. **Porche**
+2. **Cellier**
+3. **Cuisine**
+4. **Sejour**
+5. **CH.1**
+6. **CH.2**
+7. **DEGT**
+8. **WC**
+9. **Bains**
+
+#### Doors:
+1. **D1**: Porche - Sejour
+2. **D2**: Cellier - Cuisine
+3. **D3**: Cuisine - Sejour
+4. **D4**: Sejour - DEGT
+5. **D5**: DEGT - CH.1
+6. **D6**: DEGT - CH.2
+7. **D7**: DEGT - Bains
+8. **D8**: DEGT - WC
+
+### Navigation Plan
+
+#### Step-by-Step Actions:
+1. **ApproachDoor(1)**: Move in front of door D1.
+2. **OpenDoor(1)**: Open door D1.
+3. **GoThrough(1)**: Move through door D1 to Sejour.
+
+### Final Navigation Plan in JSON Format:
+```json
+[
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1}
+]
+```
+
+This plan ensures that you move from the Porche to the Sejour by using the necessary door D1.

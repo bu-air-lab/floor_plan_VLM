@@ -1,0 +1,55 @@
+### Room and Door Connections
+
+1. **PORCHE**
+   - Connected to SEJOUR via Door D1
+
+2. **SEJOUR**
+   - Connected to PORCHE via Door D1
+   - Connected to CUISINE via Door D3
+   - Connected to DEGT via Door D4
+
+3. **CUISINE**
+   - Connected to SEJOUR via Door D3
+   - Connected to CELLIER via Door D2
+
+4. **CELLIER**
+   - Connected to CUISINE via Door D2
+
+5. **DEGT**
+   - Connected to SEJOUR via Door D4
+   - Connected to CH.1 via Door D5
+   - Connected to CH.2 via Door D6
+   - Connected to WC via Door D8
+   - Connected to BAINS via Door D7
+
+6. **CH.1**
+   - Connected to DEGT via Door D5
+
+7. **CH.2**
+   - Connected to DEGT via Door D6
+
+8. **WC**
+   - Connected to DEGT via Door D8
+
+9. **BAINS**
+   - Connected to DEGT via Door D7
+
+### Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(1)",
+    "OpenDoor(1)",
+    "GoThrough(1)"
+  ]
+}
+```
+
+### Explanation
+
+1. **ApproachDoor(1)**: Move in front of Door D1, which connects PORCHE to SEJOUR.
+2. **OpenDoor(1)**: Open Door D1.
+3. **GoThrough(1)**: Move through Door D1 to enter SEJOUR.
+
+This plan ensures that you move from PORCHE to SEJOUR efficiently, using only the necessary door.

@@ -1,0 +1,46 @@
+### Room and Door Connections
+
+#### Rooms:
+1. WC 1
+2. Bains 1
+3. Hall 1
+4. Chambre 4
+5. Hall1
+6. Chambre 3
+7. Cellier 1
+8. Garage 1
+9. Porche 1
+10. Cuisine 1
+11. Terrasse Couverte 1
+
+#### Doors:
+1. D11: Cellier 1 - Hall 1
+2. D21: Bains 1 - Hall 1
+3. D31: WC 1 - Hall 1
+4. D41: Chambre 4 - Hall 1
+5. D51: Chambre 3 - Hall 1
+6. D61: Porche 1 - Hall 1
+7. D71: Cuisine 1 - Hall 1
+8. D81: Terrasse Couverte 1 - Hall 1
+9. D91: Garage 1 - Cellier 1
+10. D10: Terrasse Couverte 1 - Hall 1
+
+### Navigation Plan
+
+#### Start: WC 1
+#### End: Hall 1
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D31"},
+    {"action": "OpenDoor", "door": "D31"},
+    {"action": "GoThrough", "door": "D31"}
+]
+```
+
+### Explanation:
+1. **ApproachDoor(D31)**: Move in front of door D31 which connects WC 1 to Hall 1.
+2. **OpenDoor(D31)**: Open door D31.
+3. **GoThrough(D31)**: Move through door D31 to enter Hall 1.
+
+This sequence ensures that you move from WC 1 to Hall 1 efficiently, using only the necessary door.

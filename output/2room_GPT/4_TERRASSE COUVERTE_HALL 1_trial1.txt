@@ -1,0 +1,39 @@
+### Explicit Room and Door Descriptions
+
+#### Rooms and their connections:
+1. **TERRASSE COUVERTE**:
+   - Connected to CUISINE via Door D8
+   - Connected to HALL 1 via Door D10
+
+2. **CUISINE**:
+   - Connected to TERRASSE COUVERTE via Door D8
+   - Connected to HALL via Door D7
+
+3. **HALL**:
+   - Connected to CUISINE via Door D7
+   - Connected to HALL 1 via Door D10
+
+4. **HALL 1**:
+   - Connected to TERRASSE COUVERTE via Door D10
+   - Connected to HALL via Door D10
+
+### Navigation Plan
+
+#### Step-by-Step Solution:
+1. **Start in TERRASSE COUVERTE**
+2. **Approach Door D10**: Move in front of Door D10.
+3. **Open Door D10**: Open Door D10.
+4. **Go Through Door D10**: Move through Door D10 to HALL 1.
+
+### Final Navigation Plan in JSON Format
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"}
+  ]
+}
+```
+
+This plan ensures that you move from TERRASSE COUVERTE to HALL 1 efficiently by using the necessary door D10.

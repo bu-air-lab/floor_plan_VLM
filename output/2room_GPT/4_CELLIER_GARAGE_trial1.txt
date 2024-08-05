@@ -1,0 +1,51 @@
+### Room and Door Connections
+
+#### Rooms:
+1. CELLIER
+2. GARAGE
+3. HALL
+4. CHAMBRE 2
+5. PORCHE
+6. CUISINE
+7. TERRASSE COUVERTE
+8. BAIN
+9. WC
+10. CHAMBRE 1
+
+#### Doors:
+1. D1: CELLIER <-> HALL
+2. D2: HALL <-> BAIN
+3. D3: HALL <-> WC
+4. D4: HALL <-> CHAMBRE 1
+5. D5: HALL <-> CHAMBRE 2
+6. D6: HALL <-> PORCHE
+7. D7: HALL <-> CUISINE
+8. D8: CUISINE <-> TERRASSE COUVERTE
+9. D9: CELLIER <-> GARAGE
+10. D10: HALL <-> TERRASSE COUVERTE
+
+### Navigation Plan
+
+#### Step-by-Step Actions:
+1. **ApproachDoor(D1)**: Move in front of door D1.
+2. **OpenDoor(D1)**: Open door D1.
+3. **GoThrough(D1)**: Move through door D1 to HALL.
+4. **ApproachDoor(D9)**: Move in front of door D9.
+5. **OpenDoor(D9)**: Open door D9.
+6. **GoThrough(D9)**: Move through door D9 to GARAGE.
+
+### Final Navigation Plan in JSON Format:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D9"},
+    {"action": "OpenDoor", "door": "D9"},
+    {"action": "GoThrough", "door": "D9"}
+  ]
+}
+```
+
+This plan ensures that you move from the CELLIER to the GARAGE by passing through the necessary doors in the correct sequence.

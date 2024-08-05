@@ -1,0 +1,30 @@
+### Room and Door Connections
+
+- **D1**: SEJOUR - PORCHE
+- **D2**: CUISINE - CELLIER
+- **D3**: CUISINE - SEJOUR
+- **D4**: SEJOUR - DEGT
+- **D5**: DEGT - CH.1
+- **D6**: DEGT - CH.2
+- **D7**: DEGT - BAINS
+- **D8**: DEGT - WC
+
+### Navigation Plan
+
+1. **ApproachDoor(3)**: Move in front of door D3.
+2. **OpenDoor(3)**: Open door D3.
+3. **GoThrough(3)**: Move through door D3 to SEJOUR.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3}
+  ]
+}
+```
+
+This plan ensures that you move from the CUISINE to the SEJOUR by using the necessary door (D3) and avoiding any unnecessary doors or rooms.

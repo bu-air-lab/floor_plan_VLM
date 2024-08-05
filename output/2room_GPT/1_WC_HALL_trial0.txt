@@ -1,0 +1,31 @@
+### Room and Door Connections
+
+- **WC**:
+  - Connected to HALL via Door D3
+
+- **HALL**:
+  - Connected to WC via Door D3
+  - Connected to Bains via Door D2
+  - Connected to Cellier via Door D1
+  - Connected to Chambre 1 via Door D4
+  - Connected to Chambre 2 via Door D5
+  - Connected to Porche via Door D6
+  - Connected to Cuisine via Door D7
+
+### Navigation Plan
+
+1. **ApproachDoor(3)**: Move in front of Door D3.
+2. **OpenDoor(3)**: Open Door D3.
+3. **GoThrough(3)**: Move through Door D3 to the HALL.
+
+### Final Navigation Plan in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(3)",
+    "OpenDoor(3)",
+    "GoThrough(3)"
+  ]
+}
+```

@@ -1,0 +1,40 @@
+### Room and Door Connections
+
+#### Rooms:
+1. CELLIER
+2. PORCHE
+3. HALL
+4. GARAGE
+
+#### Doors:
+1. D1: Connects GARAGE and HALL
+2. D2: Connects CELLIER and PORCHE
+3. D3: Connects PORCHE and HALL
+4. D11: Connects CELLIER and HALL
+5. D12: Connects HALL and HALL
+6. D13: Connects CELLIER and GARAGE
+
+### Navigation Plan
+
+#### Starting Point: CELLIER
+#### Destination: GARAGE
+
+#### Step-by-Step Navigation Plan:
+
+1. **ApproachDoor(13)**: Move in front of door D13.
+2. **OpenDoor(13)**: Open door D13.
+3. **GoThrough(13)**: Move through door D13 to enter GARAGE.
+
+### JSON Format Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 13},
+    {"action": "OpenDoor", "door": 13},
+    {"action": "GoThrough", "door": 13}
+  ]
+}
+```
+
+This plan ensures that you move from the CELLIER to the GARAGE efficiently by using the necessary door D13.

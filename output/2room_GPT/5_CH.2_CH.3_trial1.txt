@@ -1,0 +1,55 @@
+### Room and Door Connections
+
+#### Rooms:
+- **CH.2**: Connected to DEGT via D6, Connected to CH.3 via D9
+- **DEGT**: Connected to CH.2 via D6, Connected to CH.3 via D51, Connected to WC via D8, Connected to Bains via D7, Connected to SEJOUR via D4
+- **CH.3**: Connected to DEGT via D51, Connected to CH.2 via D9
+- **WC**: Connected to DEGT via D8
+- **Bains**: Connected to DEGT via D7
+- **SEJOUR**: Connected to DEGT via D4
+- **CH.1**: Connected to DEGT via D5
+- **CUISINE**: Connected to SEJOUR via D3
+- **CELLER**: Connected to CUISINE via D2
+- **Porche**: Connected to SEJOUR via D1
+
+#### Doors:
+- **D1**: SEJOUR - Porche
+- **D2**: CUISINE - CELLER
+- **D3**: SEJOUR - CUISINE
+- **D4**: DEGT - SEJOUR
+- **D5**: DEGT - CH.1
+- **D6**: DEGT - CH.2
+- **D7**: DEGT - Bains
+- **D8**: DEGT - WC
+- **D9**: CH.2 - CH.3
+- **D10**: CELLER1 - Porche1
+- **D11**: SEJOUR1 - Porche1
+- **D21**: CUISINE1 - CELLER1
+- **D31**: SEJOUR1 - CUISINE1
+- **D41**: DEGT1 - SEJOUR1
+- **D51**: DEGT1 - CH.3
+- **D61**: DEGT1 - CH.4
+- **D71**: DEGT1 - Bains1
+- **D81**: DEGT1 - WC1
+
+### Navigation Plan
+
+Starting in CH.2 and arriving at CH.3:
+
+1. **ApproachDoor(9)**: Move in front of door D9.
+2. **OpenDoor(9)**: Open door D9.
+3. **GoThrough(9)**: Move through open door D9 to CH.3.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 9},
+    {"action": "OpenDoor", "door": 9},
+    {"action": "GoThrough", "door": 9}
+  ]
+}
+```
+
+This plan ensures that you move from CH.2 to CH.3 efficiently by using the necessary door D9.

@@ -1,0 +1,60 @@
+### Explicit Room and Door Descriptions
+
+#### Rooms:
+1. CELLIER
+2. PORCHE
+3. HALL
+4. GARAGE
+5. LINGERIE
+6. BUREAU
+7. WC
+8. BAINS
+9. CHAMBRE PARENTS
+10. CHAMBRE ENFANT 1
+11. CHAMBRE ENFANT 2
+
+#### Doors and Connections:
+1. **D1**: GARAGE - HALL
+2. **D2**: PORCHE - CELLIER
+3. **D3**: CELLIER - HALL
+4. **D4**: WC - HALL
+5. **D5**: LINGERIE - HALL
+6. **D6**: BUREAU - HALL
+7. **D7**: BAINS - HALL
+8. **D8**: CHAMBRE PARENTS - HALL
+9. **D9**: CHAMBRE ENFANT 2 - HALL
+10. **D10**: CHAMBRE ENFANT 1 - HALL
+11. **D11**: CELLIER - HALL
+12. **D12**: HALL - HALL
+13. **D13**: GARAGE - CELLIER
+14. **D21**: PORCHE - HALL
+15. **D31**: CELLIER - HALL
+16. **D41**: WC - HALL
+17. **D51**: LINGERIE - HALL
+18. **D61**: BUREAU - HALL
+19. **D71**: BAINS - HALL
+20. **D81**: CHAMBRE PARENTS - HALL
+21. **D91**: CHAMBRE ENFANT 2 - HALL
+22. **D101**: CHAMBRE ENFANT 1 - HALL
+23. **D111**: CELLIER - HALL
+24. **D121**: HALL - HALL
+
+### Navigation Plan
+
+#### Starting in CELLIER and arriving at HALL:
+
+1. **ApproachDoor(D11)**
+2. **OpenDoor(D11)**
+3. **GoThrough(D11)**
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(D11)",
+    "OpenDoor(D11)",
+    "GoThrough(D11)"
+  ]
+}
+```
+
+This plan ensures that you start in the CELLIER and navigate through the necessary door to reach the HALL.

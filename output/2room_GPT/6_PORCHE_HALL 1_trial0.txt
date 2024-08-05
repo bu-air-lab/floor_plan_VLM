@@ -1,0 +1,59 @@
+### Room and Door Connections
+
+#### Rooms:
+1. PORCHE
+2. HALL 1
+3. CELLIER 1
+4. GARAGE 1
+5. LINGERIE 1
+6. BUREAU 1
+7. WC 1
+8. BAINS 1
+9. CHAMBRE PARENTS 1
+10. CHAMBRE ENFANT 1
+11. CHAMBRE ENFANT 2
+
+#### Doors:
+1. D1: GARAGE 1 - HALL
+2. D2: PORCHE - CELLIER
+3. D3: PORCHE - HALL
+4. D4: WC - HALL
+5. D5: LINGERIE - HALL
+6. D6: BUREAU - HALL
+7. D7: BAINS - HALL
+8. D8: CHAMBRE PARENTS - HALL
+9. D9: CHAMBRE ENFANT 2 - HALL
+10. D10: CHAMBRE ENFANT 1 - HALL
+11. D11: CELLIER - HALL
+12. D12: HALL - HALL
+13. D13: GARAGE - CELLIER
+14. D21: PORCHE1 - CELLIER 1
+15. D31: PORCHE1 - HALL1
+16. D41: WC1 - HALL1
+17. D51: LINGERIE1 - HALL1
+18. D61: BUREAU1 - HALL1
+19. D71: BAINS1 - HALL1
+20. D81: CHAMBRE PARENTS1 - HALL1
+21. D91: CHAMBRE ENFANT 21 - HALL1
+22. D101: CHAMBRE ENFANT 11 - HALL1
+23. D111: CELLIER 1 - HALL1
+24. D121: HALL1 - HALL1
+
+### Navigation Plan
+
+```json
+{
+  "steps": [
+    {"action": "ApproachDoor", "door": "D31"},
+    {"action": "OpenDoor", "door": "D31"},
+    {"action": "GoThrough", "door": "D31"}
+  ]
+}
+```
+
+### Explanation:
+1. **ApproachDoor(D31)**: Move in front of door D31, which connects PORCHE1 to HALL1.
+2. **OpenDoor(D31)**: Open door D31.
+3. **GoThrough(D31)**: Move through door D31 to enter HALL1.
+
+This plan ensures that you move from PORCHE1 to HALL1 efficiently by using the correct door.
