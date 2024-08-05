@@ -1,0 +1,54 @@
+### Room and Door Connections
+
+**Rooms:**
+1. TERRASSE COUVERTE
+2. CUISINE
+3. PORCHE
+4. HALL
+5. CHAMBRE 1
+6. CHAMBRE 2
+7. BAIN
+8. WC
+9. CELLIER
+10. GARAGE
+
+**Doors:**
+- **D1:** HALL - CELLIER
+- **D2:** HALL - BAIN
+- **D3:** HALL - WC
+- **D4:** HALL - CHAMBRE 1
+- **D5:** HALL - CHAMBRE 2
+- **D6:** HALL - PORCHE
+- **D7:** HALL - CUISINE
+- **D8:** CUISINE - TERRASSE COUVERTE
+- **D9:** CELLIER - GARAGE
+
+### Navigation Plan
+
+1. **ApproachDoor(8):** Move in front of door D8.
+2. **OpenDoor(8):** Open door D8.
+3. **GoThrough(8):** Move through door D8 to CUISINE.
+4. **ApproachDoor(7):** Move in front of door D7.
+5. **OpenDoor(7):** Open door D7.
+6. **GoThrough(7):** Move through door D7 to HALL.
+7. **ApproachDoor(4):** Move in front of door D4.
+8. **OpenDoor(4):** Open door D4.
+9. **GoThrough(4):** Move through door D4 to CHAMBRE 1.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4}
+  ]
+}
+```

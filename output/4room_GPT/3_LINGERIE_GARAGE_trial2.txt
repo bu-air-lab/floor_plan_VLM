@@ -1,0 +1,64 @@
+### Room and Door Connections
+
+1. **Lingerie**
+   - Door D5: Connects to Hall
+
+2. **Bureau**
+   - Door D6: Connects to Hall
+
+3. **Bains**
+   - Door D7: Connects to Hall
+
+4. **Chambre Parents**
+   - Door D8: Connects to Hall
+
+5. **Chambre Enfant 1**
+   - Door D10: Connects to Hall
+
+6. **Chambre Enfant 2**
+   - Door D9: Connects to Hall
+
+7. **Hall**
+   - Door D5: Connects to Lingerie
+   - Door D6: Connects to Bureau
+   - Door D7: Connects to Bains
+   - Door D8: Connects to Chambre Parents
+   - Door D9: Connects to Chambre Enfant 2
+   - Door D10: Connects to Chambre Enfant 1
+   - Door D3: Connects to Porche
+   - Door D11: Connects to Cellier
+
+8. **Porche**
+   - Door D2: Connects to Cellier
+   - Door D3: Connects to Hall
+
+9. **Cellier**
+   - Door D1: Connects to Garage
+   - Door D2: Connects to Porche
+   - Door D11: Connects to Hall
+
+10. **Garage**
+    - Door D1: Connects to Cellier
+
+### Navigation Plan
+
+Starting in the Lingerie, the goal is to reach the Garage. Here is the step-by-step navigation plan:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"}
+]
+```
+
+This plan ensures that you move from the Lingerie to the Garage by passing through the necessary doors in the correct sequence.

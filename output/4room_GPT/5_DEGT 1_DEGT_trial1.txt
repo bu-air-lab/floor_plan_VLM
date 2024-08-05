@@ -1,0 +1,74 @@
+### Room and Door Connections
+
+#### Rooms:
+1. DEGT 1
+2. SEJOUR 1
+3. CUISINE 1
+4. WC 1
+5. BAINS 1
+6. CH.3
+7. CH.4
+8. DEGT
+
+#### Doors:
+1. D41: Connects DEGT 1 and SEJOUR 1
+2. D31: Connects SEJOUR 1 and CUISINE 1
+3. D81: Connects DEGT 1 and WC 1
+4. D71: Connects WC 1 and BAINS 1
+5. D51: Connects DEGT 1 and CH.3
+6. D61: Connects CH.3 and CH.4
+7. D9: Connects CH.4 and DEGT
+
+### Navigation Plan
+
+#### Step-by-Step Actions:
+1. ApproachDoor(41): Move in front of door D41.
+2. OpenDoor(41): Open door D41.
+3. GoThrough(41): Move through open door D41 to SEJOUR 1.
+4. ApproachDoor(31): Move in front of door D31.
+5. OpenDoor(31): Open door D31.
+6. GoThrough(31): Move through open door D31 to CUISINE 1.
+7. ApproachDoor(81): Move in front of door D81.
+8. OpenDoor(81): Open door D81.
+9. GoThrough(81): Move through open door D81 to WC 1.
+10. ApproachDoor(71): Move in front of door D71.
+11. OpenDoor(71): Open door D71.
+12. GoThrough(71): Move through open door D71 to BAINS 1.
+13. ApproachDoor(51): Move in front of door D51.
+14. OpenDoor(51): Open door D51.
+15. GoThrough(51): Move through open door D51 to CH.3.
+16. ApproachDoor(61): Move in front of door D61.
+17. OpenDoor(61): Open door D61.
+18. GoThrough(61): Move through open door D61 to CH.4.
+19. ApproachDoor(9): Move in front of door D9.
+20. OpenDoor(9): Open door D9.
+21. GoThrough(9): Move through open door D9 to DEGT.
+
+### Final Path in JSON Format
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 41},
+    {"action": "OpenDoor", "door": 41},
+    {"action": "GoThrough", "door": 41},
+    {"action": "ApproachDoor", "door": 31},
+    {"action": "OpenDoor", "door": 31},
+    {"action": "GoThrough", "door": 31},
+    {"action": "ApproachDoor", "door": 81},
+    {"action": "OpenDoor", "door": 81},
+    {"action": "GoThrough", "door": 81},
+    {"action": "ApproachDoor", "door": 71},
+    {"action": "OpenDoor", "door": 71},
+    {"action": "GoThrough", "door": 71},
+    {"action": "ApproachDoor", "door": 51},
+    {"action": "OpenDoor", "door": 51},
+    {"action": "GoThrough", "door": 51},
+    {"action": "ApproachDoor", "door": 61},
+    {"action": "OpenDoor", "door": 61},
+    {"action": "GoThrough", "door": 61},
+    {"action": "ApproachDoor", "door": 9},
+    {"action": "OpenDoor", "door": 9},
+    {"action": "GoThrough", "door": 9}
+  ]
+}
+```

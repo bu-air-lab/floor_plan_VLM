@@ -1,0 +1,77 @@
+### Room and Door Connections
+
+- **Garage**:
+  - Connected to Cellier via Door D1
+
+- **Cellier**:
+  - Connected to Garage via Door D1
+  - Connected to Porche via Door D2
+  - Connected to Hall via Door D3
+  - Connected to Hall via Door D11
+
+- **Porche**:
+  - Connected to Cellier via Door D2
+  - Connected to Hall via Door D3
+
+- **Hall**:
+  - Connected to Cellier via Door D3
+  - Connected to Porche via Door D3
+  - Connected to WC via Door D4
+  - Connected to Lingerie via Door D5
+  - Connected to Bureau via Door D6
+  - Connected to Bains via Door D7
+  - Connected to Chambre Parents via Door D8
+  - Connected to Chambre Enfant 2 via Door D9
+  - Connected to Chambre Enfant 1 via Door D10
+  - Connected to Cellier via Door D11
+
+- **WC**:
+  - Connected to Hall via Door D4
+
+- **Lingerie**:
+  - Connected to Hall via Door D5
+
+- **Bureau**:
+  - Connected to Hall via Door D6
+
+- **Bains**:
+  - Connected to Hall via Door D7
+
+- **Chambre Parents**:
+  - Connected to Hall via Door D8
+
+- **Chambre Enfant 1**:
+  - Connected to Hall via Door D10
+
+- **Chambre Enfant 2**:
+  - Connected to Hall via Door D9
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D1"},
+  {"action": "OpenDoor", "door": "D1"},
+  {"action": "GoThrough", "door": "D1"},
+  {"action": "ApproachDoor", "door": "D3"},
+  {"action": "OpenDoor", "door": "D3"},
+  {"action": "GoThrough", "door": "D3"},
+  {"action": "ApproachDoor", "door": "D4"},
+  {"action": "OpenDoor", "door": "D4"},
+  {"action": "GoThrough", "door": "D4"}
+]
+```
+
+### Step-by-Step Navigation
+
+1. **ApproachDoor(D1)**: Move in front of Door D1 in the Garage.
+2. **OpenDoor(D1)**: Open Door D1.
+3. **GoThrough(D1)**: Move through Door D1 to enter the Cellier.
+4. **ApproachDoor(D3)**: Move in front of Door D3 in the Cellier.
+5. **OpenDoor(D3)**: Open Door D3.
+6. **GoThrough(D3)**: Move through Door D3 to enter the Hall.
+7. **ApproachDoor(D4)**: Move in front of Door D4 in the Hall.
+8. **OpenDoor(D4)**: Open Door D4.
+9. **GoThrough(D4)**: Move through Door D4 to enter the WC.
+
+This plan ensures that you navigate from the Garage to the WC efficiently, using only the necessary doors.

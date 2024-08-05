@@ -1,0 +1,67 @@
+### Room and Door Connections
+
+#### Rooms:
+1. TERRASSE COUVERTE
+2. CUISINE
+3. HALL
+4. CHAMBRE 1
+5. WC
+6. BAINS
+7. CELLIER
+8. CHAMBRE 2
+9. PORCHE
+10. GARAGE
+11. TERRASSE COUVERTE 1
+12. CUISINE 1
+13. HALL 1
+14. CHAMBRE 3
+15. WC 1
+16. BAINS 1
+17. CELLIER 1
+18. CHAMBRE 4
+19. PORCHE 1
+20. GARAGE 1
+
+#### Doors:
+1. D1: HALL - CELLIER
+2. D2: HALL - BAINS
+3. D3: HALL - WC
+4. D4: HALL - CHAMBRE 1
+5. D5: HALL - CHAMBRE 2
+6. D6: HALL - PORCHE
+7. D7: HALL - CUISINE
+8. D8: HALL - TERRASSE COUVERTE
+9. D9: CELLIER - GARAGE
+10. D10: TERRASSE COUVERTE - TERRASSE COUVERTE 1
+11. D11: HALL 1 - CELLIER 1
+12. D21: HALL 1 - BAINS 1
+13. D31: HALL 1 - WC 1
+14. D41: HALL 1 - CHAMBRE 4
+15. D51: HALL 1 - CHAMBRE 3
+16. D61: HALL 1 - PORCHE 1
+17. D71: HALL 1 - CUISINE 1
+18. D81: HALL 1 - TERRASSE COUVERTE 1
+19. D91: CELLIER 1 - GARAGE 1
+
+### Navigation Plan
+
+Starting from TERRASSE COUVERTE, the goal is to reach GARAGE 1. The sequence of actions is as follows:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"},
+    {"action": "ApproachDoor", "door": "D81"},
+    {"action": "OpenDoor", "door": "D81"},
+    {"action": "GoThrough", "door": "D81"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"},
+    {"action": "ApproachDoor", "door": "D91"},
+    {"action": "OpenDoor", "door": "D91"},
+    {"action": "GoThrough", "door": "D91"}
+]
+```
+
+This plan ensures that you move from TERRASSE COUVERTE to GARAGE 1 by passing through the necessary doors in the correct sequence.

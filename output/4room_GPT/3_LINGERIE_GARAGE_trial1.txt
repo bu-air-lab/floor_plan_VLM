@@ -1,0 +1,84 @@
+### Room and Door Connections
+
+- **Lingerie**:
+  - Door D5 to Hall
+
+- **Hall**:
+  - Door D5 to Lingerie
+  - Door D6 to Bureau
+  - Door D7 to Bains
+  - Door D8 to Chambre Parents
+  - Door D9 to Chambre Enfant 2
+  - Door D10 to Chambre Enfant 1
+  - Door D3 to Porche
+  - Door D11 to Cellier
+
+- **Bureau**:
+  - Door D6 to Hall
+
+- **Bains**:
+  - Door D7 to Hall
+
+- **Chambre Parents**:
+  - Door D8 to Hall
+
+- **Chambre Enfant 2**:
+  - Door D9 to Hall
+
+- **Chambre Enfant 1**:
+  - Door D10 to Hall
+
+- **Porche**:
+  - Door D3 to Hall
+  - Door D2 to Cellier
+
+- **Cellier**:
+  - Door D2 to Porche
+  - Door D1 to Garage
+  - Door D11 to Hall
+
+- **Garage**:
+  - Door D1 to Cellier
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D5"},
+  {"action": "OpenDoor", "door": "D5"},
+  {"action": "GoThrough", "door": "D5"},
+  {"action": "ApproachDoor", "door": "D3"},
+  {"action": "OpenDoor", "door": "D3"},
+  {"action": "GoThrough", "door": "D3"},
+  {"action": "ApproachDoor", "door": "D2"},
+  {"action": "OpenDoor", "door": "D2"},
+  {"action": "GoThrough", "door": "D2"},
+  {"action": "ApproachDoor", "door": "D1"},
+  {"action": "OpenDoor", "door": "D1"},
+  {"action": "GoThrough", "door": "D1"}
+]
+```
+
+### Step-by-Step Navigation
+
+1. **Lingerie**:
+   - Approach Door D5
+   - Open Door D5
+   - Go Through Door D5 to Hall
+
+2. **Hall**:
+   - Approach Door D3
+   - Open Door D3
+   - Go Through Door D3 to Porche
+
+3. **Porche**:
+   - Approach Door D2
+   - Open Door D2
+   - Go Through Door D2 to Cellier
+
+4. **Cellier**:
+   - Approach Door D1
+   - Open Door D1
+   - Go Through Door D1 to Garage
+
+This plan ensures that you navigate from the Lingerie to the Garage efficiently, using the necessary doors in the correct sequence.
