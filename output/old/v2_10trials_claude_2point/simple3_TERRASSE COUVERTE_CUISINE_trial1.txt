@@ -1,0 +1,37 @@
+Thank you for providing the floor plan and the navigation task. Let me first list out the rooms and doors with their connections based on the image:
+
+Room and Door Connections:
+1. TERRASSE COUVERTE <-> D1 <-> CUISINE
+2. CUISINE <-> D2 <-> CELLIER
+3. CUISINE <-> D3 <-> CH. PARENTS
+4. CUISINE <-> D4 <-> DOUCHE
+
+For the navigation task from TERRASSE COUVERTE to CUISINE, we only need to use one door: D1. Here's the step-by-step navigation plan:
+
+1. Start in TERRASSE COUVERTE
+2. Approach D1
+3. Open D1
+4. Go through D1 to enter CUISINE
+
+Now, I'll provide the final navigation plan in JSON format:
+
+```json
+{
+  "navigation_plan": [
+    {
+      "action": "ApproachDoor",
+      "door": 1
+    },
+    {
+      "action": "OpenDoor",
+      "door": 1
+    },
+    {
+      "action": "GoThrough",
+      "door": 1
+    }
+  ]
+}
+```
+
+This plan efficiently navigates from TERRASSE COUVERTE to CUISINE using only the necessary door (D1) and avoids any unnecessary steps or rooms.
