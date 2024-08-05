@@ -1,0 +1,34 @@
+Thank you for providing the floor plan. Let me start by listing the rooms and doors with their connections based on the image:
+
+Rooms and Door Connections:
+1. CUISINE connects to TERRASSE COUVERTE via D1
+2. CUISINE connects to CELLIER via D2
+3. CUISINE connects to CH. PARENTS via D3
+4. CH. PARENTS connects to DOUCHE via D4
+
+Now, let's create a step-by-step navigation plan to go from CUISINE to DOUCHE:
+
+1. Start in CUISINE
+2. ApproachDoor(D3)
+3. OpenDoor(D3)
+4. GoThrough(D3) to enter CH. PARENTS
+5. ApproachDoor(D4)
+6. OpenDoor(D4)
+7. GoThrough(D4) to enter DOUCHE
+
+Here's the final navigation plan in JSON format:
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"}
+  ]
+}
+```
+
+This plan provides the most efficient route from CUISINE to DOUCHE, using only the necessary doors (D3 and D4) to reach the destination. The plan avoids any unnecessary rooms or doors, ensuring a direct path to the goal.
