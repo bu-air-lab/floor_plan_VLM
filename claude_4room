@@ -24,6 +24,8 @@ if not os.path.exists(output_folder):
 # Get a list of image files
 image_files = sorted([f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f))])
 
+
+
 #------------------------------------------------------PROMPT------------------------------------------------------#
 
 prompt_A = """I am a robot that cannot go through walls and must use doors to navigate. This is the floor plan of the building I am in right now (provided as an image). 
@@ -53,49 +55,48 @@ Remember to make explicit connections for each door, then make a step by step so
 # Define the plans
 plans = {
     '1': [
-        ('CELLIER', 'GARAGE'),
-        ('BAINS', 'HALL'),
-        ('TERRASSE COUVERTE', 'CUISINE'),
-        ('HALL', 'PORCHE'),
-        ('WC', 'HALL')
+        ('CELLIER', 'TERRASSE COUVERTE'),
+        ('GARAGE', 'WC'),
+        ('PORCHE', 'GARAGE'),
+        ('TERRASSE COUVERTE', 'CHAMBRE 1'),
+        ('BAINS', 'GARAGE')
     ],
     '2': [
-        ('PORCHE', 'SEJOUR'),
-        ('DEGT', 'BAINS'),
-        ('DEGT', 'CH.2'),
-        ('CELLIER', 'CUISINE'),
-        ('CUISINE', 'SEJOUR')
+        ('PORCHE', 'BAINS'),
+        ('DEGT', 'CELLIER'),
+        ('CUISINE', 'CH.2'),
+        ('WC', 'PORCHE'),
+        ('CH.1', 'CUISINE')
     ],
     '3': [
-        ('CELLIER', 'GARAGE'),
-        ('CELLIER', 'HALL'),
-        ('CHAMBRE ENFANT 1', 'HALL'),
-        ('PORCHE', 'CELLIER'),
-        ('HALL', 'WC')
+        ('GARAGE', 'BUREAU'),
+        ('LINGERIE', 'GARAGE'),
+        ('GARAGE', 'CHAMBRE ENFANT 1'),
+        ('CHAMBRE PARENTS', 'GARAGE'),
+        ('GARAGE', 'WC')
     ],
     '4': [
-        ('CELLIER', 'GARAGE'),
-        ('BAINS', 'HALL'),
-        ('TERRASSE COUVERTE', 'HALL 1'),
-        ('CUISINE 1', 'TERRASSE COUVERTE 1'),
-        ('WC 1', 'HALL 1')
+        ('CELLIER', 'TERRASSE COUVERTE'),
+        ('GARAGE', 'WC'),
+        ('TERRASSE COUVERTE', 'GARAGE 1'),
+        ('BAINS 1', 'CUISINE'),
+        ('CELLIER 1', 'TERRASSE COUVERTE 1')
     ],
     '5': [
-        ('PORCHE', 'SEJOUR'),
-        ('DEGT', 'BAINS'),
-        ('DEGT 1', 'CH.4'),
-        ('CELLIER', 'PORCHE 1'),
-        ('CH.2', 'CH.3')
+        ('PORCHE', 'BAINS'),
+        ('DEGT', 'CELLIER'),
+        ('DEGT 1', 'DEGT'),
+        ('CUISINE 1', 'CELLIER'),
+        ('WC 1', 'CH.2')
     ],
     '6': [
-        ('CELLIER', 'GARAGE'),
-        ('CELLIER', 'HALL'),
-        ('CHAMBRE ENFANT 11', 'HALL 1'),
-        ('PORCHE', 'HALL 1'),
-        ('PORCHE 1', 'CELLIER 1')
+        ('GARAGE', 'BUREAU'),
+        ('LINGERIE', 'GARAGE'),
+        ('CHAMBRE ENFANT 11', 'HALL'),
+        ('PORCHE 1', 'CELLIER'),
+        ('WC', 'HALL 1')
     ],
 }
-
 
 N = 10
 
@@ -138,7 +139,9 @@ def query_claude_with_image_and_text(image_path, text_prompt):
     return response.content[0].text
 
 def process_images_and_prompts():
-    for image_file in image_files:      
+    for image_file in image_files:
+         if image_file.startswith('simple3'):
+        
             image_path = os.path.join(image_folder, image_file)
             
             key = image_file[:-4]
@@ -153,11 +156,11 @@ def process_images_and_prompts():
                     text_response = query_claude_with_image_and_text(image_path, prompt)
 
                     # Write the text response to a new file
-                    filename = f'output/2room_claude/{key}_{start}_{end}_trial{n}.txt'
+                    filename = f'output/4room_claude/{key}_{start}_{end}_trial{n}.txt'
                     with open(filename, 'w') as file:
                         file.write(text_response)
 
-                    print(f"Done with trial {n}")                   
+                    print(f"Done with trial {n}")
                     
 
                 print(f"Done with plan: {plan}")
@@ -167,4 +170,3 @@ def process_images_and_prompts():
 
 # Run the process
 process_images_and_prompts()
-print("Done with")
