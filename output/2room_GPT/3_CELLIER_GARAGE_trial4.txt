@@ -1,0 +1,38 @@
+### Room and Door Connections
+
+- **CELLIER**:
+  - Connected to **GARAGE** via **Door D1**
+  - Connected to **PORCHE** via **Door D2**
+  - Connected to **HALL** via **Door D11**
+
+- **PORCHE**:
+  - Connected to **CELLIER** via **Door D2**
+  - Connected to **HALL** via **Door D3**
+
+- **HALL**:
+  - Connected to **PORCHE** via **Door D3**
+  - Connected to **WC** via **Door D4**
+  - Connected to **LINGERIE** via **Door D5**
+  - Connected to **BUREAU** via **Door D6**
+  - Connected to **BAINS** via **Door D7**
+  - Connected to **CHAMBRE PARENTS** via **Door D8**
+  - Connected to **CHAMBRE ENFANT 2** via **Door D9**
+  - Connected to **CHAMBRE ENFANT 1** via **Door D10**
+  - Connected to **CELLIER** via **Door D11**
+
+- **GARAGE**:
+  - Connected to **CELLIER** via **Door D1**
+
+### Navigation Plan
+
+To navigate from the CELLIER to the GARAGE, follow these steps:
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D1"},
+  {"action": "OpenDoor", "door": "D1"},
+  {"action": "GoThrough", "door": "D1"}
+]
+```
+
+This plan ensures that you move from the CELLIER to the GARAGE by using Door D1.

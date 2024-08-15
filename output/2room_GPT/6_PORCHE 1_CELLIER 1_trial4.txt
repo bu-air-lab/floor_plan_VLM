@@ -1,0 +1,68 @@
+### Room and Door Connections
+
+- **PORCHE 1**
+  - Door D21 to CELLIER 1
+  - Door D31 to HALL 1
+
+- **CELLIER 1**
+  - Door D21 to PORCHE 1
+  - Door D13 to GARAGE 1
+  - Door D111 to HALL 1
+
+- **HALL 1**
+  - Door D31 to PORCHE 1
+  - Door D111 to CELLIER 1
+  - Door D41 to WC1
+  - Door D51 to LINGERIE 1
+  - Door D61 to BUREAU 1
+  - Door D71 to BAINS 1
+  - Door D81 to CHAMBRE PARENTS 1
+  - Door D91 to CHAMBRE ENFANT 2 1
+  - Door D101 to CHAMBRE ENFANT 1 1
+  - Door D12 to HALL 1 (lower section)
+
+- **WC1**
+  - Door D41 to HALL 1
+
+- **LINGERIE 1**
+  - Door D51 to HALL 1
+
+- **BUREAU 1**
+  - Door D61 to HALL 1
+
+- **BAINS 1**
+  - Door D71 to HALL 1
+
+- **CHAMBRE PARENTS 1**
+  - Door D81 to HALL 1
+
+- **CHAMBRE ENFANT 2 1**
+  - Door D91 to HALL 1
+
+- **CHAMBRE ENFANT 1 1**
+  - Door D101 to HALL 1
+
+- **GARAGE 1**
+  - Door D13 to CELLIER 1
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D21"},
+  {"action": "OpenDoor", "door": "D21"},
+  {"action": "GoThrough", "door": "D21"},
+  {"action": "ApproachDoor", "door": "D111"},
+  {"action": "OpenDoor", "door": "D111"},
+  {"action": "GoThrough", "door": "D111"}
+]
+```
+
+### Explanation
+
+1. **ApproachDoor(D21)**: Move in front of door D21 in PORCHE 1.
+2. **OpenDoor(D21)**: Open door D21.
+3. **GoThrough(D21)**: Move through door D21 to enter CELLIER 1.
+4. **ApproachDoor(D111)**: Move in front of door D111 in CELLIER 1.
+5. **OpenDoor(D111)**: Open door D111.
+6. **GoThrough(D111)**: Move through door D111 to enter CELLIER 1 (final destination).

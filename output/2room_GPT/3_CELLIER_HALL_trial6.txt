@@ -1,0 +1,47 @@
+### Explicit Room and Door Descriptions
+
+**Rooms:**
+1. CELLIER
+2. GARAGE
+3. PORCHE
+4. HALL
+5. LINGERIE
+6. BUREAU
+7. WC
+8. BAINS
+9. CHAMBRE PARENTS
+10. CHAMBRE ENFANT 1
+11. CHAMBRE ENFANT 2
+
+**Doors:**
+1. D1: Connects CELLIER and GARAGE
+2. D2: Connects CELLIER and PORCHE
+3. D3: Connects PORCHE and HALL
+4. D4: Connects WC and HALL
+5. D5: Connects LINGERIE and HALL
+6. D6: Connects BUREAU and HALL
+7. D7: Connects BAINS and HALL
+8. D8: Connects CHAMBRE PARENTS and HALL
+9. D9: Connects CHAMBRE ENFANT 2 and HALL
+10. D10: Connects CHAMBRE ENFANT 1 and HALL
+11. D11: Connects CELLIER and HALL
+
+### Navigation Plan
+
+To navigate from CELLIER to HALL, the most efficient path involves using Door D11. Here is the step-by-step plan:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"}
+]
+```
+
+### Explanation
+
+1. **ApproachDoor(D11):** Move in front of door D11.
+2. **OpenDoor(D11):** Open door D11.
+3. **GoThrough(D11):** Move through open door D11 to the HALL.
+
+This plan ensures that you move directly from the CELLIER to the HALL using the shortest and most efficient path.

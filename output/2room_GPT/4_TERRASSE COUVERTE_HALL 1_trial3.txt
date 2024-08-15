@@ -1,0 +1,70 @@
+### Explicit Room and Door Descriptions
+
+#### Rooms and Doors Connections:
+1. **TERRASSE COUVERTE**:
+   - Connected to CUISINE via Door D8
+   - Connected to HALL 1 via Door D10
+
+2. **CUISINE**:
+   - Connected to TERRASSE COUVERTE via Door D8
+   - Connected to HALL via Door D7
+
+3. **HALL**:
+   - Connected to CUISINE via Door D7
+   - Connected to HALL 1 via Door D10
+   - Connected to CHAMBRE 1 via Door D4
+   - Connected to WC via Door D3
+   - Connected to HALL via Door D5
+   - Connected to HALL via Door D6
+
+4. **HALL 1**:
+   - Connected to HALL via Door D10
+   - Connected to CUISINE 1 via Door D81
+   - Connected to PORCHE 1 via Door D61
+   - Connected to CHAMBRE 4 via Door D41
+   - Connected to HALL 1 via Door D51
+   - Connected to HALL 1 via Door D21
+
+5. **CUISINE 1**:
+   - Connected to HALL 1 via Door D81
+   - Connected to TERRASSE COUVERTE 1 via Door D71
+
+6. **PORCHE 1**:
+   - Connected to HALL 1 via Door D61
+
+7. **CHAMBRE 4**:
+   - Connected to HALL 1 via Door D41
+
+8. **CHAMBRE 3**:
+   - Connected to HALL 1 via Door D51
+
+9. **Bains 1**:
+   - Connected to HALL 1 via Door D21
+
+10. **WC 1**:
+    - Connected to HALL 1 via Door D31
+
+11. **CELLIER 1**:
+    - Connected to HALL 1 via Door D11
+
+12. **GARAGE 1**:
+    - Connected to CELLIER 1 via Door D91
+
+### Navigation Plan
+
+#### Step-by-Step Navigation Plan:
+1. **Start in TERRASSE COUVERTE**
+2. **ApproachDoor(D10)**
+3. **OpenDoor(D10)**
+4. **GoThrough(D10) to HALL 1**
+
+### Final Navigation Plan in JSON Format:
+```json
+[
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"}
+]
+```
+
+This plan ensures that you start in TERRASSE COUVERTE and arrive at HALL 1 by using the necessary doors and avoiding any unnecessary rooms or doors.

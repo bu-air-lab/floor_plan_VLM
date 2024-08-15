@@ -1,0 +1,55 @@
+### Room and Door Connections
+
+- **DEGT**:
+  - Connected to SEJOUR via Door D4
+  - Connected to CH.1 via Door D5
+  - Connected to CH.2 via Door D6
+  - Connected to WC via Door D8
+  - Connected to BAINS via Door D7
+
+- **SEJOUR**:
+  - Connected to DEGT via Door D4
+  - Connected to Porche via Door D1
+  - Connected to CUISINE via Door D3
+
+- **CH.1**:
+  - Connected to DEGT via Door D5
+
+- **CH.2**:
+  - Connected to DEGT via Door D6
+
+- **CUISINE**:
+  - Connected to SEJOUR via Door D3
+  - Connected to CELLIER via Door D2
+
+- **CELLIER**:
+  - Connected to CUISINE via Door D2
+
+- **Porche**:
+  - Connected to SEJOUR via Door D1
+
+- **WC**:
+  - Connected to DEGT via Door D8
+
+- **BAINS**:
+  - Connected to DEGT via Door D7
+
+### Navigation Plan
+
+1. **ApproachDoor(7)**: Move in front of Door D7.
+2. **OpenDoor(7)**: Open Door D7.
+3. **GoThrough(7)**: Move through Door D7 to BAINS.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7}
+  ]
+}
+```
+
+This plan ensures that you move from DEGT to BAINS efficiently by using only the necessary door (D7).

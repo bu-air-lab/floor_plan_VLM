@@ -1,0 +1,39 @@
+### Room and Door Connections
+
+- **CUISINE 1**:
+  - Connected to HALL 1 via Door D71
+- **HALL 1**:
+  - Connected to CUISINE 1 via Door D71
+  - Connected to PORCHE 1 via Door D61
+  - Connected to HALL1 via Door D51
+  - Connected to TERRASSE COUVERTE 1 via Door D81
+- **PORCHE 1**:
+  - Connected to HALL 1 via Door D61
+- **TERRASSE COUVERTE 1**:
+  - Connected to HALL 1 via Door D81
+
+### Navigation Plan
+
+1. **ApproachDoor(71)**: Move in front of Door D71.
+2. **OpenDoor(71)**: Open Door D71.
+3. **GoThrough(71)**: Move through Door D71 to HALL 1.
+4. **ApproachDoor(81)**: Move in front of Door D81.
+5. **OpenDoor(81)**: Open Door D81.
+6. **GoThrough(81)**: Move through Door D81 to TERRASSE COUVERTE 1.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 71},
+    {"action": "OpenDoor", "door": 71},
+    {"action": "GoThrough", "door": 71},
+    {"action": "ApproachDoor", "door": 81},
+    {"action": "OpenDoor", "door": 81},
+    {"action": "GoThrough", "door": 81}
+  ]
+}
+```
+
+This plan ensures that you move from CUISINE 1 to TERRASSE COUVERTE 1 efficiently, using only the necessary doors.

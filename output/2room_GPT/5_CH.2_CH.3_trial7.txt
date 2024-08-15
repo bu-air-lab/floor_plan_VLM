@@ -1,0 +1,64 @@
+### Room and Door Connections
+
+#### Rooms:
+- CH.1
+- CH.2
+- CH.3
+- CH.4
+- SEJOUR
+- SEJOUR1
+- CUISINE
+- CUISINE1
+- CELLER
+- CELLER1
+- DEGT
+- DEGT1
+- BAIN
+- BAIN1
+- WC
+- WC1
+- Porche
+- Porche1
+
+#### Doors:
+- D1: SEJOUR - Porche
+- D2: CELLER - CUISINE
+- D3: SEJOUR - CUISINE
+- D4: SEJOUR - DEGT
+- D5: DEGT - CH.1
+- D6: DEGT - CH.2
+- D7: DEGT - BAIN
+- D8: WC - DEGT
+- D9: CH.2 - CH.3
+- D10: CELLER1 - Porche1
+- D11: SEJOUR1 - Porche1
+- D21: CELLER1 - CUISINE1
+- D31: SEJOUR1 - CUISINE1
+- D41: SEJOUR1 - DEGT1
+- D51: DEGT1 - CH.3
+- D61: DEGT1 - CH.4
+- D71: DEGT1 - BAIN1
+- D81: WC1 - DEGT1
+
+### Navigation Plan
+
+#### Starting Room: CH.2
+#### Target Room: CH.3
+
+1. **ApproachDoor(9)**: Move in front of door D9.
+2. **OpenDoor(9)**: Open door D9.
+3. **GoThrough(9)**: Move through door D9 to CH.3.
+
+### JSON Format Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 9},
+    {"action": "OpenDoor", "door": 9},
+    {"action": "GoThrough", "door": 9}
+  ]
+}
+```
+
+This plan ensures that you move from CH.2 to CH.3 by using the necessary door D9.

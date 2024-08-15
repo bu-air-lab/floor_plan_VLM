@@ -1,0 +1,62 @@
+### Room and Door Connections
+
+1. **WC**:
+   - Door D3: Connects WC to HALL
+
+2. **HALL**:
+   - Door D1: Connects HALL to CELLIER
+   - Door D2: Connects HALL to BAINS
+   - Door D3: Connects HALL to WC
+   - Door D4: Connects HALL to CHAMBRE 1
+   - Door D5: Connects HALL to CHAMBRE 2
+   - Door D6: Connects HALL to PORCHE
+   - Door D7: Connects HALL to CUISINE
+   - Door D8: Connects HALL to TERRASSE COUVERTE
+
+3. **CELLIER**:
+   - Door D1: Connects CELLIER to HALL
+   - Door D9: Connects CELLIER to GARAGE
+
+4. **BAINS**:
+   - Door D2: Connects BAINS to HALL
+
+5. **CHAMBRE 1**:
+   - Door D4: Connects CHAMBRE 1 to HALL
+
+6. **CHAMBRE 2**:
+   - Door D5: Connects CHAMBRE 2 to HALL
+
+7. **PORCHE**:
+   - Door D6: Connects PORCHE to HALL
+
+8. **CUISINE**:
+   - Door D7: Connects CUISINE to HALL
+   - Door D8: Connects CUISINE to TERRASSE COUVERTE
+
+9. **TERRASSE COUVERTE**:
+   - Door D8: Connects TERRASSE COUVERTE to CUISINE
+
+10. **GARAGE**:
+    - Door D9: Connects GARAGE to CELLIER
+
+### Navigation Plan
+
+Starting in the WC and aiming to arrive at the HALL, the sequence of actions is as follows:
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"}
+  ]
+}
+```
+
+### Explanation
+
+1. **ApproachDoor(D3)**: Move in front of door D3, which connects WC to HALL.
+2. **OpenDoor(D3)**: Open door D3.
+3. **GoThrough(D3)**: Move through door D3 to enter the HALL.
+
+This plan ensures that you move from the WC to the HALL efficiently, using only the necessary door (D3).

@@ -1,0 +1,53 @@
+### Room and Door Connections
+
+- **HALL**:
+  - Connected to **CELLIER** via **D1**
+  - Connected to **BAINS** via **D2**
+  - Connected to **WC** via **D3**
+  - Connected to **CHAMBRE 1** via **D4**
+  - Connected to **CHAMBRE 2** via **D5**
+  - Connected to **PORCHE** via **D6**
+  - Connected to **CUISINE** via **D7**
+
+- **CELLIER**:
+  - Connected to **HALL** via **D1**
+  - Connected to **GARAGE** via **D9**
+
+- **BAINS**:
+  - Connected to **HALL** via **D2**
+
+- **WC**:
+  - Connected to **HALL** via **D3**
+
+- **CHAMBRE 1**:
+  - Connected to **HALL** via **D4**
+
+- **CHAMBRE 2**:
+  - Connected to **HALL** via **D5**
+
+- **PORCHE**:
+  - Connected to **HALL** via **D6**
+
+- **CUISINE**:
+  - Connected to **HALL** via **D7**
+  - Connected to **TERRASSE COUVERTE** via **D8**
+
+- **GARAGE**:
+  - Connected to **CELLIER** via **D9**
+
+- **TERRASSE COUVERTE**:
+  - Connected to **CUISINE** via **D8**
+
+### Navigation Plan
+
+To navigate from the HALL to the PORCHE, the following sequence of actions is required:
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D6"},
+  {"action": "OpenDoor", "door": "D6"},
+  {"action": "GoThrough", "door": "D6"}
+]
+```
+
+This plan ensures that you move from the HALL to the PORCHE by approaching, opening, and going through the necessary door (D6).

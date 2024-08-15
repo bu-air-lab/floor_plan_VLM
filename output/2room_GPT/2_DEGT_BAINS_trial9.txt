@@ -1,0 +1,53 @@
+### Room and Door Connections
+
+- **DEGT**
+  - Door D4: Connects DEGT to SEJOUR
+  - Door D5: Connects DEGT to CH.1
+  - Door D6: Connects DEGT to CH.2
+  - Door D7: Connects DEGT to BAINS
+  - Door D8: Connects DEGT to WC
+
+- **SEJOUR**
+  - Door D1: Connects SEJOUR to PORCHE
+  - Door D3: Connects SEJOUR to CUISINE
+  - Door D4: Connects SEJOUR to DEGT
+
+- **CH.1**
+  - Door D5: Connects CH.1 to DEGT
+
+- **CH.2**
+  - Door D6: Connects CH.2 to DEGT
+
+- **BAINS**
+  - Door D7: Connects BAINS to DEGT
+
+- **WC**
+  - Door D8: Connects WC to DEGT
+
+- **PORCHE**
+  - Door D1: Connects PORCHE to SEJOUR
+
+- **CUISINE**
+  - Door D2: Connects CUISINE to CELLIER
+  - Door D3: Connects CUISINE to SEJOUR
+
+- **CELLIER**
+  - Door D2: Connects CELLIER to CUISINE
+
+### Navigation Plan
+
+1. **ApproachDoor(7)**: Move in front of door D7.
+2. **OpenDoor(7)**: Open door D7.
+3. **GoThrough(7)**: Move through open door D7 to BAINS.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7}
+  ]
+}
+```

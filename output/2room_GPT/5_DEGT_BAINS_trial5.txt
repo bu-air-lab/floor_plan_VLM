@@ -1,0 +1,55 @@
+### Room and Door Connections
+
+#### Rooms:
+- DEGT
+- BAINS
+- WC
+- SEJOUR
+- CUISINE
+- CELLER
+- PORCHE
+- CH.1
+- CH.2
+- SEJOUR1
+- CUISINE1
+- CELLER1
+- PORCHE1
+- CH.3
+- CH.4
+- DEGT1
+- BAINS1
+- WC1
+
+#### Doors:
+- D1: SEJOUR - PORCHE
+- D2: CELLER - CUISINE
+- D3: SEJOUR - CUISINE
+- D4: SEJOUR - DEGT
+- D5: DEGT - CH.1
+- D6: DEGT - CH.2
+- D7: DEGT - BAINS
+- D8: DEGT - WC
+- D9: CH.2 - Outside
+- D10: PORCHE1 - CELLER1
+- D11: SEJOUR1 - PORCHE1
+- D21: CELLER1 - CUISINE1
+- D31: SEJOUR1 - CUISINE1
+- D41: SEJOUR1 - DEGT1
+- D51: DEGT1 - CH.3
+- D61: DEGT1 - CH.4
+- D71: DEGT1 - BAINS1
+- D81: DEGT1 - WC1
+
+### Navigation Plan
+
+Starting in the DEGT room, the goal is to reach the BAINS room. The sequence of actions is as follows:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"}
+]
+```
+
+This plan ensures that you move from the DEGT room to the BAINS room by approaching, opening, and going through door D7.

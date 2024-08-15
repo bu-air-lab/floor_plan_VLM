@@ -1,0 +1,111 @@
+### Room and Door Connections
+
+#### Rooms:
+1. PORCHE
+2. HALL 1
+3. CELLIER
+4. LINGERIE
+5. BUREAU
+6. WC
+7. BAIN
+8. CHAMBRE PARENTS
+9. CHAMBRE ENFANT 1
+10. CHAMBRE ENFANT 2
+11. GARAGE
+
+#### Doors:
+1. D1: GARAGE - HALL
+2. D2: PORCHE - CELLIER
+3. D3: PORCHE - HALL
+4. D4: WC - HALL
+5. D5: LINGERIE - HALL
+6. D6: BUREAU - HALL
+7. D7: BAIN - HALL
+8. D8: CHAMBRE PARENTS - HALL
+9. D9: CHAMBRE ENFANT 2 - HALL
+10. D10: CHAMBRE ENFANT 1 - HALL
+11. D11: CELLIER - HALL
+12. D12: HALL - HALL
+13. D13: GARAGE - CELLIER
+14. D21: PORCHE1 - CELLIER 1
+15. D31: PORCHE1 - HALL1
+16. D41: WC1 - HALL1
+17. D51: LINGERIE1 - HALL1
+18. D61: BUREAU1 - HALL1
+19. D71: BAIN1 - HALL1
+20. D81: CHAMBRE PARENTS1 - HALL1
+21. D91: CHAMBRE ENFANT 21 - HALL1
+22. D101: CHAMBRE ENFANT 11 - HALL1
+23. D111: CELLIER 1 - HALL1
+24. D121: HALL1 - HALL1
+25. D131: GARAGE 1 - CELLIER 1
+
+### Navigation Plan
+
+#### Start: PORCHE
+#### End: HALL 1
+
+1. **ApproachDoor(3)**
+2. **OpenDoor(3)**
+3. **GoThrough(3)**
+
+4. **ApproachDoor(11)**
+5. **OpenDoor(11)**
+6. **GoThrough(11)**
+
+7. **ApproachDoor(12)**
+8. **OpenDoor(12)**
+9. **GoThrough(12)**
+
+10. **ApproachDoor(121)**
+11. **OpenDoor(121)**
+12. **GoThrough(121)**
+
+13. **ApproachDoor(111)**
+14. **OpenDoor(111)**
+15. **GoThrough(111)**
+
+16. **ApproachDoor(31)**
+17. **OpenDoor(31)**
+18. **GoThrough(31)**
+
+19. **ApproachDoor(21)**
+20. **OpenDoor(21)**
+21. **GoThrough(21)**
+
+22. **ApproachDoor(13)**
+23. **OpenDoor(13)**
+24. **GoThrough(13)**
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 11},
+    {"action": "OpenDoor", "door": 11},
+    {"action": "GoThrough", "door": 11},
+    {"action": "ApproachDoor", "door": 12},
+    {"action": "OpenDoor", "door": 12},
+    {"action": "GoThrough", "door": 12},
+    {"action": "ApproachDoor", "door": 121},
+    {"action": "OpenDoor", "door": 121},
+    {"action": "GoThrough", "door": 121},
+    {"action": "ApproachDoor", "door": 111},
+    {"action": "OpenDoor", "door": 111},
+    {"action": "GoThrough", "door": 111},
+    {"action": "ApproachDoor", "door": 31},
+    {"action": "OpenDoor", "door": 31},
+    {"action": "GoThrough", "door": 31},
+    {"action": "ApproachDoor", "door": 21},
+    {"action": "OpenDoor", "door": 21},
+    {"action": "GoThrough", "door": 21},
+    {"action": "ApproachDoor", "door": 13},
+    {"action": "OpenDoor", "door": 13},
+    {"action": "GoThrough", "door": 13}
+  ]
+}
+```

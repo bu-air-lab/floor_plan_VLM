@@ -1,0 +1,63 @@
+### Room and Door Connections
+
+1. **PORCHE**
+   - Connected to HALL via Door D3
+   - Connected to CELLIER via Door D2
+
+2. **CELLIER**
+   - Connected to PORCHE via Door D2
+   - Connected to GARAGE via Door D1
+   - Connected to HALL via Door D11
+
+3. **HALL**
+   - Connected to PORCHE via Door D3
+   - Connected to CELLIER via Door D11
+   - Connected to LINGERIE via Door D5
+   - Connected to BUREAU via Door D6
+   - Connected to WC via Door D4
+   - Connected to BAINS via Door D7
+   - Connected to CHAMBRE PARENTS via Door D8
+   - Connected to CHAMBRE ENFANT 1 via Door D10
+   - Connected to CHAMBRE ENFANT 2 via Door D9
+
+4. **GARAGE**
+   - Connected to CELLIER via Door D1
+
+5. **LINGERIE**
+   - Connected to HALL via Door D5
+
+6. **BUREAU**
+   - Connected to HALL via Door D6
+
+7. **WC**
+   - Connected to HALL via Door D4
+
+8. **BAINS**
+   - Connected to HALL via Door D7
+
+9. **CHAMBRE PARENTS**
+   - Connected to HALL via Door D8
+
+10. **CHAMBRE ENFANT 1**
+    - Connected to HALL via Door D10
+
+11. **CHAMBRE ENFANT 2**
+    - Connected to HALL via Door D9
+
+### Navigation Plan
+
+To navigate from the PORCHE to the CELLIER, the following sequence of actions is required:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+]
+```
+
+### Explanation
+
+1. **ApproachDoor(D2)**: Move in front of Door D2, which connects the PORCHE to the CELLIER.
+2. **OpenDoor(D2)**: Open Door D2.
+3. **GoThrough(D2)**: Move through Door D2 to enter the CELLIER.

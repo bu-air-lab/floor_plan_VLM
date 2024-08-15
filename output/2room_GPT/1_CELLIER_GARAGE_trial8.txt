@@ -1,0 +1,59 @@
+### Room and Door Connections
+
+- **CELLIER**
+  - Connected to HALL via Door D1
+  - Connected to GARAGE via Door D9
+
+- **HALL**
+  - Connected to CELLIER via Door D1
+  - Connected to BAINS via Door D2
+  - Connected to WC via Door D3
+  - Connected to CHAMBRE 1 via Door D4
+  - Connected to CHAMBRE 2 via Door D5
+  - Connected to PORCHE via Door D6
+  - Connected to CUISINE via Door D7
+
+- **BAINS**
+  - Connected to HALL via Door D2
+
+- **WC**
+  - Connected to HALL via Door D3
+
+- **CHAMBRE 1**
+  - Connected to HALL via Door D4
+
+- **CHAMBRE 2**
+  - Connected to HALL via Door D5
+
+- **PORCHE**
+  - Connected to HALL via Door D6
+
+- **CUISINE**
+  - Connected to HALL via Door D7
+  - Connected to TERRASSE COUVERTE via Door D8
+
+- **TERRASSE COUVERTE**
+  - Connected to CUISINE via Door D8
+
+- **GARAGE**
+  - Connected to CELLIER via Door D9
+
+### Navigation Plan
+
+Starting in CELLIER and arriving at GARAGE:
+
+1. **ApproachDoor(9)**: Move in front of Door D9.
+2. **OpenDoor(9)**: Open Door D9.
+3. **GoThrough(9)**: Move through Door D9 to the GARAGE.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 9},
+    {"action": "OpenDoor", "door": 9},
+    {"action": "GoThrough", "door": 9}
+  ]
+}
+```

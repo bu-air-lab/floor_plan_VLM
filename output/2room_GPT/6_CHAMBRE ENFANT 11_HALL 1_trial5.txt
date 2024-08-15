@@ -1,0 +1,38 @@
+### Room and Door Connections
+
+- **CHAMBRE ENFANT 11**
+  - Door D101 to HALL 1
+
+- **HALL 1**
+  - Door D101 to CHAMBRE ENFANT 11
+  - Door D91 to CHAMBRE ENFANT 21
+  - Door D81 to CHAMBRE PARENTS 1
+  - Door D71 to BAINS 1
+  - Door D61 to BUREAU 1
+  - Door D51 to LINGERIE 1
+  - Door D41 to WC 1
+  - Door D31 to PORCHE 1
+  - Door D21 to CELLIER 1
+  - Door D13 to GARAGE 1
+  - Door D12 to HALL 1 (lower part)
+  - Door D111 to CELLIER 1
+
+### Navigation Plan
+
+1. **ApproachDoor(101)**: Move in front of door D101.
+2. **OpenDoor(101)**: Open door D101.
+3. **GoThrough(101)**: Move through door D101 to HALL 1.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 101},
+    {"action": "OpenDoor", "door": 101},
+    {"action": "GoThrough", "door": 101}
+  ]
+}
+```
+
+This plan ensures that you move from CHAMBRE ENFANT 11 to HALL 1 by using the necessary door D101.

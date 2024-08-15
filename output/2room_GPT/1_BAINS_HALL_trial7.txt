@@ -1,0 +1,48 @@
+### Room and Door Connections
+
+1. **BAINS**:
+   - Connected to HALL via Door D2
+
+2. **WC**:
+   - Connected to HALL via Door D3
+
+3. **CHAMBRE 1**:
+   - Connected to HALL via Door D4
+
+4. **CHAMBRE 2**:
+   - Connected to HALL via Door D5
+
+5. **CUISINE**:
+   - Connected to HALL via Door D7
+   - Connected to TERRASSE COUVERTE via Door D8
+
+6. **CELLER**:
+   - Connected to HALL via Door D1
+
+7. **PORCHE**:
+   - Connected to HALL via Door D6
+
+8. **GARAGE**:
+   - Connected to CELLER via Door D9
+
+### Navigation Plan
+
+Starting in **BAINS** and arriving at **HALL**:
+
+1. **ApproachDoor(2)**: Move in front of Door D2.
+2. **OpenDoor(2)**: Open Door D2.
+3. **GoThrough(2)**: Move through Door D2 to HALL.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2}
+  ]
+}
+```
+
+This plan ensures that you move from the BAINS to the HALL by using the necessary door (D2) and performing the required actions in sequence.

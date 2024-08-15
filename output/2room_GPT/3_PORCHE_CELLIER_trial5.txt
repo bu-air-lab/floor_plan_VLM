@@ -1,0 +1,37 @@
+### Room and Door Connections
+
+- **PORCHE**
+  - Connected to HALL via Door D3
+  - Connected to CELLIER via Door D2
+
+- **CELLIER**
+  - Connected to PORCHE via Door D2
+  - Connected to GARAGE via Door D1
+  - Connected to HALL via Door D11
+
+- **HALL**
+  - Connected to PORCHE via Door D3
+  - Connected to CELLIER via Door D11
+  - Connected to LINGERIE via Door D5
+  - Connected to BUREAU via Door D6
+  - Connected to WC via Door D4
+  - Connected to BAINS via Door D7
+  - Connected to CHAMBRE PARENTS via Door D8
+  - Connected to CHAMBRE ENFANT 1 via Door D10
+  - Connected to CHAMBRE ENFANT 2 via Door D9
+
+### Navigation Plan
+
+To navigate from the PORCHE to the CELLIER, you need to use Door D2.
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+  ]
+}
+```
+
+This plan ensures that you move from the PORCHE to the CELLIER by approaching, opening, and going through Door D2.

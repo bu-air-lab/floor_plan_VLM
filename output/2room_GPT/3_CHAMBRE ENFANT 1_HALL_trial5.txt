@@ -1,0 +1,69 @@
+### Room and Door Connections
+
+- **CHAMBRE ENFANT 1**
+  - Door D10 to HALL
+
+- **HALL**
+  - Door D10 to CHAMBRE ENFANT 1
+  - Door D9 to CHAMBRE ENFANT 2
+  - Door D8 to CHAMBRE PARENTS
+  - Door D7 to BAINS
+  - Door D6 to BUREAU
+  - Door D5 to LINGERIE
+  - Door D4 to WC
+  - Door D3 to PORCHE
+  - Door D11 to CELLIER
+
+- **CHAMBRE ENFANT 2**
+  - Door D9 to HALL
+
+- **CHAMBRE PARENTS**
+  - Door D8 to HALL
+
+- **BAINS**
+  - Door D7 to HALL
+
+- **BUREAU**
+  - Door D6 to HALL
+
+- **LINGERIE**
+  - Door D5 to HALL
+
+- **WC**
+  - Door D4 to HALL
+
+- **PORCHE**
+  - Door D3 to HALL
+  - Door D2 to CELLIER
+
+- **CELLIER**
+  - Door D2 to PORCHE
+  - Door D1 to GARAGE
+  - Door D11 to HALL
+
+- **GARAGE**
+  - Door D1 to CELLIER
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D10"},
+  {"action": "OpenDoor", "door": "D10"},
+  {"action": "GoThrough", "door": "D10"},
+  {"action": "ApproachDoor", "door": "D11"},
+  {"action": "OpenDoor", "door": "D11"},
+  {"action": "GoThrough", "door": "D11"}
+]
+```
+
+### Explanation
+
+1. **ApproachDoor(D10)**: Move in front of door D10 in CHAMBRE ENFANT 1.
+2. **OpenDoor(D10)**: Open door D10.
+3. **GoThrough(D10)**: Move through door D10 to enter the HALL.
+4. **ApproachDoor(D11)**: Move in front of door D11 in the HALL.
+5. **OpenDoor(D11)**: Open door D11.
+6. **GoThrough(D11)**: Move through door D11 to enter the HALL.
+
+This plan ensures that you move from CHAMBRE ENFANT 1 to the HALL efficiently, using only the necessary doors.
