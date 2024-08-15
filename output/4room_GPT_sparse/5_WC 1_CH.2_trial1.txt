@@ -1,0 +1,51 @@
+### Room and Door Connections
+
+- **WC 1**:
+  - Door D8 to DEGT
+
+- **DEGT**:
+  - Door D4 to SEJOUR
+  - Door D5 to CH.1
+  - Door D6 to CH.2
+  - Door D7 to BAINS
+  - Door D8 to WC 1
+
+- **CH.2**:
+  - Door D6 to DEGT
+  - Door D9 to CH.3
+
+- **CH.3**:
+  - Door D9 to CH.2
+  - Door D41 to DEGT 1
+  - Door D51 to DEGT 1
+
+- **DEGT 1**:
+  - Door D41 to CH.3
+  - Door D51 to CH.3
+  - Door D61 to CH.4
+  - Door D71 to BAINS 1
+  - Door D81 to WC 1
+
+### Navigation Plan
+
+1. **ApproachDoor(8)**: Move in front of door D8.
+2. **OpenDoor(8)**: Open door D8.
+3. **GoThrough(8)**: Move through door D8 to DEGT.
+4. **ApproachDoor(6)**: Move in front of door D6.
+5. **OpenDoor(6)**: Open door D6.
+6. **GoThrough(6)**: Move through door D6 to CH.2.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6}
+  ]
+}
+```

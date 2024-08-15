@@ -1,0 +1,125 @@
+### Room and Door Connections
+
+- **LINGERIE**
+  - Door D5: Connects to WC
+  - Door D6: Connects to BUREAU
+
+- **WC**
+  - Door D4: Connects to PORCHE
+  - Door D5: Connects to LINGERIE
+
+- **BUREAU**
+  - Door D6: Connects to LINGERIE
+  - Door D7: Connects to BAINS
+
+- **BAINS**
+  - Door D7: Connects to BUREAU
+  - Door D8: Connects to CHAMBRE PARENTS
+
+- **CHAMBRE PARENTS**
+  - Door D8: Connects to BAINS
+
+- **CHAMBRE ENFANT 1**
+  - Door D10: Connects to HALL
+
+- **CHAMBRE ENFANT 2**
+  - Door D9: Connects to HALL
+
+- **HALL**
+  - Door D10: Connects to CHAMBRE ENFANT 1
+  - Door D9: Connects to CHAMBRE ENFANT 2
+  - Door D11: Connects to CELLIER
+
+- **CELLIER**
+  - Door D11: Connects to HALL
+  - Door D1: Connects to GARAGE
+  - Door D2: Connects to PORCHE
+
+- **PORCHE**
+  - Door D2: Connects to CELLIER
+  - Door D3: Connects to WC
+  - Door D4: Connects to WC
+
+- **GARAGE**
+  - Door D1: Connects to CELLIER
+
+### Navigation Plan
+
+1. **ApproachDoor(6)**
+2. **OpenDoor(6)**
+3. **GoThrough(6)**: Move from LINGERIE to BUREAU
+
+4. **ApproachDoor(7)**
+5. **OpenDoor(7)**
+6. **GoThrough(7)**: Move from BUREAU to BAINS
+
+7. **ApproachDoor(8)**
+8. **OpenDoor(8)**
+9. **GoThrough(8)**: Move from BAINS to CHAMBRE PARENTS
+
+10. **ApproachDoor(8)**
+11. **OpenDoor(8)**
+12. **GoThrough(8)**: Move from CHAMBRE PARENTS to BAINS
+
+13. **ApproachDoor(7)**
+14. **OpenDoor(7)**
+15. **GoThrough(7)**: Move from BAINS to BUREAU
+
+16. **ApproachDoor(6)**
+17. **OpenDoor(6)**
+18. **GoThrough(6)**: Move from BUREAU to LINGERIE
+
+19. **ApproachDoor(5)**
+20. **OpenDoor(5)**
+21. **GoThrough(5)**: Move from LINGERIE to WC
+
+22. **ApproachDoor(4)**
+23. **OpenDoor(4)**
+24. **GoThrough(4)**: Move from WC to PORCHE
+
+25. **ApproachDoor(2)**
+26. **OpenDoor(2)**
+27. **GoThrough(2)**: Move from PORCHE to CELLIER
+
+28. **ApproachDoor(1)**
+29. **OpenDoor(1)**
+30. **GoThrough(1)**: Move from CELLIER to GARAGE
+
+### Final Path in JSON Format
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7},
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8},
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6},
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2},
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1}
+  ]
+}
+```

@@ -1,0 +1,79 @@
+### Room and Door Connections
+
+#### Rooms:
+1. **Garage**
+2. **Cellier**
+3. **Chambre 1**
+4. **Chambre 2**
+5. **Chambre 3**
+6. **Chambre 4**
+7. **Cuisine**
+8. **Cuisine 1**
+9. **Porche**
+10. **Porche 1**
+11. **Hall**
+12. **Hall 1**
+13. **Bains**
+14. **Bains 1**
+15. **WC**
+16. **WC 1**
+17. **Terrasse Couverte**
+18. **Terrasse Couverte 1**
+19. **Garage 1**
+20. **Cellier 1**
+
+#### Doors:
+1. **D1**: Cellier - Hall
+2. **D2**: Bains - WC
+3. **D3**: WC - Hall
+4. **D4**: Hall - Chambre 1
+5. **D5**: Hall - Chambre 2
+6. **D6**: Hall - Porche
+7. **D7**: Hall - Cuisine
+8. **D8**: Cuisine - Terrasse Couverte
+9. **D9**: Garage - Cellier
+10. **D10**: Terrasse Couverte - Outside
+11. **D11**: Cellier 1 - Hall 1
+12. **D21**: Bains 1 - WC 1
+13. **D31**: WC 1 - Hall 1
+14. **D41**: Hall 1 - Chambre 4
+15. **D51**: Hall 1 - Chambre 3
+16. **D61**: Hall 1 - Porche 1
+17. **D71**: Hall 1 - Cuisine 1
+18. **D81**: Cuisine 1 - Terrasse Couverte 1
+19. **D91**: Garage 1 - Cellier 1
+
+### Navigation Plan
+
+#### Starting Point: Garage
+#### Destination: WC
+
+1. **ApproachDoor(9)**: Move in front of door D9.
+2. **OpenDoor(9)**: Open door D9.
+3. **GoThrough(9)**: Move through door D9 to Cellier.
+4. **ApproachDoor(1)**: Move in front of door D1.
+5. **OpenDoor(1)**: Open door D1.
+6. **GoThrough(1)**: Move through door D1 to Hall.
+7. **ApproachDoor(3)**: Move in front of door D3.
+8. **OpenDoor(3)**: Open door D3.
+9. **GoThrough(3)**: Move through door D3 to WC.
+
+### Final Path in JSON Format
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": 9},
+    {"action": "OpenDoor", "door": 9},
+    {"action": "GoThrough", "door": 9},
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3}
+  ]
+}
+```
+
+This plan ensures that you navigate efficiently from the Garage to the WC, using only the necessary doors.

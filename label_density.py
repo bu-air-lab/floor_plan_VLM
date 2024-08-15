@@ -11,7 +11,7 @@ api_key_file.close()
 client = OpenAI(api_key=api_key)
 
 #Folder to images dataset
-image_folder = 'maps/dense_labels'
+image_folder = 'maps/sparse_labels'
 
 #Output folder for JSON plans from VLM
 output_folder = 'output'
@@ -53,50 +53,50 @@ Remember to make explicit connections for each door, then make a step by step so
 # Define the plans
 plans = {
     '1': [
-        ('CELLIER', 'GARAGE'),
-        ('BAINS', 'HALL'),
-        ('TERRASSE COUVERTE', 'CUISINE'),
-        ('HALL', 'PORCHE'),
-        ('WC', 'HALL')
+        ('CELLIER', 'TERRASSE COUVERTE'),
+        ('GARAGE', 'WC'),
+        ('PORCHE', 'GARAGE'),
+        ('TERRASSE COUVERTE', 'CHAMBRE 1'),
+        ('BAINS', 'GARAGE')
     ],
     '2': [
-        ('PORCHE', 'SEJOUR'),
-        ('DEGT', 'BAINS'),
-        ('DEGT', 'CH.2'),
-        ('CELLIER', 'CUISINE'),
-        ('CUISINE', 'SEJOUR')
+        ('PORCHE', 'BAINS'),
+        ('DEGT', 'CELLIER'),
+        ('CUISINE', 'CH.2'),
+        ('WC', 'PORCHE'),
+        ('CH.1', 'CUISINE')
     ],
     '3': [
-        ('CELLIER', 'GARAGE'),
-        ('CELLIER', 'HALL'),
-        ('CHAMBRE ENFANT 1', 'HALL'),
-        ('PORCHE', 'CELLIER'),
-        ('HALL', 'WC')
+        ('GARAGE', 'BUREAU'),
+        ('LINGERIE', 'GARAGE'),
+        ('GARAGE', 'CHAMBRE ENFANT 1'),
+        ('CHAMBRE PARENTS', 'GARAGE'),
+        ('GARAGE', 'WC')
     ],
     '4': [
-        ('CELLIER', 'GARAGE'),
-        ('BAINS', 'HALL'),
-        ('TERRASSE COUVERTE', 'HALL 1'),
-        ('CUISINE 1', 'TERRASSE COUVERTE 1'),
-        ('WC 1', 'HALL 1')
+        ('CELLIER', 'TERRASSE COUVERTE'),
+        ('GARAGE', 'WC'),
+        ('TERRASSE COUVERTE', 'GARAGE 1'),
+        ('BAINS 1', 'CUISINE'),
+        ('CELLIER 1', 'TERRASSE COUVERTE 1')
     ],
     '5': [
-        ('PORCHE', 'SEJOUR'),
-        ('DEGT', 'BAINS'),
-        ('DEGT 1', 'CH.4'),
-        ('CELLIER', 'PORCHE 1'),
-        ('CH.2', 'CH.3')
+        ('PORCHE', 'BAINS'),
+        ('DEGT', 'CELLIER'),
+        ('DEGT 1', 'DEGT'),
+        ('CUISINE 1', 'CELLIER'),
+        ('WC 1', 'CH.2')
     ],
     '6': [
-        ('CELLIER', 'GARAGE'),
-        ('CELLIER', 'HALL'),
-        ('CHAMBRE ENFANT 11', 'HALL 1'),
-        ('PORCHE', 'HALL 1'),
-        ('PORCHE 1', 'CELLIER 1')
+        ('GARAGE', 'BUREAU'),
+        ('LINGERIE', 'GARAGE'),
+        ('CHAMBRE ENFANT 11', 'HALL'),
+        ('PORCHE 1', 'CELLIER'),
+        ('WC', 'HALL 1')
     ],
 }
 
-N = 10
+N = 3
 
 
 def encode_image(image_path):
@@ -144,13 +144,13 @@ def process_images_and_prompts():
 
             prompt = prompt_A + start + prompt_B + end + prompt_C
 
-            for n in range(3, N):
+            for n in range(N):
 
                 #Call VLM
                 text_response = query_gpt4o_with_image_and_text(image_path, prompt)
 
                 # Write the text response to a new file
-                filename = 'output/2room_GPT/' + key + '_' + start + '_' + end + '_' + 'trial' + str(n) + '.txt'
+                filename = 'output/4room_GPT_sparse/' + key + '_' + start + '_' + end + '_' + 'trial' + str(n) + '.txt'
                 with open(filename, 'w') as file:
                     file.write(text_response)
 

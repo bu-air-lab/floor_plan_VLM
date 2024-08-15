@@ -1,0 +1,82 @@
+### Room and Door Connections
+
+1. **Garage**
+   - Door D1: Connects to Cellier
+
+2. **Cellier**
+   - Door D1: Connects to Garage
+   - Door D2: Connects to Porche
+   - Door D11: Connects to Hall
+
+3. **Porche**
+   - Door D2: Connects to Cellier
+   - Door D3: Connects to WC
+
+4. **WC**
+   - Door D3: Connects to Porche
+   - Door D4: Connects to Lingerie
+
+5. **Lingerie**
+   - Door D4: Connects to WC
+   - Door D5: Connects to Bureau
+
+6. **Bureau**
+   - Door D5: Connects to Lingerie
+   - Door D6: Connects to Bains
+
+7. **Bains**
+   - Door D6: Connects to Bureau
+   - Door D7: Connects to Chambre Parents
+
+8. **Chambre Parents**
+   - Door D7: Connects to Bains
+   - Door D8: Connects to Hall
+
+9. **Hall**
+   - Door D8: Connects to Chambre Parents
+   - Door D9: Connects to Chambre Enfant 2
+   - Door D10: Connects to Chambre Enfant 1
+   - Door D11: Connects to Cellier
+
+10. **Chambre Enfant 1**
+    - Door D10: Connects to Hall
+
+11. **Chambre Enfant 2**
+    - Door D9: Connects to Hall
+
+### Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(1)",
+    "OpenDoor(1)",
+    "GoThrough(1)",
+    "ApproachDoor(11)",
+    "OpenDoor(11)",
+    "GoThrough(11)",
+    "ApproachDoor(10)",
+    "OpenDoor(10)",
+    "GoThrough(10)"
+  ]
+}
+```
+
+### Step-by-Step Navigation
+
+1. **Garage to Cellier**
+   - ApproachDoor(1)
+   - OpenDoor(1)
+   - GoThrough(1)
+
+2. **Cellier to Hall**
+   - ApproachDoor(11)
+   - OpenDoor(11)
+   - GoThrough(11)
+
+3. **Hall to Chambre Enfant 1**
+   - ApproachDoor(10)
+   - OpenDoor(10)
+   - GoThrough(10)
+
+This plan ensures that you move from the Garage to Chambre Enfant 1 by passing through the necessary doors in the correct sequence.

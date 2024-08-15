@@ -1,0 +1,76 @@
+### Room and Door Connections
+
+- **TERRASSE COUVERTE**
+  - Connected to CUISINE via Door D8
+
+- **CUISINE**
+  - Connected to TERRASSE COUVERTE via Door D8
+  - Connected to PORCHE via Door D7
+  - Connected to HALL via Door D7
+
+- **PORCHE**
+  - Connected to CUISINE via Door D7
+  - Connected to HALL via Door D6
+
+- **HALL**
+  - Connected to PORCHE via Door D6
+  - Connected to CUISINE via Door D7
+  - Connected to CHAMBRE 2 via Door D5
+  - Connected to CHAMBRE 1 via Door D4
+  - Connected to WC via Door D3
+  - Connected to CELLIER via Door D1
+
+- **CHAMBRE 1**
+  - Connected to HALL via Door D4
+
+- **CHAMBRE 2**
+  - Connected to HALL via Door D5
+
+- **WC**
+  - Connected to HALL via Door D3
+  - Connected to BAINS via Door D2
+
+- **BAINS**
+  - Connected to WC via Door D2
+
+- **CELLIER**
+  - Connected to HALL via Door D1
+
+- **GARAGE**
+  - Connected to CELLIER via Door D9
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D8"},
+  {"action": "OpenDoor", "door": "D8"},
+  {"action": "GoThrough", "door": "D8"},
+  {"action": "ApproachDoor", "door": "D7"},
+  {"action": "OpenDoor", "door": "D7"},
+  {"action": "GoThrough", "door": "D7"},
+  {"action": "ApproachDoor", "door": "D6"},
+  {"action": "OpenDoor", "door": "D6"},
+  {"action": "GoThrough", "door": "D6"},
+  {"action": "ApproachDoor", "door": "D4"},
+  {"action": "OpenDoor", "door": "D4"},
+  {"action": "GoThrough", "door": "D4"}
+]
+```
+
+### Step-by-Step Navigation
+
+1. **ApproachDoor(D8)**: Move in front of Door D8 (TERRASSE COUVERTE to CUISINE).
+2. **OpenDoor(D8)**: Open Door D8.
+3. **GoThrough(D8)**: Move through Door D8 to CUISINE.
+4. **ApproachDoor(D7)**: Move in front of Door D7 (CUISINE to PORCHE).
+5. **OpenDoor(D7)**: Open Door D7.
+6. **GoThrough(D7)**: Move through Door D7 to PORCHE.
+7. **ApproachDoor(D6)**: Move in front of Door D6 (PORCHE to HALL).
+8. **OpenDoor(D6)**: Open Door D6.
+9. **GoThrough(D6)**: Move through Door D6 to HALL.
+10. **ApproachDoor(D4)**: Move in front of Door D4 (HALL to CHAMBRE 1).
+11. **OpenDoor(D4)**: Open Door D4.
+12. **GoThrough(D4)**: Move through Door D4 to CHAMBRE 1.
+
+This plan ensures that you navigate efficiently from TERRASSE COUVERTE to CHAMBRE 1, using only the necessary doors.

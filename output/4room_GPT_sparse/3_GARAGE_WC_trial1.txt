@@ -1,0 +1,43 @@
+### Room and Door Connections
+
+- **Garage**: Connected to Cellier via Door D1
+- **Cellier**: Connected to Garage via Door D1, to Porche via Door D2, and to Hall via Door D11
+- **Porche**: Connected to Cellier via Door D2, to WC via Door D3
+- **WC**: Connected to Porche via Door D3, to Lingerie via Door D4
+- **Lingerie**: Connected to WC via Door D4, to Bureau via Door D5
+- **Bureau**: Connected to Lingerie via Door D5, to Bains via Door D6
+- **Bains**: Connected to Bureau via Door D6, to Chambre Parents via Door D7
+- **Chambre Parents**: Connected to Bains via Door D7, to Hall via Door D8
+- **Hall**: Connected to Cellier via Door D11, to Chambre Parents via Door D8, to Chambre Enfant 1 via Door D10, to Chambre Enfant 2 via Door D9
+- **Chambre Enfant 1**: Connected to Hall via Door D10
+- **Chambre Enfant 2**: Connected to Hall via Door D9
+
+### Navigation Plan
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"}
+]
+```
+
+### Step-by-Step Solution
+
+1. **ApproachDoor(D1)**: Move in front of Door D1 (Garage to Cellier).
+2. **OpenDoor(D1)**: Open Door D1.
+3. **GoThrough(D1)**: Move through Door D1 to Cellier.
+4. **ApproachDoor(D2)**: Move in front of Door D2 (Cellier to Porche).
+5. **OpenDoor(D2)**: Open Door D2.
+6. **GoThrough(D2)**: Move through Door D2 to Porche.
+7. **ApproachDoor(D3)**: Move in front of Door D3 (Porche to WC).
+8. **OpenDoor(D3)**: Open Door D3.
+9. **GoThrough(D3)**: Move through Door D3 to WC.
+
+This plan ensures that you move from the Garage to the WC by passing through the necessary doors in the correct sequence.

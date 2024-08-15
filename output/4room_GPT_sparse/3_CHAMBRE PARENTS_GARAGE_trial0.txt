@@ -1,0 +1,74 @@
+### Room and Door Connections
+
+- **CHAMBRE PARENTS**
+  - Door D8: Connects to BUREAU
+- **BUREAU**
+  - Door D6: Connects to LINGERIE
+  - Door D8: Connects to CHAMBRE PARENTS
+- **LINGERIE**
+  - Door D5: Connects to WC
+  - Door D6: Connects to BUREAU
+- **WC**
+  - Door D4: Connects to PORCHE
+  - Door D5: Connects to LINGERIE
+- **PORCHE**
+  - Door D2: Connects to GARAGE
+  - Door D3: Connects to CELLIER
+  - Door D4: Connects to WC
+- **CELLIER**
+  - Door D1: Connects to GARAGE
+  - Door D3: Connects to PORCHE
+  - Door D11: Connects to HALL
+- **HALL**
+  - Door D9: Connects to CHAMBRE ENFANT 2
+  - Door D10: Connects to CHAMBRE ENFANT 1
+  - Door D11: Connects to CELLIER
+- **CHAMBRE ENFANT 1**
+  - Door D10: Connects to HALL
+- **CHAMBRE ENFANT 2**
+  - Door D9: Connects to HALL
+- **GARAGE**
+  - Door D1: Connects to CELLIER
+  - Door D2: Connects to PORCHE
+
+### Navigation Plan
+
+1. **ApproachDoor(D8)**: Move in front of door D8.
+2. **OpenDoor(D8)**: Open door D8.
+3. **GoThrough(D8)**: Move through door D8 to BUREAU.
+4. **ApproachDoor(D6)**: Move in front of door D6.
+5. **OpenDoor(D6)**: Open door D6.
+6. **GoThrough(D6)**: Move through door D6 to LINGERIE.
+7. **ApproachDoor(D5)**: Move in front of door D5.
+8. **OpenDoor(D5)**: Open door D5.
+9. **GoThrough(D5)**: Move through door D5 to WC.
+10. **ApproachDoor(D4)**: Move in front of door D4.
+11. **OpenDoor(D4)**: Open door D4.
+12. **GoThrough(D4)**: Move through door D4 to PORCHE.
+13. **ApproachDoor(D2)**: Move in front of door D2.
+14. **OpenDoor(D2)**: Open door D2.
+15. **GoThrough(D2)**: Move through door D2 to GARAGE.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"},
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+  ]
+}
+```

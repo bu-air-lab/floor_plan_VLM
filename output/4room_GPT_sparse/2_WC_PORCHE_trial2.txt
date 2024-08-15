@@ -1,0 +1,69 @@
+### Room and Door Connections
+
+- **WC**:
+  - Connected to DEGT via D8
+
+- **DEGT**:
+  - Connected to WC via D8
+  - Connected to BAINS via D7
+  - Connected to SEJOUR via D4
+  - Connected to CH.1 via D5
+  - Connected to CH.2 via D6
+
+- **BAINS**:
+  - Connected to DEGT via D7
+
+- **SEJOUR**:
+  - Connected to DEGT via D4
+  - Connected to PORCHE via D1
+  - Connected to CUISINE via D3
+
+- **CH.1**:
+  - Connected to DEGT via D5
+
+- **CH.2**:
+  - Connected to DEGT via D6
+
+- **CUISINE**:
+  - Connected to SEJOUR via D3
+  - Connected to CELLIER via D2
+
+- **CELLIER**:
+  - Connected to CUISINE via D2
+
+- **PORCHE**:
+  - Connected to SEJOUR via D1
+
+### Navigation Plan
+
+Starting in the WC and aiming to reach the PORCHE, the most efficient path is as follows:
+
+1. **ApproachDoor(D8)**: Move in front of door D8.
+2. **OpenDoor(D8)**: Open door D8.
+3. **GoThrough(D8)**: Move through door D8 to DEGT.
+4. **ApproachDoor(D4)**: Move in front of door D4.
+5. **OpenDoor(D4)**: Open door D4.
+6. **GoThrough(D4)**: Move through door D4 to SEJOUR.
+7. **ApproachDoor(D1)**: Move in front of door D1.
+8. **OpenDoor(D1)**: Open door D1.
+9. **GoThrough(D1)**: Move through door D1 to PORCHE.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"}
+  ]
+}
+```
+
+This plan ensures that you move efficiently from the WC to the PORCHE, using only the necessary doors.

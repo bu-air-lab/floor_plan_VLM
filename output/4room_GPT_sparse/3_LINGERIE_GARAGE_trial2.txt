@@ -1,0 +1,93 @@
+### Room and Door Connections
+
+- **LINGERIE**
+  - Connected to WC via Door D4
+  - Connected to BUREAU via Door D5
+
+- **WC**
+  - Connected to LINGERIE via Door D4
+  - Connected to PORCHE via Door D3
+
+- **BUREAU**
+  - Connected to LINGERIE via Door D5
+  - Connected to BAINS via Door D6
+
+- **BAINS**
+  - Connected to BUREAU via Door D6
+  - Connected to CHAMBRE PARENTS via Door D7
+
+- **CHAMBRE PARENTS**
+  - Connected to BAINS via Door D7
+  - Connected to HALL via Door D8
+
+- **HALL**
+  - Connected to CHAMBRE PARENTS via Door D8
+  - Connected to CHAMBRE ENFANT 2 via Door D9
+  - Connected to CHAMBRE ENFANT 1 via Door D10
+  - Connected to CELLIER via Door D11
+
+- **CHAMBRE ENFANT 1**
+  - Connected to HALL via Door D10
+
+- **CHAMBRE ENFANT 2**
+  - Connected to HALL via Door D9
+
+- **CELLIER**
+  - Connected to HALL via Door D11
+  - Connected to PORCHE via Door D2
+  - Connected to GARAGE via Door D1
+
+- **PORCHE**
+  - Connected to WC via Door D3
+  - Connected to CELLIER via Door D2
+
+- **GARAGE**
+  - Connected to CELLIER via Door D1
+
+### Navigation Plan
+
+1. **ApproachDoor(D5)**: Move in front of Door D5.
+2. **OpenDoor(D5)**: Open Door D5.
+3. **GoThrough(D5)**: Move through Door D5 to BUREAU.
+4. **ApproachDoor(D6)**: Move in front of Door D6.
+5. **OpenDoor(D6)**: Open Door D6.
+6. **GoThrough(D6)**: Move through Door D6 to BAINS.
+7. **ApproachDoor(D7)**: Move in front of Door D7.
+8. **OpenDoor(D7)**: Open Door D7.
+9. **GoThrough(D7)**: Move through Door D7 to CHAMBRE PARENTS.
+10. **ApproachDoor(D8)**: Move in front of Door D8.
+11. **OpenDoor(D8)**: Open Door D8.
+12. **GoThrough(D8)**: Move through Door D8 to HALL.
+13. **ApproachDoor(D11)**: Move in front of Door D11.
+14. **OpenDoor(D11)**: Open Door D11.
+15. **GoThrough(D11)**: Move through Door D11 to CELLIER.
+16. **ApproachDoor(D1)**: Move in front of Door D1.
+17. **OpenDoor(D1)**: Open Door D1.
+18. **GoThrough(D1)**: Move through Door D1 to GARAGE.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D5"},
+    {"action": "OpenDoor", "door": "D5"},
+    {"action": "GoThrough", "door": "D5"},
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"}
+  ]
+}
+```

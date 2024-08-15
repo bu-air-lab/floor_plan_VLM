@@ -1,0 +1,75 @@
+### Room and Door Connections
+
+**Rooms:**
+1. BAINS
+2. WC
+3. CHAMBRE 1
+4. CHAMBRE 2
+5. HALL
+6. PORCHE
+7. CUISINE
+8. TERRASSE COUVERTE
+9. CELLIER
+10. GARAGE
+11. BAINS 1
+12. WC 1
+13. CHAMBRE 3
+14. CHAMBRE 4
+15. HALL 1
+16. PORCHE 1
+17. CUISINE 1
+18. TERRASSE COUVERTE 1
+19. CELLIER 1
+20. GARAGE 1
+
+**Doors:**
+1. D1: Connects CELLIER and CHAMBRE 2
+2. D2: Connects BAINS and WC
+3. D3: Connects WC and HALL
+4. D4: Connects HALL and CHAMBRE 1
+5. D5: Connects CHAMBRE 2 and HALL
+6. D6: Connects HALL and PORCHE
+7. D7: Connects HALL and CUISINE
+8. D8: Connects CUISINE and TERRASSE COUVERTE
+9. D9: Connects CELLIER and GARAGE
+10. D10: Connects CHAMBRE 1 and TERRASSE COUVERTE
+11. D11: Connects CELLIER 1 and CHAMBRE 3
+12. D21: Connects BAINS 1 and WC 1
+13. D31: Connects WC 1 and HALL 1
+14. D41: Connects HALL 1 and CHAMBRE 4
+15. D51: Connects CHAMBRE 3 and HALL 1
+16. D61: Connects HALL 1 and PORCHE 1
+17. D71: Connects HALL 1 and CUISINE 1
+18. D81: Connects CUISINE 1 and TERRASSE COUVERTE 1
+19. D91: Connects CELLIER 1 and GARAGE 1
+
+### Navigation Plan
+
+Starting in BAINS, the goal is to reach CUISINE. The sequence of actions is as follows:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"}
+]
+```
+
+### Explanation:
+1. **ApproachDoor(D2)**: Move in front of door D2.
+2. **OpenDoor(D2)**: Open door D2.
+3. **GoThrough(D2)**: Move through door D2 to WC.
+4. **ApproachDoor(D3)**: Move in front of door D3.
+5. **OpenDoor(D3)**: Open door D3.
+6. **GoThrough(D3)**: Move through door D3 to HALL.
+7. **ApproachDoor(D7)**: Move in front of door D7.
+8. **OpenDoor(D7)**: Open door D7.
+9. **GoThrough(D7)**: Move through door D7 to CUISINE.
+
+This plan ensures that you navigate efficiently from BAINS to CUISINE using the necessary doors.

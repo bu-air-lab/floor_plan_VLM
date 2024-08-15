@@ -1,0 +1,86 @@
+### Room and Door Connections
+
+1. **DEGT**
+   - Door D4 to SEJOUR
+   - Door D5 to CH.1
+   - Door D6 to CH.2
+   - Door D7 to BAINS
+   - Door D8 to WC
+   - Door D41 to DEGT1
+
+2. **SEJOUR**
+   - Door D1 to Porche
+   - Door D2 to CELLIER
+   - Door D3 to CUISINE
+   - Door D4 to DEGT
+
+3. **CELLIER**
+   - Door D2 to SEJOUR
+
+4. **CUISINE**
+   - Door D3 to SEJOUR
+
+5. **CH.1**
+   - Door D5 to DEGT
+
+6. **CH.2**
+   - Door D6 to DEGT
+
+7. **BAINS**
+   - Door D7 to DEGT
+
+8. **WC**
+   - Door D8 to DEGT
+
+9. **DEGT1**
+   - Door D41 to DEGT
+   - Door D51 to CH.3
+   - Door D61 to CH.4
+   - Door D71 to BAINS1
+   - Door D81 to WC1
+
+10. **SEJOUR1**
+    - Door D10 to Porche1
+    - Door D11 to CELLIER1
+    - Door D31 to CUISINE1
+
+11. **CELLIER1**
+    - Door D11 to SEJOUR1
+
+12. **CUISINE1**
+    - Door D31 to SEJOUR1
+
+13. **CH.3**
+    - Door D51 to DEGT1
+
+14. **CH.4**
+    - Door D61 to DEGT1
+
+15. **BAINS1**
+    - Door D71 to DEGT1
+
+16. **WC1**
+    - Door D81 to DEGT1
+
+### Navigation Plan
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+]
+```
+
+### Explanation
+1. **ApproachDoor(D4)**: Move in front of door D4 in DEGT.
+2. **OpenDoor(D4)**: Open door D4.
+3. **GoThrough(D4)**: Move through door D4 to SEJOUR.
+4. **ApproachDoor(D2)**: Move in front of door D2 in SEJOUR.
+5. **OpenDoor(D2)**: Open door D2.
+6. **GoThrough(D2)**: Move through door D2 to CELLIER.
+
+This plan ensures that you move from DEGT to CELLIER efficiently by using the necessary doors and avoiding unnecessary ones.

@@ -1,0 +1,50 @@
+### Room and Door Connections
+
+#### Rooms:
+1. CHAMBRE ENFANT 11
+2. CHAMBRE ENFANT 21
+3. CHAMBRE PARENTS 1
+4. BUREAU 1
+5. LINGERIE 1
+6. BAIN 1
+7. WC 1
+8. CELLIER 1
+9. PORCHE 1
+10. GARAGE 1
+11. HALL 1
+
+#### Doors:
+1. D1: GARAGE 1 - CELLIER 1
+2. D2: PORCHE 1 - CELLIER 1
+3. D3: PORCHE 1 - LINGERIE 1
+4. D4: WC 1 - LINGERIE 1
+5. D5: LINGERIE 1 - BUREAU 1
+6. D6: BUREAU 1 - BAIN 1
+7. D7: BAIN 1 - CHAMBRE PARENTS 1
+8. D8: BAIN 1 - CHAMBRE ENFANT 21
+9. D9: CHAMBRE ENFANT 21 - CHAMBRE ENFANT 11
+10. D10: CHAMBRE ENFANT 11 - HALL 1
+11. D11: CELLIER 1 - HALL 1
+12. D12: HALL 1 - PORCHE 1
+13. D13: GARAGE 1 - PORCHE 1
+
+### Navigation Plan
+
+#### Step-by-Step Solution:
+1. **Start in CHAMBRE ENFANT 11**
+2. ApproachDoor(D10)
+3. OpenDoor(D10)
+4. GoThrough(D10) to HALL 1
+
+### Final Navigation Plan in JSON Format:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"}
+  ]
+}
+```
+
+This plan ensures that you start in CHAMBRE ENFANT 11 and arrive at HALL 1 by using the necessary door D10.
