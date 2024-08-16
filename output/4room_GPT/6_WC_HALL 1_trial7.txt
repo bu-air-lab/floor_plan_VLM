@@ -1,0 +1,62 @@
+### Room and Door Connections
+
+#### Rooms:
+1. WC
+2. HALL 1
+3. LINGERIE
+4. BUREAU
+5. BAIN
+6. CHAMBRE PARENTS
+7. CHAMBRE ENFANT 1
+8. CHAMBRE ENFANT 2
+9. PORCHE
+10. CELLIER
+11. GARAGE
+
+#### Doors:
+- **D1**: Connects GARAGE and PORCHE
+- **D2**: Connects PORCHE and CELLIER
+- **D3**: Connects CELLIER and HALL
+- **D4**: Connects WC and HALL
+- **D5**: Connects HALL and LINGERIE
+- **D6**: Connects HALL and BUREAU
+- **D7**: Connects HALL and BAIN
+- **D8**: Connects HALL and CHAMBRE PARENTS
+- **D9**: Connects HALL and CHAMBRE ENFANT 2
+- **D10**: Connects HALL and CHAMBRE ENFANT 1
+- **D11**: Connects CELLIER and HALL
+- **D12**: Connects HALL and HALL 1
+- **D13**: Connects GARAGE and CELLIER
+- **D21**: Connects PORCHE and HALL 1
+- **D31**: Connects CELLIER and HALL 1
+- **D41**: Connects WC and HALL 1
+- **D51**: Connects LINGERIE and HALL 1
+- **D61**: Connects BUREAU and HALL 1
+- **D71**: Connects BAIN and HALL 1
+- **D81**: Connects CHAMBRE PARENTS and HALL 1
+- **D91**: Connects CHAMBRE ENFANT 2 and HALL 1
+- **D101**: Connects CHAMBRE ENFANT 1 and HALL 1
+- **D111**: Connects CELLIER and HALL 1
+
+### Navigation Plan
+
+#### Starting Point: WC
+#### Destination: HALL 1
+
+1. **ApproachDoor(41)**: Move in front of door D41.
+2. **OpenDoor(41)**: Open door D41.
+3. **GoThrough(41)**: Move through door D41 to HALL 1.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 41},
+    {"action": "OpenDoor", "door": 41},
+    {"action": "GoThrough", "door": 41}
+  ]
+}
+```
+
+This plan ensures that you move from the WC to HALL 1 using the necessary door, D41, without any unnecessary steps or doors.

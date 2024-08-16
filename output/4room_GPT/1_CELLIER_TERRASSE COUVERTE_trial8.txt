@@ -1,0 +1,53 @@
+### Room and Door Connections
+
+#### Rooms:
+1. CELLIER
+2. HALL
+3. BAIN
+4. WC
+5. CHAMBRE 1
+6. CHAMBRE 2
+7. PORCHE
+8. CUISINE
+9. TERRASSE COUVERTE
+10. GARAGE
+
+#### Doors:
+1. D1: CELLIER - HALL
+2. D2: BAIN - WC
+3. D3: WC - HALL
+4. D4: HALL - CHAMBRE 1
+5. D5: HALL - CHAMBRE 2
+6. D6: HALL - PORCHE
+7. D7: HALL - CUISINE
+8. D8: CUISINE - TERRASSE COUVERTE
+9. D9: GARAGE - CELLIER
+
+### Navigation Plan
+
+#### Step-by-Step Solution:
+1. Start in CELLIER.
+2. Approach and open door D1 to enter HALL.
+3. Navigate through HALL to door D7.
+4. Approach and open door D7 to enter CUISINE.
+5. Navigate through CUISINE to door D8.
+6. Approach and open door D8 to enter TERRASSE COUVERTE.
+
+#### JSON Format Plan:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"}
+  ]
+}
+```
+
+This plan ensures that you move from the CELLIER to the TERRASSE COUVERTE by passing through the necessary doors in the correct sequence.

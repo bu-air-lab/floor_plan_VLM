@@ -1,0 +1,80 @@
+### Room and Door Connections
+
+1. **Garage**
+   - Door D1: Connects Garage to Cellier
+
+2. **Cellier**
+   - Door D1: Connects Cellier to Garage
+   - Door D2: Connects Cellier to Porche
+   - Door D3: Connects Cellier to Hall
+   - Door D11: Connects Cellier to Hall
+
+3. **Porche**
+   - Door D2: Connects Porche to Cellier
+
+4. **Hall**
+   - Door D3: Connects Hall to Cellier
+   - Door D4: Connects Hall to WC
+   - Door D5: Connects Hall to Lingerie
+   - Door D6: Connects Hall to Bureau
+   - Door D7: Connects Hall to Bains
+   - Door D8: Connects Hall to Chambre Parents
+   - Door D9: Connects Hall to Chambre Enfant 2
+   - Door D10: Connects Hall to Chambre Enfant 1
+   - Door D11: Connects Hall to Cellier
+
+5. **WC**
+   - Door D4: Connects WC to Hall
+
+6. **Lingerie**
+   - Door D5: Connects Lingerie to Hall
+
+7. **Bureau**
+   - Door D6: Connects Bureau to Hall
+
+8. **Bains**
+   - Door D7: Connects Bains to Hall
+
+9. **Chambre Parents**
+   - Door D8: Connects Chambre Parents to Hall
+
+10. **Chambre Enfant 1**
+    - Door D10: Connects Chambre Enfant 1 to Hall
+
+11. **Chambre Enfant 2**
+    - Door D9: Connects Chambre Enfant 2 to Hall
+
+### Navigation Plan
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"},
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"}
+]
+```
+
+### Step-by-Step Solution
+
+1. **From Garage to Cellier**
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1)
+
+2. **From Cellier to Hall**
+   - ApproachDoor(D11)
+   - OpenDoor(D11)
+   - GoThrough(D11)
+
+3. **From Hall to Chambre Enfant 1**
+   - ApproachDoor(D10)
+   - OpenDoor(D10)
+   - GoThrough(D10)
+
+This plan ensures that you move efficiently from the Garage to Chambre Enfant 1, using only the necessary doors.

@@ -1,0 +1,76 @@
+### Room and Door Connections
+
+#### Rooms:
+1. **Garage**
+2. **Porche**
+3. **Cellier**
+4. **Hall**
+5. **WC**
+6. **Lingerie**
+7. **Bureau**
+8. **Bains**
+9. **Chambre Parents**
+10. **Chambre Enfant 1**
+11. **Chambre Enfant 2**
+
+#### Doors:
+1. **D1**: Garage - Hall
+2. **D2**: Hall - Cellier
+3. **D3**: Cellier - Porche
+4. **D4**: WC - Hall
+5. **D5**: Hall - Lingerie
+6. **D6**: Hall - Bureau
+7. **D7**: Hall - Bains
+8. **D8**: Hall - Chambre Parents
+9. **D9**: Hall - Chambre Enfant 2
+10. **D10**: Hall - Chambre Enfant 1
+11. **D11**: Cellier - Hall
+12. **D12**: Hall - Hall
+13. **D13**: Garage - Cellier
+14. **D21**: Porche - Cellier
+15. **D31**: Cellier - Hall
+16. **D41**: WC - Hall
+17. **D51**: Hall - Lingerie
+18. **D61**: Hall - Bureau
+19. **D71**: Hall - Bains
+20. **D81**: Hall - Chambre Parents
+21. **D91**: Hall - Chambre Enfant 2
+22. **D101**: Hall - Chambre Enfant 1
+23. **D111**: Cellier - Hall
+
+### Navigation Plan
+
+#### Starting Point: Garage
+#### Destination: Bureau
+
+1. **ApproachDoor(D13)**
+2. **OpenDoor(D13)**
+3. **GoThrough(D13)**: Move from Garage to Cellier
+
+4. **ApproachDoor(D111)**
+5. **OpenDoor(D111)**
+6. **GoThrough(D111)**: Move from Cellier to Hall
+
+7. **ApproachDoor(D61)**
+8. **OpenDoor(D61)**
+9. **GoThrough(D61)**: Move from Hall to Bureau
+
+### JSON Format Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D13"},
+    {"action": "OpenDoor", "door": "D13"},
+    {"action": "GoThrough", "door": "D13"},
+    {"action": "ApproachDoor", "door": "D111"},
+    {"action": "OpenDoor", "door": "D111"},
+    {"action": "GoThrough", "door": "D111"},
+    {"action": "ApproachDoor", "door": "D61"},
+    {"action": "OpenDoor", "door": "D61"},
+    {"action": "GoThrough", "door": "D61"}
+  ]
+}
+```
+
+This plan ensures that you navigate efficiently from the Garage to the Bureau, using only the necessary doors.

@@ -1,0 +1,67 @@
+### Room and Door Connections
+
+- **PORCHE**
+  - Connected to SEJOUR via Door D1
+
+- **SEJOUR**
+  - Connected to PORCHE via Door D1
+  - Connected to CUISINE via Door D3
+  - Connected to DEGT via Door D4
+
+- **CUISINE**
+  - Connected to SEJOUR via Door D3
+  - Connected to CELLIER via Door D2
+
+- **CELLIER**
+  - Connected to CUISINE via Door D2
+
+- **DEGT**
+  - Connected to SEJOUR via Door D4
+  - Connected to CH.1 via Door D5
+  - Connected to CH.2 via Door D6
+  - Connected to WC via Door D8
+  - Connected to BAINS via Door D7
+
+- **CH.1**
+  - Connected to DEGT via Door D5
+
+- **CH.2**
+  - Connected to DEGT via Door D6
+
+- **WC**
+  - Connected to DEGT via Door D8
+
+- **BAINS**
+  - Connected to DEGT via Door D7
+
+### Navigation Plan
+
+1. **ApproachDoor(1)**
+2. **OpenDoor(1)**
+3. **GoThrough(1)**
+4. **ApproachDoor(4)**
+5. **OpenDoor(4)**
+6. **GoThrough(4)**
+7. **ApproachDoor(7)**
+8. **OpenDoor(7)**
+9. **GoThrough(7)**
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7}
+  ]
+}
+```
+
+This plan ensures that you move from the PORCHE to the BAINS by passing through the necessary doors in the correct sequence.

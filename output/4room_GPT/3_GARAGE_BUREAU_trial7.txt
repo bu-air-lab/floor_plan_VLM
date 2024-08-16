@@ -1,0 +1,62 @@
+### Room and Door Connections
+
+**Rooms:**
+1. Garage
+2. Cellier
+3. Porche
+4. Hall
+5. Lingerie
+6. Bureau
+7. WC
+8. Bains
+9. Chambre Parents
+10. Chambre Enfant 1
+11. Chambre Enfant 2
+
+**Doors:**
+1. D1: Garage - Cellier
+2. D2: Cellier - Porche
+3. D3: Porche - Hall
+4. D4: Hall - WC
+5. D5: Hall - Lingerie
+6. D6: Hall - Bureau
+7. D7: Hall - Bains
+8. D8: Hall - Chambre Parents
+9. D9: Hall - Chambre Enfant 2
+10. D10: Hall - Chambre Enfant 1
+11. D11: Cellier - Hall
+
+### Navigation Plan
+
+**Objective:** Begin in the Garage and arrive at the Bureau.
+
+**Steps:**
+1. ApproachDoor(1): Move in front of door D1.
+2. OpenDoor(1): Open door D1.
+3. GoThrough(1): Move through door D1 to the Cellier.
+4. ApproachDoor(11): Move in front of door D11.
+5. OpenDoor(11): Open door D11.
+6. GoThrough(11): Move through door D11 to the Hall.
+7. ApproachDoor(6): Move in front of door D6.
+8. OpenDoor(6): Open door D6.
+9. GoThrough(6): Move through door D6 to the Bureau.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 11},
+    {"action": "OpenDoor", "door": 11},
+    {"action": "GoThrough", "door": 11},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6}
+  ]
+}
+```
+
+This plan ensures that you navigate from the Garage to the Bureau efficiently, using only the necessary doors.

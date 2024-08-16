@@ -1,0 +1,63 @@
+### Room and Door Connections
+
+#### Rooms:
+1. PORCHE 1
+2. CELLIER 1
+3. HALL 1
+4. GARAGE 1
+5. LINGERIE 1
+6. BUREAU 1
+7. WC 1
+8. BAIN 1
+9. CHAMBRE PARENTS 1
+10. CHAMBRE ENFANT 1
+11. CHAMBRE ENFANT 2
+
+#### Doors:
+1. D1: Connects GARAGE 1 and HALL 1
+2. D2: Connects PORCHE 1 and CELLIER 1
+3. D3: Connects PORCHE 1 and HALL 1
+4. D4: Connects WC 1 and HALL 1
+5. D5: Connects LINGERIE 1 and HALL 1
+6. D6: Connects BUREAU 1 and HALL 1
+7. D7: Connects BAIN 1 and HALL 1
+8. D8: Connects CHAMBRE PARENTS 1 and HALL 1
+9. D9: Connects CHAMBRE ENFANT 2 and HALL 1
+10. D10: Connects CHAMBRE ENFANT 1 and HALL 1
+11. D11: Connects CELLIER 1 and HALL 1
+12. D12: Connects HALL 1 and HALL 1 (lower section)
+13. D13: Connects GARAGE 1 and CELLIER 1
+14. D21: Connects PORCHE 1 and CELLIER 1
+15. D31: Connects PORCHE 1 and HALL 1
+16. D41: Connects WC 1 and HALL 1
+17. D51: Connects LINGERIE 1 and HALL 1
+18. D61: Connects BUREAU 1 and HALL 1
+19. D71: Connects BAIN 1 and HALL 1
+20. D81: Connects CHAMBRE PARENTS 1 and HALL 1
+21. D91: Connects CHAMBRE ENFANT 2 and HALL 1
+22. D101: Connects CHAMBRE ENFANT 1 and HALL 1
+23. D111: Connects CELLIER 1 and HALL 1
+24. D121: Connects HALL 1 and HALL 1 (lower section)
+
+### Navigation Plan
+
+```json
+{
+  "navigation_plan": [
+    "ApproachDoor(21)",
+    "OpenDoor(21)",
+    "GoThrough(21)",
+    "ApproachDoor(111)",
+    "OpenDoor(111)",
+    "GoThrough(111)"
+  ]
+}
+```
+
+### Explanation:
+1. **ApproachDoor(21)**: Move in front of door D21.
+2. **OpenDoor(21)**: Open door D21.
+3. **GoThrough(21)**: Move through door D21 to enter CELLIER 1.
+4. **ApproachDoor(111)**: Move in front of door D111.
+5. **OpenDoor(111)**: Open door D111.
+6. **GoThrough(111)**: Move through door D111 to enter the final destination, CELLIER 1.

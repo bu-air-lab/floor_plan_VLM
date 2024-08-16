@@ -1,0 +1,57 @@
+### Room and Door Connections
+
+**Rooms:**
+1. CUISINE
+2. SEJOUR
+3. CELLER
+4. PORCHE
+5. DEGT
+6. WC
+7. BAINS
+8. CH.1
+9. CH.2
+
+**Doors:**
+1. D1: SEJOUR - PORCHE
+2. D2: CUISINE - CELLER
+3. D3: CUISINE - SEJOUR
+4. D4: SEJOUR - DEGT
+5. D5: DEGT - CH.1
+6. D6: DEGT - CH.2
+7. D7: DEGT - BAINS
+8. D8: DEGT - WC
+
+### Navigation Plan
+
+**Objective:** Navigate from CUISINE to CH.2
+
+**Steps:**
+1. ApproachDoor(3): Move in front of door D3.
+2. OpenDoor(3): Open door D3.
+3. GoThrough(3): Move through door D3 to SEJOUR.
+4. ApproachDoor(4): Move in front of door D4.
+5. OpenDoor(4): Open door D4.
+6. GoThrough(4): Move through door D4 to DEGT.
+7. ApproachDoor(6): Move in front of door D6.
+8. OpenDoor(6): Open door D6.
+9. GoThrough(6): Move through door D6 to CH.2.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6}
+  ]
+}
+```
+
+This plan ensures that you navigate efficiently from CUISINE to CH.2, using only the necessary doors and avoiding any unnecessary rooms or doors.

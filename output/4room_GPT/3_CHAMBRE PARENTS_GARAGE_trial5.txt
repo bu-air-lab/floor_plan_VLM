@@ -1,0 +1,52 @@
+### Room and Door Connections
+
+- **CHAMBRE PARENTS**:
+  - Door D8 to HALL
+
+- **HALL**:
+  - Door D8 to CHAMBRE PARENTS
+  - Door D7 to BAINS
+  - Door D6 to BUREAU
+  - Door D5 to LINGERIE
+  - Door D4 to WC
+  - Door D3 to PORCHE
+  - Door D2 to CELLIER
+  - Door D11 to CELLIER
+  - Door D10 to CHAMBRE ENFANT 1
+  - Door D9 to CHAMBRE ENFANT 2
+
+- **CELLIER**:
+  - Door D1 to GARAGE
+  - Door D2 to PORCHE
+  - Door D11 to HALL
+
+- **GARAGE**:
+  - Door D1 to CELLIER
+
+### Navigation Plan
+
+1. **ApproachDoor(D8)**: Move in front of door D8.
+2. **OpenDoor(D8)**: Open door D8.
+3. **GoThrough(D8)**: Move through door D8 to HALL.
+4. **ApproachDoor(D11)**: Move in front of door D11.
+5. **OpenDoor(D11)**: Open door D11.
+6. **GoThrough(D11)**: Move through door D11 to CELLIER.
+7. **ApproachDoor(D1)**: Move in front of door D1.
+8. **OpenDoor(D1)**: Open door D1.
+9. **GoThrough(D1)**: Move through door D1 to GARAGE.
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"}
+  ]
+}
+```

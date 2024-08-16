@@ -1,0 +1,55 @@
+### Room and Door Connections
+
+- **LINGERIE**
+  - Connected to HALL via Door D5
+
+- **HALL**
+  - Connected to LINGERIE via Door D5
+  - Connected to BUREAU via Door D6
+  - Connected to BATHROOM (BAINS) via Door D7
+  - Connected to PARENTS' BEDROOM (CHAMBRE PARENTS) via Door D8
+  - Connected to CHILDREN'S BEDROOM 2 (CHAMBRE ENFANT 2) via Door D9
+  - Connected to CHILDREN'S BEDROOM 1 (CHAMBRE ENFANT 1) via Door D10
+  - Connected to CELLAR (CELLIER) via Door D3
+
+- **CELLIER**
+  - Connected to HALL via Door D3
+  - Connected to PORCH via Door D2
+  - Connected to GARAGE via Door D1
+  - Connected to HALL via Door D11
+
+- **PORCH**
+  - Connected to CELLAR via Door D2
+
+- **GARAGE**
+  - Connected to CELLAR via Door D1
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D5"},
+  {"action": "OpenDoor", "door": "D5"},
+  {"action": "GoThrough", "door": "D5"},
+  {"action": "ApproachDoor", "door": "D3"},
+  {"action": "OpenDoor", "door": "D3"},
+  {"action": "GoThrough", "door": "D3"},
+  {"action": "ApproachDoor", "door": "D1"},
+  {"action": "OpenDoor", "door": "D1"},
+  {"action": "GoThrough", "door": "D1"}
+]
+```
+
+### Step-by-Step Navigation
+
+1. **ApproachDoor(D5)**: Move in front of Door D5.
+2. **OpenDoor(D5)**: Open Door D5.
+3. **GoThrough(D5)**: Move through Door D5 to enter the HALL.
+4. **ApproachDoor(D3)**: Move in front of Door D3.
+5. **OpenDoor(D3)**: Open Door D3.
+6. **GoThrough(D3)**: Move through Door D3 to enter the CELLAR.
+7. **ApproachDoor(D1)**: Move in front of Door D1.
+8. **OpenDoor(D1)**: Open Door D1.
+9. **GoThrough(D1)**: Move through Door D1 to enter the GARAGE.
+
+This plan ensures that you navigate from the LINGERIE to the GARAGE efficiently, using only the necessary doors.

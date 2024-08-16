@@ -1,0 +1,44 @@
+### Room and Door Connections
+
+#### Rooms:
+1. CUISINE 1
+2. SEJOUR 1
+3. DEGT 1
+4. CELLIER 1
+
+#### Doors:
+1. D31: Connects CUISINE 1 and SEJOUR 1
+2. D41: Connects SEJOUR 1 and DEGT 1
+3. D21: Connects DEGT 1 and CELLIER 1
+
+### Navigation Plan
+
+#### Step-by-Step Actions:
+1. **ApproachDoor(31)**: Move in front of door D31.
+2. **OpenDoor(31)**: Open door D31.
+3. **GoThrough(31)**: Move through door D31 to SEJOUR 1.
+4. **ApproachDoor(41)**: Move in front of door D41.
+5. **OpenDoor(41)**: Open door D41.
+6. **GoThrough(41)**: Move through door D41 to DEGT 1.
+7. **ApproachDoor(21)**: Move in front of door D21.
+8. **OpenDoor(21)**: Open door D21.
+9. **GoThrough(21)**: Move through door D21 to CELLIER 1.
+
+### Final Navigation Plan in JSON Format:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 31},
+    {"action": "OpenDoor", "door": 31},
+    {"action": "GoThrough", "door": 31},
+    {"action": "ApproachDoor", "door": 41},
+    {"action": "OpenDoor", "door": 41},
+    {"action": "GoThrough", "door": 41},
+    {"action": "ApproachDoor", "door": 21},
+    {"action": "OpenDoor", "door": 21},
+    {"action": "GoThrough", "door": 21}
+  ]
+}
+```
+
+This plan ensures that you navigate efficiently from CUISINE 1 to CELLIER 1, using only the necessary doors.

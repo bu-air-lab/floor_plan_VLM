@@ -1,0 +1,70 @@
+### Room and Door Connections
+
+#### Rooms:
+1. CHAMBRE ENFANT 11
+2. CHAMBRE ENFANT 21
+3. HALL
+4. CHAMBRE PARENTS 1
+5. BAIN 1
+6. BUREAU 1
+7. LINGERIE 1
+8. WC 1
+9. CELLIER 1
+10. PORCHE 1
+11. GARAGE 1
+
+#### Doors:
+1. D1: GARAGE 1 - HALL
+2. D2: CELLIER 1 - PORCHE 1
+3. D3: PORCHE 1 - HALL
+4. D4: WC 1 - HALL
+5. D5: LINGERIE 1 - HALL
+6. D6: BUREAU 1 - HALL
+7. D7: BAIN 1 - HALL
+8. D8: CHAMBRE PARENTS 1 - HALL
+9. D9: CHAMBRE ENFANT 21 - HALL
+10. D10: CHAMBRE ENFANT 11 - HALL
+11. D11: CELLIER 1 - HALL
+12. D12: HALL - HALL
+13. D13: GARAGE 1 - CELLIER 1
+14. D21: PORCHE 1 - CELLIER 1
+15. D31: HALL 1 - PORCHE 1
+16. D41: WC 1 - HALL 1
+17. D51: LINGERIE 1 - HALL 1
+18. D61: BUREAU 1 - HALL 1
+19. D71: BAIN 1 - HALL 1
+20. D81: CHAMBRE PARENTS 1 - HALL 1
+21. D91: CHAMBRE ENFANT 21 - HALL 1
+22. D101: CHAMBRE ENFANT 11 - HALL 1
+23. D111: CELLIER 1 - HALL 1
+24. D121: HALL 1 - HALL 1
+25. D131: GARAGE 1 - CELLIER 1
+
+### Navigation Plan
+
+#### Start: CHAMBRE ENFANT 11
+#### End: HALL
+
+1. ApproachDoor(D101)
+2. OpenDoor(D101)
+3. GoThrough(D101)
+4. ApproachDoor(D121)
+5. OpenDoor(D121)
+6. GoThrough(D121)
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D101"},
+    {"action": "OpenDoor", "door": "D101"},
+    {"action": "GoThrough", "door": "D101"},
+    {"action": "ApproachDoor", "door": "D121"},
+    {"action": "OpenDoor", "door": "D121"},
+    {"action": "GoThrough", "door": "D121"}
+  ]
+}
+```
+
+This plan ensures that you move from CHAMBRE ENFANT 11 to the HALL efficiently by using the necessary doors.

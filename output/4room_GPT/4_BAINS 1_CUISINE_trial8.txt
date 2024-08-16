@@ -1,0 +1,72 @@
+### Room and Door Connections
+
+#### Rooms:
+1. BAINS
+2. WC
+3. HALL
+4. CHAMBRE 1
+5. CHAMBRE 2
+6. PORCHE
+7. CUISINE
+8. TERRASSE COUVERTE
+9. CELLIER
+10. GARAGE
+11. HALL 1
+12. CHAMBRE 3
+13. CHAMBRE 4
+14. PORCHE 1
+15. CUISINE 1
+16. TERRASSE COUVERTE 1
+17. CELLIER 1
+18. GARAGE 1
+19. BAINS 1
+20. WC 1
+
+#### Doors:
+1. D1: HALL - CELLIER
+2. D2: HALL - BAINS
+3. D3: HALL - WC
+4. D4: HALL - CHAMBRE 1
+5. D5: HALL - CHAMBRE 2
+6. D6: HALL - PORCHE
+7. D7: HALL - CUISINE
+8. D8: CUISINE - TERRASSE COUVERTE
+9. D9: CELLIER - GARAGE
+10. D10: HALL 1 - TERRASSE COUVERTE 1
+11. D11: HALL 1 - CELLIER 1
+12. D21: HALL 1 - BAINS 1
+13. D31: HALL 1 - WC 1
+14. D41: HALL 1 - CHAMBRE 4
+15. D51: HALL 1 - CHAMBRE 3
+16. D61: HALL 1 - PORCHE 1
+17. D71: HALL 1 - CUISINE 1
+18. D81: CUISINE 1 - TERRASSE COUVERTE 1
+19. D91: CELLIER 1 - GARAGE 1
+
+### Navigation Plan
+
+Starting in BAINS, the goal is to reach CUISINE. Here is the step-by-step navigation plan:
+
+1. **ApproachDoor(2)**: Move in front of door D2.
+2. **OpenDoor(2)**: Open door D2.
+3. **GoThrough(2)**: Move through door D2 to HALL.
+4. **ApproachDoor(7)**: Move in front of door D7.
+5. **OpenDoor(7)**: Open door D7.
+6. **GoThrough(7)**: Move through door D7 to CUISINE.
+
+### JSON Format Plan
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7}
+  ]
+}
+```
+
+This plan ensures that you move from BAINS to CUISINE efficiently by using only the necessary doors.

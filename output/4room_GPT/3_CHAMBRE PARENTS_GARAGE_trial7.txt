@@ -1,0 +1,76 @@
+### Room and Door Connections
+
+1. **CHAMBRE PARENTS**
+   - Door D8: Connects to HALL
+
+2. **HALL**
+   - Door D8: Connects to CHAMBRE PARENTS
+   - Door D7: Connects to BAINS
+   - Door D6: Connects to BUREAU
+   - Door D5: Connects to LINGERIE
+   - Door D3: Connects to PORCHE
+   - Door D10: Connects to CHAMBRE ENFANT 1
+   - Door D9: Connects to CHAMBRE ENFANT 2
+   - Door D11: Connects to CELLIER
+
+3. **BAINS**
+   - Door D7: Connects to HALL
+
+4. **BUREAU**
+   - Door D6: Connects to HALL
+
+5. **LINGERIE**
+   - Door D5: Connects to HALL
+
+6. **PORCHE**
+   - Door D3: Connects to HALL
+   - Door D2: Connects to CELLIER
+
+7. **CELLIER**
+   - Door D2: Connects to PORCHE
+   - Door D1: Connects to GARAGE
+   - Door D11: Connects to HALL
+
+8. **CHAMBRE ENFANT 1**
+   - Door D10: Connects to HALL
+
+9. **CHAMBRE ENFANT 2**
+   - Door D9: Connects to HALL
+
+10. **GARAGE**
+    - Door D1: Connects to CELLIER
+
+### Navigation Plan
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"}
+]
+```
+
+### Step-by-Step Solution
+
+1. **CHAMBRE PARENTS to HALL**
+   - ApproachDoor(D8)
+   - OpenDoor(D8)
+   - GoThrough(D8)
+
+2. **HALL to CELLIER**
+   - ApproachDoor(D11)
+   - OpenDoor(D11)
+   - GoThrough(D11)
+
+3. **CELLIER to GARAGE**
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1)
+
+This plan ensures that you navigate from CHAMBRE PARENTS to the GARAGE efficiently, using only the necessary doors.

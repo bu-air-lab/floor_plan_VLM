@@ -1,0 +1,50 @@
+### Room and Door Connections
+
+#### Rooms:
+1. DEGT 1
+2. WC 1
+3. Bains 1
+4. DEGT
+5. CH.3
+6. CH.4
+7. SEJOUR1
+8. CUISINE 1
+9. CELLER 1
+10. Porche 1
+
+#### Doors:
+1. D41: DEGT 1 <-> SEJOUR1
+2. D51: DEGT 1 <-> CH.3
+3. D61: CH.3 <-> CH.4
+4. D71: Bains 1 <-> DEGT
+5. D81: WC 1 <-> DEGT 1
+6. D31: SEJOUR1 <-> CUISINE 1
+7. D21: CUISINE 1 <-> CELLER 1
+8. D11: SEJOUR1 <-> Porche 1
+9. D10: CELLER 1 <-> Porche 1
+
+### Navigation Plan
+
+#### Step-by-Step Actions:
+1. **ApproachDoor(D81)**: Move in front of door D81.
+2. **OpenDoor(D81)**: Open door D81.
+3. **GoThrough(D81)**: Move through door D81 to WC 1.
+4. **ApproachDoor(D71)**: Move in front of door D71.
+5. **OpenDoor(D71)**: Open door D71.
+6. **GoThrough(D71)**: Move through door D71 to DEGT.
+
+### Final Navigation Plan in JSON Format:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D81"},
+    {"action": "OpenDoor", "door": "D81"},
+    {"action": "GoThrough", "door": "D81"},
+    {"action": "ApproachDoor", "door": "D71"},
+    {"action": "OpenDoor", "door": "D71"},
+    {"action": "GoThrough", "door": "D71"}
+  ]
+}
+```
+
+This plan ensures that you move from DEGT 1 to DEGT by passing through the necessary doors in the correct sequence.

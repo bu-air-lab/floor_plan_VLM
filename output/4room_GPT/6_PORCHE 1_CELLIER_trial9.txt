@@ -1,0 +1,49 @@
+### Room and Door Connections
+
+#### Rooms:
+1. PORCHE 1
+2. CELLIER 1
+3. HALL 1
+4. GARAGE 1
+5. LINGERIE 1
+6. BUREAU 1
+7. WC 1
+8. BAIN 1
+9. CHAMBRE PARENTS 1
+10. CHAMBRE ENFANT 1
+11. CHAMBRE ENFANT 2
+
+#### Doors:
+1. D1: GARAGE 1 - HALL 1
+2. D2: PORCHE 1 - CELLIER 1
+3. D3: PORCHE 1 - HALL 1
+4. D4: WC 1 - HALL 1
+5. D5: LINGERIE 1 - HALL 1
+6. D6: BUREAU 1 - HALL 1
+7. D7: BAIN 1 - HALL 1
+8. D8: CHAMBRE PARENTS 1 - HALL 1
+9. D9: CHAMBRE ENFANT 2 - HALL 1
+10. D10: CHAMBRE ENFANT 1 - HALL 1
+11. D11: CELLIER 1 - HALL 1
+12. D12: HALL 1 - HALL 1 (connecting two parts of HALL 1)
+13. D13: GARAGE 1 - CELLIER 1
+
+### Navigation Plan
+
+#### Starting Point: PORCHE 1
+#### Destination: CELLIER 1
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+]
+```
+
+### Explanation:
+1. **ApproachDoor(D2)**: Move in front of door D2 which connects PORCHE 1 to CELLIER 1.
+2. **OpenDoor(D2)**: Open door D2.
+3. **GoThrough(D2)**: Move through door D2 to enter CELLIER 1.
+
+This plan ensures that you move directly from PORCHE 1 to CELLIER 1 using the shortest and most efficient path.

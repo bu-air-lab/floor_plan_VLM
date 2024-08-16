@@ -1,0 +1,43 @@
+### Room and Door Connections
+
+- **D1**: SEJOUR ↔ PORCHE
+- **D2**: SEJOUR ↔ CELLIER
+- **D3**: SEJOUR ↔ CUISINE
+- **D4**: SEJOUR ↔ DEGT
+- **D5**: CH.1 ↔ DEGT
+- **D6**: CH.2 ↔ DEGT
+- **D7**: BAINS ↔ DEGT
+- **D8**: WC ↔ DEGT
+
+### Navigation Plan
+
+1. **Start in CH.1**
+2. **ApproachDoor(5)**: Move in front of door D5.
+3. **OpenDoor(5)**: Open door D5.
+4. **GoThrough(5)**: Move through door D5 to DEGT.
+5. **ApproachDoor(4)**: Move in front of door D4.
+6. **OpenDoor(4)**: Open door D4.
+7. **GoThrough(4)**: Move through door D4 to SEJOUR.
+8. **ApproachDoor(3)**: Move in front of door D3.
+9. **OpenDoor(3)**: Open door D3.
+10. **GoThrough(3)**: Move through door D3 to CUISINE.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3}
+  ]
+}
+```
+
+This plan ensures that you navigate from CH.1 to CUISINE efficiently, using only the necessary doors.

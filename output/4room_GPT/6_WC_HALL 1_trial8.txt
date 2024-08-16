@@ -1,0 +1,32 @@
+### Room and Door Connections
+
+- **WC1**: Connected to **HALL1** via **D41**
+- **HALL1**: Connected to:
+  - **WC1** via **D41**
+  - **LINGERIE1** via **D51**
+  - **BUREAU1** via **D61**
+  - **BAINS1** via **D71**
+  - **CHAMBRE PARENTS1** via **D81**
+  - **CHAMBRE ENFANT 1** via **D101**
+  - **CHAMBRE ENFANT 2** via **D91**
+  - **PORCHE1** via **D31**
+  - **CELLIER1** via **D111**
+  - **HALL1** via **D12**
+
+### Navigation Plan
+
+1. **ApproachDoor(41)**: Move in front of door 41.
+2. **OpenDoor(41)**: Open door 41.
+3. **GoThrough(41)**: Move through open door 41 to **HALL1**.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 41},
+    {"action": "OpenDoor", "door": 41},
+    {"action": "GoThrough", "door": 41}
+  ]
+}
+```

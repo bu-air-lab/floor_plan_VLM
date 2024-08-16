@@ -1,0 +1,121 @@
+### Room and Door Connections
+
+#### Rooms:
+1. DEGT 1
+2. DEGT
+3. SEJOUR
+4. SEJOUR1
+5. CUISINE
+6. CUISINE 1
+7. CELLER
+8. CELLER 1
+9. CH.1
+10. CH.2
+11. CH.3
+12. CH.4
+13. BAIN
+14. BAIN 1
+15. WC
+16. WC 1
+17. Porche
+18. Porche 1
+
+#### Doors:
+1. D1: SEJOUR - Porche
+2. D2: CELLER - CUISINE
+3. D3: SEJOUR - CUISINE
+4. D4: SEJOUR - DEGT
+5. D5: DEGT - CH.1
+6. D6: DEGT - CH.2
+7. D7: DEGT - BAIN
+8. D8: WC - DEGT
+9. D9: CH.2 - CH.3
+10. D10: Porche1 - CELLER1
+11. D11: SEJOUR1 - Porche1
+12. D21: CELLER1 - CUISINE 1
+13. D31: SEJOUR1 - CUISINE 1
+14. D41: SEJOUR1 - DEGT 1
+15. D51: DEGT 1 - CH.3
+16. D61: DEGT 1 - CH.4
+17. D71: DEGT 1 - BAIN 1
+18. D81: WC 1 - DEGT 1
+
+### Navigation Plan
+
+#### Step-by-Step Solution:
+1. Start in DEGT 1.
+2. Approach door D41.
+3. Open door D41.
+4. Go through door D41 to SEJOUR1.
+5. Approach door D11.
+6. Open door D11.
+7. Go through door D11 to Porche1.
+8. Approach door D10.
+9. Open door D10.
+10. Go through door D10 to CELLER1.
+11. Approach door D21.
+12. Open door D21.
+13. Go through door D21 to CUISINE 1.
+14. Approach door D31.
+15. Open door D31.
+16. Go through door D31 to SEJOUR1.
+17. Approach door D41.
+18. Open door D41.
+19. Go through door D41 to DEGT 1.
+20. Approach door D81.
+21. Open door D81.
+22. Go through door D81 to WC 1.
+23. Approach door D81.
+24. Open door D81.
+25. Go through door D81 to DEGT 1.
+26. Approach door D51.
+27. Open door D51.
+28. Go through door D51 to CH.3.
+29. Approach door D9.
+30. Open door D9.
+31. Go through door D9 to CH.2.
+32. Approach door D6.
+33. Open door D6.
+34. Go through door D6 to DEGT.
+35. Arrive at DEGT.
+
+### Final Navigation Plan (JSON Format):
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D41"},
+    {"action": "OpenDoor", "door": "D41"},
+    {"action": "GoThrough", "door": "D41"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"},
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"},
+    {"action": "ApproachDoor", "door": "D21"},
+    {"action": "OpenDoor", "door": "D21"},
+    {"action": "GoThrough", "door": "D21"},
+    {"action": "ApproachDoor", "door": "D31"},
+    {"action": "OpenDoor", "door": "D31"},
+    {"action": "GoThrough", "door": "D31"},
+    {"action": "ApproachDoor", "door": "D41"},
+    {"action": "OpenDoor", "door": "D41"},
+    {"action": "GoThrough", "door": "D41"},
+    {"action": "ApproachDoor", "door": "D81"},
+    {"action": "OpenDoor", "door": "D81"},
+    {"action": "GoThrough", "door": "D81"},
+    {"action": "ApproachDoor", "door": "D81"},
+    {"action": "OpenDoor", "door": "D81"},
+    {"action": "GoThrough", "door": "D81"},
+    {"action": "ApproachDoor", "door": "D51"},
+    {"action": "OpenDoor", "door": "D51"},
+    {"action": "GoThrough", "door": "D51"},
+    {"action": "ApproachDoor", "door": "D9"},
+    {"action": "OpenDoor", "door": "D9"},
+    {"action": "GoThrough", "door": "D9"},
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"}
+  ]
+}
+```

@@ -1,0 +1,36 @@
+### Room and Door Connections
+
+#### Rooms:
+1. WC 1
+2. DEGT
+3. CH.2
+
+#### Doors:
+1. D8: WC 1 <-> DEGT
+2. D6: DEGT <-> CH.2
+
+### Navigation Plan
+
+#### Step-by-Step Solution:
+1. **ApproachDoor(8)**: Move in front of door D8.
+2. **OpenDoor(8)**: Open door D8.
+3. **GoThrough(8)**: Move through door D8 to DEGT.
+4. **ApproachDoor(6)**: Move in front of door D6.
+5. **OpenDoor(6)**: Open door D6.
+6. **GoThrough(6)**: Move through door D6 to CH.2.
+
+### Final Navigation Plan in JSON Format:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6}
+  ]
+}
+```
+
+This plan ensures that you move from WC 1 to CH.2 by passing through the necessary doors in the correct sequence.

@@ -1,0 +1,67 @@
+### Room and Door Connections
+
+- **WC**:
+  - Door D8 to DEGT
+
+- **DEGT**:
+  - Door D8 to WC
+  - Door D4 to SEJOUR
+  - Door D5 to CH.1
+  - Door D6 to CH.2
+  - Door D7 to BAINS
+
+- **SEJOUR**:
+  - Door D1 to PORCHE
+  - Door D4 to DEGT
+  - Door D3 to CUISINE
+
+- **PORCHE**:
+  - Door D1 to SEJOUR
+
+- **CUISINE**:
+  - Door D2 to CELLIER
+  - Door D3 to SEJOUR
+
+- **CELLIER**:
+  - Door D2 to CUISINE
+
+- **CH.1**:
+  - Door D5 to DEGT
+
+- **CH.2**:
+  - Door D6 to DEGT
+
+- **BAINS**:
+  - Door D7 to DEGT
+
+### Navigation Plan
+
+Starting in the WC, the goal is to reach the PORCHE. The sequence of actions is as follows:
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D8"},
+  {"action": "OpenDoor", "door": "D8"},
+  {"action": "GoThrough", "door": "D8"},
+  {"action": "ApproachDoor", "door": "D4"},
+  {"action": "OpenDoor", "door": "D4"},
+  {"action": "GoThrough", "door": "D4"},
+  {"action": "ApproachDoor", "door": "D1"},
+  {"action": "OpenDoor", "door": "D1"},
+  {"action": "GoThrough", "door": "D1"}
+]
+```
+
+### Step-by-Step Explanation
+
+1. **ApproachDoor(D8)**: Move in front of door D8 in the WC.
+2. **OpenDoor(D8)**: Open door D8.
+3. **GoThrough(D8)**: Move through door D8 to DEGT.
+4. **ApproachDoor(D4)**: Move in front of door D4 in DEGT.
+5. **OpenDoor(D4)**: Open door D4.
+6. **GoThrough(D4)**: Move through door D4 to SEJOUR.
+7. **ApproachDoor(D1)**: Move in front of door D1 in SEJOUR.
+8. **OpenDoor(D1)**: Open door D1.
+9. **GoThrough(D1)**: Move through door D1 to PORCHE.
+
+This plan ensures that you navigate from the WC to the PORCHE efficiently, using only the necessary doors.

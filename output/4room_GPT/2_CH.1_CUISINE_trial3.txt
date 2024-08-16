@@ -1,0 +1,52 @@
+### Room and Door Connections
+
+- **CH.1**:
+  - Door D5 connects CH.1 to DEGT
+
+- **DEGT**:
+  - Door D4 connects DEGT to SEJOUR
+  - Door D5 connects DEGT to CH.1
+  - Door D6 connects DEGT to CH.2
+  - Door D7 connects DEGT to BAINS
+  - Door D8 connects DEGT to WC
+
+- **SEJOUR**:
+  - Door D1 connects SEJOUR to Porche
+  - Door D3 connects SEJOUR to CUISINE
+  - Door D4 connects SEJOUR to DEGT
+
+- **CUISINE**:
+  - Door D2 connects CUISINE to CELLIER
+  - Door D3 connects CUISINE to SEJOUR
+
+- **CELLIER**:
+  - Door D2 connects CELLIER to CUISINE
+
+- **CH.2**:
+  - Door D6 connects CH.2 to DEGT
+
+- **BAINS**:
+  - Door D7 connects BAINS to DEGT
+
+- **WC**:
+  - Door D8 connects WC to DEGT
+
+### Navigation Plan
+
+Starting from CH.1, the goal is to reach CUISINE. The sequence of actions is as follows:
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D5"},
+  {"action": "OpenDoor", "door": "D5"},
+  {"action": "GoThrough", "door": "D5"},
+  {"action": "ApproachDoor", "door": "D4"},
+  {"action": "OpenDoor", "door": "D4"},
+  {"action": "GoThrough", "door": "D4"},
+  {"action": "ApproachDoor", "door": "D3"},
+  {"action": "OpenDoor", "door": "D3"},
+  {"action": "GoThrough", "door": "D3"}
+]
+```
+
+This plan ensures that you move from CH.1 to CUISINE by passing through the necessary doors in the correct sequence.

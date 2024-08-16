@@ -1,0 +1,49 @@
+### Room and Door Connections
+
+- **D1**: Hall <-> Cellier
+- **D2**: Hall <-> Bains
+- **D3**: Hall <-> WC
+- **D4**: Hall <-> Chambre 1
+- **D5**: Hall <-> Chambre 2
+- **D6**: Hall <-> Porche
+- **D7**: Hall <-> Cuisine
+- **D8**: Cuisine <-> Terrasse Couverte
+- **D9**: Cellier <-> Garage
+
+### Navigation Plan
+
+1. **ApproachDoor(6)**: Move in front of door D6.
+2. **OpenDoor(6)**: Open door D6.
+3. **GoThrough(6)**: Move through door D6 to enter the Hall.
+4. **ApproachDoor(7)**: Move in front of door D7.
+5. **OpenDoor(7)**: Open door D7.
+6. **GoThrough(7)**: Move through door D7 to enter the Cuisine.
+7. **ApproachDoor(1)**: Move in front of door D1.
+8. **OpenDoor(1)**: Open door D1.
+9. **GoThrough(1)**: Move through door D1 to enter the Cellier.
+10. **ApproachDoor(9)**: Move in front of door D9.
+11. **OpenDoor(9)**: Open door D9.
+12. **GoThrough(9)**: Move through door D9 to enter the Garage.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7},
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 9},
+    {"action": "OpenDoor", "door": 9},
+    {"action": "GoThrough", "door": 9}
+  ]
+}
+```
+
+This plan ensures that you move from the Porche to the Garage by passing through the necessary doors in the correct sequence.

@@ -1,0 +1,53 @@
+### Room and Door Connections
+
+#### Rooms:
+1. WC
+2. Bains
+3. Degt
+4. Sejour
+5. Cuisine
+6. Cellier
+7. Ch.1
+8. Ch.2
+9. Porche
+
+#### Doors:
+- **D1**: Sejour - Porche
+- **D2**: Cuisine - Cellier
+- **D3**: Cuisine - Sejour
+- **D4**: Sejour - Degt
+- **D5**: Degt - Ch.1
+- **D6**: Degt - Ch.2
+- **D7**: Bains - Degt
+- **D8**: WC - Degt
+
+### Navigation Plan
+
+#### Step-by-Step Solution:
+1. **Start in WC**
+2. ApproachDoor(D8)
+3. OpenDoor(D8)
+4. GoThrough(D8) to Degt
+5. ApproachDoor(D4)
+6. OpenDoor(D4)
+7. GoThrough(D4) to Sejour
+8. ApproachDoor(D1)
+9. OpenDoor(D1)
+10. GoThrough(D1) to Porche
+
+### Final Navigation Plan in JSON Format:
+```json
+[
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"}
+]
+```
+
+This plan ensures that you navigate from the WC to the Porche efficiently, using only the necessary doors.

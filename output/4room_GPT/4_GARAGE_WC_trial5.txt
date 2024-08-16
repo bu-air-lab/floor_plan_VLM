@@ -1,0 +1,60 @@
+### Room and Door Connections
+
+#### Rooms:
+1. GARAGE
+2. CELLER
+3. HALL
+4. BATHROOM (BAINS)
+5. WC
+6. CHAMBRE 1
+7. CHAMBRE 2
+8. PORCHE
+9. CUISINE
+10. TERRASSE COUVERTE
+
+#### Doors:
+1. D1: Connects CELLER and HALL
+2. D2: Connects BATHROOM and HALL
+3. D3: Connects WC and HALL
+4. D4: Connects CHAMBRE 1 and HALL
+5. D5: Connects CHAMBRE 2 and HALL
+6. D6: Connects PORCHE and HALL
+7. D7: Connects CUISINE and HALL
+8. D8: Connects CUISINE and TERRASSE COUVERTE
+9. D9: Connects GARAGE and CELLER
+10. D10: Connects TERRASSE COUVERTE and HALL
+
+### Navigation Plan
+
+#### Start: GARAGE
+#### End: WC
+
+1. **ApproachDoor(9)**: Move in front of door D9.
+2. **OpenDoor(9)**: Open door D9.
+3. **GoThrough(9)**: Move through door D9 to CELLER.
+4. **ApproachDoor(1)**: Move in front of door D1.
+5. **OpenDoor(1)**: Open door D1.
+6. **GoThrough(1)**: Move through door D1 to HALL.
+7. **ApproachDoor(3)**: Move in front of door D3.
+8. **OpenDoor(3)**: Open door D3.
+9. **GoThrough(3)**: Move through door D3 to WC.
+
+### Final Path in JSON Format
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": 9},
+    {"action": "OpenDoor", "door": 9},
+    {"action": "GoThrough", "door": 9},
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3}
+  ]
+}
+```
+
+This plan ensures that you move from the GARAGE to the WC by passing through the necessary doors in the correct sequence.

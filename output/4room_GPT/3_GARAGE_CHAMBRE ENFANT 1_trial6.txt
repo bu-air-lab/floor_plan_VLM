@@ -1,0 +1,74 @@
+### Room and Door Connections
+
+1. **Garage**
+   - Door D1: Connects Garage to Cellier
+
+2. **Cellier**
+   - Door D1: Connects Cellier to Garage
+   - Door D2: Connects Cellier to Porche
+   - Door D3: Connects Cellier to Hall
+   - Door D11: Connects Cellier to Hall
+
+3. **Porche**
+   - Door D2: Connects Porche to Cellier
+
+4. **Hall**
+   - Door D3: Connects Hall to Cellier
+   - Door D5: Connects Hall to Lingerie
+   - Door D6: Connects Hall to Bureau
+   - Door D7: Connects Hall to Bains
+   - Door D8: Connects Hall to Chambre Parents
+   - Door D9: Connects Hall to Chambre Enfant 2
+   - Door D10: Connects Hall to Chambre Enfant 1
+   - Door D11: Connects Hall to Cellier
+
+5. **Lingerie**
+   - Door D5: Connects Lingerie to Hall
+
+6. **Bureau**
+   - Door D6: Connects Bureau to Hall
+
+7. **Bains**
+   - Door D7: Connects Bains to Hall
+
+8. **Chambre Parents**
+   - Door D8: Connects Chambre Parents to Hall
+
+9. **Chambre Enfant 1**
+   - Door D10: Connects Chambre Enfant 1 to Hall
+
+10. **Chambre Enfant 2**
+    - Door D9: Connects Chambre Enfant 2 to Hall
+
+### Navigation Plan
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"},
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"}
+]
+```
+
+### Explanation of the Plan
+
+1. **From Garage to Cellier:**
+   - Approach Door D1
+   - Open Door D1
+   - Go Through Door D1 to enter Cellier
+
+2. **From Cellier to Hall:**
+   - Approach Door D11
+   - Open Door D11
+   - Go Through Door D11 to enter Hall
+
+3. **From Hall to Chambre Enfant 1:**
+   - Approach Door D10
+   - Open Door D10
+   - Go Through Door D10 to enter Chambre Enfant 1

@@ -1,0 +1,74 @@
+### Room and Door Connections
+
+1. **CELLIER**
+   - Door D1 to HALL
+   - Door D9 to GARAGE
+
+2. **HALL**
+   - Door D1 to CELLIER
+   - Door D2 to BAINS
+   - Door D3 to WC
+   - Door D4 to CHAMBRE 1
+   - Door D5 to CHAMBRE 2
+   - Door D6 to PORCHE
+   - Door D7 to CUISINE
+
+3. **BAINS**
+   - Door D2 to HALL
+
+4. **WC**
+   - Door D3 to HALL
+
+5. **CHAMBRE 1**
+   - Door D4 to HALL
+
+6. **CHAMBRE 2**
+   - Door D5 to HALL
+
+7. **PORCHE**
+   - Door D6 to HALL
+
+8. **CUISINE**
+   - Door D7 to HALL
+   - Door D8 to TERRASSE COUVERTE
+
+9. **TERRASSE COUVERTE**
+   - Door D8 to CUISINE
+
+10. **GARAGE**
+    - Door D9 to CELLIER
+
+### Navigation Plan
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"}
+]
+```
+
+### Step-by-Step Navigation
+
+1. **CELLIER to HALL**
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1)
+
+2. **HALL to CUISINE**
+   - ApproachDoor(D7)
+   - OpenDoor(D7)
+   - GoThrough(D7)
+
+3. **CUISINE to TERRASSE COUVERTE**
+   - ApproachDoor(D8)
+   - OpenDoor(D8)
+   - GoThrough(D8)
+
+This plan ensures that you move efficiently from the CELLIER to the TERRASSE COUVERTE by passing through the necessary doors in sequence.
