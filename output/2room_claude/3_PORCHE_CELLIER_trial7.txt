@@ -1,0 +1,35 @@
+Thank you for providing the floor plan. I'll analyze the connections and provide a navigation plan as requested.
+
+Explicit Room and Door Descriptions:
+
+D1: Connects PORCHE and CELLIER
+D2: Connects PORCHE and CELLIER
+D3: Connects PORCHE and HALL
+D4: Connects HALL and WC
+D5: Connects HALL and BUREAU
+D6: Connects HALL and BAINS
+D7: Connects HALL and HALL (near CHAMBRE PARENTS)
+D8: Connects HALL and CHAMBRE PARENTS
+D9: Connects HALL and CHAMBRE ENFANT 2
+D10: Connects HALL and CHAMBRE ENFANT 1
+D11: Connects HALL and CELLIER
+
+Step-by-step solution:
+1. Start in PORCHE
+2. Use D2 to enter CELLIER
+
+Final navigation plan in JSON format:
+
+```json
+{
+  "start": "PORCHE",
+  "end": "CELLIER",
+  "steps": [
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2}
+  ]
+}
+```
+
+This plan provides the most direct and efficient path from the PORCHE to the CELLIER using only the necessary doors.

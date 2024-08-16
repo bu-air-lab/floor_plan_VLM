@@ -1,0 +1,52 @@
+Certainly! I'll provide you with a detailed navigation plan based on the floor plan image. Let's start by listing the rooms and their door connections:
+
+Room and Door Connections:
+1. Garage - D1 connects to Cellier
+2. Cellier - D1 connects to Garage, D2 connects to Porche
+3. Porche - D2 connects to Cellier, D3 connects to Hall
+4. Hall - D3 connects to Porche, D4 connects to WC, D5 connects to Lingerie, D6 connects to Bureau, D7 connects to Bains, D8 connects to Chambre Parents, D9 connects to Chambre Enfant 2, D10 connects to Chambre Enfant 1, D11 connects to Cellier
+5. WC - D4 connects to Hall
+6. Lingerie - D5 connects to Hall
+7. Bureau - D6 connects to Hall
+8. Bains - D7 connects to Hall
+9. Chambre Parents - D8 connects to Hall
+10. Chambre Enfant 1 - D10 connects to Hall
+11. Chambre Enfant 2 - D9 connects to Hall
+
+Now, let's create a step-by-step navigation plan to go from the Garage to the WC:
+
+1. ApproachDoor(1)
+2. OpenDoor(1)
+3. GoThrough(1)
+4. ApproachDoor(2)
+5. OpenDoor(2)
+6. GoThrough(2)
+7. ApproachDoor(3)
+8. OpenDoor(3)
+9. GoThrough(3)
+10. ApproachDoor(4)
+11. OpenDoor(4)
+12. GoThrough(4)
+
+Here's the final path in JSON format:
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4}
+  ]
+}
+```
+
+This path efficiently navigates you from the Garage to the WC using only the necessary doors and rooms. The plan takes into account that doors close after each GoThrough action, so each door needs to be approached and opened before going through it.

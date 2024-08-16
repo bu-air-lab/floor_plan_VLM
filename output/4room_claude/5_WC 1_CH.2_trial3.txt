@@ -1,0 +1,46 @@
+Thank you for providing the floor plan. I'll start by listing the rooms and doors with their connections, then provide a navigation plan to get from WC 1 to CH.2.
+
+Room and Door Connections:
+D31: Connects SEJOUR1 and CUISINE1
+D41: Connects SEJOUR1 and DEGT1
+D51: Connects DEGT1 and CH.3
+D61: Connects DEGT1 and CH.4
+D71: Connects DEGT1 and BAINS1
+D81: Connects DEGT1 and WC1
+D9: Connects left and right sides of the building
+D8: Connects DEGT and WC
+D7: Connects DEGT and BAINS
+D6: Connects DEGT and CH.2
+D5: Connects DEGT and CH.1
+D4: Connects SEJOUR and DEGT
+D3: Connects SEJOUR and CUISINE
+D2: Connects SEJOUR and CELLIER
+D1: Connects SEJOUR and Porche
+D10: Connects left and right CELLIER
+D11: Connects Porche1 and SEJOUR1
+D21: Connects SEJOUR1 and CELLIER1
+
+Navigation Plan:
+1. ApproachDoor(D81)
+2. OpenDoor(D81)
+3. GoThrough(D81)
+4. ApproachDoor(D6)
+5. OpenDoor(D6)
+6. GoThrough(D6)
+
+Here's the final path in JSON format:
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": "D81"},
+    {"action": "OpenDoor", "door": "D81"},
+    {"action": "GoThrough", "door": "D81"},
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"}
+  ]
+}
+```
+
+This plan will efficiently navigate you from WC1 to CH.2 using only the necessary doors.

@@ -1,0 +1,26 @@
+Thank you for providing the floor plan. I'll analyze the layout, list the rooms and doors with their connections, and then provide a navigation plan from the PORCHE to the CELLIER.
+
+Room and Door Connections:
+1. PORCHE connects to HALL via D2 and to CELLIER via D1
+2. HALL connects to PORCHE via D2, to CELLIER via D3, and to WC via D4
+3. CELLIER connects to PORCHE via D1 and to HALL via D3
+4. WC connects to HALL via D4
+5. LINGERIE connects to HALL via D5
+6. BUREAU connects to HALL via D6
+7. BAINS connects to HALL via D7
+8. CHAMBRE PARENTS connects to HALL via D8
+9. CHAMBRE ENFANT 2 connects to HALL via D9
+10. CHAMBRE ENFANT 1 connects to HALL via D10
+11. CELLIER (lower) connects to HALL via D11
+
+Now, let's create the navigation plan from PORCHE to CELLIER:
+
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1}
+  ]
+}
+
+This plan takes you directly from the PORCHE to the CELLIER using the most efficient route. The plan involves only one door (D1) which directly connects these two areas.

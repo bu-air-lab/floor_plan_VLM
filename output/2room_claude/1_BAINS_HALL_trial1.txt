@@ -1,0 +1,29 @@
+Thank you for providing the floor plan. I'll first list out the rooms and doors with their connections, then provide a navigation plan to get from BAINS to HALL.
+
+Room and Door Connections:
+D1: Connects CELLIER and HALL
+D2: Connects BAINS and HALL
+D3: Connects WC and HALL
+D4: Connects HALL and CHAMBRE 1
+D5: Connects HALL and CHAMBRE 2
+D6: Connects HALL and PORCHE
+D7: Connects HALL and CUISINE
+D8: Connects CUISINE and TERRASSE COUVERTE
+D9: Connects CELLIER and GARAGE
+
+Navigation Plan:
+To move from BAINS to HALL, we only need to use one door: D2.
+
+Here's the step-by-step plan in JSON format:
+
+```json
+{
+  "plan": [
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2}
+  ]
+}
+```
+
+This plan will efficiently move you from BAINS to HALL using the most direct route available according to the floor plan.

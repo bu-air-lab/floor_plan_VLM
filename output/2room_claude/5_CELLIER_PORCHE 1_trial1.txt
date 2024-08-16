@@ -1,0 +1,46 @@
+Thank you for providing the floor plan image. I'll analyze the layout, list the room and door connections, and then provide a navigation plan to get from CELLIER to PORCHE 1.
+
+Room and Door Connections:
+1. D10 connects CELLIER and PORCHE1
+2. D2 connects CELLIER and CUISINE
+3. D3 connects CUISINE and SEJOUR
+4. D4 connects SEJOUR and DEGT
+5. D5 connects DEGT and CH.1
+6. D6 connects DEGT and CH.2
+7. D7 connects DEGT and BAINS
+8. D8 connects DEGT and WC
+9. D9 connects CH.2 and CH.4
+10. D1 connects SEJOUR and PORCHE
+11. D11 connects PORCHE1 and SEJOUR1
+12. D21 connects CELLIER1 and CUISINE1
+13. D31 connects CUISINE1 and SEJOUR1
+14. D41 connects SEJOUR1 and DEGT1
+15. D51 connects DEGT1 and CH.3
+16. D61 connects DEGT1 and CH.4
+17. D71 connects DEGT1 and BAINS1
+18. D81 connects DEGT1 and WC1
+
+Navigation Plan:
+To get from CELLIER to PORCHE1, we only need to use one door:
+
+1. ApproachDoor(10)
+2. OpenDoor(10)
+3. GoThrough(10)
+
+This is the most efficient path as it directly connects CELLIER to PORCHE1.
+
+Here's the plan in JSON format:
+
+```json
+{
+  "start": "CELLIER",
+  "end": "PORCHE1",
+  "path": [
+    {"action": "ApproachDoor", "door": 10},
+    {"action": "OpenDoor", "door": 10},
+    {"action": "GoThrough", "door": 10}
+  ]
+}
+```
+
+This plan ensures the most direct and efficient route from CELLIER to PORCHE1 using only the necessary door.

@@ -1,25 +1,24 @@
 import os
-import json
 import base64
+import time
+import random
 from anthropic import Anthropic
 
 # Set your Anthropic API key
-api_key_file = open("api_key.txt", "r+")
-API_KEY = api_key_file.read().strip()
-api_key_file.close()
+with open("api_key.txt", "r") as api_key_file:
+    API_KEY = api_key_file.read().strip()
 
 os.environ["ANTHROPIC_API_KEY"] = API_KEY
 client = Anthropic()
 
 # Folder to images dataset
-image_folder = 'maps'
+image_folder = 'maps/dense_labels'
 
 # Output folder for JSON plans from VLM
-output_folder = 'output'
+output_folder = 'output/4room_claude'
 
 # Create output folder if it doesn't exist
-if not os.path.exists(output_folder):
-    os.makedirs(output_folder)
+os.makedirs(output_folder, exist_ok=True)
 
 # Get a list of image files
 image_files = sorted([f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f))])
@@ -105,68 +104,81 @@ MAX_TOKENS = 2048
 
 def get_base64_encoded_image(image_path):
     with open(image_path, "rb") as image_file:
-        binary_data = image_file.read()
-        base_64_encoded_data = base64.b64encode(binary_data)
-        base64_string = base_64_encoded_data.decode('utf-8')
-        return base64_string
+        return base64.b64encode(image_file.read()).decode('utf-8')
 
-def query_claude_with_image_and_text(image_path, text_prompt):
-    media_type = f"image/{image_path.split('.')[-1]}"
+def query_claude_with_image_and_text(image_path, text_prompt, max_retries=5, initial_delay=1):
+    retries = 0
+    while retries < max_retries:
+        try:
+            media_type = f"image/{image_path.split('.')[-1]}"
     
-    message_list = [
-        {
-            "role": "user",
-            "content": [
+            message_list = [
                 {
-                    "type": "image", 
-                    "source": {
-                        "type": "base64", 
-                        "media_type": media_type, 
-                        "data": get_base64_encoded_image(image_path)
-                    }
-                },
-                {"type": "text", "text": text_prompt}
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "image", 
+                            "source": {
+                                "type": "base64", 
+                                "media_type": media_type, 
+                                "data": get_base64_encoded_image(image_path)
+                            }
+                        },
+                        {"type": "text", "text": text_prompt}
+                    ]
+                }
             ]
-        }
-    ]
 
-    response = client.messages.create(
-        model=MODEL_NAME,
-        max_tokens=MAX_TOKENS,
-        messages=message_list
-    )
+            response = client.messages.create(
+                model=MODEL_NAME,
+                max_tokens=MAX_TOKENS,
+                messages=message_list
+            )
 
-    return response.content[0].text
+            return response.content[0].text
+        except Exception as e:
+            retries += 1
+            if retries == max_retries:
+                print(f"Max retries reached for query. Error: {e}")
+                return None
+            delay = initial_delay * (2 ** retries) + random.uniform(0, 1)
+            print(f"Error: {e}. Retrying in {delay:.2f} seconds...")
+            time.sleep(delay)
 
 def process_images_and_prompts():
-    for image_file in image_files:
-         if image_file.startswith('simple3'):
+    for image_file in image_files:      
+        image_path = os.path.join(image_folder, image_file)
         
-            image_path = os.path.join(image_folder, image_file)
-            
-            key = image_file[:-4]
+        key = image_file[:-4]
 
-            for plan in plans[key]:
-                start, end = plan
+        if key not in plans:
+            print(f"No plan found for image {image_file}. Skipping.")
+            continue
 
-                prompt = prompt_A + start + prompt_B + end + prompt_C
+        for plan in plans[key]:
+            start, end = plan
 
-                for n in range(N):
-                    # Call Claude API
-                    text_response = query_claude_with_image_and_text(image_path, prompt)
+            prompt = prompt_A + start + prompt_B + end + prompt_C
 
-                    # Write the text response to a new file
-                    filename = f'output/4room_claude/{key}_{start}_{end}_trial{n}.txt'
-                    with open(filename, 'w') as file:
-                        file.write(text_response)
+            for n in range(N):
+                # Call Claude API
+                text_response = query_claude_with_image_and_text(image_path, prompt)
 
-                    print(f"Done with trial {n}")
-                    
+                if text_response is None:
+                    print(f"Failed to get response for {image_file}, plan {plan}, trial {n}")
+                    continue
 
-                print(f"Done with plan: {plan}")
+                # Write the text response to a new file
+                filename = f'{output_folder}/{key}_{start}_{end}_trial{n}.txt'
+                with open(filename, 'w') as file:
+                    file.write(text_response)
+
+                print(f"Done with trial {n}")                   
                 
-
-            print(f"Done with {image_file}")
+            print(f"Done with plan: {plan}")
+            
+        print(f"Done with {image_file}")
 
 # Run the process
 process_images_and_prompts()
+print("Done with processing all images.")

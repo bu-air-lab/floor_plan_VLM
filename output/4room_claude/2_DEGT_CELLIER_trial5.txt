@@ -1,0 +1,63 @@
+Thank you for providing the floor plan and the navigation task. Let's start by listing the rooms and doors with their connections based on the image:
+
+Room and Door Connections:
+1. DEGT connects to SEJOUR via D4
+2. DEGT connects to CH.2 via D6
+3. DEGT connects to WC via D8
+4. SEJOUR connects to CUISINE via D3
+5. SEJOUR connects to Porche via D1
+6. CUISINE connects to CELLIER via D2
+7. CH.1 connects to SEJOUR via D5
+
+Now, let's create the navigation plan to go from DEGT to CELLIER:
+
+Step 1: Exit DEGT to SEJOUR
+Step 2: Go from SEJOUR to CUISINE
+Step 3: Go from CUISINE to CELLIER
+
+Here's the detailed action plan in JSON format:
+
+```json
+{
+  "navigationPlan": [
+    {
+      "action": "ApproachDoor",
+      "door": 4
+    },
+    {
+      "action": "OpenDoor",
+      "door": 4
+    },
+    {
+      "action": "GoThrough",
+      "door": 4
+    },
+    {
+      "action": "ApproachDoor",
+      "door": 3
+    },
+    {
+      "action": "OpenDoor",
+      "door": 3
+    },
+    {
+      "action": "GoThrough",
+      "door": 3
+    },
+    {
+      "action": "ApproachDoor",
+      "door": 2
+    },
+    {
+      "action": "OpenDoor",
+      "door": 2
+    },
+    {
+      "action": "GoThrough",
+      "door": 2
+    }
+  ]
+}
+```
+
+This plan efficiently navigates from DEGT to CELLIER using only the necessary doors and avoiding any unnecessary rooms or detours.

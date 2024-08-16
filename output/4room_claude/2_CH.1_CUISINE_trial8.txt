@@ -1,0 +1,39 @@
+Thank you for providing the floor plan. I'll analyze the layout, list the room and door connections, and then provide a navigation plan from CH.1 to CUISINE.
+
+Room and Door Connections:
+- D1: Connects SEJOUR and Porche
+- D2: Connects SEJOUR and CUISINE
+- D3: Connects SEJOUR and CUISINE
+- D4: Connects SEJOUR and DEGT
+- D5: Connects CH.1 and DEGT
+- D6: Connects DEGT and CH.2
+- D7: Connects DEGT and BAINS
+- D8: Connects DEGT and WC
+
+Now, let's create the navigation plan from CH.1 to CUISINE:
+
+1. ApproachDoor(5)
+2. OpenDoor(5)
+3. GoThrough(5)
+4. ApproachDoor(3)
+5. OpenDoor(3)
+6. GoThrough(3)
+
+Here's the navigation plan in JSON format:
+
+```json
+{
+  "start": "CH.1",
+  "end": "CUISINE",
+  "plan": [
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3}
+  ]
+}
+```
+
+This plan takes you from CH.1 to CUISINE using the most direct route. You'll first go through D5 to enter DEGT, then use D3 to enter CUISINE. This path avoids any unnecessary rooms or doors.

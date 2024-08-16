@@ -1,0 +1,36 @@
+Thank you for providing the floor plan. I'll start by listing the rooms and their door connections, then provide a step-by-step navigation plan to get from DEGT 1 to CH.4.
+
+Room and Door Connections:
+1. DEGT 1 - D51, D61
+2. SEJOUR1 - D41, D31, D11
+3. CUISINE 1 - D31, D21
+4. CELLIER1 - D21
+5. BAINS 1 - D71
+6. WC 1 - D81
+7. CH.4 - D61
+8. CH.3 - D41, D51
+
+Navigation Plan:
+To get from DEGT 1 to CH.4, we only need to use one door: D61.
+
+Step-by-step solution:
+1. Start in DEGT 1
+2. ApproachDoor(D61)
+3. OpenDoor(D61)
+4. GoThrough(D61)
+
+Here's the final path in JSON format:
+
+```json
+{
+  "start": "DEGT 1",
+  "end": "CH.4",
+  "path": [
+    {"action": "ApproachDoor", "door": "D61"},
+    {"action": "OpenDoor", "door": "D61"},
+    {"action": "GoThrough", "door": "D61"}
+  ]
+}
+```
+
+This is the most efficient path from DEGT 1 to CH.4, using only the necessary door (D61) to reach the destination.

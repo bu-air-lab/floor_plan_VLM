@@ -1,0 +1,118 @@
+Thank you for providing the floor plan. I'll first list the rooms and their door connections, then provide a step-by-step navigation plan to get from WC 1 to CH.2.
+
+Room and Door Connections:
+1. WC 1 - D71 connects to DEGT 1
+2. DEGT 1 - D61 connects to CH.4, D51 connects to SEJOUR 1
+3. SEJOUR 1 - D41 connects to DEGT 1, D31 connects to CUISINE 1, D11 connects to Porche1
+4. CUISINE 1 - D31 connects to SEJOUR 1, D21 connects to CELLIER 1
+5. CELLIER 1 - D21 connects to CUISINE 1
+6. Porche1 - D11 connects to SEJOUR 1, D10 connects to CELLIER
+7. CELLIER - D10 connects to Porche1, D2 connects to CUISINE
+8. CUISINE - D2 connects to CELLIER, D3 connects to SEJOUR
+9. SEJOUR - D3 connects to CUISINE, D4 connects to DEGT, D1 connects to Porche
+10. Porche - D1 connects to SEJOUR
+11. DEGT - D4 connects to SEJOUR, D5 connects to CH.1, D6 connects to CH.2, D8 connects to WC
+12. CH.1 - D5 connects to DEGT
+13. CH.2 - D6 connects to DEGT
+14. WC - D8 connects to DEGT
+15. BAINS - D7 connects to DEGT
+16. BAINS 1 - D71 connects to DEGT 1
+17. CH.3 - D51 connects to DEGT 1
+18. CH.4 - D61 connects to DEGT 1
+
+Step-by-step navigation plan:
+1. ApproachDoor(71)
+2. OpenDoor(71)
+3. GoThrough(71)
+4. ApproachDoor(51)
+5. OpenDoor(51)
+6. GoThrough(51)
+7. ApproachDoor(41)
+8. OpenDoor(41)
+9. GoThrough(41)
+10. ApproachDoor(51)
+11. OpenDoor(51)
+12. GoThrough(51)
+13. ApproachDoor(61)
+14. OpenDoor(61)
+15. GoThrough(61)
+16. ApproachDoor(51)
+17. OpenDoor(51)
+18. GoThrough(51)
+19. ApproachDoor(41)
+20. OpenDoor(41)
+21. GoThrough(41)
+22. ApproachDoor(31)
+23. OpenDoor(31)
+24. GoThrough(31)
+25. ApproachDoor(21)
+26. OpenDoor(21)
+27. GoThrough(21)
+28. ApproachDoor(10)
+29. OpenDoor(10)
+30. GoThrough(10)
+31. ApproachDoor(2)
+32. OpenDoor(2)
+33. GoThrough(2)
+34. ApproachDoor(3)
+35. OpenDoor(3)
+36. GoThrough(3)
+37. ApproachDoor(4)
+38. OpenDoor(4)
+39. GoThrough(4)
+40. ApproachDoor(6)
+41. OpenDoor(6)
+42. GoThrough(6)
+
+JSON format of the final path:
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": 71},
+    {"action": "OpenDoor", "door": 71},
+    {"action": "GoThrough", "door": 71},
+    {"action": "ApproachDoor", "door": 51},
+    {"action": "OpenDoor", "door": 51},
+    {"action": "GoThrough", "door": 51},
+    {"action": "ApproachDoor", "door": 41},
+    {"action": "OpenDoor", "door": 41},
+    {"action": "GoThrough", "door": 41},
+    {"action": "ApproachDoor", "door": 51},
+    {"action": "OpenDoor", "door": 51},
+    {"action": "GoThrough", "door": 51},
+    {"action": "ApproachDoor", "door": 61},
+    {"action": "OpenDoor", "door": 61},
+    {"action": "GoThrough", "door": 61},
+    {"action": "ApproachDoor", "door": 51},
+    {"action": "OpenDoor", "door": 51},
+    {"action": "GoThrough", "door": 51},
+    {"action": "ApproachDoor", "door": 41},
+    {"action": "OpenDoor", "door": 41},
+    {"action": "GoThrough", "door": 41},
+    {"action": "ApproachDoor", "door": 31},
+    {"action": "OpenDoor", "door": 31},
+    {"action": "GoThrough", "door": 31},
+    {"action": "ApproachDoor", "door": 21},
+    {"action": "OpenDoor", "door": 21},
+    {"action": "GoThrough", "door": 21},
+    {"action": "ApproachDoor", "door": 10},
+    {"action": "OpenDoor", "door": 10},
+    {"action": "GoThrough", "door": 10},
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6}
+  ]
+}
+```
+
+This path will efficiently navigate you from WC 1 to CH.2 using only the available doors.

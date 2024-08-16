@@ -1,0 +1,36 @@
+Thank you for providing the floor plan. I'll analyze the layout, list the room and door connections, and then provide a navigation plan to get from the HALL to the WC.
+
+Room and Door Connections:
+D1: Connects HALL to CELLIER
+D2: Connects CELLIER to PORCHE
+D3: Connects PORCHE to HALL
+D4: Connects HALL to WC
+D5: Connects HALL to LINGERIE
+D6: Connects HALL to BUREAU
+D7: Connects HALL to BAINS
+D8: Connects HALL to CHAMBRE PARENTS
+D9: Connects HALL to CHAMBRE ENFANT 2
+D10: Connects HALL to CHAMBRE ENFANT 1
+D11: Connects CELLIER to HALL
+
+Step-by-step Solution:
+1. Start in the HALL
+2. Approach door D4
+3. Open door D4
+4. Go through door D4 to enter the WC
+
+Final Navigation Plan in JSON format:
+
+```json
+{
+  "start": "HALL",
+  "end": "WC",
+  "actions": [
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4}
+  ]
+}
+```
+
+This plan provides the most direct and efficient path from the HALL to the WC, using only the necessary door (D4) to reach the destination.

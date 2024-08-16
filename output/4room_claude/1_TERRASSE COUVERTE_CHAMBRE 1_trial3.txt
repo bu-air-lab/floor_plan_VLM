@@ -1,0 +1,49 @@
+Thank you for providing the floor plan. I'll start by listing the rooms and doors with their connections, then provide a navigation plan to get from the TERRASSE COUVERTE to CHAMBRE 1.
+
+Room and Door Connections:
+
+D8: Connects TERRASSE COUVERTE and CUISINE
+D7: Connects CUISINE and HALL
+D6: Connects HALL and PORCHE
+D5: Connects HALL and CHAMBRE 2
+D4: Connects HALL and CHAMBRE 1
+D3: Connects HALL and WC
+D2: Connects HALL and BAINS
+D1: Connects HALL and CELLIER
+D9: Connects CELLIER and GARAGE
+
+Navigation Plan:
+
+To go from TERRASSE COUVERTE to CHAMBRE 1, we need to use doors D8, D7, and D4. Here's the detailed plan:
+
+1. ApproachDoor(8)
+2. OpenDoor(8)
+3. GoThrough(8)
+4. ApproachDoor(7)
+5. OpenDoor(7)
+6. GoThrough(7)
+7. ApproachDoor(4)
+8. OpenDoor(4)
+9. GoThrough(4)
+
+This plan takes you from TERRASSE COUVERTE through the CUISINE, into the HALL, and finally into CHAMBRE 1.
+
+Here's the plan in JSON format:
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4}
+  ]
+}
+```
+
+This plan provides the most efficient route from TERRASSE COUVERTE to CHAMBRE 1, using only the necessary doors and avoiding any unnecessary rooms or detours.

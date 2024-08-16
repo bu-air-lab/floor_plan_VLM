@@ -1,0 +1,40 @@
+Thank you for providing the floor plan. I'll first list out the rooms and doors with their connections, then provide a navigation plan to get from DEGT to CELLIER.
+
+Room and Door Connections:
+1. D1: Connects SEJOUR and Porche
+2. D2: Connects SEJOUR and CUISINE
+3. D3: Connects SEJOUR and CUISINE
+4. D4: Connects SEJOUR and DEGT
+5. D5: Connects DEGT and CH.1
+6. D6: Connects DEGT and CH.2
+7. D7: Connects DEGT and BAINS
+8. D8: Connects DEGT and WC
+
+Navigation Plan:
+To get from DEGT to CELLIER, we need to go through the SEJOUR. Here's the step-by-step plan:
+
+1. ApproachDoor(4)
+2. OpenDoor(4)
+3. GoThrough(4)
+4. ApproachDoor(1)
+5. OpenDoor(1)
+6. GoThrough(1)
+
+Here's the plan in JSON format:
+
+```json
+{
+  "start": "DEGT",
+  "end": "CELLIER",
+  "plan": [
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1}
+  ]
+}
+```
+
+This plan takes you from DEGT through SEJOUR and finally to CELLIER using the most direct route available based on the floor plan provided.

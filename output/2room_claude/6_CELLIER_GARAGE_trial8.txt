@@ -1,0 +1,33 @@
+Thank you for providing the floor plan. I'll analyze the layout, list the rooms and doors with their connections, and then provide a navigation plan from the CELLIER to the GARAGE.
+
+Room and Door Connections:
+1. D1: Connects CELLIER to GARAGE
+2. D2: Connects CELLIER to PORCHE
+3. D3: Connects PORCHE to HALL
+4. D4: Connects HALL to WC
+5. D5: Connects HALL to LINGERIE
+6. D6: Connects HALL to BUREAU
+7. D7: Connects HALL to BAINS
+8. D8: Connects HALL to CHAMBRE PARENTS
+9. D9: Connects HALL to CHAMBRE ENFANT 2
+10. D10: Connects HALL to CHAMBRE ENFANT 1
+11. D11: Connects CELLIER to HALL
+12. D12: Connects HALL to GARAGE
+
+Step-by-step navigation plan:
+1. Start in CELLIER
+2. Use D1 to go directly to GARAGE
+
+Final navigation plan in JSON format:
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1}
+  ]
+}
+```
+
+This plan provides the most direct and efficient route from the CELLIER to the GARAGE using only the necessary door (D1) that connects these two spaces directly.
