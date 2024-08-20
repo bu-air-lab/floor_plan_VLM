@@ -1,0 +1,35 @@
+### Room and Door Connections
+
+- **DEGT 1**:
+  - Connected to DEGT via D51
+  - Connected to WC 1 via D81
+  - Connected to Bains 1 via D71
+  - Connected to CH.3 via D41
+
+- **DEGT**:
+  - Connected to DEGT 1 via D51
+  - Connected to WC via D8
+  - Connected to Bains via D7
+  - Connected to CH.1 via D5
+  - Connected to CH.2 via D6
+  - Connected to SEJOUR via D4
+
+### Navigation Plan
+
+1. **ApproachDoor(51)**: Move in front of door D51.
+2. **OpenDoor(51)**: Open door D51.
+3. **GoThrough(51)**: Move through open door D51 to DEGT.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 51},
+    {"action": "OpenDoor", "door": 51},
+    {"action": "GoThrough", "door": 51}
+  ]
+}
+```
+
+This plan ensures that you move from DEGT 1 to DEGT by using the necessary door D51.

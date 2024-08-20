@@ -1,0 +1,80 @@
+### Room and Door Connections
+
+- **Garage**:
+  - Door D1: Connects Garage to Cellier
+
+- **Cellier**:
+  - Door D1: Connects Cellier to Garage
+  - Door D2: Connects Cellier to Porche
+  - Door D11: Connects Cellier to Hall
+
+- **Porche**:
+  - Door D2: Connects Porche to Cellier
+  - Door D3: Connects Porche to WC
+
+- **WC**:
+  - Door D3: Connects WC to Porche
+  - Door D4: Connects WC to Lingerie
+
+- **Lingerie**:
+  - Door D4: Connects Lingerie to WC
+  - Door D5: Connects Lingerie to Bureau
+
+- **Bureau**:
+  - Door D5: Connects Bureau to Lingerie
+  - Door D6: Connects Bureau to Bains
+
+- **Bains**:
+  - Door D6: Connects Bains to Bureau
+  - Door D7: Connects Bains to Chambre Parents
+
+- **Chambre Parents**:
+  - Door D7: Connects Chambre Parents to Bains
+  - Door D8: Connects Chambre Parents to Hall
+
+- **Hall**:
+  - Door D8: Connects Hall to Chambre Parents
+  - Door D9: Connects Hall to Chambre Enfant 2
+  - Door D10: Connects Hall to Chambre Enfant 1
+  - Door D11: Connects Hall to Cellier
+
+- **Chambre Enfant 1**:
+  - Door D10: Connects Chambre Enfant 1 to Hall
+
+- **Chambre Enfant 2**:
+  - Door D9: Connects Chambre Enfant 2 to Hall
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D1"},
+  {"action": "OpenDoor", "door": "D1"},
+  {"action": "GoThrough", "door": "D1"},
+  {"action": "ApproachDoor", "door": "D2"},
+  {"action": "OpenDoor", "door": "D2"},
+  {"action": "GoThrough", "door": "D2"},
+  {"action": "ApproachDoor", "door": "D3"},
+  {"action": "OpenDoor", "door": "D3"},
+  {"action": "GoThrough", "door": "D3"}
+]
+```
+
+### Step-by-Step Solution
+
+1. **Garage to Cellier**:
+   - ApproachDoor(D1)
+   - OpenDoor(D1)
+   - GoThrough(D1)
+
+2. **Cellier to Porche**:
+   - ApproachDoor(D2)
+   - OpenDoor(D2)
+   - GoThrough(D2)
+
+3. **Porche to WC**:
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3)
+
+This plan ensures that you move from the Garage to the WC by passing through the necessary doors in sequence.

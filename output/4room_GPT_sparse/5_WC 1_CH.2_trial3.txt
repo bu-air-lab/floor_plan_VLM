@@ -1,0 +1,43 @@
+### Room and Door Connections
+
+- **WC 1**: Connected to DEGT 1 via D81
+- **DEGT 1**: Connected to WC 1 via D81, Bains 1 via D71, CH.3 via D51, and DEGT via D41
+- **Bains 1**: Connected to DEGT 1 via D71
+- **CH.3**: Connected to DEGT 1 via D51, CH.2 via D9
+- **CH.2**: Connected to CH.3 via D9
+- **DEGT**: Connected to DEGT 1 via D41, WC via D8, Bains via D7, CH.1 via D4
+- **WC**: Connected to DEGT via D8
+- **Bains**: Connected to DEGT via D7
+- **CH.1**: Connected to DEGT via D4
+
+### Navigation Plan
+
+1. **ApproachDoor(81)**: Move in front of door D81.
+2. **OpenDoor(81)**: Open door D81.
+3. **GoThrough(81)**: Move through door D81 to DEGT 1.
+4. **ApproachDoor(51)**: Move in front of door D51.
+5. **OpenDoor(51)**: Open door D51.
+6. **GoThrough(51)**: Move through door D51 to CH.3.
+7. **ApproachDoor(9)**: Move in front of door D9.
+8. **OpenDoor(9)**: Open door D9.
+9. **GoThrough(9)**: Move through door D9 to CH.2.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 81},
+    {"action": "OpenDoor", "door": 81},
+    {"action": "GoThrough", "door": 81},
+    {"action": "ApproachDoor", "door": 51},
+    {"action": "OpenDoor", "door": 51},
+    {"action": "GoThrough", "door": 51},
+    {"action": "ApproachDoor", "door": 9},
+    {"action": "OpenDoor", "door": 9},
+    {"action": "GoThrough", "door": 9}
+  ]
+}
+```
+
+This plan ensures that you move from WC 1 to CH.2 by passing through the necessary doors in the correct sequence.

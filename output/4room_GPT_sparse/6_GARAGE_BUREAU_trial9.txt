@@ -1,0 +1,69 @@
+### Room and Door Connections
+
+#### Rooms:
+1. GARAGE
+2. PORCHE
+3. CELLIER
+4. WC
+5. LINGERIE
+6. BUREAU
+7. HALL
+8. BAIN
+9. CHAMBRE PARENTS
+10. CHAMBRE ENFANT 1
+11. CHAMBRE ENFANT 2
+
+#### Doors:
+1. D1: GARAGE - HALL
+2. D2: GARAGE - PORCHE
+3. D3: PORCHE - CELLIER
+4. D4: WC - HALL
+5. D5: LINGERIE - HALL
+6. D6: BUREAU - HALL
+7. D7: BAIN - HALL
+8. D8: CHAMBRE PARENTS - HALL
+9. D9: CHAMBRE ENFANT 2 - HALL
+10. D10: CHAMBRE ENFANT 1 - HALL
+11. D11: CELLIER - HALL
+12. D12: HALL - OUTSIDE
+13. D13: GARAGE - CELLIER
+14. D21: PORCHE - HALL
+15. D31: PORCHE - LINGERIE
+16. D41: WC - LINGERIE
+17. D51: LINGERIE - BUREAU
+18. D61: BUREAU - HALL
+19. D71: BAIN - HALL
+20. D81: CHAMBRE PARENTS - HALL
+21. D91: CHAMBRE ENFANT 2 - HALL
+22. D101: CHAMBRE ENFANT 1 - HALL
+23. D111: CELLIER - HALL
+
+### Navigation Plan
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D13"},
+    {"action": "OpenDoor", "door": "D13"},
+    {"action": "GoThrough", "door": "D13"},
+    {"action": "ApproachDoor", "door": "D111"},
+    {"action": "OpenDoor", "door": "D111"},
+    {"action": "GoThrough", "door": "D111"},
+    {"action": "ApproachDoor", "door": "D51"},
+    {"action": "OpenDoor", "door": "D51"},
+    {"action": "GoThrough", "door": "D51"}
+]
+```
+
+### Explanation:
+1. **ApproachDoor(D13)**: Move in front of door D13.
+2. **OpenDoor(D13)**: Open door D13.
+3. **GoThrough(D13)**: Move through door D13 to CELLIER.
+4. **ApproachDoor(D111)**: Move in front of door D111.
+5. **OpenDoor(D111)**: Open door D111.
+6. **GoThrough(D111)**: Move through door D111 to HALL.
+7. **ApproachDoor(D51)**: Move in front of door D51.
+8. **OpenDoor(D51)**: Open door D51.
+9. **GoThrough(D51)**: Move through door D51 to LINGERIE.
+10. **ApproachDoor(D61)**: Move in front of door D61.
+11. **OpenDoor(D61)**: Open door D61.
+12. **GoThrough(D61)**: Move through door D61 to BUREAU.

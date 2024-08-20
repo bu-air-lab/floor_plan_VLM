@@ -1,0 +1,77 @@
+### Room and Door Connections
+
+- **LINGERIE**:
+  - Door D5: Connects to WC
+  - Door D6: Connects to BUREAU
+
+- **WC**:
+  - Door D4: Connects to PORCHE
+  - Door D5: Connects to LINGERIE
+
+- **PORCHE**:
+  - Door D2: Connects to GARAGE
+  - Door D3: Connects to CELLIER
+  - Door D4: Connects to WC
+
+- **CELLIER**:
+  - Door D1: Connects to GARAGE
+  - Door D3: Connects to PORCHE
+  - Door D11: Connects to HALL
+
+- **GARAGE**:
+  - Door D1: Connects to CELLIER
+  - Door D2: Connects to PORCHE
+
+- **BUREAU**:
+  - Door D6: Connects to LINGERIE
+  - Door D7: Connects to BAINS
+
+- **BAINS**:
+  - Door D7: Connects to BUREAU
+  - Door D8: Connects to CHAMBRE PARENTS
+
+- **CHAMBRE PARENTS**:
+  - Door D8: Connects to BAINS
+  - Door D9: Connects to CHAMBRE ENFANT 2
+
+- **CHAMBRE ENFANT 2**:
+  - Door D9: Connects to CHAMBRE PARENTS
+  - Door D10: Connects to HALL
+
+- **CHAMBRE ENFANT 1**:
+  - Door D10: Connects to HALL
+
+- **HALL**:
+  - Door D11: Connects to CELLIER
+  - Door D10: Connects to CHAMBRE ENFANT 1
+  - Door D9: Connects to CHAMBRE ENFANT 2
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D6"},
+  {"action": "OpenDoor", "door": "D6"},
+  {"action": "GoThrough", "door": "D6"},
+  {"action": "ApproachDoor", "door": "D7"},
+  {"action": "OpenDoor", "door": "D7"},
+  {"action": "GoThrough", "door": "D7"},
+  {"action": "ApproachDoor", "door": "D8"},
+  {"action": "OpenDoor", "door": "D8"},
+  {"action": "GoThrough", "door": "D8"},
+  {"action": "ApproachDoor", "door": "D9"},
+  {"action": "OpenDoor", "door": "D9"},
+  {"action": "GoThrough", "door": "D9"},
+  {"action": "ApproachDoor", "door": "D10"},
+  {"action": "OpenDoor", "door": "D10"},
+  {"action": "GoThrough", "door": "D10"},
+  {"action": "ApproachDoor", "door": "D11"},
+  {"action": "OpenDoor", "door": "D11"},
+  {"action": "GoThrough", "door": "D11"},
+  {"action": "ApproachDoor", "door": "D1"},
+  {"action": "OpenDoor", "door": "D1"},
+  {"action": "GoThrough", "door": "D1"}
+]
+```
+
+This plan ensures that you move from the LINGERIE to the GARAGE by going through the necessary doors in the correct sequence.

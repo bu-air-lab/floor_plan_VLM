@@ -1,0 +1,93 @@
+### Room and Door Connections
+
+#### Rooms:
+1. **DEGT 1**
+2. **DEGT**
+3. **SEJOUR**
+4. **CUISINE**
+5. **CELLER**
+6. **Porche**
+7. **CH.1**
+8. **CH.2**
+9. **WC**
+10. **BAINS**
+11. **SEJOUR1**
+12. **CUISINE 1**
+13. **CELLER 1**
+14. **Porche 1**
+15. **CH.3**
+16. **CH.4**
+17. **WC 1**
+18. **BAINS 1**
+
+#### Doors:
+1. **D1**: SEJOUR - Porche
+2. **D2**: CELLER - CUISINE
+3. **D3**: SEJOUR - CUISINE
+4. **D4**: SEJOUR - DEGT
+5. **D5**: SEJOUR - CH.1
+6. **D6**: DEGT - CH.2
+7. **D7**: DEGT - BAINS
+8. **D8**: WC - DEGT
+9. **D9**: CH.2 - CH.3
+10. **D10**: CELLER 1 - CUISINE 1
+11. **D11**: SEJOUR1 - Porche 1
+12. **D21**: CELLER 1 - CUISINE 1
+13. **D31**: SEJOUR1 - CUISINE 1
+14. **D41**: SEJOUR1 - DEGT 1
+15. **D51**: SEJOUR1 - CH.3
+16. **D61**: DEGT 1 - CH.4
+17. **D71**: DEGT 1 - BAINS 1
+18. **D81**: WC 1 - DEGT 1
+
+### Navigation Plan
+
+#### Step-by-Step Solution:
+1. **Start at DEGT 1**
+2. **Approach Door D41**: Move in front of door D41.
+3. **Open Door D41**: Open door D41.
+4. **Go Through Door D41**: Move through door D41 to SEJOUR1.
+5. **Approach Door D31**: Move in front of door D31.
+6. **Open Door D31**: Open door D31.
+7. **Go Through Door D31**: Move through door D31 to CUISINE 1.
+8. **Approach Door D21**: Move in front of door D21.
+9. **Open Door D21**: Open door D21.
+10. **Go Through Door D21**: Move through door D21 to CELLER 1.
+11. **Approach Door D10**: Move in front of door D10.
+12. **Open Door D10**: Open door D10.
+13. **Go Through Door D10**: Move through door D10 to Porche 1.
+14. **Approach Door D11**: Move in front of door D11.
+15. **Open Door D11**: Open door D11.
+16. **Go Through Door D11**: Move through door D11 to SEJOUR1.
+17. **Approach Door D41**: Move in front of door D41.
+18. **Open Door D41**: Open door D41.
+19. **Go Through Door D41**: Move through door D41 to DEGT.
+
+### Final Navigation Plan in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D41"},
+    {"action": "OpenDoor", "door": "D41"},
+    {"action": "GoThrough", "door": "D41"},
+    {"action": "ApproachDoor", "door": "D31"},
+    {"action": "OpenDoor", "door": "D31"},
+    {"action": "GoThrough", "door": "D31"},
+    {"action": "ApproachDoor", "door": "D21"},
+    {"action": "OpenDoor", "door": "D21"},
+    {"action": "GoThrough", "door": "D21"},
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"},
+    {"action": "ApproachDoor", "door": "D41"},
+    {"action": "OpenDoor", "door": "D41"},
+    {"action": "GoThrough", "door": "D41"}
+  ]
+}
+```
+
+This plan ensures that you navigate from DEGT 1 to DEGT by following the correct sequence of actions and using the necessary doors.

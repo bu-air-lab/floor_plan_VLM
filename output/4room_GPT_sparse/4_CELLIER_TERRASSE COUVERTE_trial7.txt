@@ -1,0 +1,77 @@
+### Room and Door Connections
+
+#### Rooms:
+1. CELLIER
+2. GARAGE
+3. BAIN
+4. WC
+5. CHAMBRE 1
+6. CHAMBRE 2
+7. HALL
+8. PORCHE
+9. CUISINE
+10. TERRASSE COUVERTE
+11. CELLIER 1
+12. GARAGE 1
+13. BAIN 1
+14. WC 1
+15. CHAMBRE 3
+16. CHAMBRE 4
+17. HALL 1
+18. PORCHE 1
+19. CUISINE 1
+20. TERRASSE COUVERTE 1
+
+#### Doors:
+1. D1: Connects CELLIER and HALL
+2. D2: Connects WC and BAIN
+3. D3: Connects WC and HALL
+4. D4: Connects CHAMBRE 1 and HALL
+5. D5: Connects CHAMBRE 2 and HALL
+6. D6: Connects HALL and PORCHE
+7. D7: Connects HALL and CUISINE
+8. D8: Connects CUISINE and TERRASSE COUVERTE
+9. D9: Connects CELLIER and GARAGE
+10. D10: Connects TERRASSE COUVERTE and TERRASSE COUVERTE 1
+11. D11: Connects CELLIER 1 and HALL 1
+12. D21: Connects WC 1 and BAIN 1
+13. D31: Connects WC 1 and HALL 1
+14. D41: Connects CHAMBRE 4 and HALL 1
+15. D51: Connects CHAMBRE 3 and HALL 1
+16. D61: Connects HALL 1 and PORCHE 1
+17. D71: Connects HALL 1 and CUISINE 1
+18. D81: Connects CUISINE 1 and TERRASSE COUVERTE 1
+19. D91: Connects CELLIER 1 and GARAGE 1
+
+### Navigation Plan
+
+#### Step-by-Step Solution:
+1. Start in CELLIER.
+2. ApproachDoor(D1): Move in front of door D1.
+3. OpenDoor(D1): Open door D1.
+4. GoThrough(D1): Move through door D1 to HALL.
+5. ApproachDoor(D7): Move in front of door D7.
+6. OpenDoor(D7): Open door D7.
+7. GoThrough(D7): Move through door D7 to CUISINE.
+8. ApproachDoor(D8): Move in front of door D8.
+9. OpenDoor(D8): Open door D8.
+10. GoThrough(D8): Move through door D8 to TERRASSE COUVERTE.
+
+### Final Navigation Plan in JSON Format:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"}
+  ]
+}
+```
+
+This plan ensures that you navigate from CELLIER to TERRASSE COUVERTE efficiently, using only the necessary doors.
