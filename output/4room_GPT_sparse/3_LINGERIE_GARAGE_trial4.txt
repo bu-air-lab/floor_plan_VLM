@@ -1,0 +1,93 @@
+### Room and Door Connections
+
+- **LINGERIE**
+  - Connected to WC via Door D4
+  - Connected to BUREAU via Door D5
+
+- **WC**
+  - Connected to LINGERIE via Door D4
+  - Connected to PORCHE via Door D3
+
+- **BUREAU**
+  - Connected to LINGERIE via Door D5
+  - Connected to BAINS via Door D6
+
+- **BAINS**
+  - Connected to BUREAU via Door D6
+  - Connected to CHAMBRE PARENTS via Door D7
+
+- **CHAMBRE PARENTS**
+  - Connected to BAINS via Door D7
+  - Connected to HALL via Door D8
+
+- **HALL**
+  - Connected to CHAMBRE PARENTS via Door D8
+  - Connected to CHAMBRE ENFANT 2 via Door D9
+  - Connected to CHAMBRE ENFANT 1 via Door D10
+  - Connected to CELLIER via Door D11
+
+- **CHAMBRE ENFANT 2**
+  - Connected to HALL via Door D9
+
+- **CHAMBRE ENFANT 1**
+  - Connected to HALL via Door D10
+
+- **CELLIER**
+  - Connected to HALL via Door D11
+  - Connected to PORCHE via Door D2
+  - Connected to GARAGE via Door D1
+
+- **PORCHE**
+  - Connected to CELLIER via Door D2
+  - Connected to WC via Door D3
+
+- **GARAGE**
+  - Connected to CELLIER via Door D1
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D5"},
+  {"action": "OpenDoor", "door": "D5"},
+  {"action": "GoThrough", "door": "D5"},
+  {"action": "ApproachDoor", "door": "D6"},
+  {"action": "OpenDoor", "door": "D6"},
+  {"action": "GoThrough", "door": "D6"},
+  {"action": "ApproachDoor", "door": "D4"},
+  {"action": "OpenDoor", "door": "D4"},
+  {"action": "GoThrough", "door": "D4"},
+  {"action": "ApproachDoor", "door": "D3"},
+  {"action": "OpenDoor", "door": "D3"},
+  {"action": "GoThrough", "door": "D3"},
+  {"action": "ApproachDoor", "door": "D2"},
+  {"action": "OpenDoor", "door": "D2"},
+  {"action": "GoThrough", "door": "D2"},
+  {"action": "ApproachDoor", "door": "D1"},
+  {"action": "OpenDoor", "door": "D1"},
+  {"action": "GoThrough", "door": "D1"}
+]
+```
+
+### Step-by-Step Navigation
+
+1. **ApproachDoor(D5)**: Move in front of Door D5.
+2. **OpenDoor(D5)**: Open Door D5.
+3. **GoThrough(D5)**: Move through Door D5 to BUREAU.
+4. **ApproachDoor(D6)**: Move in front of Door D6.
+5. **OpenDoor(D6)**: Open Door D6.
+6. **GoThrough(D6)**: Move through Door D6 to BAINS.
+7. **ApproachDoor(D4)**: Move in front of Door D4.
+8. **OpenDoor(D4)**: Open Door D4.
+9. **GoThrough(D4)**: Move through Door D4 to WC.
+10. **ApproachDoor(D3)**: Move in front of Door D3.
+11. **OpenDoor(D3)**: Open Door D3.
+12. **GoThrough(D3)**: Move through Door D3 to PORCHE.
+13. **ApproachDoor(D2)**: Move in front of Door D2.
+14. **OpenDoor(D2)**: Open Door D2.
+15. **GoThrough(D2)**: Move through Door D2 to CELLIER.
+16. **ApproachDoor(D1)**: Move in front of Door D1.
+17. **OpenDoor(D1)**: Open Door D1.
+18. **GoThrough(D1)**: Move through Door D1 to GARAGE.
+
+This plan ensures that you navigate from the LINGERIE to the GARAGE efficiently, using the necessary doors in the correct sequence.

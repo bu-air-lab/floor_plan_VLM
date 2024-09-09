@@ -1,0 +1,87 @@
+### Room and Door Connections
+
+1. **CHAMBRE PARENTS**
+   - Door D8: Connects to HALL
+
+2. **HALL**
+   - Door D8: Connects to CHAMBRE PARENTS
+   - Door D9: Connects to CHAMBRE ENFANT 2
+   - Door D10: Connects to CHAMBRE ENFANT 1
+   - Door D7: Connects to BAINS
+   - Door D6: Connects to BUREAU
+   - Door D5: Connects to LINGERIE
+   - Door D11: Connects to CELLIER
+
+3. **CHAMBRE ENFANT 2**
+   - Door D9: Connects to HALL
+
+4. **CHAMBRE ENFANT 1**
+   - Door D10: Connects to HALL
+
+5. **BAINS**
+   - Door D7: Connects to HALL
+
+6. **BUREAU**
+   - Door D6: Connects to HALL
+
+7. **LINGERIE**
+   - Door D5: Connects to HALL
+   - Door D4: Connects to WC
+
+8. **WC**
+   - Door D4: Connects to LINGERIE
+
+9. **CELLIER**
+   - Door D11: Connects to HALL
+   - Door D3: Connects to PORCHE
+
+10. **PORCHE**
+    - Door D3: Connects to CELLIER
+    - Door D2: Connects to GARAGE
+
+11. **GARAGE**
+    - Door D2: Connects to PORCHE
+    - Door D1: Connects to CELLIER
+
+### Navigation Plan
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+]
+```
+
+### Step-by-Step Solution
+
+1. **CHAMBRE PARENTS to HALL**
+   - ApproachDoor(D8)
+   - OpenDoor(D8)
+   - GoThrough(D8)
+
+2. **HALL to CELLIER**
+   - ApproachDoor(D11)
+   - OpenDoor(D11)
+   - GoThrough(D11)
+
+3. **CELLIER to PORCHE**
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3)
+
+4. **PORCHE to GARAGE**
+   - ApproachDoor(D2)
+   - OpenDoor(D2)
+   - GoThrough(D2)
+
+This plan ensures that you navigate efficiently from CHAMBRE PARENTS to the GARAGE, using only the necessary doors.

@@ -96,7 +96,7 @@ plans = {
     ],
 }
 
-N = 3
+N = 10
 
 
 def encode_image(image_path):
@@ -144,7 +144,7 @@ def process_images_and_prompts():
 
             prompt = prompt_A + start + prompt_B + end + prompt_C
 
-            for n in range(N):
+            for n in range(3, N):
 
                 #Call VLM
                 text_response = query_gpt4o_with_image_and_text(image_path, prompt)

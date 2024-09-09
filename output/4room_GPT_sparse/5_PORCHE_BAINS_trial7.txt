@@ -1,0 +1,76 @@
+### Room and Door Connections
+
+#### Rooms:
+1. **Porche**
+2. **Cellier**
+3. **Sejour**
+4. **Cuisine**
+5. **CH.1**
+6. **CH.2**
+7. **DEGT**
+8. **WC**
+9. **Bains**
+10. **Porche1**
+11. **Cellier1**
+12. **Sejour1**
+13. **Cuisine1**
+14. **CH.3**
+15. **CH.4**
+16. **DEGT1**
+17. **WC1**
+18. **Bains1**
+
+#### Doors:
+1. **D1**: Connects Porche and Sejour
+2. **D2**: Connects Cellier and Cuisine
+3. **D3**: Connects Sejour and Cuisine
+4. **D4**: Connects Sejour and DEGT
+5. **D5**: Connects DEGT and CH.1
+6. **D6**: Connects DEGT and CH.2
+7. **D7**: Connects DEGT and Bains
+8. **D8**: Connects DEGT and WC
+9. **D9**: Connects CH.2 and CH.3
+10. **D10**: Connects Porche1 and Sejour1
+11. **D11**: Connects Cellier1 and Cuisine1
+12. **D21**: Connects Sejour1 and Cuisine1
+13. **D31**: Connects Sejour1 and Cuisine1
+14. **D41**: Connects Sejour1 and DEGT1
+15. **D51**: Connects DEGT1 and CH.3
+16. **D61**: Connects DEGT1 and CH.4
+17. **D71**: Connects DEGT1 and Bains1
+18. **D81**: Connects DEGT1 and WC1
+
+### Navigation Plan
+
+#### Starting Point: Porche
+#### Destination: Bains
+
+1. **ApproachDoor(1)**: Move in front of door D1.
+2. **OpenDoor(1)**: Open door D1.
+3. **GoThrough(1)**: Move through door D1 to Sejour.
+4. **ApproachDoor(4)**: Move in front of door D4.
+5. **OpenDoor(4)**: Open door D4.
+6. **GoThrough(4)**: Move through door D4 to DEGT.
+7. **ApproachDoor(7)**: Move in front of door D7.
+8. **OpenDoor(7)**: Open door D7.
+9. **GoThrough(7)**: Move through door D7 to Bains.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 4},
+    {"action": "OpenDoor", "door": 4},
+    {"action": "GoThrough", "door": 4},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7}
+  ]
+}
+```
+
+This plan ensures that you move from the Porche to the Bains by passing through the necessary doors in the correct sequence.

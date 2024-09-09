@@ -1,0 +1,85 @@
+### Room and Door Connections:
+
+#### Rooms:
+1. LINGERIE
+2. BUREAU
+3. BUREAU1
+4. WC
+5. WC1
+6. BAIN
+7. BAIN1
+8. CHAMBRE PARENTS
+9. CHAMBRE PARENTS1
+10. CHAMBRE ENFANT 1
+11. CHAMBRE ENFANT 11
+12. CHAMBRE ENFANT 2
+13. CHAMBRE ENFANT 21
+14. HALL
+15. HALL 1
+16. CELLER
+17. CELLER 1
+18. PORCHE
+19. PORCHE1
+20. GARAGE
+21. GARAGE 1
+
+#### Doors:
+1. D1: GARAGE - CELLER
+2. D2: PORCHE - CELLER
+3. D3: PORCHE - LINGERIE
+4. D4: WC - LINGERIE
+5. D5: LINGERIE - HALL
+6. D6: BUREAU - HALL
+7. D7: BAIN - HALL
+8. D8: CHAMBRE PARENTS - HALL
+9. D9: CHAMBRE ENFANT 2 - HALL
+10. D10: CHAMBRE ENFANT 1 - HALL
+11. D11: CELLER - HALL
+12. D12: GARAGE - HALL
+13. D13: GARAGE 1 - PORCHE1
+14. D21: PORCHE1 - CELLER 1
+15. D31: PORCHE1 - LINGERIE 1
+16. D41: WC1 - LINGERIE 1
+17. D51: LINGERIE 1 - HALL 1
+18. D61: BUREAU1 - HALL 1
+19. D71: BAIN1 - HALL 1
+20. D81: CHAMBRE PARENTS1 - HALL 1
+21. D91: CHAMBRE ENFANT 21 - HALL 1
+22. D101: CHAMBRE ENFANT 11 - HALL 1
+23. D111: CELLER 1 - HALL 1
+
+### Navigation Plan:
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D51"},
+    {"action": "OpenDoor", "door": "D51"},
+    {"action": "GoThrough", "door": "D51"},
+    {"action": "ApproachDoor", "door": "D111"},
+    {"action": "OpenDoor", "door": "D111"},
+    {"action": "GoThrough", "door": "D111"},
+    {"action": "ApproachDoor", "door": "D21"},
+    {"action": "OpenDoor", "door": "D21"},
+    {"action": "GoThrough", "door": "D21"},
+    {"action": "ApproachDoor", "door": "D13"},
+    {"action": "OpenDoor", "door": "D13"},
+    {"action": "GoThrough", "door": "D13"}
+]
+```
+
+### Step-by-Step Navigation:
+
+1. **ApproachDoor(D51)**: Move in front of door D51.
+2. **OpenDoor(D51)**: Open door D51.
+3. **GoThrough(D51)**: Move through door D51 to HALL 1.
+4. **ApproachDoor(D111)**: Move in front of door D111.
+5. **OpenDoor(D111)**: Open door D111.
+6. **GoThrough(D111)**: Move through door D111 to CELLER 1.
+7. **ApproachDoor(D21)**: Move in front of door D21.
+8. **OpenDoor(D21)**: Open door D21.
+9. **GoThrough(D21)**: Move through door D21 to PORCHE1.
+10. **ApproachDoor(D13)**: Move in front of door D13.
+11. **OpenDoor(D13)**: Open door D13.
+12. **GoThrough(D13)**: Move through door D13 to GARAGE 1.
+
+This plan ensures that you navigate from LINGERIE to GARAGE 1 efficiently, using only the necessary doors.

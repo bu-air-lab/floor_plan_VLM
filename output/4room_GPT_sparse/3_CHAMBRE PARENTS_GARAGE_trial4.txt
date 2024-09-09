@@ -1,0 +1,88 @@
+### Room and Door Connections
+
+- **CHAMBRE PARENTS**
+  - Door: D8 (to HALL)
+
+- **HALL**
+  - Door: D8 (to CHAMBRE PARENTS)
+  - Door: D9 (to CHAMBRE ENFANT 2)
+  - Door: D10 (to CHAMBRE ENFANT 1)
+  - Door: D7 (to BAINS)
+  - Door: D6 (to BUREAU)
+  - Door: D5 (to LINGERIE)
+  - Door: D11 (to CELLIER)
+
+- **CHAMBRE ENFANT 2**
+  - Door: D9 (to HALL)
+
+- **CHAMBRE ENFANT 1**
+  - Door: D10 (to HALL)
+
+- **BAINS**
+  - Door: D7 (to HALL)
+
+- **BUREAU**
+  - Door: D6 (to HALL)
+
+- **LINGERIE**
+  - Door: D5 (to HALL)
+  - Door: D4 (to WC)
+
+- **WC**
+  - Door: D4 (to LINGERIE)
+
+- **CELLIER**
+  - Door: D11 (to HALL)
+  - Door: D3 (to PORCHE)
+
+- **PORCHE**
+  - Door: D3 (to CELLIER)
+  - Door: D2 (to GARAGE)
+
+- **GARAGE**
+  - Door: D2 (to PORCHE)
+  - Door: D1 (to CELLIER)
+
+### Navigation Plan
+
+```json
+[
+  {"action": "ApproachDoor", "door": "D8"},
+  {"action": "OpenDoor", "door": "D8"},
+  {"action": "GoThrough", "door": "D8"},
+  {"action": "ApproachDoor", "door": "D11"},
+  {"action": "OpenDoor", "door": "D11"},
+  {"action": "GoThrough", "door": "D11"},
+  {"action": "ApproachDoor", "door": "D3"},
+  {"action": "OpenDoor", "door": "D3"},
+  {"action": "GoThrough", "door": "D3"},
+  {"action": "ApproachDoor", "door": "D2"},
+  {"action": "OpenDoor", "door": "D2"},
+  {"action": "GoThrough", "door": "D2"}
+]
+```
+
+### Step-by-Step Navigation
+
+1. **CHAMBRE PARENTS**:
+   - ApproachDoor(D8)
+   - OpenDoor(D8)
+   - GoThrough(D8)
+
+2. **HALL**:
+   - ApproachDoor(D11)
+   - OpenDoor(D11)
+   - GoThrough(D11)
+
+3. **CELLIER**:
+   - ApproachDoor(D3)
+   - OpenDoor(D3)
+   - GoThrough(D3)
+
+4. **PORCHE**:
+   - ApproachDoor(D2)
+   - OpenDoor(D2)
+   - GoThrough(D2)
+
+5. **GARAGE**:
+   - You have arrived at your destination.

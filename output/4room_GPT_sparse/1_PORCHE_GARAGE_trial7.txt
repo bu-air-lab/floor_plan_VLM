@@ -1,0 +1,48 @@
+### Room and Door Connections
+
+- **PORCHE**
+  - Connected to HALL via Door D6
+
+- **HALL**
+  - Connected to PORCHE via Door D6
+  - Connected to CHAMBRE 2 via Door D5
+  - Connected to WC via Door D3
+  - Connected to CHAMBRE 1 via Door D4
+  - Connected to CELLIER via Door D1
+
+- **CHAMBRE 2**
+  - Connected to HALL via Door D5
+  - Connected to GARAGE via Door D9
+
+- **GARAGE**
+  - Connected to CHAMBRE 2 via Door D9
+
+### Navigation Plan
+
+1. **ApproachDoor(6)**: Move in front of Door D6.
+2. **OpenDoor(6)**: Open Door D6.
+3. **GoThrough(6)**: Move through Door D6 to HALL.
+4. **ApproachDoor(5)**: Move in front of Door D5.
+5. **OpenDoor(5)**: Open Door D5.
+6. **GoThrough(5)**: Move through Door D5 to CHAMBRE 2.
+7. **ApproachDoor(9)**: Move in front of Door D9.
+8. **OpenDoor(9)**: Open Door D9.
+9. **GoThrough(9)**: Move through Door D9 to GARAGE.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6},
+    {"action": "ApproachDoor", "door": 5},
+    {"action": "OpenDoor", "door": 5},
+    {"action": "GoThrough", "door": 5},
+    {"action": "ApproachDoor", "door": 9},
+    {"action": "OpenDoor", "door": 9},
+    {"action": "GoThrough", "door": 9}
+  ]
+}
+```

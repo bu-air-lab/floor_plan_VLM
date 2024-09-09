@@ -1,0 +1,80 @@
+### Room and Door Connections
+
+1. **Garage**
+   - Connected to Cellier through Door D1
+
+2. **Cellier**
+   - Connected to Garage through Door D1
+   - Connected to Porche through Door D2
+   - Connected to Hall through Door D11
+
+3. **Porche**
+   - Connected to Cellier through Door D2
+   - Connected to WC through Door D4
+   - Connected to Lingerie through Door D3
+
+4. **WC**
+   - Connected to Porche through Door D4
+
+5. **Lingerie**
+   - Connected to Porche through Door D3
+   - Connected to Bureau through Door D5
+
+6. **Bureau**
+   - Connected to Lingerie through Door D5
+   - Connected to Bains through Door D6
+
+7. **Bains**
+   - Connected to Bureau through Door D6
+   - Connected to Chambre Parents through Door D7
+
+8. **Chambre Parents**
+   - Connected to Bains through Door D7
+   - Connected to Hall through Door D8
+
+9. **Hall**
+   - Connected to Cellier through Door D11
+   - Connected to Chambre Parents through Door D8
+   - Connected to Chambre Enfant 2 through Door D9
+   - Connected to Chambre Enfant 1 through Door D10
+
+10. **Chambre Enfant 1**
+    - Connected to Hall through Door D10
+
+11. **Chambre Enfant 2**
+    - Connected to Hall through Door D9
+
+### Navigation Plan
+
+```json
+[
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"},
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"}
+]
+```
+
+### Step-by-Step Solution
+
+1. **From Garage to Cellier**
+   - Approach Door D1
+   - Open Door D1
+   - Go Through Door D1
+
+2. **From Cellier to Hall**
+   - Approach Door D11
+   - Open Door D11
+   - Go Through Door D11
+
+3. **From Hall to Chambre Enfant 1**
+   - Approach Door D10
+   - Open Door D10
+   - Go Through Door D10
+
+This plan ensures that you move efficiently from the Garage to Chambre Enfant 1 by only using the necessary doors and avoiding any unnecessary rooms or doors.

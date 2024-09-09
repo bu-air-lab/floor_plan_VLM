@@ -1,0 +1,88 @@
+### Room and Door Connections
+
+#### Rooms:
+1. DEGT 1
+2. DEGT
+3. WC
+4. Bains
+5. CH.1
+6. CH.2
+7. CH.3
+8. CH.4
+9. SEJOUR
+10. SEJOUR 1
+11. CUISINE
+12. CUISINE 1
+13. CELLIER
+14. CELLIER 1
+15. Porche
+16. Porche 1
+
+#### Doors:
+1. D1: Porche - SEJOUR
+2. D2: CELLIER - CUISINE
+3. D3: SEJOUR - CUISINE
+4. D4: SEJOUR - DEGT
+5. D5: DEGT - CH.1
+6. D6: DEGT - CH.2
+7. D7: DEGT - Bains
+8. D8: WC - DEGT
+9. D9: CH.2 - CH.3
+10. D10: Porche 1 - CELLIER 1
+11. D11: Porche 1 - SEJOUR 1
+12. D21: CELLIER 1 - CUISINE 1
+13. D31: SEJOUR 1 - CUISINE 1
+14. D41: SEJOUR 1 - DEGT 1
+15. D51: DEGT 1 - CH.3
+16. D61: DEGT 1 - CH.4
+17. D71: DEGT 1 - Bains 1
+18. D81: WC 1 - DEGT 1
+
+### Navigation Plan
+
+#### Step-by-Step Solution:
+1. Start in DEGT 1.
+2. Approach door D41.
+3. Open door D41.
+4. Go through door D41 to SEJOUR 1.
+5. Approach door D31.
+6. Open door D31.
+7. Go through door D31 to CUISINE 1.
+8. Approach door D21.
+9. Open door D21.
+10. Go through door D21 to CELLIER 1.
+11. Approach door D10.
+12. Open door D10.
+13. Go through door D10 to Porche 1.
+14. Approach door D11.
+15. Open door D11.
+16. Go through door D11 to SEJOUR.
+17. Approach door D4.
+18. Open door D4.
+19. Go through door D4 to DEGT.
+
+### Final Navigation Plan in JSON Format:
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": "D41"},
+    {"action": "OpenDoor", "door": "D41"},
+    {"action": "GoThrough", "door": "D41"},
+    {"action": "ApproachDoor", "door": "D31"},
+    {"action": "OpenDoor", "door": "D31"},
+    {"action": "GoThrough", "door": "D31"},
+    {"action": "ApproachDoor", "door": "D21"},
+    {"action": "OpenDoor", "door": "D21"},
+    {"action": "GoThrough", "door": "D21"},
+    {"action": "ApproachDoor", "door": "D10"},
+    {"action": "OpenDoor", "door": "D10"},
+    {"action": "GoThrough", "door": "D10"},
+    {"action": "ApproachDoor", "door": "D11"},
+    {"action": "OpenDoor", "door": "D11"},
+    {"action": "GoThrough", "door": "D11"},
+    {"action": "ApproachDoor", "door": "D4"},
+    {"action": "OpenDoor", "door": "D4"},
+    {"action": "GoThrough", "door": "D4"}
+  ]
+}
+```

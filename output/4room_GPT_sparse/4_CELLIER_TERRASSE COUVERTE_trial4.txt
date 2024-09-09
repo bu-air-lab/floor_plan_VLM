@@ -1,0 +1,76 @@
+### Room and Door Connections
+
+**Rooms:**
+1. CELLIER
+2. GARAGE
+3. BAIN
+4. WC
+5. CHAMBRE 1
+6. CHAMBRE 2
+7. HALL
+8. PORCHE
+9. CUISINE
+10. TERRASSE COUVERTE
+11. CELLIER 1
+12. GARAGE 1
+13. BAIN 1
+14. WC 1
+15. CHAMBRE 3
+16. CHAMBRE 4
+17. HALL 1
+18. PORCHE 1
+19. CUISINE 1
+20. TERRASSE COUVERTE 1
+
+**Doors:**
+1. D1: Connects CELLIER and HALL
+2. D2: Connects WC and BAIN
+3. D3: Connects WC and HALL
+4. D4: Connects CHAMBRE 1 and HALL
+5. D5: Connects CHAMBRE 2 and HALL
+6. D6: Connects HALL and PORCHE
+7. D7: Connects HALL and CUISINE
+8. D8: Connects CUISINE and TERRASSE COUVERTE
+9. D9: Connects CELLIER and GARAGE
+10. D10: Connects CUISINE and TERRASSE COUVERTE
+11. D11: Connects CELLIER 1 and HALL 1
+12. D21: Connects WC 1 and BAIN 1
+13. D31: Connects WC 1 and HALL 1
+14. D41: Connects CHAMBRE 4 and HALL 1
+15. D51: Connects CHAMBRE 3 and HALL 1
+16. D61: Connects HALL 1 and PORCHE 1
+17. D71: Connects HALL 1 and CUISINE 1
+18. D81: Connects CUISINE 1 and TERRASSE COUVERTE 1
+19. D91: Connects CELLIER 1 and GARAGE 1
+
+### Navigation Plan
+
+1. **ApproachDoor(1):** Move in front of door D1.
+2. **OpenDoor(1):** Open door D1.
+3. **GoThrough(1):** Move through door D1 to HALL.
+4. **ApproachDoor(7):** Move in front of door D7.
+5. **OpenDoor(7):** Open door D7.
+6. **GoThrough(7):** Move through door D7 to CUISINE.
+7. **ApproachDoor(8):** Move in front of door D8.
+8. **OpenDoor(8):** Open door D8.
+9. **GoThrough(8):** Move through door D8 to TERRASSE COUVERTE.
+
+### Final Path in JSON Format
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7},
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8}
+  ]
+}
+```
+
+This plan ensures that you navigate from the CELLIER to the TERRASSE COUVERTE efficiently, using only the necessary doors.

@@ -1,0 +1,62 @@
+### Room and Door Connections
+
+#### Rooms:
+1. CUISINE
+2. CELLIER
+3. SEJOUR
+4. CH.1
+5. CH.2
+6. DEGT
+7. WC
+8. BAINS
+9. Porche
+10. CUISINE 1
+11. CELLIER 1
+12. SEJOUR 1
+13. CH.3
+14. CH.4
+15. DEGT 1
+16. WC 1
+17. BAINS 1
+18. Porche 1
+
+#### Doors:
+1. D1: Porche - SEJOUR
+2. D2: CELLIER - CUISINE
+3. D3: CUISINE - SEJOUR
+4. D4: SEJOUR - DEGT
+5. D5: DEGT - CH.1
+6. D6: DEGT - CH.2
+7. D7: DEGT - BAINS
+8. D8: WC - DEGT
+9. D9: CH.2 - Outside
+10. D10: Porche 1 - CELLIER 1
+11. D11: CELLIER 1 - CUISINE 1
+12. D21: SEJOUR 1 - Porche 1
+13. D31: CUISINE 1 - SEJOUR 1
+14. D41: DEGT 1 - SEJOUR 1
+15. D51: DEGT 1 - CH.3
+16. D61: DEGT 1 - CH.4
+17. D71: DEGT 1 - BAINS 1
+18. D81: WC 1 - DEGT 1
+
+### Navigation Plan
+
+#### Start: CUISINE
+#### Goal: CELLIER
+
+1. **ApproachDoor(2)**: Move in front of door D2.
+2. **OpenDoor(2)**: Open door D2.
+3. **GoThrough(2)**: Move through door D2 to CELLIER.
+
+### Final Path in JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2}
+  ]
+}
+```

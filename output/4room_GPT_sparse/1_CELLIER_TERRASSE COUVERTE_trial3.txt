@@ -1,0 +1,76 @@
+### Room and Door Connections
+
+1. **CELLIER**
+   - Door D1: Connects to HALL
+
+2. **HALL**
+   - Door D1: Connects to CELLIER
+   - Door D2: Connects to BAINS
+   - Door D3: Connects to WC
+   - Door D4: Connects to CHAMBRE 1
+   - Door D5: Connects to CHAMBRE 2
+   - Door D6: Connects to PORCHE
+
+3. **BAINS**
+   - Door D2: Connects to HALL
+
+4. **WC**
+   - Door D3: Connects to HALL
+
+5. **CHAMBRE 1**
+   - Door D4: Connects to HALL
+
+6. **CHAMBRE 2**
+   - Door D5: Connects to HALL
+
+7. **PORCHE**
+   - Door D6: Connects to HALL
+   - Door D7: Connects to CUISINE
+
+8. **CUISINE**
+   - Door D7: Connects to PORCHE
+   - Door D8: Connects to TERRASSE COUVERTE
+
+9. **TERRASSE COUVERTE**
+   - Door D8: Connects to CUISINE
+
+10. **GARAGE**
+    - Door D9: Connects to CELLIER
+
+### Navigation Plan
+
+Starting in the CELLIER and arriving at the TERRASSE COUVERTE:
+
+1. **ApproachDoor(1)**: Move in front of door D1.
+2. **OpenDoor(1)**: Open door D1.
+3. **GoThrough(1)**: Move through door D1 to HALL.
+4. **ApproachDoor(6)**: Move in front of door D6.
+5. **OpenDoor(6)**: Open door D6.
+6. **GoThrough(6)**: Move through door D6 to PORCHE.
+7. **ApproachDoor(7)**: Move in front of door D7.
+8. **OpenDoor(7)**: Open door D7.
+9. **GoThrough(7)**: Move through door D7 to CUISINE.
+10. **ApproachDoor(8)**: Move in front of door D8.
+11. **OpenDoor(8)**: Open door D8.
+12. **GoThrough(8)**: Move through door D8 to TERRASSE COUVERTE.
+
+### Final Path in JSON Format
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 6},
+    {"action": "OpenDoor", "door": 6},
+    {"action": "GoThrough", "door": 6},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7},
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8}
+  ]
+}
+```

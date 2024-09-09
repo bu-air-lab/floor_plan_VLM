@@ -1,0 +1,79 @@
+### Room and Door Connections
+
+- **DEGT**:
+  - Connected to SEJOUR via Door D4
+  - Connected to CH.1 via Door D5
+  - Connected to CH.2 via Door D6
+  - Connected to WC via Door D8
+
+- **SEJOUR**:
+  - Connected to DEGT via Door D4
+  - Connected to Porche via Door D1
+  - Connected to CUISINE via Door D3
+
+- **CH.1**:
+  - Connected to DEGT via Door D5
+
+- **CH.2**:
+  - Connected to DEGT via Door D6
+
+- **CUISINE**:
+  - Connected to SEJOUR via Door D3
+  - Connected to CELLIER via Door D2
+
+- **CELLIER**:
+  - Connected to CUISINE via Door D2
+
+- **Porche**:
+  - Connected to SEJOUR via Door D1
+
+- **WC**:
+  - Connected to DEGT via Door D8
+  - Connected to BAINS via Door D7
+
+- **BAINS**:
+  - Connected to WC via Door D7
+
+### Navigation Plan
+
+1. **ApproachDoor(8)**: Move in front of Door D8.
+2. **OpenDoor(8)**: Open Door D8.
+3. **GoThrough(8)**: Move through Door D8 to WC.
+4. **ApproachDoor(7)**: Move in front of Door D7.
+5. **OpenDoor(7)**: Open Door D7.
+6. **GoThrough(7)**: Move through Door D7 to BAINS.
+7. **ApproachDoor(3)**: Move in front of Door D3.
+8. **OpenDoor(3)**: Open Door D3.
+9. **GoThrough(3)**: Move through Door D3 to SEJOUR.
+10. **ApproachDoor(1)**: Move in front of Door D1.
+11. **OpenDoor(1)**: Open Door D1.
+12. **GoThrough(1)**: Move through Door D1 to Porche.
+13. **ApproachDoor(2)**: Move in front of Door D2.
+14. **OpenDoor(2)**: Open Door D2.
+15. **GoThrough(2)**: Move through Door D2 to CELLIER.
+
+### JSON Format
+
+```json
+{
+  "navigation_plan": [
+    {"action": "ApproachDoor", "door": 8},
+    {"action": "OpenDoor", "door": 8},
+    {"action": "GoThrough", "door": 8},
+    {"action": "ApproachDoor", "door": 7},
+    {"action": "OpenDoor", "door": 7},
+    {"action": "GoThrough", "door": 7},
+    {"action": "ApproachDoor", "door": 3},
+    {"action": "OpenDoor", "door": 3},
+    {"action": "GoThrough", "door": 3},
+    {"action": "ApproachDoor", "door": 1},
+    {"action": "OpenDoor", "door": 1},
+    {"action": "GoThrough", "door": 1},
+    {"action": "ApproachDoor", "door": 2},
+    {"action": "OpenDoor", "door": 2},
+    {"action": "GoThrough", "door": 2}
+  ]
+}
+```
+
+This plan ensures that you navigate from DEGT to CELLIER efficiently, using the necessary doors and avoiding any unnecessary rooms or doors.
