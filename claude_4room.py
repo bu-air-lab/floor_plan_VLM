@@ -12,10 +12,10 @@ os.environ["ANTHROPIC_API_KEY"] = API_KEY
 client = Anthropic()
 
 # Folder to images dataset
-image_folder = 'maps/dense_labels'
+image_folder = 'maps/sparse_labels'
 
 # Output folder for JSON plans from VLM
-output_folder = 'output/4room_claude'
+output_folder = 'output/4room_claude_sparse'
 
 # Create output folder if it doesn't exist
 os.makedirs(output_folder, exist_ok=True)

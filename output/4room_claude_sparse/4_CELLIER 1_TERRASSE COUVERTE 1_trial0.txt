@@ -1,0 +1,60 @@
+Thank you for providing the floor plan. I'll start by listing the rooms and their door connections, then provide a navigation plan to get from CELLIER 1 to TERRASSE COUVERTE 1.
+
+Room and Door Connections:
+1. CELLIER 1: D91
+2. GARAGE 1: D91
+3. CHAMBRE 3: D51
+4. BAINS 1: D11, D21
+5. WC 1: D21
+6. CHAMBRE 4: D31, D41
+7. HALL 1: D11, D31, D41, D51, D61
+8. PORCHE 1: D61, D71
+9. CUISINE 1: D71, D81
+10. TERRASSE COUVERTE 1: D81
+
+Navigation Plan:
+To go from CELLIER 1 to TERRASSE COUVERTE 1, we need to traverse through several rooms. Here's the step-by-step plan:
+
+1. ApproachDoor(91)
+2. OpenDoor(91)
+3. GoThrough(91)
+4. ApproachDoor(51)
+5. OpenDoor(51)
+6. GoThrough(51)
+7. ApproachDoor(61)
+8. OpenDoor(61)
+9. GoThrough(61)
+10. ApproachDoor(71)
+11. OpenDoor(71)
+12. GoThrough(71)
+13. ApproachDoor(81)
+14. OpenDoor(81)
+15. GoThrough(81)
+
+Here's the navigation plan in JSON format:
+
+```json
+{
+  "start": "CELLIER 1",
+  "end": "TERRASSE COUVERTE 1",
+  "path": [
+    {"action": "ApproachDoor", "door": 91},
+    {"action": "OpenDoor", "door": 91},
+    {"action": "GoThrough", "door": 91},
+    {"action": "ApproachDoor", "door": 51},
+    {"action": "OpenDoor", "door": 51},
+    {"action": "GoThrough", "door": 51},
+    {"action": "ApproachDoor", "door": 61},
+    {"action": "OpenDoor", "door": 61},
+    {"action": "GoThrough", "door": 61},
+    {"action": "ApproachDoor", "door": 71},
+    {"action": "OpenDoor", "door": 71},
+    {"action": "GoThrough", "door": 71},
+    {"action": "ApproachDoor", "door": 81},
+    {"action": "OpenDoor", "door": 81},
+    {"action": "GoThrough", "door": 81}
+  ]
+}
+```
+
+This plan will efficiently guide you from CELLIER 1 to TERRASSE COUVERTE 1, using only the necessary doors and avoiding any unnecessary detours.

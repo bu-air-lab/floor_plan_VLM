@@ -1,0 +1,38 @@
+Thank you for providing the floor plan. I'll first list out the rooms and doors with their connections, then provide a navigation plan to get from the CELLIER to the TERRASSE COUVERTE.
+
+Room and Door Connections:
+1. CELLIER - D1 - HALL
+2. HALL - D2 - BAINS
+3. HALL - D3 - WC
+4. HALL - D4 - CHAMBRE 1
+5. HALL - D5 - CHAMBRE 2
+6. HALL - D6 - PORCHE
+7. PORCHE - D7 - CUISINE
+8. CUISINE - D8 - TERRASSE COUVERTE
+9. CELLIER - D9 - GARAGE
+
+Navigation Plan:
+To get from the CELLIER to the TERRASSE COUVERTE, we need to go through the following rooms: CELLIER -> HALL -> PORCHE -> CUISINE -> TERRASSE COUVERTE.
+
+Here's the step-by-step navigation plan:
+
+```json
+{
+  "plan": [
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"}
+  ]
+}
+```
+
+This plan efficiently navigates from the CELLIER to the TERRASSE COUVERTE using only the necessary doors and avoiding any unnecessary rooms or detours.

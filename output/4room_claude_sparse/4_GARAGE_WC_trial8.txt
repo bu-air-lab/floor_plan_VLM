@@ -1,0 +1,57 @@
+Thank you for providing the floor plan. I'll start by listing the rooms and their door connections, then provide a step-by-step navigation plan from the GARAGE to the WC.
+
+Room and Door Connections:
+1. GARAGE - D9
+2. CELLIER - D9
+3. CHAMBRE 2 - D5
+4. CHAMBRE 1 - D3, D4
+5. BAINS - D1, D2
+6. WC - D2
+7. HALL - D1, D3, D4, D5, D6
+8. PORCHE - D6, D7
+9. CUISINE - D7, D8
+10. TERRASSE COUVERTE - D8, D10
+
+Step-by-step Navigation Plan:
+1. Start in GARAGE
+2. ApproachDoor(D9)
+3. OpenDoor(D9)
+4. GoThrough(D9) to enter CELLIER
+5. ApproachDoor(D9)
+6. OpenDoor(D9)
+7. GoThrough(D9) to enter GARAGE
+8. ApproachDoor(D9)
+9. OpenDoor(D9)
+10. GoThrough(D9) to enter CELLIER
+11. ApproachDoor(D1)
+12. OpenDoor(D1)
+13. GoThrough(D1) to enter HALL
+14. ApproachDoor(D2)
+15. OpenDoor(D2)
+16. GoThrough(D2) to enter WC
+
+Here's the final navigation plan in JSON format:
+
+```json
+{
+  "navigationPlan": [
+    {"action": "ApproachDoor", "door": "D9"},
+    {"action": "OpenDoor", "door": "D9"},
+    {"action": "GoThrough", "door": "D9"},
+    {"action": "ApproachDoor", "door": "D9"},
+    {"action": "OpenDoor", "door": "D9"},
+    {"action": "GoThrough", "door": "D9"},
+    {"action": "ApproachDoor", "door": "D9"},
+    {"action": "OpenDoor", "door": "D9"},
+    {"action": "GoThrough", "door": "D9"},
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D2"},
+    {"action": "OpenDoor", "door": "D2"},
+    {"action": "GoThrough", "door": "D2"}
+  ]
+}
+```
+
+This plan ensures that you navigate from the GARAGE to the WC using only the necessary doors and rooms based on the provided floor plan.

@@ -1,0 +1,55 @@
+Thank you for providing the floor plan. I'll analyze the rooms, doors, and connections, then provide a navigation plan from WC 1 to CH.2.
+
+Room and Door Connections:
+1. WC 1 connects to DEGT 1 via D81
+2. DEGT 1 connects to SEJOUR1 via D51
+3. SEJOUR1 connects to CUISINE via D3
+4. CUISINE connects to DEGT via D8
+5. DEGT connects to CH.2 via D6
+
+Step-by-step navigation plan:
+
+1. Start in WC 1
+2. ApproachDoor(D81)
+3. OpenDoor(D81)
+4. GoThrough(D81) to enter DEGT 1
+5. ApproachDoor(D51)
+6. OpenDoor(D51)
+7. GoThrough(D51) to enter SEJOUR1
+8. ApproachDoor(D3)
+9. OpenDoor(D3)
+10. GoThrough(D3) to enter CUISINE
+11. ApproachDoor(D8)
+12. OpenDoor(D8)
+13. GoThrough(D8) to enter DEGT
+14. ApproachDoor(D6)
+15. OpenDoor(D6)
+16. GoThrough(D6) to enter CH.2
+
+Here's the final navigation plan in JSON format:
+
+```json
+{
+  "start": "WC 1",
+  "end": "CH.2",
+  "actions": [
+    {"action": "ApproachDoor", "door": "D81"},
+    {"action": "OpenDoor", "door": "D81"},
+    {"action": "GoThrough", "door": "D81"},
+    {"action": "ApproachDoor", "door": "D51"},
+    {"action": "OpenDoor", "door": "D51"},
+    {"action": "GoThrough", "door": "D51"},
+    {"action": "ApproachDoor", "door": "D3"},
+    {"action": "OpenDoor", "door": "D3"},
+    {"action": "GoThrough", "door": "D3"},
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"},
+    {"action": "ApproachDoor", "door": "D6"},
+    {"action": "OpenDoor", "door": "D6"},
+    {"action": "GoThrough", "door": "D6"}
+  ]
+}
+```
+
+This plan provides the most efficient route from WC 1 to CH.2, using only the necessary doors and avoiding any unnecessary rooms or detours.

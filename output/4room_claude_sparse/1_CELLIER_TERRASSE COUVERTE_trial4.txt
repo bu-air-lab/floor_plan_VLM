@@ -1,0 +1,47 @@
+Thank you for providing the floor plan. I'll start by listing the rooms and doors with their connections, then provide a navigation plan to get from the CELLIER to the TERRASSE COUVERTE.
+
+Room and Door Connections:
+1. CELLIER: Connected to HALL via D1
+2. GARAGE: Connected to CELLIER via D9
+3. CHAMBRE 2: Connected to HALL via D5
+4. BAINS: Connected to HALL via D1
+5. WC: Connected to HALL via D2
+6. CHAMBRE 1: Connected to HALL via D4
+7. HALL: Central area connecting multiple rooms
+8. PORCHE: Connected to HALL via D6
+9. CUISINE: Connected to HALL via D7
+10. TERRASSE COUVERTE: Connected to CUISINE via D8
+
+Navigation Plan:
+To get from the CELLIER to the TERRASSE COUVERTE, we need to go through the HALL and CUISINE. Here's the step-by-step plan:
+
+1. Start in CELLIER
+2. ApproachDoor(D1)
+3. OpenDoor(D1)
+4. GoThrough(D1) // Now in HALL
+5. ApproachDoor(D7)
+6. OpenDoor(D7)
+7. GoThrough(D7) // Now in CUISINE
+8. ApproachDoor(D8)
+9. OpenDoor(D8)
+10. GoThrough(D8) // Now in TERRASSE COUVERTE
+
+Here's the final path in JSON format:
+
+```json
+{
+  "path": [
+    {"action": "ApproachDoor", "door": "D1"},
+    {"action": "OpenDoor", "door": "D1"},
+    {"action": "GoThrough", "door": "D1"},
+    {"action": "ApproachDoor", "door": "D7"},
+    {"action": "OpenDoor", "door": "D7"},
+    {"action": "GoThrough", "door": "D7"},
+    {"action": "ApproachDoor", "door": "D8"},
+    {"action": "OpenDoor", "door": "D8"},
+    {"action": "GoThrough", "door": "D8"}
+  ]
+}
+```
+
+This plan provides the most direct and efficient route from the CELLIER to the TERRASSE COUVERTE, using only the necessary doors and avoiding any unnecessary rooms or detours.
